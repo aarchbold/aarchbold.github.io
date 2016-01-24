@@ -127,6 +127,14 @@ body {
     margin-top: 0;
   }
 }
+.landing-page-header.-open-nav {
+  overflow-x: initial;
+}
+@media (min-width: 765px) {
+  .landing-page-header.-open-nav {
+    overflow-x: hidden;
+  }
+}
 
 .section-hero {
   height: 45.125rem;
