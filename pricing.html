@@ -68,7 +68,22 @@
             </div>
         </header>
 
-        
+        <div class="pricing-upgrade-modal">
+            <div class="pricing-updade-modal__popup">
+                <a href="" class="pricing-update-modal__close fa fa-close"></a>
+                <div class="pricing-updade-modal__annual">
+                    <h2 class="pricing-updade-modal__header">Annual Plan</h2>
+                    <p class="pricing-updade-modal__text">$8 per month billed annually</p>
+                    <a href="#" class="btn-pricing-feature -three">Go Annual</a>
+                </div>
+                <div class="pricing-updade-modal__monthly">
+                    <h2 class="pricing-updade-modal__header">Monthly Plan</h2>
+                    <p class="pricing-updade-modal__text">$10 billed monthly</p>
+                    <a href="#" class="btn-pricing-feature -three">Go Monthly</a>
+                </div>
+            </div>
+        </div>
+
         <div class="wrap-container">
 
             <!-- hero section -->
@@ -84,7 +99,7 @@
                                 <a class="pricing-packages-card__details" href="#">Details</a>
                                 <a href="http://www.resaas.com/signup-2015" class="btn-pricing-feature -one">Get Started</a>
                             </div>
-                            <div class="pricing-packages-mobile__chevron">
+                            <div class="pricing-packages-mobile__chevron" data-target="section-pricing-features">
                                 <i class="fa fa-angle-down pricing-packages-mobile__icon"></i>
                             </div>
                             <div class="pricing-packages-features">
@@ -110,9 +125,9 @@
                                     <span>$10 billed monthly</span>
                                 </p>
                                 <a class="pricing-packages-card__details" href="#">Details</a>
-                                <a href="http://www.resaas.com/signup-2015" class="btn-pricing-feature -two">Upgrade Now</a>
+                                <a href class="btn-pricing-feature -two btn-open-upgrade-modal">Upgrade Now</a>
                             </div>
-                            <div class="pricing-packages-mobile__chevron">
+                            <div class="pricing-packages-mobile__chevron" data-target="section-pricing-premium">
                                 <i class="fa fa-angle-down pricing-packages-mobile__icon"></i>
                             </div>
                             <div class="pricing-packages-features">
@@ -135,9 +150,9 @@
                                 <div class="pricing-packages-card__price"><span>$</span>99</div>
                                 <p>and up based on team size</p>
                                 <a class="pricing-packages-card__details" href="#">Details</a>
-                                <a href="http://www.resaas.com/signup-2015" class="btn-pricing-feature -three">Contact us</a>
+                                <a href="http://corporate.resaas.com/contact/" class="btn-pricing-feature -three">Contact us</a>
                             </div>
-                            <div class="pricing-packages-mobile__chevron">
+                            <div class="pricing-packages-mobile__chevron" data-target="section-pricing-management-tool">
                                 <i class="fa fa-angle-down pricing-packages-mobile__icon"></i>
                             </div>
                             <div class="pricing-packages-features">
@@ -160,9 +175,9 @@
                                 <div class="pricing-packages-card__quote">Get a Quote</div>
                                 <p class="-quote">Custom solutions for franchises and MLSs</p>
                                 <a class="pricing-packages-card__details" href="#">Details</a>
-                                <a href="http://www.resaas.com/signup-2015" class="btn-pricing-feature -four">Contact us</a>
+                                <a href="http://corporate.resaas.com/contact/" class="btn-pricing-feature -four">Contact us</a>
                             </div>
-                            <div class="pricing-packages-mobile__chevron">
+                            <div class="pricing-packages-mobile__chevron" data-target="section-custom-solutions">
                                 <i class="fa fa-angle-down pricing-packages-mobile__icon"></i>
                             </div>
                             <div class="pricing-packages-features">
@@ -189,50 +204,52 @@
                     <h1 class="section-pricing-features__header">Basic Features With Our Free Plan To Get You Started</h1>
 
                     <div class="pricing-basic-features">
-                        <a href class="carousel-control -previous fa fa-chevron-left fa-2x"></a>
-                        <a href class="carousel-control -next fa fa-chevron-right fa-2x"></a>
-                        <ul class="section-pricing-bullets group">
-                            <li class="-active">
-                                <div class="section-pricing-features__card"></div>
-                                <div class="section-pricing-features__item">
-                                    <img src="static/images/features/bullet-referral-network.png" />
-                                    <h2>Referral Network</h2>
-                                    <p>Discover, connect and network with top producing agents</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="section-pricing-features__card"></div>
-                                <div class="section-pricing-features__item">
-                                    <img src="static/images/features/bullet-academy.png" />
-                                    <h2>Access to Academy</h2>
-                                    <p>Learn best practices from industry professionals</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="section-pricing-features__card"></div>
-                                <div class="section-pricing-features__item">
-                                    <img src="static/images/features/bullet-social-sync.png" />
-                                    <h2>Social Sync</h2>
-                                    <p>Easily share your activity on Facebook, LinkedIn &amp; Twitter</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="section-pricing-features__card"></div>
-                                <div class="section-pricing-features__item">
-                                    <img src="static/images/features/bullet-marketplace.png" />
-                                    <h2>Marketplace Savings</h2>
-                                    <p>Save up to 50% off industry-leading tools &amp; services</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="section-pricing-features__card"></div>
-                                <div class="section-pricing-features__item">
-                                    <img src="static/images/features/bullet-listing-discovery.png" />
-                                    <h2>Listing Discovery</h2>
-                                    <p>Search listings locally and across the globe</p>
-                                </div>
-                            </li>
-                        </ul>
+                        <div class="resaas-carousel-container">
+                            <a href class="carousel-control -previous fa fa-chevron-left fa-2x"></a>
+                            <a href class="carousel-control -next fa fa-chevron-right fa-2x"></a>
+                            <ul class="section-pricing-bullets group">
+                                <li class="-active">
+                                    <div class="section-pricing-features__card"></div>
+                                    <div class="section-pricing-features__item">
+                                        <img src="static/images/features/bullet-referral-network.png" />
+                                        <h2>Referral Network</h2>
+                                        <p>Discover, connect and network with top producing agents</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="section-pricing-features__card"></div>
+                                    <div class="section-pricing-features__item">
+                                        <img src="static/images/features/bullet-academy.png" />
+                                        <h2>Access to Academy</h2>
+                                        <p>Learn best practices from industry professionals</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="section-pricing-features__card"></div>
+                                    <div class="section-pricing-features__item">
+                                        <img src="static/images/features/bullet-social-sync.png" />
+                                        <h2>Social Sync</h2>
+                                        <p>Easily share your activity on Facebook, LinkedIn &amp; Twitter</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="section-pricing-features__card"></div>
+                                    <div class="section-pricing-features__item">
+                                        <img src="static/images/features/bullet-marketplace.png" />
+                                        <h2>Marketplace Savings</h2>
+                                        <p>Save up to 50% off industry-leading tools &amp; services</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="section-pricing-features__card"></div>
+                                    <div class="section-pricing-features__item">
+                                        <img src="static/images/features/bullet-listing-discovery.png" />
+                                        <h2>Listing Discovery</h2>
+                                        <p>Search listings locally and across the globe</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -244,51 +261,53 @@
 
                     <div class="pricing-premium__list">
                         <img class="pricing-premium__image" src="static/images/features/iphone_large.png" />
-                        <a href class="carousel-control -previous fa fa-chevron-left fa-2x"></a>
-                        <a href class="carousel-control -next fa fa-chevron-right fa-2x"></a>
-                        <ul class="section-pricing-bullets group -premium">
-                            <li class="-premium -active">
-                                <div class="section-pricing-features__card"></div>
-                                <div class="section-pricing-features__item -premium">
-                                    <h2>Instant Referral Alerts</h2>
-                                    <p>Be the first to know when a referral is posted in your area</p>
-                                </div>
-                            </li>
-                            <li class="-premium">
-                                <div class="section-pricing-features__card"></div>
-                                <div class="section-pricing-features__item -premium">
-                                    <h2>Campaign Management</h2>
-                                    <p>Send targeted email campaigns to your new and past clients</p>
-                                </div>
-                            </li>
-                            <li class="-premium">
-                                <div class="section-pricing-features__card"></div>
-                                <div class="section-pricing-features__item -premium">
-                                    <h2>Lead Generation</h2>
-                                    <p>Gain new prospects by answering their real estate questions</p>
-                                </div>
-                            </li>
-                            <li class="-premium">
-                                <div class="section-pricing-features__card"></div>
-                                <div class="section-pricing-features__item -premium">
-                                    <h2>Priority Discovery Placement</h2>
-                                    <p>Appear at the top of search results</p>
-                                </div>
-                            </li>
-                            <li class="-premium">
-                                <div class="section-pricing-features__card"></div>
-                                <div class="section-pricing-features__item -premium">
-                                    <h2>Analytics</h2>
-                                    <p>Gives you insight into who’s looking at your profile &amp; listings</p>
-                                </div>
-                            </li>
-                            <li class="-premium">
-                                <div class="section-pricing-features__card"></div>
-                                <div class="section-pricing-features__item -premium">
-                                    <a href="http://www.resaas.com/signup-2015" class="btn-pricing-premium">Get Premium</a>
-                                </div>
-                            </li>
-                        </ul>
+                        <div class="resaas-carousel-container -premium">
+                            <a href class="carousel-control -previous fa fa-chevron-left fa-2x"></a>
+                            <a href class="carousel-control -next fa fa-chevron-right fa-2x"></a>
+                            <ul class="section-pricing-bullets group -premium">
+                                <li class="-premium -active">
+                                    <div class="section-pricing-features__card"></div>
+                                    <div class="section-pricing-features__item -premium">
+                                        <h2>Instant Referral Alerts</h2>
+                                        <p>Be the first to know when a referral is posted in your area</p>
+                                    </div>
+                                </li>
+                                <li class="-premium">
+                                    <div class="section-pricing-features__card"></div>
+                                    <div class="section-pricing-features__item -premium">
+                                        <h2>Campaign Management</h2>
+                                        <p>Send targeted email campaigns to your new and past clients</p>
+                                    </div>
+                                </li>
+                                <li class="-premium">
+                                    <div class="section-pricing-features__card"></div>
+                                    <div class="section-pricing-features__item -premium">
+                                        <h2>Lead Generation</h2>
+                                        <p>Gain new prospects by answering their real estate questions</p>
+                                    </div>
+                                </li>
+                                <li class="-premium">
+                                    <div class="section-pricing-features__card"></div>
+                                    <div class="section-pricing-features__item -premium">
+                                        <h2>Priority Discovery Placement</h2>
+                                        <p>Appear at the top of search results</p>
+                                    </div>
+                                </li>
+                                <li class="-premium">
+                                    <div class="section-pricing-features__card"></div>
+                                    <div class="section-pricing-features__item -premium">
+                                        <h2>Analytics</h2>
+                                        <p>Gives you insight into who’s looking at your profile &amp; listings</p>
+                                    </div>
+                                </li>
+                                <li class="-premium">
+                                    <div class="section-pricing-features__card"></div>
+                                    <div class="section-pricing-features__item -premium">
+                                        <a href="http://www.resaas.com/signup-2015" class="btn-pricing-premium">Get Premium</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -306,7 +325,7 @@
                             <li>Refer your partner client service providers to earn commission</li>
                             <li>Target and attract top producing agents in your market</li>
                         </ul>
-                        <a href="http://www.resaas.com/signup-2015" class="btn-pricing-management-tools">Get Broker Plan</a>
+                        <a href="http://corporate.resaas.com/contact/" class="btn-pricing-management-tools">Get Broker Plan</a>
                     </div>
                 </div>
             </section>
@@ -324,7 +343,7 @@
                             <li>Get visibility into your network’s performance</li>
                             <li>Give your agents one less password. They will thank you</li>
                         </ul>
-                        <a href="http://www.resaas.com/signup-2015" class="btn-pricing-premium">Get A Quote</a>
+                        <a href="http://corporate.resaas.com/contact/" class="btn-pricing-premium">Get A Quote</a>
                     </div>
                 </div>
             </section>
@@ -387,5 +406,6 @@
         <script>window.jQuery || document.write('<script src="static/js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
         <script src="static/js/vendor/jquery.mobile.custom.min.js"></script>
         <script src="static/js/landing/landing.js"></script>
+        <script src="static/js/pricing/pricing.js"></script>
     </body>
 </html>
