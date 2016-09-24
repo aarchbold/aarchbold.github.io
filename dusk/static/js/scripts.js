@@ -38,9 +38,9 @@ $.fn.setSectionHeight = function(){
 
   function setHeroHeight() {
     hero.height(windowHeight + heroOffset);
-    sections.each(function(i,e) {
-      $(e).css('min-height',windowHeight - footerHeight);
-    });
+    // sections.each(function(i,e) {
+    //   $(e).css('min-height',windowHeight - footerHeight);
+    // });
   }
 
   setHeroHeight();
@@ -67,12 +67,14 @@ $.fn.scrolltoSection = function(){
   })
 }
 
-function showFooter() {
-  var lastScrollTop = 0
-    footer = $('.main-footer');
+function scrollyStuff() {
+  var lastScrollTop = 0,
+    feedbackSection = $('.home-feedback'),
+    footer = $('.main-footer'),
+    btnSlack = $('.section-feedback__cta-slack'),
+    btnTwitter = $('.section-feedback__cta-twitter');
   $(window).scroll(function(event){
     var st = $(this).scrollTop();
-    console.log(st);
     if (st > lastScrollTop){
     // downscroll code
       footer.addClass('-show-footer');
@@ -82,6 +84,12 @@ function showFooter() {
     if (st < 50) {
       footer.removeClass('-show-footer');
     }
+    if (st >= feedbackSection.offset().top - 400) {
+      btnSlack.addClass('-show');
+      btnTwitter.addClass('-show');
+    } else {
+      btnSlack.removeClass('-show');
+      btnTwitter.removeClass('-show');    }
     lastScrollTop = st;
   });
 }
@@ -92,6 +100,6 @@ $(function(){
   $('#home-page').setSectionHeight();
   $('.main-footer').scrolltoSection();
   // show footer when scrolling down
-  showFooter();
+  scrollyStuff();
 });
 
