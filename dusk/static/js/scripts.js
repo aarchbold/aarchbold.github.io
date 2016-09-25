@@ -131,7 +131,8 @@ $(function(){
     // attempt to hide the location bar (site looks way better without it)
     setTimeout(function() {
       window.scrollTo(0, 1);
-    }, 100)
+      alert('hi');
+    }, 500)
   };
   $('#home-page').setSectionHeight();
   $('.main-footer').scrolltoSection();
