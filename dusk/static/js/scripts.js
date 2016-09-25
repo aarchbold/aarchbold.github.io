@@ -124,8 +124,14 @@ function scrollyStuff() {
 
 
 $(function(){
+  // remove prallax on phones for performance gains
   if ($('html').hasClass('no-touch')) {
     $('[data-scroll-speed]').moveIt();
+  } else {
+    // attempt to hide the location bar (site looks way better without it)
+    setTimeout(function() {
+      window.scrollTo(0, 1);
+    }, 100)
   };
   $('#home-page').setSectionHeight();
   $('.main-footer').scrolltoSection();
