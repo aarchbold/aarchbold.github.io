@@ -134,6 +134,7 @@ $(function(){
       alert('hi');
     }, 500)
   };
+  alert('wut?');
   $('#home-page').setSectionHeight();
   $('.main-footer').scrolltoSection();
   // show footer when scrolling down
