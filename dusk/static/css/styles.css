@@ -105,6 +105,46 @@ table {
   }
 }
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * http://applemusic.tumblr.com/
+ * https://jsfiddle.net/xq56dmrh/
+ */
+/** Ultra Light */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 100;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff");
+}
+/** Thin */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 200;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff");
+}
+/** Regular */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+/** Medium */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 500;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff");
+}
+/** Semi Bold */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 600;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
+}
+/** Bold */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 700;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+}
 .btn-default {
   transition: all 0.125s;
   padding: 15px 40px;
@@ -127,11 +167,16 @@ table {
     font-size: 16px;
   }
 }
+@media (max-width: 490px) {
+  .btn-default {
+    font-size: 15px;
+  }
+}
 
 body {
   color: white;
   font-size: 20px;
-  font-family: Roboto,sans-serif;
+  font-family: San Francisco,Roboto,sans-serif;
   background: black url(../images/backgrounds/bg-body.jpg) 50% 0;
   overflow-x: hidden;
 }
@@ -139,14 +184,6 @@ body {
   body {
     font-size: 18px;
   }
-}
-
-a {
-  color: white;
-  text-decoration: underline;
-}
-a:hover {
-  text-decoration: none;
 }
 
 .comet1 {
@@ -160,6 +197,11 @@ a:hover {
   animation: shootingStar linear 6s infinite;
   z-index: 3;
 }
+@media (max-width: 778px) {
+  .comet1 {
+    top: 0px;
+  }
+}
 
 .comet2 {
   position: absolute;
@@ -171,6 +213,11 @@ a:hover {
   -webkit-animation: shootingStar linear 7s infinite;
   animation: shootingStar linear 7s infinite;
   z-index: 3;
+}
+@media (max-width: 778px) {
+  .comet2 {
+    top: 140px;
+  }
 }
 
 .comet3 {
@@ -249,12 +296,18 @@ a:hover {
   padding-top: 52px;
   z-index: 10;
 }
+@media (max-width: 778px) {
+  .main-hero__cta {
+    padding-top: 0;
+  }
+}
 
 .main-hero__cta-tagline {
   padding-top: 10px;
   font-size: 15px;
   text-align: center;
   z-index: 10;
+  color: white;
 }
 
 .main-hero__scene {
@@ -302,22 +355,10 @@ a:hover {
   background: url(../images/backgrounds/bg-sky.png) 50% 0 no-repeat;
 }
 
-.home-faq__question {
-  margin-bottom: 40px;
-}
-.home-faq__question .-question {
-  margin-bottom: 10px;
-  color: white;
-  line-height: 1.4;
-}
-.home-faq__question .-answer {
-  color: #5c6369;
-  line-height: 1.4;
-}
-
 .section-feedback__intro {
   line-height: 1.4;
   margin-bottom: 100px;
+  color: white;
 }
 
 .section-feedback__ctas {
@@ -338,16 +379,7 @@ a:hover {
 
 .section-feedback__cta-slack {
   transition: all 0.40s;
-  opacity: 0;
-  -webkit-transform: translateX(-1000px);
-  -ms-transform: translateX(-1000px);
-  transform: translateX(-1000px);
-}
-.section-feedback__cta-slack.-show, .touch .section-feedback__cta-slack {
   opacity: 1;
-  -webkit-transform: translateX(0px);
-  -ms-transform: translateX(0px);
-  transform: translateX(0px);
 }
 @media (max-width: 778px) {
   .section-feedback__cta-slack {
@@ -357,16 +389,7 @@ a:hover {
 
 .section-feedback__cta-twitter {
   transition: all 0.40s;
-  opacity: 0;
-  -webkit-transform: translateX(1000px);
-  -ms-transform: translateX(1000px);
-  transform: translateX(1000px);
-}
-.section-feedback__cta-twitter.-show, .touch .section-feedback__cta-twitter {
   opacity: 1;
-  -webkit-transform: translateX(0px);
-  -ms-transform: translateX(0px);
-  transform: translateX(0px);
 }
 @media (max-width: 778px) {
   .section-feedback__cta-twitter {
@@ -404,6 +427,37 @@ a:hover {
 .section-heading {
   text-align: center;
   margin-bottom: 100px;
+}
+
+h2 {
+  margin-bottom: 10px;
+  color: white;
+  line-height: 1.4;
+}
+
+p {
+  color: #5c6369;
+  line-height: 1.4;
+  margin-bottom: 40px;
+}
+p a {
+  color: #5c6369;
+}
+
+a {
+  color: white;
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  margin-bottom: 40px;
+  color: #5c6369;
+  list-style: circle;
+  padding-left: 30px;
+  line-height: 1.4;
 }
 
 .main-footer {
@@ -475,7 +529,17 @@ a:hover {
   animation: pulse-link 0.8s;
   color: #4cc1fc;
 }
+@media (max-width: 490px) {
+  .main-footer a {
+    font-size: 13px;
+  }
+}
 .main-footer .main-footer__legal {
   color: #5c6369;
   margin-top: 22px;
+}
+@media (max-width: 490px) {
+  .main-footer .main-footer__legal {
+    font-size: 13px;
+  }
 }
