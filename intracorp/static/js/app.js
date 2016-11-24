@@ -1,0 +1,1 @@
+$.fn.menuToggle=function(){var a=$(this),s=$(".nav-tools__menu");a.click(function(e){e.preventDefault(),a.hasClass("fa-bars")?(a.addClass("fa-times"),a.removeClass("fa-bars"),s.show()):(a.addClass("fa-bars"),a.removeClass("fa-times"),s.hide())})},$(function(){$(".-menu-bars").menuToggle()});
