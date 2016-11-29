@@ -460,6 +460,67 @@ body {
   font-family: FaktPro-Semibold,sans-serif;
 }
 
+.section-sales__h2 {
+  margin-bottom: 0;
+}
+
+.section-sales-container {
+  border-bottom: 2px solid #000000;
+}
+.section-sales-container h3 {
+  padding: 18px 0 16px;
+  cursor: pointer;
+}
+.section-sales-container h3 .btn-sales {
+  padding-right: 10px;
+}
+.section-sales-container h3.-open {
+  border-bottom: 1px solid #c4c5c7;
+}
+
+.section-sales__table {
+  width: 100%;
+  border-spacing: 4px;
+}
+.section-sales__table thead tr {
+  border-bottom: 1px solid #000000;
+}
+.section-sales__table thead tr th {
+  position: relative;
+  text-align: left;
+  vertical-align: bottom;
+  height: 79px;
+  padding-right: 10px;
+}
+.section-sales__table thead tr th h3 {
+  font-size: 14px;
+}
+.section-sales__table thead tr th.section-sales__table-homeowner {
+  width: 12%;
+}
+.section-sales__table thead tr th.section-sales__table-brokerage {
+  width: 25%;
+}
+.section-sales__table thead tr th.section-sales__table-price {
+  width: 10%;
+}
+.section-sales__table tr td {
+  padding: 10px 10px 10px 0;
+  font-size: 14px;
+}
+.section-sales__table tr.section-sales__table-footer {
+  border-top: 1px solid #000000;
+}
+.section-sales__table tr.section-sales__table-footer td {
+  padding: 20px 0 16px;
+}
+.section-sales__table tr.section-sales__table-last-row td {
+  padding-bottom: 25px;
+}
+.section-sales__table tr:first-child td {
+  padding-top: 28px;
+}
+
 header {
   width: 100%;
   height: 75px;

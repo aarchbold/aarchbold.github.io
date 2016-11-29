@@ -46,14 +46,14 @@
                 <p class="section-intro__desc">To show our appreciation for your commitment to selling Intracorp homes, welcome to the Intracorp Insider Program. It's designed to make the experience easier, more exclusive, and offer rewards to both you and your clients.</p>
 
                 <div class="section-intro__buttons">
-                    <a href="#" class="intracorp-btn btn-margin-right">Profile</a>
-                    <a href="#" class="intracorp-btn btn-margin-right">Rewards &amp; Privileges</a>
-                    <a href="#" class="intracorp-btn btn-margin-right">Now Selling</a>
-                    <a href="#" class="intracorp-btn">Sales Details</a>
+                    <a href="#" data-goto="profile" class="intracorp-btn btn-margin-right">Profile</a>
+                    <a href="#" data-goto="rewards" class="intracorp-btn btn-margin-right">Rewards &amp; Privileges</a>
+                    <a href="#" data-goto="nowselling" class="intracorp-btn btn-margin-right">Now Selling</a>
+                    <a href="#" data-goto="salesdetails" class="intracorp-btn">Sales Details</a>
                 </div>
             </section>
 
-            <section class="section-insider section-profile">
+            <section data-target="profile" class="section-insider section-profile">
                 <h2 class="section-profile__h2">Insider Profile</h2>
 
                 <div class="insider-bio clearfix">
@@ -100,7 +100,7 @@
                 </div>
             </section>
 
-            <section class="section-insider section-rewards">
+            <section data-target="rewards" class="section-insider section-rewards">
                 <h2 class="section-rewards__h2">Insider Rewards &amp; Privileges</h2>
 
                 <table class="section-rewards__table">
@@ -325,7 +325,7 @@
                 </div>
             </section>
 
-            <section class="section-insider section-now-selling">
+            <section data-target="nowselling" class="section-insider section-now-selling">
                 <h2 class="section-rewards__h2">Now Selling</h2>
                 <h3>Step up to super elite and sell one of these extraordinary projects</h3>
 
@@ -402,6 +402,276 @@
                             <a href="#" class="intracorp-btn btn-block">View Project Website</a>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <section data-target="salesdetails" class="section-insider section-sales">
+                <h2 class="section-sales__h2">Sales Details</h2>
+                
+                <div class="section-sales-container">
+                    <h3 class="section-sales__table-toggle -open"><i class="btn-sales fa fa-minus"></i>Firm Sales</h3>
+                    <table class="section-sales__table">
+                        <thead>
+                            <tr>
+                                <th class="section-sales__table-price">
+                                    <h3>Project</h3>
+                                </th>
+                                <th>
+                                    <h3>SL#</h3>
+                                </th>
+                                <th class="section-sales__table-homeowner">
+                                    <h3>Homeowner</h3>
+                                </th>
+                                <th>
+                                    <h3>Contract Date</h3>
+                                </th>
+                                <th>
+                                    <h3>Purchase Price</h3>
+                                </th>
+                                <th class="section-sales__table-brokerage">
+                                    <h3>Brokerage</h3>
+                                </th>
+                                <th class="section-sales__table-price">
+                                    <h3>Total Commission</h3>
+                                </th>
+                                <th class="section-sales__table-price">
+                                    <h3>Total Commission Advanced</h3>
+                                </th>
+                                <th class="section-sales__table-price">
+                                    <h3>Total Commission Payable</h3>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>MC2 South</td>
+                                <td>184</td>
+                                <td>Jie Gao</td>
+                                <td>20-Nov-2013</td>
+                                <td>$513,000</td>
+                                <td>Regent Park Realty Inc - Vancouver</td>
+                                <td>$11,798.00</td>
+                                <td>$5,899.00</td>
+                                <td>$5,899.00</td>
+                            </tr>
+                            <tr>
+                                <td>MC2 South</td>
+                                <td>184</td>
+                                <td>Jie Gao</td>
+                                <td>20-Nov-2013</td>
+                                <td>$513,000</td>
+                                <td>Regent Park Realty Inc - Vancouver</td>
+                                <td>$11,798.00</td>
+                                <td>$5,899.00</td>
+                                <td>$5,899.00</td>
+                            </tr>
+                            <tr>
+                                <td>MC2 South</td>
+                                <td>184</td>
+                                <td>Jie Gao</td>
+                                <td>20-Nov-2013</td>
+                                <td>$513,000</td>
+                                <td>Regent Park Realty Inc - Vancouver</td>
+                                <td>$11,798.00</td>
+                                <td>$5,899.00</td>
+                                <td>$5,899.00</td>
+                            </tr>
+                            <tr>
+                                <td>MC2 South</td>
+                                <td>184</td>
+                                <td>Jie Gao</td>
+                                <td>20-Nov-2013</td>
+                                <td>$513,000</td>
+                                <td>Regent Park Realty Inc - Vancouver</td>
+                                <td>$11,798.00</td>
+                                <td>$5,899.00</td>
+                                <td>$5,899.00</td>
+                            </tr>
+                            <tr>
+                                <td>MC2 South</td>
+                                <td>184</td>
+                                <td>Jie Gao</td>
+                                <td>20-Nov-2013</td>
+                                <td>$513,000</td>
+                                <td>Regent Park Realty Inc - Vancouver</td>
+                                <td>$11,798.00</td>
+                                <td>$5,899.00</td>
+                                <td>$5,899.00</td>
+                            </tr>
+                            <tr>
+                                <td>MC2 South</td>
+                                <td>184</td>
+                                <td>Jie Gao</td>
+                                <td>20-Nov-2013</td>
+                                <td>$513,000</td>
+                                <td>Regent Park Realty Inc - Vancouver</td>
+                                <td>$11,798.00</td>
+                                <td>$5,899.00</td>
+                                <td>$5,899.00</td>
+                            </tr>
+                            <tr>
+                                <td>MC2 South</td>
+                                <td>184</td>
+                                <td>Jie Gao</td>
+                                <td>20-Nov-2013</td>
+                                <td>$513,000</td>
+                                <td>Regent Park Realty Inc - Vancouver</td>
+                                <td>$11,798.00</td>
+                                <td>$5,899.00</td>
+                                <td>$5,899.00</td>
+                            </tr>
+                            <tr class="section-sales__table-last-row">
+                                <td>MC2 South</td>
+                                <td>184</td>
+                                <td>Jie Gao</td>
+                                <td>20-Nov-2013</td>
+                                <td>$513,000</td>
+                                <td>Regent Park Realty Inc - Vancouver</td>
+                                <td>$11,798.00</td>
+                                <td>$5,899.00</td>
+                                <td>$5,899.00</td>
+                            </tr>
+                            <tr class="section-sales__table-footer">
+                                <td colspan="6">Total Commission on Firm Homes</td>
+                                <td>$11,798.00</td>
+                                <td>$5,899.00</td>
+                                <td>$5,899.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="section-sales-container">
+                    <h3 class="section-sales__table-toggle"><i class="btn-sales fa fa-plus"></i>Closed Sales</h3>
+                   <table class="section-sales__table" style="display:none;">
+                        <thead>
+                            <tr>
+                                <th class="section-sales__table-price">
+                                    <h3>Project</h3>
+                                </th>
+                                <th>
+                                    <h3>SL#</h3>
+                                </th>
+                                <th class="section-sales__table-homeowner">
+                                    <h3>Homeowner</h3>
+                                </th>
+                                <th>
+                                    <h3>Contract Date</h3>
+                                </th>
+                                <th>
+                                    <h3>Purchase Price</h3>
+                                </th>
+                                <th class="section-sales__table-brokerage">
+                                    <h3>Brokerage</h3>
+                                </th>
+                                <th class="section-sales__table-price">
+                                    <h3>Total Commission</h3>
+                                </th>
+                                <th class="section-sales__table-price">
+                                    <h3>Total Commission Advanced</h3>
+                                </th>
+                                <th class="section-sales__table-price">
+                                    <h3>Total Commission Payable</h3>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>MC2 South</td>
+                                <td>184</td>
+                                <td>Jie Gao</td>
+                                <td>20-Nov-2013</td>
+                                <td>$513,000</td>
+                                <td>Regent Park Realty Inc - Vancouver</td>
+                                <td>$11,798.00</td>
+                                <td>$5,899.00</td>
+                                <td>$5,899.00</td>
+                            </tr>
+                            <tr>
+                                <td>MC2 South</td>
+                                <td>184</td>
+                                <td>Jie Gao</td>
+                                <td>20-Nov-2013</td>
+                                <td>$513,000</td>
+                                <td>Regent Park Realty Inc - Vancouver</td>
+                                <td>$11,798.00</td>
+                                <td>$5,899.00</td>
+                                <td>$5,899.00</td>
+                            </tr>
+                            <tr>
+                                <td>MC2 South</td>
+                                <td>184</td>
+                                <td>Jie Gao</td>
+                                <td>20-Nov-2013</td>
+                                <td>$513,000</td>
+                                <td>Regent Park Realty Inc - Vancouver</td>
+                                <td>$11,798.00</td>
+                                <td>$5,899.00</td>
+                                <td>$5,899.00</td>
+                            </tr>
+                            <tr>
+                                <td>MC2 South</td>
+                                <td>184</td>
+                                <td>Jie Gao</td>
+                                <td>20-Nov-2013</td>
+                                <td>$513,000</td>
+                                <td>Regent Park Realty Inc - Vancouver</td>
+                                <td>$11,798.00</td>
+                                <td>$5,899.00</td>
+                                <td>$5,899.00</td>
+                            </tr>
+                            <tr>
+                                <td>MC2 South</td>
+                                <td>184</td>
+                                <td>Jie Gao</td>
+                                <td>20-Nov-2013</td>
+                                <td>$513,000</td>
+                                <td>Regent Park Realty Inc - Vancouver</td>
+                                <td>$11,798.00</td>
+                                <td>$5,899.00</td>
+                                <td>$5,899.00</td>
+                            </tr>
+                            <tr>
+                                <td>MC2 South</td>
+                                <td>184</td>
+                                <td>Jie Gao</td>
+                                <td>20-Nov-2013</td>
+                                <td>$513,000</td>
+                                <td>Regent Park Realty Inc - Vancouver</td>
+                                <td>$11,798.00</td>
+                                <td>$5,899.00</td>
+                                <td>$5,899.00</td>
+                            </tr>
+                            <tr>
+                                <td>MC2 South</td>
+                                <td>184</td>
+                                <td>Jie Gao</td>
+                                <td>20-Nov-2013</td>
+                                <td>$513,000</td>
+                                <td>Regent Park Realty Inc - Vancouver</td>
+                                <td>$11,798.00</td>
+                                <td>$5,899.00</td>
+                                <td>$5,899.00</td>
+                            </tr>
+                            <tr class="section-sales__table-last-row">
+                                <td>MC2 South</td>
+                                <td>184</td>
+                                <td>Jie Gao</td>
+                                <td>20-Nov-2013</td>
+                                <td>$513,000</td>
+                                <td>Regent Park Realty Inc - Vancouver</td>
+                                <td>$11,798.00</td>
+                                <td>$5,899.00</td>
+                                <td>$5,899.00</td>
+                            </tr>
+                            <tr class="section-sales__table-footer">
+                                <td colspan="6">Total Commission on Firm Homes</td>
+                                <td>$11,798.00</td>
+                                <td>$5,899.00</td>
+                                <td>$5,899.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </section>
         </div>
