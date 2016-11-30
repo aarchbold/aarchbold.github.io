@@ -376,6 +376,7 @@ body {
 
 .section-rewards__table {
   width: 100%;
+  min-width: 1000px;
   border-spacing: 4px;
   border-collapse: separate;
 }
@@ -529,6 +530,7 @@ body {
 
 .section-sales__table {
   width: 100%;
+  min-width: 1000px;
   border-spacing: 4px;
 }
 .section-sales__table thead tr {
@@ -612,6 +614,11 @@ header {
     display: block;
     margin: 0 0 10px;
   }
+}
+
+.table-container {
+  overflow: hidden;
+  overflow-x: auto;
 }
 
 h1 {
