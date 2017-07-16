@@ -360,6 +360,9 @@ body.legal-page {
   border-bottom: 1px solid #eff5f9;
   padding-bottom: 1px;
 }
+.main-navigation__business a.-selected {
+  color: #3EAEFF;
+}
 .main-navigation__business a:hover {
   border-bottom: 1px solid #717171;
 }
@@ -1377,7 +1380,7 @@ input:focus {
   border-radius: 10px;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
 }
-.button-biz:hover {
+.button-biz:hover, .button-biz.-selected {
   background-color: #3EAEFF;
   color: white;
 }
@@ -1391,6 +1394,19 @@ input:focus {
   background-color: #3EAEFF;
   color: white;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.button-biz__corporate {
+  background-color: #FFE554;
+  color: #7A7559;
+  box-shadow: none;
+}
+.button-biz__corporate:hover {
+  opacity: 0.8;
+  box-shadow: none;
+}
+.button-biz__corporate.-margin {
+  margin-top: 50px;
 }
 
 .section-legal {
