@@ -491,7 +491,7 @@ footer {
 
 .section-intro {
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
   min-height: 780px;
 }
 @media (max-width: 640px) {
