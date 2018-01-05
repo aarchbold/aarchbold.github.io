@@ -1,0 +1,353 @@
+/* Eric Meyer's CSS Reset
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   This is a Sass partial
+*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * http://applemusic.tumblr.com/
+ * https://jsfiddle.net/xq56dmrh/
+ */
+/** Ultra Light */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 100;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff");
+}
+/** Thin */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 200;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff");
+}
+/** Regular */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+/** Medium */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 500;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff");
+}
+/** Semi Bold */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 600;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
+}
+/** Bold */
+@font-face {
+  font-family: "San Francisco Bold";
+  font-weight: 700;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+}
+h1 {
+  font-size: 48px;
+  font-family: "San Francisco Bold";
+  color: #41464C;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 48px;
+  font-family: "San Francisco Bold";
+  color: #41464C;
+  line-height: 1.1;
+}
+
+p {
+  color: #41464C;
+  line-height: 1.4;
+  margin-bottom: 40px;
+}
+
+a {
+  color: #3EAEFF;
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  margin-bottom: 40px;
+  color: #5c6369;
+  list-style: circle;
+  padding-left: 30px;
+  line-height: 1.4;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #41464C;
+  font-family: 'TruenoRegular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;
+  height: 100%;
+}
+body.legal-page {
+  background-color: #f55a5d;
+}
+
+.page-wrap {
+  margin-top: 80px;
+}
+
+section {
+  width: 100%;
+  min-height: 750px;
+}
+
+.section-accent {
+  position: relative;
+  margin-top: 100px;
+  background: linear-gradient(0deg, #3EAEFF, #54D4D3 70%);
+}
+
+.section-inner, .section-inner-accent {
+  position: relative;
+  max-width: 1190px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 40px;
+}
+
+.section-inner-accent {
+  color: #FFFFFF;
+}
+.section-inner-accent h2, .section-inner-accent p {
+  color: #FFFFFF !important;
+}
+
+.section-content {
+  padding: 150px 0;
+  width: 50%;
+}
+.section-content.-right {
+  margin-left: 50%;
+}
+
+.section-content-accent {
+  padding: 0 0 40px;
+  margin-top: -100px;
+  width: 50%;
+}
+
+.section-description {
+  padding-top: 20px;
+  margin-bottom: 60px;
+}
+
+.section-feature-phone {
+  position: relative;
+  top: -150px;
+}
+
+.section-feature-image {
+  position: absolute;
+  left: -10px;
+  width: 50%;
+  top: 60%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.section-feature-image.-right {
+  left: auto;
+  right: -10px;
+}
+.section-feature-image.-cloud {
+  width: 55%;
+  left: auto;
+  top: 45%;
+  right: -120px;
+}
+.section-feature-image.-ai {
+  top: 50%;
+  width: 45%;
+  left: 0;
+}
+
+.section-footer {
+  padding: 40px 0;
+}
+
+.topnav-container {
+  top: 0px;
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 26px;
+  text-align: right;
+  background-color: #ffffff;
+  z-index: 10;
+}
+
+.topnav-logo {
+  position: absolute;
+  left: 20px;
+}
+
+footer {
+  background-color: #F2F7FA;
+  padding: 20px 20px 40px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-ctas {
+  text-align: right;
+}
+.footer-ctas .button {
+  margin-left: 20px;
+}
+
+.footer-buttons {
+  padding: 20px 0 40px;
+}
+.footer-buttons img {
+  margin: 0 5px;
+}
+
+@media (max-width: 442px) {
+  .contact-header a.contact-header--phone-number {
+    left: 60px;
+  }
+}
+.home-hero {
+  height: 850px;
+  background: transparent url("../../static/images/home/home-hero.jpg") 50% 50% no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.home-tagline {
+  padding-top: 100px;
+  width: 60%;
+}
+
+.home-subtitle {
+  padding-top: 10px;
+  margin-bottom: 80px;
+}
+
+.home-integrations {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 40%;
+  box-sizing: border-box;
+  min-height: 200px;
+  box-shadow: 5px 5px 30px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 30px 10px;
+}
+.home-integrations img {
+  display: inline;
+  width: 45%;
+}
+
+.home-integrations__footer {
+  padding: 30px 0 20px;
+  text-align: center;
+  font-size: 18px;
+  color: #9A9A9A;
+}
+
+.button {
+  transition: all 0.2s;
+  display: inline-block;
+  padding: 22px 60px;
+  background-color: #282828;
+  font-family: 'TruenoBold';
+  font-size: 18px;
+  background-color: #282828;
+  color: #ffffff;
+  border-radius: 6px;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: 5px 5px 30px 5px rgba(0, 0, 0, 0.3);
+  opacity: 1;
+}
+.button:hover {
+  opacity: .75;
+}
+
+.button-alt {
+  background-color: #ffffff;
+  color: #287EBB;
+  box-shadow: 5px 5px 30px 5px rgba(255, 255, 255, 0.3);
+}
+
+.button-nav {
+  background-color: transparent;
+  color: #282828;
+  box-shadow: none;
+  padding: 10px 16px;
+  font-size: 15px;
+  border: 1px solid #DBDBDB;
+}
