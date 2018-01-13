@@ -1,32 +1,5 @@
 /* eslint-disable */
 
-$.fn.makeEqualHeight = function() {
-    var context = $(this),
-        $tiles = $('.home-featurs__item.-equal', context),
-        $shadows = $('.home-featurs__item--shadow.-equal', context),
-        offset = 150;
-
-    console.log($tiles);
-    function setHeight() {
-        var height = 0;
-        // get tallest element
-        $tiles.each(function(i,e) {
-            console.log($(e));
-            if ($(e).height() > height) {
-                height = $(e).height();
-            }
-        })
-        var shadowHeight = height - offset;
-        // set all to the tallest element
-        $shadows.each(function(i,e) {
-            $(e).height(shadowHeight);
-        })
-    }
-
-    setHeight();
-
-}
-
 $.fn.handleMenu = function() {
     var context = $(this),
         $menuBtn = $('.main-navigation__mobile-button', context),
@@ -52,6 +25,7 @@ $.fn.handleAnimations = function() {
         $shiffy = $('.section-intro__image', context),
         $introShiffy = $('.intro-shiffy__container', context),
         $introBubble = $('.intro-shiffy__bubble', context),
+        $shiffySched = $('.section-intro__image .-shiffy', context),
         $map = $('.map-phone__container', context),
         $mapThumb = $('.map-phone__container .map-thumb', context),
         $pin1 = $('.-pin-green', context),
@@ -72,6 +46,7 @@ $.fn.handleAnimations = function() {
 
     setTimeout(function(){
         $introBubble.fadeIn();
+        $shiffySched.addClass('-animate');
         $mapThumb.addClass('-animate');
     },1400)
 
@@ -414,7 +389,5 @@ $(function(){
     threshold : 400,
     placeholder: 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
   });
-
-  $('.home-features').makeEqualHeight();
 
 });
