@@ -143,6 +143,10 @@ body.legal-page {
   background-color: #f55a5d;
 }
 
+section, nav {
+  overflow: hidden;
+}
+
 .section-footer-scene {
   position: relative;
   height: 1278px;
@@ -325,6 +329,9 @@ body.legal-page {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   background-color: white;
+}
+.main-navigation.-legal {
+  background-color: transparent;
 }
 .main-navigation .main-navigation__container {
   padding: 44px 15px 0;
