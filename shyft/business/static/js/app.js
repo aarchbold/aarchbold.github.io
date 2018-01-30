@@ -1,5 +1,37 @@
 /* eslint-disable */
 
+$.fn.handleFeaturesAnimations = function() {
+    console.log('hello?');
+    console.log($(this));
+
+    var $animation_elements = $('.features__phones-inner',$(this));
+    var $window = $(window);
+
+    function check_if_in_view() {
+      var window_height = $window.height();
+      var window_top_position = $window.scrollTop();
+      var window_bottom_position = (window_top_position + window_height);
+
+      $.each($animation_elements, function() {
+        var $element = $(this);
+        var element_height = $element.outerHeight();
+        var element_top_position = $element.offset().top;
+        var element_bottom_position = (element_top_position + element_height);
+
+        //check to see if this current container is within viewport
+        if ((element_bottom_position >= window_top_position) &&
+          (element_top_position <= window_bottom_position)) {
+          $element.addClass('in-view');
+        } else {
+          $element.removeClass('in-view');
+        }
+      });
+    }
+
+    $window.on('scroll resize', check_if_in_view);
+    $window.trigger('scroll');
+}
+
 $.fn.makeEqualHeight = function() {
     var context = $(this),
         $tiles = $('.home-featurs__item.-equal', context),
@@ -326,41 +358,36 @@ $.fn.handleModal = function() {
             validateForm();
         })
 
+        function closeSlider() {
+            $('.modal-contents', modal).removeClass('-active');
+            setTimeout(function() {
+                modal.removeClass('-active');
+                modal.empty();
+                modal.remove();
+                $('body').css('overflow','visible');
+                window.location.hash = 'close';
+            },300)
+        }
+
         $closeButton.click(function(e) {
             e.preventDefault();
-            modal.empty();
-            modal.removeClass('-active');
-            modal.remove();
-            $('body').css('overflow','visible');
-            window.location.hash = 'close';
+            closeSlider();
         });
 
         $headerCloseButton.click(function(e) {
             e.preventDefault();
-            modal.empty();
-            modal.removeClass('-active');
-            modal.remove();
-            $('body').css('overflow','visible');
-            window.location.hash = 'close';
+            closeSlider();
         });
 
         $thanksCloseBtn.click(function(e) {
             e.preventDefault();
-            modal.empty();
-            modal.removeClass('-active');
-            modal.remove();
-            $('body').css('overflow','visible');
-            window.location.hash = 'close';
+            closeSlider();
         })
 
         modal.click(function(e) {
             // close the modal when user clicks on the overlay
             if ($(e.target).hasClass('modal-overlay')) {
-                modal.empty();
-                modal.removeClass('-active');
-                modal.remove();
-                $('body').css('overflow','visible');
-                window.location.hash = 'close';
+                closeSlider();
             }
         })
 
@@ -380,7 +407,7 @@ $.fn.handleModal = function() {
         $overlay.addClass('-active');
         $('body').css('overflow','hidden');
         // load the modal content
-        $.get('business/includes/request-demo.html?cache=bust2', function(data) {
+        $.get('business/includes/request-demo.html?cache=bust3', function(data) {
             $overlay.html(data);
             setTimeout(function() {
                 $('.modal-contents', $overlay).addClass('-active');
@@ -429,5 +456,7 @@ $(function(){
   });
 
   $('.home-features').makeEqualHeight();
+
+  $('.section-features__inner').handleFeaturesAnimations()
 
 });
