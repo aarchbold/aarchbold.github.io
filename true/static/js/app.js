@@ -73,44 +73,68 @@ $.fn.handleCurrency = function(currencyOption) {
         $currencyRangeContainer = $('#rangeContainer',$context);
     var usdOptions = [
         {
-            value: '0-100',
-            label: '$0 - $100',
+            value: '< 100',
+            label: '< $100',
         },
         {
             value: '100-1000',
             label: '$100 - $1,000',
         },
         {
-            value: '1000-5000',
-            label: '$1000 - $5,000',
+            value: '1000-10000',
+            label: '$1,000 - $10,000',
+        },
+        {
+            value: '10000-50000',
+            label: '$10,000 - $50,000',
+        },
+        {
+            value: '50000+',
+            label: '$50,000 +',
         }
     ];
     var euroOptions = [
         {
-            value: '0-100',
-            label: '€0 - €100',
+            value: '< 100',
+            label: '< €100',
         },
         {
             value: '100-1000',
             label: '€100 - €1,000',
         },
         {
-            value: '1000-5000',
-            label: '€1000 - €5,000',
+            value: '1000-10000',
+            label: '€1,000 - €10,000',
+        },
+        {
+            value: '10000-50000',
+            label: '€10,000 - €50,000',
+        },
+        {
+            value: '50000+',
+            label: '€50,000 +',
         }
     ];
     var yenOptions = [
         {
-            value: '0-100',
-            label: '¥0 - ¥100',
+            value: '< 100',
+            label: '< ¥100',
         },
         {
             value: '100-1000',
             label: '¥100 - ¥1,000',
         },
         {
-            value: '1000-5000',
-            label: '¥1000 - ¥5,000',
+            value: '1000-10000',
+            label: '¥1,000 - ¥10,000',
+        },
+        {
+            value: '10000-50000',
+            label: '¥10,000 - ¥50,000',
+        },
+        {
+            value: '50000+',
+            label: '¥50,000 +',
         }
     ];
 
@@ -141,6 +165,7 @@ $.fn.handleCurrency = function(currencyOption) {
 
         window.setTimeout(function() {
             $('#signupCurrencyRange',$context).minimalect({
+                placeholder: '',
                 class_container: 'minict_wrapper signup-select -full'
             });
         })
@@ -185,7 +210,7 @@ var english = {
     body3: "Shortly, we’ll be launching the biggest token sale for a new social media platform in history, led by the biggest names in Silicon Valley.",
     body4: "We already have 2 million users, how would you like to share in our financial success?",
     contact: "Contact Us",
-    footer: "Copyright 2018 Hello Mobile Inc.",
+    footer: "저작권 2018 Hello Mobile Inc.",
     signupheader: "Save 25%",
     signuptext: "Sign up today to stay updated and get the same 25% discount the VCs get when the sale goes live later in 2018.",
     formfirstname: "First Name",
@@ -208,7 +233,7 @@ var korean = {
     body3: "곧 실리콘 밸리의 유명인사들이 이끄는 새로운 미디어 플렛폼을 위한 역사상 가장 큰 토큰 세일을 출시할 예정입니다.",
     body4: "저희는 벌써 이백만명의 회원이 가입되어 있습니다. 우리의 사업적 성공을 함께 나누시겠습니까?",
     contact: "고객 문의",
-    footer: "Copyright 2018 Hello Mobile Inc.",
+    footer: "저작권 2018 Hello Mobile Inc.",
     signupheader: "25% 절약하세요",
     signuptext: "오늘 가입하시고 가장 최신정보를 받으세요.  그리고 2018년 후반부 세일이 시작될때 벤처사업 자본가들이(VCs) 받는 것과 똑같은 25%의 디스카운트를 받으세요.",
     formfirstname: "이름",
@@ -217,12 +242,12 @@ var korean = {
     formcurrencytype: "How would you like to invest?",
     formamount: "투자하고 싶으신 금액",
     selectChoice: "Select a choice",
-    formerror: "Please enter a first name, last name, and valid email address.",
+    formerror: "이름, 성, 그리고 유효한 이메일 주소를 입력해 주십시요.",
     formbutton: "관심 있습니다. 가입하겠습니다.",
     success: "Success",
-    successbody1: "Your 25% discount is now guaranteed. We’ll send an email to <email> with your discount code before the sale goes live.",
-    successbody2: "Have a great day.",
-    successbody3: "- The Team @ True"
+    successbody1: "귀하께 약속드린 25%의 디스카운트를 지금 방금 보증 받으셨습니다. 세일이 시작되기전 저희가 <email> 이메일 주소로 디스카운트 코드를 보내드리겠습니다.",
+    successbody2: "좋은하루 보내세요.",
+    successbody3: "- TRUE 팀 드림"
 }
 function handleLocalizaion(langObj) {
     var currentLang;
@@ -289,15 +314,15 @@ $(function(){
     $('.language-selector').localizr();
 });
 var russian = {
-    header: "Facebook уже не исправить. Мы идем ему на смену.",
-    body1: "Этому миру нужна кардинально новая социальная сеть. Принципиально иное мобильное сообщество, основанное на подлинности, ограниченном распространении информации и приватности персональных данных.",
+    header: "Facebook уже не исправить - мы его заменим.",
+    body1: "Миру нужна принципиально новая социальная платформа. Мобильное сообщество, основанное на подлинности, ограниченном распространении информации и приватности персональных данных.",
     body2: "Хотите поддержать True?",
     body3: "В ближайшее время будет запущена крупнейшая в истории продажа токенов новой социальной платформы, при поддержке самых влиятельных персон Силиконовой Долины.",
     body4: "Уже сегодня нашим приложением пользуется 2 миллиона человек. Хотите разделить с нами грядущий финансовый успех?",
     contact: "Контакты",
     footer: "Copyright 2018 Hello Mobile Inc.",
     signupheader: "Сэкономьте 25%",
-    signuptext: "Подпишитесь сегодня, чтобы быть в курсе старта продаж в конце 2018 года и получить 25% скидку для будущих инвесторов.",
+    signuptext: "Подпишитесь сегодня, чтобы узнать о начале продаж в конце 2018 года и получить 25% скидку для будущих инвесторов.",
     formfirstname: "Имя",
     formlastname: "Фамилия",
     formemail: "Email",
@@ -308,6 +333,6 @@ var russian = {
     formbutton: "Подписаться!",
     success: "Поздравляем! ",
     successbody1: "Вам гарантирована скидка 25%. Скидочный код будет отправлен на вашу электронную почту перед началом продаж.",
-    successbody2: "Удачного вам дня!",
+    successbody2: "С наилучшими пожеланиями,",
     successbody3: "- Команда @True"
 }
