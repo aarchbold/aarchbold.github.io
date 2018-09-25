@@ -28,6 +28,7 @@ $.fn.handleSignUp = function() {
     })
 
     function submitForm() {
+        debug = false;
         postData = {
             firstName: $firstName.val(),
             lastName: $lastName.val(),
@@ -35,26 +36,60 @@ $.fn.handleSignUp = function() {
             currency: $('#signupCurrency',$context).val(),
             range: $('#signupCurrencyRange',$context).val()
         }
-        console.log('form post data:');
-        console.log(postData);
-        
+        if(debug) console.log('form post data:');
+        if(debug) console.log(postData);
+
+        var myUrl = $email.closest("form").prop("action");
+        if(debug) console.log('myUrl=' + myUrl);
+        window['SUBSCRIBE_SUCCESS']="";
+        $.ajax({
+            type: "POST",
+            url: myUrl,
+            data: postData,
+            success: function(msg) {
+
+                if(msg.indexOf($("#responseRegex").html()) >= 0) {
+                    if(debug) console.log('GOT GOOD(' + $("#responseRegex").html() + ' from:');
+                    if(debug) console.log(msg);
+                    window['SUBSCRIBE_SUCCESS'] = 'Y';
+
+                } else {
+                    if(debug) console.log('GOT FAILURE from:');
+                    if(debug) console.log(msg);
+
+                    window['SUBSCRIBE_SUCCESS'] = 'N';
+                }
+                // console.log(msg);
+                // alert("Form Submitted: " + msg);
+            }
+        });
+
+
+
     };
 
     function validateForm() {
         if ($firstName.val() === '' ||
             $lastName.val() === '' ||
             $email.val() === '') {
-            $error.show(); 
+            $error.show();
+            return false;
         } else {
             $throbber.css('height',$entryPanel.outerHeight() + 'px');
             $throbber.show();
-            submitForm();
-            window.setTimeout(function() {
-                $entryPanel.hide();
-                $successPanel.show();
-                $emailHolder.html($email.val());
-                localStorage.setItem('trueSignUpEmail',$email.val());
-            },2000);
+
+            var isGood = submitForm();
+
+            displayResultOfSubscribe();
+            /*
+             window.setTimeout(function() {
+             $entryPanel.hide();
+             $successPanel.show();
+             $emailHolder.html($email.val());
+             // localStorage.setItem('trueSignUpEmail',$email.val());
+             },2000);
+             */
+            return true;
         }
     };
     
@@ -62,10 +97,68 @@ $.fn.handleSignUp = function() {
     console.log($context);
 
     $submit.click(function(e) {
+        var debug = false;
+
+        if(debug) console.log('submit.click occurs.');
+        if(debug) console.log(e);
+
         e.preventDefault();
-        validateForm();
+
+        var rv = validateForm();
+        if(debug) console.log('after validateForm');
+        if(rv) {
+            return true;
+        } else {
+            return false;
+        }
     })
 }
+function displayResultOfSubscribe() {
+    var debug = false;
+
+    try { clearTimeout(window['_ST_displayResultOfSubscribe']); } catch(e) { }
+    var myAnswer = window['SUBSCRIBE_SUCCESS'];
+    if(myAnswer && (myAnswer != "") ) {
+        if(debug) console.log('got myAnswer: ' + myAnswer);
+        if(myAnswer == "Y") {
+            window.setTimeout(function() {
+
+                $('.home-signup__form-entry').hide();
+                $('.home-signup__form-success').show();
+                var successHtml =  $('.home-signup__form-success').html();
+                successHtml = successHtml.replace("&lt;email&gt;", "<span class='home-signup__success-email'>" + $('#formEmail').val() + "</span>");
+                //console.log('new text: ' + successHtml);
+                $('.home-signup__form-success').html(successHtml);
+                $('.home-signup__success-email').html($('#formEmail').val());
+                // localStorage.setItem('trueSignUpEmail',$email.val());
+                
+                if(window.handleLeadConversion) {
+                  //console.log('DO handleLeadConversion');
+                  
+                  handleLeadConversion($('#formEmail').val());
+                } else {
+                  //console.log('NO FUNC handleLeadConversion');
+                }
+                
+            },1000);
+        }
+        else {
+            window.setTimeout(function() {
+				//html($("#submissionFailureMessage").html()).
+                $('.home-signup__error').html($('#submissionErrorMssg').html()).show();
+                $('.home-signup__form-entry').show();
+
+                $('.home-signup__throbber').hide();
+                // $('.home-signup__form-failure').show();
+            },1000);
+        }
+    } else {
+        if(debug) console.log('no result yet. try again shortly.');
+
+        window['_ST_displayResultOfSubscribe'] = setTimeout(displayResultOfSubscribe,100);
+    }
+}
+
 
 $.fn.handleCurrency = function(currencyOption) {
     var $context = $(this),
@@ -150,14 +243,14 @@ $.fn.handleCurrency = function(currencyOption) {
         // remove select
         $('#signupCurrencyRange',$context).remove();
 
-        var $newSelect = $('<select id="signupCurrencyRange" class="home-signup__select"></select>');
+        var $newSelect = $('<select id="signupCurrencyRange" name="MERGE5" class="home-signup__select"></select>');
         $currencyRangeContainer.append($newSelect);
         looper.forEach(function(amount,index) {
             var option;
             if (index === 0) {
-                option = '<option selected="selected" value='+ amount.value +'>'+ amount.label +'</option>';
+                option = '<option selected="selected" value="'+ amount.value +'">'+ amount.label +'</option>';
             } else {
-                option = '<option value='+ amount.value +'>'+ amount.label +'</option>';
+                option = '<option value="'+ amount.value +'">'+ amount.label +'</option>';
             }
             $newSelect.append(option);
         })
@@ -180,8 +273,9 @@ $.fn.handleCurrency = function(currencyOption) {
 }
 
 $(function(){
+    var debug = false;
     console.log('Hello World!');
-    console.log($);
+    if(debug) console.log($);
     $("#signupCurrency").minimalect({
         placeholder: null,
         class_container: 'minict_wrapper signup-select -full'
@@ -210,7 +304,7 @@ var english = {
     body3: "Shortly, we’ll be launching the biggest token sale for a new social media platform in history, led by the biggest names in Silicon Valley.",
     body4: "We already have 2 million users, how would you like to share in our financial success?",
     contact: "Contact Us",
-    footer: "저작권 2018 Hello Mobile Inc.",
+    footer: "Copyright 2018 Hello Mobile Inc.",
     signupheader: "Save 25%",
     signuptext: "Sign up today to stay updated and get the same 25% discount the VCs get when the sale goes live later in 2018.",
     formfirstname: "First Name",
@@ -224,7 +318,8 @@ var english = {
     success: "Success",
     successbody1: "Your 25% discount is now guaranteed. We’ll send an email to <email> with your discount code before the sale goes live.",
     successbody2: "Have a great day.",
-    successbody3: "- The Team @ True"
+    successbody3: "- The Team @ True",
+    submissionerrormssg: "We couldn't validate your data. Please re-check your information and try again."
 }
 var korean = {
     header: "페이스북의 문제점은 쉽게 고쳐질수 없습니다, 그래서 저희가 그 역활을 대신하고자 합니다.",
@@ -241,22 +336,28 @@ var korean = {
     formemail: "이메일 주소",
     formcurrencytype: "How would you like to invest?",
     formamount: "투자하고 싶으신 금액",
-    selectChoice: "Select a choice",
+    selectChoice: "선택하세요",
     formerror: "이름, 성, 그리고 유효한 이메일 주소를 입력해 주십시요.",
     formbutton: "관심 있습니다. 가입하겠습니다.",
-    success: "Success",
+    success: "가입 성공을 축하 드립니다~!",
     successbody1: "귀하께 약속드린 25%의 디스카운트를 지금 방금 보증 받으셨습니다. 세일이 시작되기전 저희가 <email> 이메일 주소로 디스카운트 코드를 보내드리겠습니다.",
     successbody2: "좋은하루 보내세요.",
-    successbody3: "- TRUE 팀 드림"
+    successbody3: "- TRUE 팀 드림",
+    submissionerrormssg: "We couldn't validate your data. Please re-check your information and try again."
 }
-function handleLocalizaion(langObj) {
+function handleLocalizaion(language) {
     var currentLang;
-    $('.language-selector__current span').text(langObj.short);
-    if (langObj.full.toLowerCase() === 'english') {
+    $('.language-selector__item').each(function(i,e){
+        $(e).removeClass('-active');
+    });
+    $('[data-language='+language+']').addClass('-active');
+    $('.language-selector__current span').text(language);
+    
+    if (language === 'EN') {
         currentLang = english;
-    } else if (langObj.full.toLowerCase() === 'korean') {
+    } else if (language === 'KO') {
         currentLang = korean;
-    } else if (langObj.full.toLowerCase() === 'russian') {
+    } else if (language === 'RU') {
         currentLang = russian;
     }
     for (key in currentLang) {
@@ -296,20 +397,30 @@ $.fn.localizr = function() {
     });
 
     $languages.click(function(e) {
-        var currentLang = {
-            full: $(e.target).html(),
-            short: $(e.target).data('language')
-        }
-        localStorage.setItem('trueLanguage',JSON.stringify(currentLang));
+        var currentLang = $(e.target).data('language');
+        localStorage.setItem('trueLanguage',currentLang);
         handleLocalizaion(currentLang);
         toggleLayer();
     });
 }
 
+var getParameterByName = function (name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+};
+
 $(function(){
     console.log('Localizer');
-    if (localStorage.getItem('trueLanguage')) {
-        handleLocalizaion(JSON.parse(localStorage.getItem('trueLanguage')));
+    if (getParameterByName('lang')) {
+        localStorage.setItem('trueLanguage',getParameterByName('lang').toLocaleUpperCase());
+        handleLocalizaion(getParameterByName('lang').toUpperCase());
+    } else if (localStorage.getItem('trueLanguage')) {
+        handleLocalizaion(localStorage.getItem('trueLanguage'));
     }
     $('.language-selector').localizr();
 });
@@ -334,5 +445,6 @@ var russian = {
     success: "Поздравляем! ",
     successbody1: "Вам гарантирована скидка 25%. Скидочный код будет отправлен на вашу электронную почту перед началом продаж.",
     successbody2: "С наилучшими пожеланиями,",
-    successbody3: "- Команда @True"
+    successbody3: "- Команда @True",
+    submissionerrormssg: "We couldn't validate your data. Please re-check your information and try again."
 }

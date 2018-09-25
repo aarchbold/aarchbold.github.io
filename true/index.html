@@ -6,7 +6,7 @@
         <title>True - Facebook can't be fixed, so we're going to replace it.</title>
         <meta name="description" content="What the world needs now is a new generation social media platform that is fundamentally different in it’s incentives. A new kind of mobile community focused on authenticity, intimate sharing and personal data privacy.">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-        <meta property="og:image" content="http://aarchbold.github.io/true/static/images/logos/logo-share-true.png">
+        <meta property="og:image" content="static/images/logos/logo-share-true.png">
         <meta property="og:description" content="What the world needs now is a new generation social media platform that is fundamentally different in it’s incentives. A new kind of mobile community focused on authenticity, intimate sharing and personal data privacy.">
         <!-- <meta name="apple-itunes-app" content="app-id=730422337"/>
         <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
@@ -14,8 +14,8 @@
         <link rel="shortcut icon" href="https://s3.amazonaws.com/shyftassets/images/favicon.png" type="image/x-icon">
         <link rel="icon" href="https://s3.amazonaws.com/shyftassets/images/favicon.png" type="image/x-icon">
         -->
-        <script src="static/js/vendors.js?cache=bust2"></script>
-        <link rel="stylesheet" href="static/css/styles.css?cache=bust2">
+        <script src="static/js/vendors.js?cache=bust3"></script>
+        <link rel="stylesheet" href="static/css/styles.css?cache=bust3">
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -28,10 +28,19 @@
                     <div class="language-selector__arrow"></div>
                 </div>
                 <div class="language-selector__layer">
-                    <a href="#" data-language="EN" class="language-selector__item">English</a>
+                    <a href="#" data-language="EN" class="language-selector__item">
+                        EN
+                        <img src="static/images/icons/icon-check.png" />
+                    </a>
                     <!-- <a href="#" data-language="JA" class="language-selector__item">Japanese</a>-->
-                    <a href="#" data-language="RU" class="language-selector__item">Russian</a> 
-                    <a href="#" data-language="KO" class="language-selector__item">Korean</a>
+                    <a href="#" data-language="RU" class="language-selector__item">
+                        RU
+                        <img src="static/images/icons/icon-check.png" />
+                    </a> 
+                    <a href="#" data-language="KO" class="language-selector__item">
+                        KO
+                        <img src="static/images/icons/icon-check.png" />
+                    </a>
                     <!-- <a href="#" data-language="CH" class="language-selector__item">Chinese</a> -->
                 </div>
             </div>
@@ -72,20 +81,20 @@
                         </div>
                         <div class="home-signup__header" data-text="signupheader">Save 25%</div>
                         <div class="home-signup__intro" data-text="signuptext">Sign up today to stay updated and get the same 25% discount the VCs get when the sale goes live later in 2018.</div>
-                        <form autocomplete="off">
+                        <form autocomplete="off" action="posted.php" method="POST">
+                            <input type="hidden" id="form-version-code" value="VC25LIST">
                             <div class="home-signup__form">
-                                <input id="formFirstName" data-text="formfirstname" class="home-signup__input" type="text" placeholder="FIRST NAME" />
-                                <input id="formLastName" data-text="formlastname" class="home-signup__input" type="text" placeholder="LAST NAME" />
-                                <input id="formEmail" data-text="formemail" class="home-signup__input" type="text" placeholder="EMAIL ADDRESS" />
+                                <input name="MERGE1" id="formFirstName" data-text="formfirstname" class="home-signup__input" type="text" placeholder="FIRST NAME" />
+                                <input name="MERGE2" id="formLastName" data-text="formlastname" class="home-signup__input" type="text" placeholder="LAST NAME" />
+                                <input name="MERGE0" id="formEmail" data-text="formemail" class="home-signup__input" type="text" placeholder="EMAIL ADDRESS" />
                                 <div class="signup-select-wrapper">
-                                    <label data-text="formcurrencytype">HOW WOULD YOU LIKE TO INVEST?</label>
-                                    <select id="signupCurrency" class="home-signup__select">
+                                    <select name="MERGE6" id="signupCurrency" class="home-signup__select">
                                         <option value="USD">USD</option>
                                         <option value="EURO">EURO</option>
                                         <option value="YEN">YEN</option>
                                     </select>
                                 </div>
-                                <div id="rangeContainer" class="signup-select-wrapper">
+                                <div name="MERGE5" id="rangeContainer" class="signup-select-wrapper">
                                     <label data-text="formamount">AMOUNT INTERESTED IN INVESTING</label>
                                     <select id="signupCurrencyRange" class="home-signup__select">
                                         <!-- <option value="100-1000">$100 - $1000</option>
@@ -93,8 +102,11 @@
                                     </select>
                                 </div>
                                 <div class="home-signup__error" data-text="formerror">
-                                    Please enter a first name, last name, and valid email address.
+                                    sub: Please enter a first name, last name, and valid email address.
                                 </div>
+								
+                        		<div style="display:none" id="submissionErrorMssg" data-text="submissionerrormssg">sub. We couldn't validate your data. Please feel free to try the form again.</div>
+
                                 <div class="home-signup__cta">
                                     <button data-text="formbutton" type="submit" id="formSubmit" class="button button-signup">I'M INTERESTED, SIGN ME UP</button>
                                 </div>
@@ -107,6 +119,8 @@
                         <p data-text="successbody2">Have a great day.</p>
                         <p data-text="successbody3">- The Team @ True</p>
                     </div>
+                    
+
                 </div>
 
                 <div class="home-footer home-gutters">
@@ -115,12 +129,42 @@
                         <a href="https://play.google.com/store/apps/details?id=hellomobile.hello" target="_blank"><img class="home-footer__button" src="static/images/buttons/button-google-play.png" width="140" /></a>
                     </div>
                     <div class="home-footer__legal">
-                        <a href="#" data-text="contact">Contact Us</a> &bull; <span data-text="footer">Copyright 2018 Hello Mobile Inc.</span>
+                        <a href="#" data-text="contact">Contact Us</a> &bull; <span data-text="footer">Copyright 2018 Hello Mobile Inc.</span> | <span data-text="privacy"><a href="https://www.trueapp.co/privacy" target="_blank">Privacy</a></span>
                     </div>
                 </div>
             </div>
         </div>
+        <script src="static/js/app.js?cache=bust3"></script>
+		<script type="text/javascript" src="static/js/click_tracking.js"></script>
+<script>
+function handleLeadConversion(email_addr) {
+   var data = {
+     em: email_addr,
+     source: 'truetokensale.com',
+     unid: $("#form-version-code").val() + "-" + new Date().getTime(),
+     detail: "LANG=" + localStorage.getItem('trueLanguage') 
+       + "|CURR=" + $("#signupCurrency").val()
+       + "|RANGE=" + $("#signupCurrencyRange").val() 
+       + "|FN=" + $("#formFirstName").val() 
+       + "|LN=" + $("#formLastName").val() 
+       + "|EM=" + $("#formEmail").val() 
+     , 
+       
+     a: 1
+   };
+   return trackLead(data);
+}
+</script>   
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125567854-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-        <script src="static/js/app.js?cache=bust2"></script>
+  gtag('config', 'UA-125567854-1');
+</script>	
+<div style="display:none" id="responseRegex">~GOOD~</div><!-- a substring of posted.php success response -->
+
     </body>
 </html>
