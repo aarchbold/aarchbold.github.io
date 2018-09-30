@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="51px" height="50px" viewBox="0 0 51 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>facebook-black-social-button-circle</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ICO-Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy" transform="translate(-289.000000, -7561.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="facebook-black-social-button-circle" transform="translate(289.057609, 7561.000000)">
+                <path d="M50,25 C50,11.1931373 38.806781,0 25,0 C11.1931373,0 0,11.1931373 0,25 C0,38.806781 11.1931373,50 25,50 C38.806781,50 50,38.806781 50,25 Z M18.2863562,25 L18.2863562,20.2159314 L21.2181373,20.2159314 L21.2181373,17.3227124 C21.2181373,13.4204248 22.3840686,10.6090686 26.656781,10.6090686 L31.7385621,10.6090686 L31.7385621,15.381781 L28.1613562,15.381781 C26.3681373,15.381781 25.9612745,16.5727124 25.9612745,17.8204248 L25.9612745,20.2158497 L31.4749183,20.2158497 L30.7227124,25 L25.9614379,25 L25.9614379,39.4294935 L21.2181373,39.4294935 L21.2181373,25 L18.2863562,25 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
