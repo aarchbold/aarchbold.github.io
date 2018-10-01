@@ -1,10 +1,62 @@
-$.fn.exampleFunction = function() {
-    
+$.fn.localizr = function() {
+    var $context = $(this),
+        $current = $('.language-selector__current', $context),
+        $arrow = $('.language-selector__arrow', $context),
+        $layer = $('.language-selector__layer', $context),
+        $languages = $('.language-selector__item', $context);
+
+    function toggleLayer() {
+        if ($layer.hasClass('-active')) {
+            $arrow.removeClass('-active');
+            $layer.removeClass('-active');
+            $layer.hide();
+        } else {
+            $layer.show();
+            setTimeout(function() {
+                $arrow.addClass('-active');
+                $layer.addClass('-active');
+            },100)
+        }
+    }
+
+    $current.click(function() {
+        toggleLayer();
+    });
+
+    $languages.click(function(e) {
+        // var currentLang = $(e.target).data('language');
+        // localStorage.setItem('trueLanguage2',currentLang);
+        // handleLocalizaion(currentLang);
+        toggleLayer();
+    });
+}
+
+$.fn.handleNav = function() {
+    var $topnavLinks = $('.top-nav__link');
+    var $footerLinks = $('.footer-link');
+
+    function scrollToElement(clickedElement) {
+        var idAttr = '#' + clickedElement.attr('data-scroll-to');
+        //console.log(idAttr);
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $(idAttr).offset().top - 80
+        }, 800);
+    }
+
+    $topnavLinks.click(function(e) {
+        e.preventDefault();
+        scrollToElement($(this));
+    });
+    $footerLinks.click(function(e) {
+        e.preventDefault();
+        scrollToElement($(this));
+    });
 }
 
 $(function(){
-    console.log('Hello Marketing!');
-    console.log($);
+    $('.language-selector').localizr();
+    $('body').handleNav();
+
 
     var $win = $(window);
 
