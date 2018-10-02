@@ -180,7 +180,17 @@ section {
   background-image: linear-gradient(#DEFBFF, white 60%);
 }
 
+.home-header-scroller {
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  position: relative;
+}
+
 .presale-countdown {
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
   position: absolute;
   bottom: -200px;
   max-width: 535px;
@@ -677,9 +687,9 @@ section {
   background: transparent url(../images/bgs/bg-home5.png) 50% 50% no-repeat;
   background-size: 100%;
   z-index: 2;
-  -webkit-transform: translateY(-44.6743px);
-  -ms-transform: translateY(-44.6743px);
-  transform: translateY(-44.6743px);
+  -webkit-transform: translateY(-61.3069px);
+  -ms-transform: translateY(-61.3069px);
+  transform: translateY(-61.3069px);
 }
 
 /* Cap styles
