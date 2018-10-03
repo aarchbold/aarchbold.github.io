@@ -70,12 +70,34 @@ $.fn.fadeOnScroll = function() {
     });
 }
 
+$.fn.rotateGraphs = function() {
+    var $leftGraph = $('.roadmap-graphs__svg.-left-graph'),
+        $rightGraph = $('.roadmap-graphs__svg.-right-graph'),
+        rotation = 0, 
+        scrollLoc = $(document).scrollTop();
+    $(window).scroll(function() {
+        var newLoc = $(document).scrollTop();
+        var diff = scrollLoc - newLoc;
+        rotation += diff, scrollLoc = newLoc;
+        var rotationStr = "rotate(" + rotation + "deg)";
+        $leftGraph.css({
+            "-webkit-transform": rotationStr,
+            "-moz-transform": rotationStr,
+            "transform": rotationStr
+        });
+        $rightGraph.css({
+            "-webkit-transform": rotationStr,
+            "-moz-transform": rotationStr,
+            "transform": rotationStr
+        });
+    });
+}
+
 $(function(){
     $('.language-selector').localizr();
     $('body').handleNav();
-
-
     $('.home-header-scroller').fadeOnScroll();
+    $('.roadmap-graphs').rotateGraphs();
 
     var $win = $(window);
 
