@@ -1,3 +1,21 @@
+function getParam(name) {
+    SCH = document.location.search;
+    if(window['W3T'] && (W3T['MORE_ARGS'] != "")) {
+        SCH += "&" + W3T['MORE_ARGS'];
+    }
+    SCH = "?&" + SCH.substring(1,SCH.length);
+    // alert('SCH = ' + SCH);
+    var start = SCH.indexOf("&" + name+"=");
+    var len = start+name.length+2;
+    if ((!start) && (name != SCH.substring(0,name.length))) return("");
+    if (start == -1) return "";
+    var end = SCH.indexOf("&",len);
+    if (end == -1) end = SCH.length;
+    // alert('finished getting parm ' + name);
+    return unescape(SCH.substring(len,end));
+}
+
+
 $.fn.handleSignUp = function() {
     var $context = $(this);
     var $entryPanel = $('.home-signup__form-entry',$context),
@@ -9,14 +27,16 @@ $.fn.handleSignUp = function() {
         $error = $('.home-signup__error',$context),
         $throbber = $('.home-signup__throbber',$context),
         $emailHolder = $('.home-signup__success-email');
-    
+    /*
     if (localStorage.getItem('trueSignUpEmail')) {
         $emailHolder.html(localStorage.getItem('trueSignUpEmail'));
         $successPanel.fadeIn();
     } else {
+
         $entryPanel.fadeIn();
     }
-
+    */
+    $entryPanel.fadeIn();
     $firstName.keyup(function(){
         $error.hide();
     })
@@ -29,6 +49,7 @@ $.fn.handleSignUp = function() {
 
     function submitForm() {
         debug = false;
+	if(getParam('debug_post') == "Y") { debug = true; }
         postData = {
             firstName: $firstName.val(),
             lastName: $lastName.val(),
@@ -36,8 +57,15 @@ $.fn.handleSignUp = function() {
             currency: $('#signupCurrency',$context).val(),
             range: $('#signupCurrencyRange',$context).val()
         }
+       
         if(debug) console.log('form post data:');
         if(debug) console.log(postData);
+	var urlstr = ""; 
+  	for (var key in postData) { 
+	   urlstr += escape(key) + "=" + escape(postData[key]) + "&";
+	}
+	urlstr += "debug_post=Y";
+        if(debug) console.log('as URLARGS: ' + urlstr);
 
         var myUrl = $email.closest("form").prop("action");
         if(debug) console.log('myUrl=' + myUrl);
@@ -230,6 +258,72 @@ $.fn.handleCurrency = function(currencyOption) {
             label: '¥50,000 +',
         }
     ];
+    var wonOptions = [
+        {
+            value: '< 100',
+            label: '< ₩100',
+        },
+        {
+            value: '100-1000',
+            label: '₩100 - ₩1,000',
+        },
+        {
+            value: '1000-10000',
+            label: '₩1,000 - ₩10,000',
+        },
+        {
+            value: '10000-50000',
+            label: '₩10,000 - ₩50,000',
+        },
+        {
+            value: '50000+',
+            label: '₩50,000 +',
+        }
+    ];
+    var rubOptions = [
+        {
+            value: '< 100',
+            label: '< ₽100',
+        },
+        {
+            value: '100-1000',
+            label: '₽100 - ₽¥1,000',
+        },
+        {
+            value: '1000-10000',
+            label: '₽1,000 - ₽10,000',
+        },
+        {
+            value: '10000-50000',
+            label: '₽10,000 - ₽50,000',
+        },
+        {
+            value: '50000+',
+            label: '₽50,000 +',
+        }
+    ];
+    var yuanOptions = [
+        {
+            value: '< 100',
+            label: '< ¥100',
+        },
+        {
+            value: '100-1000',
+            label: '¥100 - ¥1,000',
+        },
+        {
+            value: '1000-10000',
+            label: '¥1,000 - ¥10,000',
+        },
+        {
+            value: '10000-50000',
+            label: '¥10,000 - ¥50,000',
+        },
+        {
+            value: '50000+',
+            label: '¥50,000 +',
+        }
+    ];
 
     function updateCurrencyOptions(currency) {
         var looper = [];
@@ -237,8 +331,14 @@ $.fn.handleCurrency = function(currencyOption) {
             looper = usdOptions;
         } else if (currency === 'EURO') {
             looper = euroOptions;
+        } else if (currency === 'WON') {
+            looper = wonOptions;
+        } else if (currency === 'RUB') {
+            looper = rubOptions;
         } else if (currency === 'YEN') {
-            looper = yenOptions;
+            looper = yenOptions;    
+        } else if (currency === 'YUAN') {
+            looper = yuanOptions;    
         }
         // remove select
         $('#signupCurrencyRange',$context).remove();
@@ -272,15 +372,37 @@ $.fn.handleCurrency = function(currencyOption) {
     updateCurrencyOptions(currencyOption);
 }
 
+$.fn.rotateGraphs = function() {
+    var $leftGraph = $('.roadmap-graphs__svg.-left-graph'),
+        rotation = 0, 
+        scrollLoc = $(document).scrollTop();
+    $(window).scroll(function() {
+        var newLoc = $(document).scrollTop();
+        var diff = scrollLoc - newLoc;
+        rotation += diff, scrollLoc = newLoc;
+        var rotationStr = "rotate(" + rotation + "deg)";
+        $leftGraph.css({
+            "-webkit-transform": rotationStr,
+            "-moz-transform": rotationStr,
+            "transform": rotationStr
+        });
+        // $rightGraph.css({
+        //     "-webkit-transform": rotationStr,
+        //     "-moz-transform": rotationStr,
+        //     "transform": rotationStr
+        // });
+    });
+}
+
 $(function(){
     var debug = false;
-    console.log('Hello World!');
     if(debug) console.log($);
     $("#signupCurrency").minimalect({
         placeholder: null,
         class_container: 'minict_wrapper signup-select -full'
     });
 
+    $('.roadmap-graphs').rotateGraphs();
     $('.home-signup').handleSignUp();
     $('.home-signup__form').handleCurrency('USD');
 
@@ -297,6 +419,30 @@ $(function(){
         });
     });
 });
+var chinese = {
+    header: "Facebook 是改不好的, 所以我们要取代它。",
+	body1: "世界现在需要的是新一代的，激励机制完全不同的社交媒体平台。 需要的是一种新型的，重视真实性，亲密共享和个人数据隐私的移动社区。",
+	body2: "您对支持True感兴趣吗?",
+	body3: "最近,我们将推出一个由硅谷大人物发起的新社交媒体平台史上最大的代币销售活动.",
+	body4: "我们已经拥有200万用户，您想怎么分享我们的财务成功呢?",
+	contact: "联系我们",
+	footer: "版权所有2018 Hello Mobile 公司..",
+	signupheader: "节省25%",
+	signuptext: "立即注册，持续获取最新动态，并在2018年晚些时候的销售中获得25％折扣.",
+	formfirstname: "名字",
+	formlastname: "姓",
+	formemail: "邮箱地址",
+	formcurrencytype: "您想怎么投资?",
+	formamount: "感兴趣的投资额",
+	selectChoice: "选择一个选项",
+	formerror: "请输入您的名字, 姓氏, 以及有效的邮箱地址.",
+	formbutton: "我感兴趣,报名参加",
+	success: "成功",
+	successbody1: "现在您已确定会获得25%的折扣。我们会在销售开始前，将折扣码发送至您的<email>邮箱。",
+	successbody2: "祝您愉快。",
+	successbody3: "- 团队 @True",
+	submissionerrormssg: "我们无法验证您的数据。 请重新核对您的信息，然后重试。"
+}
 var english = {
     header: "Facebook can't be fixed, so we're going to replace it.",
     body1: "What the world needs now is a new generation social media platform that is fundamentally different in it’s incentives. A new kind of mobile community focused on authenticity, intimate sharing and personal data privacy.",
@@ -321,6 +467,30 @@ var english = {
     successbody3: "- The Team @ True",
     submissionerrormssg: "We couldn't validate your data. Please re-check your information and try again."
 }
+var japanese = {
+    header: "フェイスブックは修正できないので、私たちが代替します。",
+    body1: "今、世の中に必要なものは次世代のソーシャルメディアプラットフォーム。確実性、親密な共有、個人情報の安全性に特化した、新しいモバイルコミュニティ。",
+    body2: "Trueをサポートすることに興味がありますか？",
+    body3: "間もなく、私たちはシリコンバレーのビッグネーム達による先導で、かつてないほどに大規模なトークンセールを、新しいソーシャルメディアプラットフォームのために開催します。",
+    body4: "私たちはすでに２００万人のユーザーを獲得しています。我々のファイナンシャルサクセスに参加しませんか？",
+    contact: "コンタクト",
+    footer: "Copyright 2018 Hello Mobile Inc.",
+    signupheader: "今日、登録してください。",
+    signuptext: "最新情報とセールが2018年後半に開始されるとき、VCが得るのと同じ25%の割引を得られます。",
+    formfirstname: "名",
+    formlastname: "姓",
+    formemail: "Eメール",
+    formcurrencytype: "どのように投資したいですか？",
+    formamount: "投資したい額",
+    selectChoice: "選択して下さい",
+    formerror: "氏名、Eメールアドレスをご記入ください。",
+    formbutton: "サインアップします",
+    success: "サクセス",
+    successbody1: "25%ディスカウントが確約されました。セールが開始される前に、ディスカウントコードがのったEメールを <email> 宛てに、お送りいたします。",
+    successbody2: "",
+    successbody3: "チーム@トゥルー",
+    submissionerrormssg: "あなたのデータを検証できませんでした。情報を再確認後、もう一度お試しください。"
+}
 var korean = {
     header: "페이스북의 문제점은 쉽게 고쳐질수 없습니다, 그래서 저희가 그 역활을 대신하고자 합니다.",
     body1: "지금 세계가 필요로 하는건 인센티브가 근본적으로 다른 새로운 세대의 소셜 미디어 플렛폼 입니다. 진실성, 친밀감 공유, 그리고 개인 사생활 자료를 초점으로 한 새로운 종류의 모빌 커뮤니티 (유동 공동체).",
@@ -334,7 +504,7 @@ var korean = {
     formfirstname: "이름",
     formlastname: "성",
     formemail: "이메일 주소",
-    formcurrencytype: "How would you like to invest?",
+    formcurrencytype: "어떻게 투자하고 싶니?",
     formamount: "투자하고 싶으신 금액",
     selectChoice: "선택하세요",
     formerror: "이름, 성, 그리고 유효한 이메일 주소를 입력해 주십시요.",
@@ -343,22 +513,33 @@ var korean = {
     successbody1: "귀하께 약속드린 25%의 디스카운트를 지금 방금 보증 받으셨습니다. 세일이 시작되기전 저희가 <email> 이메일 주소로 디스카운트 코드를 보내드리겠습니다.",
     successbody2: "좋은하루 보내세요.",
     successbody3: "- TRUE 팀 드림",
-    submissionerrormssg: "We couldn't validate your data. Please re-check your information and try again."
+    submissionerrormssg: "귀하의 데이터를 확인할 수 없습니다. 정보를 확인하고 다시 시도하십시오."
 }
 function handleLocalizaion(language) {
     var currentLang;
+	var flag;
     $('.language-selector__item').each(function(i,e){
         $(e).removeClass('-active');
     });
     $('[data-language='+language+']').addClass('-active');
-    $('.language-selector__current span').text(language);
-    
+    //$('.language-selector__current span').text(language);
+	
+	// 
     if (language === 'EN') {
         currentLang = english;
+		flag = "us";
     } else if (language === 'KO') {
         currentLang = korean;
+		flag = "korea";
     } else if (language === 'RU') {
         currentLang = russian;
+		flag = "russia";
+    } else if (language === 'JP') {
+        currentLang = japanese;
+		flag = "japan";
+    } else if (language === 'CH') {
+        currentLang = chinese;
+		flag = "china";
     }
     for (key in currentLang) {
         if (key === 'formfirstname' ||
@@ -369,6 +550,8 @@ function handleLocalizaion(language) {
             $('[data-text='+key+']').text(currentLang[key]);
         }
     }
+	$('.language-selector__current span').html('<img src="static/images/icons/'+ flag +'.png" class="flag" /> ' + language);
+   
 }
 
 $.fn.localizr = function() {
@@ -439,8 +622,8 @@ var russian = {
     signuptext: "Подпишитесь сегодня, чтобы узнать о начале продаж в конце 2018 года и получить 25% скидку для будущих инвесторов.",
     formfirstname: "Имя",
     formlastname: "Фамилия",
-    formemail: "Email",
-    formcurrencytype: "How would you like to invest?",
+    formemail: "Емейл",
+    formcurrencytype: "Как вы хотели бы инвестировать?",
     formamount: "Желаемая сумма инвестиций",
     selectChoice: "Доступные варианты",
     formerror: "Пожалуйста, введите ваше имя, фамилию и действующий email.",
@@ -449,5 +632,5 @@ var russian = {
     successbody1: "Вам гарантирована скидка 25%. Скидочный код будет отправлен на вашу электронную почту перед началом продаж.",
     successbody2: "С наилучшими пожеланиями,",
     successbody3: "- Команда @True",
-    submissionerrormssg: "We couldn't validate your data. Please re-check your information and try again."
+    submissionerrormssg: "Пожалуйста, введите правильный адрес электронной почты."
 }

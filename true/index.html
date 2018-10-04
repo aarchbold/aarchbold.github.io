@@ -5,7 +5,7 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>True - Facebook can't be fixed, so we're going to replace it.</title>
         <meta name="description" content="What the world needs now is a new generation social media platform that is fundamentally different in it’s incentives. A new kind of mobile community focused on authenticity, intimate sharing and personal data privacy.">
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta property="og:image" content="static/images/logos/logo-share-true.png">
         <meta property="og:description" content="What the world needs now is a new generation social media platform that is fundamentally different in it’s incentives. A new kind of mobile community focused on authenticity, intimate sharing and personal data privacy.">
         <!-- <meta name="apple-itunes-app" content="app-id=730422337"/>
@@ -14,32 +14,39 @@
         <link rel="shortcut icon" href="https://s3.amazonaws.com/shyftassets/images/favicon.png" type="image/x-icon">
         <link rel="icon" href="https://s3.amazonaws.com/shyftassets/images/favicon.png" type="image/x-icon">
         -->
-        <script src="static/js/vendors.js?cache=bust3"></script>
-        <link rel="stylesheet" href="static/css/styles.css?cache=bust3">
+        <script src="static/js/vendors.js?cache=bust5"></script>
+        <link rel="stylesheet" href="static/css/styles.css?cache=bust5">
     </head>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div class="page-container scrollerino">
+        <div class="page-container">
             <div class="language-selector">
                 <div class="language-selector__current">
-                    <span>EN</span>
+                    <span><img src="static/images/icons/us.png" class="flag" /> EN</span>
                     <div class="language-selector__arrow"></div>
                 </div>
                 <div class="language-selector__layer">
                     <a href="#" data-language="EN" class="language-selector__item">
-                        EN
-                        <img src="static/images/icons/icon-check.png" />
+                        <img src="static/images/icons/us.png" class="flag" /> EN
+                        <img src="static/images/icons/icon-check.png" class="check" />
                     </a>
-                    <!-- <a href="#" data-language="JA" class="language-selector__item">Japanese</a>-->
+                    <a href="#" data-language="JP" class="language-selector__item">
+                        <img src="static/images/icons/japan.png" class="flag" /> JP
+                        <img src="static/images/icons/icon-check.png" class="check"/>
+                    </a>
                     <a href="#" data-language="RU" class="language-selector__item">
-                        RU
-                        <img src="static/images/icons/icon-check.png" />
+                        <img src="static/images/icons/russia.png" class="flag" /> RU
+                        <img src="static/images/icons/icon-check.png" class="check" />
                     </a> 
                     <a href="#" data-language="KO" class="language-selector__item">
-                        KO
-                        <img src="static/images/icons/icon-check.png" />
+                        <img src="static/images/icons/korea.png" class="flag" /> KO
+                        <img src="static/images/icons/icon-check.png" class="check" />
+                    </a>
+                    <a href="#" data-language="CH" class="language-selector__item">
+                        <img src="static/images/icons/china.png" class="flag" /> CH
+                        <img src="static/images/icons/icon-check.png" class="check" />
                     </a>
                     <!-- <a href="#" data-language="CH" class="language-selector__item">Chinese</a> -->
                 </div>
@@ -47,7 +54,8 @@
             <img class="home-comet1" src="static/images/comet.png" />
             <img class="home-comet2" src="static/images/comet.png" />
             <img class="home-comet3" src="static/images/comet.png" />
-            <div class="home-container">
+            <div class="home-container scrollerino">
+                <div class="home-inner">  
                 <div class="home-header home-gutters">
                     <img class="home-logo" src="static/images/logos/logo-true.png" width="147" />
                     <h1 class="home-title" data-text="header">
@@ -88,10 +96,14 @@
                                 <input name="MERGE2" id="formLastName" data-text="formlastname" class="home-signup__input" type="text" placeholder="LAST NAME" />
                                 <input name="MERGE0" id="formEmail" data-text="formemail" class="home-signup__input" type="text" placeholder="EMAIL ADDRESS" />
                                 <div class="signup-select-wrapper">
+									<label data-text="formcurrencytype">HOW WOULD YOU LIKE TO INVEST?</label>
                                     <select name="MERGE6" id="signupCurrency" class="home-signup__select">
                                         <option value="USD">USD</option>
                                         <option value="EURO">EURO</option>
                                         <option value="YEN">YEN</option>
+										<option value="RUB">RUB</option>
+										<option value="WON">WON</option>
+										<option value="YUAN">YUAN</option>
                                     </select>
                                 </div>
                                 <div name="MERGE5" id="rangeContainer" class="signup-select-wrapper">
@@ -102,10 +114,10 @@
                                     </select>
                                 </div>
                                 <div class="home-signup__error" data-text="formerror">
-                                    sub: Please enter a first name, last name, and valid email address.
+                                    Please enter a first name, last name, and valid email address.
                                 </div>
 								
-                        		<div style="display:none" id="submissionErrorMssg" data-text="submissionerrormssg">sub. We couldn't validate your data. Please feel free to try the form again.</div>
+                        		<div style="display:none" id="submissionErrorMssg" data-text="submissionerrormssg">We couldn’t validate your data. Please re-check your information and try again.</div>
 
                                 <div class="home-signup__cta">
                                     <button data-text="formbutton" type="submit" id="formSubmit" class="button button-signup">I'M INTERESTED, SIGN ME UP</button>
@@ -119,22 +131,137 @@
                         <p data-text="successbody2">Have a great day.</p>
                         <p data-text="successbody3">- The Team @ True</p>
                     </div>
-                    
 
                 </div>
 
-                <div class="home-footer home-gutters">
-                    <div class="home-footer__app-buttons">
-                        <a href="https://itunes.apple.com/us/app/apple-store/id834451429?mt=8" target="_blank"><img class="home-footer__button" src="static/images/buttons/button-appstore.png" width="140" /></a>
-                        <a href="https://play.google.com/store/apps/details?id=hellomobile.hello" target="_blank"><img class="home-footer__button" src="static/images/buttons/button-google-play.png" width="140" /></a>
+                </div>
+                <img class="home-footer-image" src="static/images/bgs/bg-background-footer.png" width="100%" />
+            </div>
+            <div class="social-media">
+                <div class="social-media__row">
+                    <div class="social-media__col">
+                        <h2 class="social-media__header">
+                            WHY IS SOCIAL NETWORKING BROKEN?
+                        </h2>
+                        <p>The largest social media platforms have become surveillance empires that prepetually manipulate your attention, secretly harvest your personal data and influence your behavior in order to profit.</p>
                     </div>
-                    <div class="home-footer__legal">
-                        <a href="#" data-text="contact">Contact Us</a> &bull; <span data-text="footer">Copyright 2018 Hello Mobile Inc.</span> | <span data-text="privacy"><a href="https://www.trueapp.co/privacy" target="_blank">Privacy</a></span>
+                    <div class="social-media__col">
+                        <div class="social-media__infographic">
+                            <div class="social-media__tag -brother">
+                                <img src="static/images/icons/icon-eye.svg" />
+                                <strong>Big Brother</strong>
+                                Surveillance
+                            </div>
+                            <div class="social-media__tag -leaks">
+                                <img src="static/images/icons/icon-warning.svg" />
+                                <strong>Privacy</strong>
+                                Leaks
+                            </div>
+                            <div class="social-media__tag -fakenews">
+                                <img src="static/images/icons/icon-paper.svg" />
+                                <strong>Influence</strong>
+                                Fake News
+                            </div>
+                            <img class="cyclist" src="static/images/cyclist.png" />
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="tokenization">
+                <div class="tokenization-header">
+                    <h2>
+                        TOKENIZATION WITH TRUE COIN
+                    </h2>
+                    <p>With TrueCoin, the opportunity is not to issue yet-another token, but to re-invent the medium by integrating cryptocurrency and the value of trade at its core.</p>
+                </div>
+                <div class="tokenization__row">
+                    <div class="tokenization__col">
+                        <div class="tokenization__col--inner">
+                            <div class="tokenization__col--img">
+                                <img src="static/images/logos/logo-true-blue.svg" />
+                            </div>
+                            <p>TRUE COIN CAN PERFORM MANY FUNCTIONS</p>
+                        </div>
+                    </div>
+
+                    <div class="tokenization__col">
+                        <div class="tokenization__col--inner">
+                            <div class="tokenization__col--img">
+                                <img src="static/images/icons/icon-work-token.svg" />
+                            </div>
+                            <p>As a work (utility) token, it will handle transaction settlements, rm fundraising and philanthropic engagements</p>
+                        </div>
+                    </div>
+
+                    <div class="tokenization__col">
+                        <div class="tokenization__col--inner">
+                            <div class="tokenization__col--img">
+                                <img src="static/images/icons/icon-discount-token.svg" />
+                            </div>
+                            <p>As discount token it will allow access to paywalls, benefit from price cuts in purchases of products and services, and may alter royalty streams</p>
+                        </div>
+                    </div>
+
+                    <div class="tokenization__col">
+                        <div class="tokenization__col--inner">
+                            <div class="tokenization__col--img">
+                                <img src="static/images/icons/icon-staking-token.svg" />
+                            </div>
+                            <p>As a staking token it may grant the user access to VIP events</p>
+                        </div>
+                    </div>
+
+                    <div class="tokenization__col">
+                        <div class="tokenization__col--inner">
+                            <div class="tokenization__col--img">
+                                <img src="static/images/icons/icon-voting-mechanism.svg" />
+                            </div>
+                            <p>As voting mechanism, will allow users to contribute to the direction of the network’s future development, make community decisions, and become politically involved</p>
+                        </div>
+                    </div>
+
+                    <div class="tokenization__col">
+                        <div class="tokenization__col--inner">
+                            <div class="tokenization__col--img">
+                                <img src="static/images/icons/icon-asset.svg" />
+                            </div>
+                            <p>As an asset, the token may represent blocks of advertising capacity (a futures contract)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="roadmap-graphs__container">
+                <div class="roadmap-graphs">
+                    <h3>Token Distribution</h3>
+                    <div class="roadmap-graphs__col">
+                        <img class="roadmap-graphs__svg -left-graph" src="static/images/roadmap/data-viz1.svg" />
+                    </div>
+                    <div class="roadmap-graphs__col">
+                        <ul class="roadmap-graphs__ul roadmap-graphs__ul--right">
+                            <li class="roadmap-graphs__item -blue">35% PUBLIC SALE (ICO)</li>
+                            <li class="roadmap-graphs__item -red">20% RESERVE POOL</li>
+                            <li class="roadmap-graphs__item -lightblue">15% TEAM</li>
+                            <li class="roadmap-graphs__item -lightgreen">15% NETWORK GROWTH</li>
+                            <li class="roadmap-graphs__item -darkgreen">10% AIR DROPS/BIZ DEV</li>
+                            <li class="roadmap-graphs__item -yellow">5% ADVISORS, CONSULTANTS, PARTNERS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="home-footer home-gutters">
+                <div class="home-footer__app-buttons">
+                    <a href="https://itunes.apple.com/us/app/apple-store/id834451429?mt=8" target="_blank"><img class="home-footer__button" src="static/images/buttons/button-appstore.png" width="140" /></a>
+                    <a href="https://play.google.com/store/apps/details?id=hellomobile.hello" target="_blank"><img class="home-footer__button" src="static/images/buttons/button-google-play.png" width="140" /></a>
+                </div>
+                <div class="home-footer__legal">
+                    <a href="#" data-text="contact">Contact Us</a> &bull; <span data-text="footer">Copyright 2018 Hello Mobile Inc.</span> | <span data-text="privacy"><a href="https://www.trueapp.co/privacy" target="_blank">Privacy</a></span>
+                </div>
+            </div>
         </div>
-        <script src="static/js/app.js?cache=bust3"></script>
+        <script src="static/js/app.js?cache=bust6"></script>
 		<script type="text/javascript" src="static/js/click_tracking.js"></script>
 <script>
 function handleLeadConversion(email_addr) {
