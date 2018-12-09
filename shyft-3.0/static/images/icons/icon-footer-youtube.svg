@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Youtube</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="breakpoint--xlarge-[desktop-wide]" transform="translate(-321.000000, -1723.000000)">
+            <g id="Footer" transform="translate(0.000000, 1415.000000)">
+                <g id="Group-4" transform="translate(165.000000, 74.000000)">
+                    <g id="Social-Links" transform="translate(0.000000, 208.000000)">
+                        <g id="Group-5" transform="translate(0.000000, 26.000000)">
+                            <g id="Youtube" transform="translate(156.000000, 0.000000)">
+                                <path d="M2,16.5 C2,9.04415551 8.04415551,3 15.5,3 C22.9558445,3 29,9.04415551 29,16.5 C29,23.9558445 22.9558445,30 15.5,30 C8.04415551,30 2,23.9558445 2,16.5 Z" id="back-copy-5" fill="#FFFFFF"></path>
+                                <path d="M0,15 C0,6.71572834 6.71572834,0 15,0 C23.2842717,0 30,6.71572834 30,15 C30,23.2842717 23.2842717,30 15,30 C6.71572834,30 0,23.2842717 0,15 Z" id="back" fill="#FFFFFF"></path>
+                                <path d="M22.6656364,11.8738387 C22.4816364,11.1362258 21.9394545,10.5553871 21.251,10.3582581 C20.0033636,10 15,10 15,10 C15,10 9.99663636,10 8.74890909,10.3582581 C8.06045455,10.5553871 7.51827273,11.1362258 7.33427273,11.8738387 C7,13.2106774 7,16 7,16 C7,16 7,18.7892258 7.33427273,20.1261613 C7.51827273,20.8637742 8.06045455,21.4446129 8.74890909,21.6418387 C9.99663636,22 15,22 15,22 C15,22 20.0033636,22 21.251,21.6418387 C21.9394545,21.4446129 22.4816364,20.8637742 22.6656364,20.1261613 C23,18.7892258 23,16 23,16 C23,16 23,13.2106774 22.6656364,11.8738387" id="Fill-1" fill="#1C1D1E"></path>
+                                <polygon id="Fill-2" fill="#FFFFFF" points="14 18 14 13 18 15.5000955"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
