@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="19px" viewBox="0 0 27 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>🔴 Icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Buttons/Icon-Right/Small/White-Outline/DesktopLogin-Normal" transform="translate(-56.000000, -9.000000)" stroke="#1C1D1E">
+            <g id="Buttons/Icon-Right/Small/White-Outline/Normal">
+                <g id="Buttons/Icon-Right/Small/White/Normal">
+                    <g id="🔴-Icon" transform="translate(57.000000, 9.000000)">
+                        <g id="🔹-Icon-Color" transform="translate(0.125000, 0.625000)">
+                            <g id="Group">
+                                <path d="M8.13813559,6.08734756 C9.22881356,2.68682927 12.375,0.209908537 16.1504237,0.209908537 C20.7648305,0.209908537 24.5402542,3.9882622 24.5402542,8.60625 C24.5402542,13.2242378 20.7648305,17.0025915 16.1504237,17.0025915 C12.375,17.0025915 9.22881356,14.5256707 8.13813559,11.1251524" id="Path" stroke-width="1.48945779"></path>
+                                <path d="M0.209745763,8.60625 L17.8283898,8.60625" id="Path" stroke-width="1.48945779"></path>
+                                <polyline id="Path" stroke-width="1.48945779" points="13.6334746 4.40807927 17.8283898 8.60625 13.6334746 12.8044207"></polyline>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
