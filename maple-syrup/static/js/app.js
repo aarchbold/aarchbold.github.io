@@ -18,12 +18,57 @@
 
 $.fn.handleTextLink = function() {
     var $container = $(this),
+        $formContainer = $('.footer-download-link__form--show', $container),
         $button = $('.button', $container),
-        $form = $('input', $container);
+        $spinner = $('#newsletterSpinner', $container),
+        $form = $('input', $container),
+        $success = $('.-success', $container),
+        $fail = $('.-error', $container),
+        linkData = {
+            tags: [],
+            channel: 'Website',
+            feature: 'TextMeTheApp',
+            data: {
+              'foo': 'bar'
+            }
+        },
+        options = {};
     
+    var submitting = function() {
+        $button.hide();
+        $spinner.css('display','inline-block');
+        $form.prop('disabled',true);
+        $success.hide();
+        $fail.hide();
+    }
+
+    var complete = function(hasError) {
+        if (hasError) {
+            $spinner.hide();
+            $form.prop('disabled',false);
+            $fail.show();
+            $button.show();
+        } else {
+            $formContainer.hide();
+            $success.show();
+        }
+    }
+    
+    var callback = function(err, result) {
+        if (err) {
+            complete(true);
+        }
+        else {
+            complete(false);
+        }
+      };
+
     $button.click(function(e){
-        alert('TODO: add functionality for sending text links')
+        submitting();
+        console.log($success);
+        branch.sendSMS($form.val(), linkData, options, callback);
     });
+
 }
 
 $(function(){
