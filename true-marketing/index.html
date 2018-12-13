@@ -25,18 +25,7 @@
         <div class="page-container">
             <section class="home-intro">
                 <nav class="top-nav">
-                    <img src="static/images/logos/true-logo-dark.svg" />
-                    <ul class="top-nav__menu">
-                        <li class="top-nav__item">
-                            <a href="#" data-scroll-to="whatIsTrue" class="top-nav__link">What is True?</a>
-                        </li>
-                        <li class="top-nav__item">
-                            <a href="#" data-scroll-to="theTeam" class="top-nav__link">Team</a>
-                        </li>
-                        <li class="top-nav__item">
-                            <a href="#" data-scroll-to="theRoadmap" class="top-nav__link">Key Dates</a>
-                        </li>
-                    </ul>
+                    <img class="top-nav__logo" src="static/images/logos/true-logo-dark.svg" />
                     <div class="language-selector">
                         <div class="language-selector__current">
                             <span><img src="static/images/icons/us.png" class="language-selector__flag" /> EN</span>
@@ -63,8 +52,33 @@
                                 <img src="static/images/icons/china.png" class="language-selector__flag" /> CH
                                 <img src="static/images/icons/icon-check.png" class="language-selector__check" />
                             </a>
+                            
                         </div>
                     </div>
+                    <ul class="top-nav__menu">
+                        <li class="top-nav__item">
+                            <a href="#" data-scroll-to="whatIsTrue" class="top-nav__link">How it works</a>
+                        </li>
+                        <li class="top-nav__item">
+                            <a href="#" data-scroll-to="theTeam" class="top-nav__link">Token Sale</a>
+                        </li>
+                        <li class="top-nav__item">
+                            <a href="#" data-scroll-to="theRoadmap" class="top-nav__link">Roadmap</a>
+                        </li>
+                        <li class="top-nav__item">
+                            <a href="#" data-scroll-to="theTeam" class="top-nav__link">Team</a>
+                        </li>
+                        <li class="top-nav__item">
+                            <a href="#" data-scroll-to="theNews" class="top-nav__link">News</a>
+                        </li>
+                        <li class="top-nav__item">
+                            <a href="#" data-scroll-to="downloadApp" class="top-nav__link">Try True</a>
+                        </li>
+                        <li class="top-nav__item">
+                            <a href="#" class="button-topnav">Whitepaper</a>
+                        </li>
+                    </ul>
+                    
                 </nav>
 
                 <div class="home-header">
@@ -72,14 +86,14 @@
                         <h1>Facebook can’t be fixed, so we’re going to replace it.</h1>
                         <p>Our mission is to create a better social community that focuses on authenticity, meaningful connections, and helping the world share their experiences in a meaningful way that respects thier privacy.</p>
                         <div class="home-header__cta">
-                            <a href="#" class="button button--alt">Pre Buy Coins</a>
-                            <a href="#" class="button">Get The Whitepaper</a>
+                            <a href="#" class="button button--alt">I'm Interested, Sign Me Up</a>
+                            <!-- <a href="#" class="button">Get The Whitepaper</a> -->
                         </div>
                     </div>
 
                     <div id="countdownContainer" class="presale-countdown">
-                        <div class="presale-countdown__header">Pre Sale Starts on:</div>
-                        <div class="presale-countdown__subheader">Oct 27, 2018</div>
+                        <div class="presale-countdown__header">Pre Sale Starts In</div>
+                        <!-- <div class="presale-countdown__subheader">Oct 27, 2018</div> -->
                         <div class="presale-countdown__counter">
                             <div class="presale-countdown__slot">
                                 <span id="counterDays">&nbsp;</span>
@@ -99,7 +113,7 @@
                             </div>
                         </div>
                         <div class="presale-countdown__cta">
-                            <a href="#" class="button">Set Reminder</a>
+                            <a href="#" class="button button--alt">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -110,9 +124,99 @@
                 <div class="home-parallax__mask"></div>
                 <div class="home-parallax header-bg-5"></div>
             </section>
+
+            <div class="home-signup__overlay"></div>
+            <div class="home-signup">
+                <a href="#" class="home-signup__close"></a>
+                <div class="home-signup__form-entry">
+                    <div class="home-signup__throbber">
+                        <div class="throbber-content">
+                            <img src="static/images/throbber.svg" width="80"  /><br />
+                            <span data-text="spinnertext">Guaranteeing your discount...</span>
+                        </div>
+                    </div>
+                    <div class="home-signup__header" data-text="signupheader">Save 25%</div>
+                    <div class="home-signup__intro" data-text="signuptext">Sign up today to stay updated and get the same 25% discount the VCs get when the sale goes live later in 2018.</div>
+                    <form autocomplete="off" action="posted.php" method="POST">
+                        <input type="hidden" id="form-version-code" value="VC25LIST">
+                        <div class="home-signup__form">
+                            <input name="MERGE1" id="formFirstName" data-text="formfirstname" class="home-signup__input" type="text" placeholder="FIRST NAME" />
+                            <input name="MERGE2" id="formLastName" data-text="formlastname" class="home-signup__input" type="text" placeholder="LAST NAME" />
+                            <input name="MERGE0" id="formEmail" data-text="formemail" class="home-signup__input" type="text" placeholder="EMAIL ADDRESS" />
+                            <div class="signup-select-wrapper">
+                                <label data-text="formcurrencytype">HOW WOULD YOU LIKE TO INVEST?</label>
+                                <select name="MERGE6" id="signupCurrency" class="home-signup__select">
+                                    <option value="USD">USD</option>
+                                    <option value="EURO">EURO</option>
+                                    <option value="YEN">YEN</option>
+                                    <option value="RUB">RUB</option>
+                                    <option value="WON">WON</option>
+                                    <option value="YUAN">YUAN</option>
+                                </select>
+                            </div>
+                            <div name="MERGE5" id="rangeContainer" class="signup-select-wrapper">
+                                <label data-text="formamount">AMOUNT INTERESTED IN INVESTING</label>
+                                <select id="signupCurrencyRange" class="home-signup__select">
+                                    <!-- <option value="100-1000">$100 - $1000</option>
+                                    <option value="1000-5000">$1000 - $5000</option> -->
+                                </select>
+                            </div>
+                            <div class="home-signup__error" data-text="formerror">
+                                Please enter a first name, last name, and valid email address.
+                            </div>
+                            
+                            <div style="display:none" id="submissionErrorMssg" data-text="submissionerrormssg">We couldn’t validate your data. Please re-check your information and try again.</div>
+
+                            <div class="home-signup__cta">
+                                <button data-text="formbutton" type="submit" id="formSubmit" class="button button-signup" onClick="actionTrack('1308');">I'M INTERESTED, SIGN ME UP</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="home-signup__form-success">
+                    <div class="home-signup__success-hdr" data-text="success">Success!<img src="static/images/icon-party.svg" width="26" /></div>
+                    <p data-text="successbody1">Your 25% discount is now guaranteed. We’ll send an email to <span class="home-signup__success-email">name@email.com</span> with your discount code before the sale goes live.</p>
+                    <p data-text="successbody2">Have a great day.</p>
+                    <p data-text="successbody3">- The Team @ True</p>
+                </div>
+            </div>
+
+            <section class="home-features">
+
+                <div class="feature-row">
+                    <div class="features-item">
+                        <img class="feature-item__image text-animation" src="static/images/features/feature-tokens.png" />
+                        <h2 class="feature-item__header text-animation" data-text="feature3header">TRU Tokens</h2>
+                        <p class="feature-item__description text-animation" data-text="feature3body">We're creating a new social media economy.Tru tokens will allow users to interact on social network with a built-in end-to-end decentralized privacy solution. User’s data will always be owned & governed by the user. Period.</p>
+                    </div>
+                    
+                    <div class="features-item">
+                        <img class="feature-item__image text-animation" src="static/images/features/feature-social.png" />
+                        <h2 class="feature-item__header text-animation" data-text="feature1header">The promise of social media to connect the whole world was a wonderful idea... but it has come at a cost.</h2>
+                        <p class="feature-item__description text-animation" data-text="feature1body">In pursuit of growth at all costs, social media platforms have made you the product. The only way they can maintain this growth is through monetization of your personal data by intrusive data mining & harvesting techniques with no regards to privacy.</p>
+                    </div>
+                </div>
+
+                <div class="feature-row">
+                    
+                    <div class="features-item">
+                        <img class="feature-item__image text-animation" src="static/images/features/feature-blockchain.png" />
+                        <h2 class="feature-item__header text-animation" data-text="feature2header">True has an honest data agreement guaranteed by blockchain.</h2>
+                        <p class="feature-item__description text-animation" data-text="feature2body">Our users own and control access to their personal data powered by blockchain technology. We’re building a decentralized system that bakes privacy and trust into our core features.</p>
+                    </div>
+
+                    <div class="features-item">
+                            <img class="feature-item__image text-animation" src="static/images/features/feature-users.png" />
+                        <h2 class="feature-item__header text-animation" data-text="feature4header">Our users want TRUE!</h2>
+                        <p class="feature-item__description text-animation" data-text="feature4body1">True has already raised $10M in venture capital and is a real company with a real product with thousands of users using the application daily. We’re changing the paradigm to an honest solution that protects & safeguards users privacy & data from deep intrusive harvesting techniques & data mining.</p>
+                    </div>
+                </div>
+
+            </section>
+
             <section class="home-video">
                 <div class="home-video__container">
-                    <div id="whatIsTrue" class="home-video__header">What Is True?</div>
+                    <div id="whatIsTrue" class="home-video__header">How It Works</div>
                     <video width="714" height="407" controls poster="static/images/poster.png">
                         <source src="static/video/true-intro.mp4" type="video/mp4">
                         <source src="movie.ogg" type="video/ogg">
@@ -122,10 +226,8 @@
             </section>
             <section class="social-media">
                 <div class="social-media__row">
+                    <h2 class="social-media__header">Why is Social Networking Broken?</h2>
                     <div class="social-media__col">
-                        <h2 class="social-media__header">
-                            WHY IS SOCIAL NETWORKING BROKEN?
-                        </h2>
                         <p>The largest social media platforms have become surveillance empires that prepetually manipulate your attention, secretly harvest your personal data and influence your behavior in order to profit.</p>
                     </div>
                     <div class="social-media__col">
@@ -260,7 +362,7 @@
             </section>
 
             <section class="true-news">
-                <h2>True In The News</h2>
+                <h2 id="theNews">True In The News</h2>
                 <div class="news-carousel__container">
                     <a href="#" class="news-carousel__nav -previous">
                         <img src="static/images/icons/icon-left-arrow.svg" />
@@ -297,6 +399,7 @@
                                 <a href="#" class="button button-news">View Article</a>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </section>

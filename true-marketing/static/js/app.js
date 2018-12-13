@@ -65,7 +65,7 @@ $.fn.fadeOnScroll = function() {
         // }
         $element.css({
             'opacity': 1 - $(window).scrollTop() / 400,
-            'transform': 'translateY('+($win.scrollTop() - $element.offset().top) / -4+'px)'
+            // 'transform': 'translateY('+($win.scrollTop() - $element.offset().top) / -4+'px)'
         });
     });
 }
@@ -96,7 +96,7 @@ $.fn.rotateGraphs = function() {
 $(function(){
     $('.language-selector').localizr();
     $('body').handleNav();
-    $('.home-header-scroller').fadeOnScroll();
+    // $('.home-header-scroller').fadeOnScroll();
     $('.roadmap-graphs').rotateGraphs();
 
     var $win = $(window);
@@ -148,7 +148,7 @@ $.fn.initCountdown = function() {
         $counterHours = $('#counterHours',$context),
         $counterMinutes = $('#counterMinutes',$context),
         $counterSeconds = $('#counterSeconds',$context),
-        countDownDate = new Date("Oct 27, 2018 00:00:00").getTime();
+        countDownDate = new Date("Jan 27, 2019 00:00:00").getTime();
 
     // Update the count down every 1 second
     var x = setInterval(function() {
@@ -183,4 +183,33 @@ $(function(){
     console.log('Hello Countdown!');
     console.log($);
     $('#countdownContainer').initCountdown();
+});
+$.fn.handleSignup = function() {
+    var $context = $(this),
+        $overlay = $('.home-signup__overlay'),
+        $button = $('.home-header__cta a');
+
+    var openSlider = function() {
+        $overlay.fadeIn();
+        $context.addClass('-active');
+        $('body').css('overflow','hidden');
+    }
+
+    var closeSlider = function() {
+        $context.removeClass('-active');
+        $overlay.hide();
+        $('body').css('overflow','visible');
+    }
+
+    $overlay.click(function() {
+        closeSlider();
+    });
+    $button.click(function(e) {
+        e.preventDefault();
+        openSlider();
+    });
+}
+
+$(function(){
+    $('.home-signup').handleSignup();
 });
