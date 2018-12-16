@@ -338,7 +338,7 @@ button, .button {
   -webkit-transition: all 0.25s;
   -o-transition: all 0.25s;
   transition: all 0.25s;
-  font-size: 20px;
+  font-size: 18px;
   text-transform: uppercase;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -355,6 +355,12 @@ button, .button {
 }
 button:hover, .button:hover {
   opacity: 0.7;
+}
+@media (max-width: 650px) {
+  button, .button {
+    padding: 14px 50px;
+    border-radius: 20px;
+  }
 }
 
 .button--alt {
@@ -419,6 +425,11 @@ body {
     padding: 120px 60px 50px 60px;
   }
 }
+@media (max-width: 650px) {
+  .home-header {
+    padding: 120px 20px 50px;
+  }
+}
 
 .home-header__cta .button {
   margin-right: 20px;
@@ -444,7 +455,7 @@ body {
     font-size: 40px;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .home-title {
     text-align: center;
   }
@@ -553,6 +564,17 @@ section {
 }
 .presale-countdown__slot span#counterSeconds:after {
   content: '';
+}
+@media (max-width: 650px) {
+  .presale-countdown__slot {
+    font-size: 28px;
+  }
+  .presale-countdown__slot span {
+    padding: 6px 10px;
+  }
+  .presale-countdown__slot span:after {
+    right: -14px;
+  }
 }
 
 .presale-countdown__label {
@@ -743,7 +765,7 @@ section {
   float: right;
   margin-right: 40px;
 }
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .top-nav__menu {
     display: none;
   }
@@ -793,7 +815,7 @@ section {
   cursor: pointer;
   float: right;
 }
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .language-selector {
     position: absolute;
     right: 30px;
@@ -813,7 +835,7 @@ section {
 .language-selector__current:active {
   outline: none;
 }
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .language-selector__current {
     float: right;
     border-radius: 5px;
@@ -825,7 +847,7 @@ section {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .language-selector__current span {
     margin-right: -5px;
   }
@@ -837,7 +859,7 @@ section {
   width: 12px;
   padding-right: 4px;
 }
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .language-selector__flag {
     width: 17px;
   }
@@ -864,12 +886,12 @@ section {
   -ms-transform: rotate(225deg);
   transform: rotate(225deg);
 }
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .language-selector__arrow.-active {
     top: 12px;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .language-selector__arrow {
     top: 8px;
     right: 12px;
@@ -908,7 +930,7 @@ section {
   border-right: 8px solid transparent;
   border-bottom: 8px solid white;
 }
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .language-selector__layer {
     width: 100%;
     top: 24px;
@@ -950,7 +972,7 @@ section {
   top: 6px;
   width: 21px;
 }
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .language-selector__item .language-selector__check {
     top: 20px;
     right: 49%;
@@ -963,7 +985,7 @@ section {
 .language-selector__item.-active img {
   display: inline-block;
 }
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .language-selector__item {
     padding: 12px;
     font-size: 22px;
@@ -1825,6 +1847,66 @@ section {
     padding-right: 20px;
   }
 }
+@media (max-width: 650px) {
+  .home-features {
+    padding-top: 160px;
+  }
+}
+
+.home-main-features {
+  padding: 140px 0;
+  background: transparent url(../images/features/bg-phones-carousel.png) 50% 50% no-repeat;
+}
+.home-main-features h2 {
+  font-size: 45px;
+  text-align: center;
+}
+
+.main-features__container {
+  background: #2f482a url(../images/features/cap-features.png) 0 100% no-repeat;
+  background-size: 100%;
+  padding-top: 50px;
+  position: relative;
+  top: 50px;
+}
+.main-features__container .home-main-features__inner {
+  max-width: 1056px;
+  margin: 0 auto;
+}
+.main-features__container .home-main-features__inner:after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+.feature-phone-item {
+  float: left;
+  width: 33.3%;
+  color: #ffffff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 20px;
+  min-height: 240px;
+  position: relative;
+  top: -50px;
+}
+.feature-phone-item h3 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.feature-phone-item p {
+  font-size: 15px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+@media (max-width: 650px) {
+  .feature-phone-item {
+    float: none;
+    width: 100%;
+    min-height: auto;
+  }
+}
 
 .feature-row:after {
   content: '';
@@ -1844,6 +1926,12 @@ section {
   position: relative;
   padding: 0 30px;
   margin-bottom: 80px;
+}
+@media (max-width: 650px) {
+  .features-item {
+    float: none;
+    width: 100%;
+  }
 }
 
 .feature-item__header {
@@ -1907,6 +1995,80 @@ section {
   text-align: center;
   font-size: 30px;
   line-height: 1.2;
+}
+
+.phone-carousel {
+  position: relative;
+  margin: 60px auto;
+  max-width: 700px;
+}
+
+.phone-1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.phone-1 img {
+  max-width: 218px;
+}
+
+.phone-5 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+.phone-5 img {
+  max-width: 218px;
+}
+
+.phone-4 {
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  z-index: 5;
+}
+.phone-4 img {
+  max-width: 246px;
+}
+
+.phone-2 {
+  position: absolute;
+  bottom: 0;
+  right: 15%;
+  z-index: 5;
+}
+.phone-2 img {
+  max-width: 246px;
+}
+
+.phone-3 {
+  position: relative;
+  text-align: center;
+  z-index: 10;
+}
+.phone-3 img {
+  max-width: 267px;
+}
+.phone-3.phone-bring-to-front {
+  z-index: 100;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.phone-item {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.phone-bring-to-front {
+  z-index: 100;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* Signup styles
@@ -2022,7 +2184,7 @@ section {
   line-height: 1.4;
   font-size: 18px;
 }
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .home-signup__intro {
     font-size: 20px;
     line-height: 1.4;
