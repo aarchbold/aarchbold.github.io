@@ -1233,6 +1233,11 @@ section {
   max-width: 1200px;
   padding: 0 100px;
 }
+@media (max-width: 770px) {
+  .true-news__inner {
+    padding: 0 50px;
+  }
+}
 
 .news-carousel__container {
   position: relative;
@@ -1302,8 +1307,18 @@ section {
 .news-carousel__nav.-previous {
   left: -80px;
 }
+@media (max-width: 770px) {
+  .news-carousel__nav.-previous {
+    left: -37px;
+  }
+}
 .news-carousel__nav.-next {
   right: -80px;
+}
+@media (max-width: 770px) {
+  .news-carousel__nav.-next {
+    right: -37px;
+  }
 }
 .news-carousel__nav:hover {
   text-decoration: none;
@@ -1316,6 +1331,12 @@ section {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+@media (max-width: 770px) {
+  .news-carousel__nav {
+    width: 40px;
+    height: 40px;
+  }
+}
 
 /* Team styles
 */
@@ -1323,11 +1344,13 @@ section {
   padding: 120px 60px 200px 60px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  margin: 0 auto;
 }
 .true-team h2 {
   padding: 0 160px;
   font-size: 45px;
-  text-transform: uppercase;
+  text-align: center;
+  color: #000000;
 }
 @media (max-width: 770px) {
   .true-team {
@@ -1337,15 +1360,21 @@ section {
 
 .team-protraits {
   position: relative;
-  left: -60px;
   padding: 80px 40px;
   max-width: 1200px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0 auto;
 }
 .team-protraits:after {
   content: ' ';
   display: table;
   clear: both;
+}
+@media (max-width: 900px) {
+  .team-protraits {
+    padding: 80px 0px;
+  }
 }
 
 .team-protraits-col {
@@ -1354,28 +1383,42 @@ section {
   padding: 0 30px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-transform: rotate(-45deg) translate(40px, 40px);
-  -ms-transform: rotate(-45deg) translate(40px, 40px);
-  transform: rotate(-45deg) translate(40px, 40px);
 }
 
 .team-portraits__item {
-  position: relative;
-  margin: 0 auto 40px;
-  width: 73%;
-  border-radius: 25%;
+  float: left;
+  width: 20%;
   overflow: hidden;
-  -webkit-box-shadow: 1px 2px 20px -1px rgba(108, 73, 255, 0.4);
-  box-shadow: 1px 2px 20px -1px rgba(108, 73, 255, 0.4);
-  margin-left: 30%;
 }
-.team-portraits__item:last-child {
-  margin-right: 20%;
+@media (max-width: 1100px) {
+  .team-portraits__item {
+    width: 25%;
+  }
 }
-.team-portraits__item:before {
-  content: ' ';
-  display: block;
-  padding-top: 100%;
+@media (max-width: 900px) {
+  .team-portraits__item {
+    width: 33.3%;
+  }
+}
+@media (max-width: 570px) {
+  .team-portraits__item {
+    width: 50%;
+  }
+}
+
+.team-portraits__item--inner {
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid #c7c7c7;
+  min-height: 280px;
+  margin: 10px;
+}
+.team-portraits__item--inner:hover {
+  -webkit-box-shadow: 1px 2px 20px -1px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 2px 20px -1px rgba(0, 0, 0, 0.2);
 }
 
 .team-portraits__item--hover {
@@ -1394,43 +1437,35 @@ section {
 .team-portraits__item--hover:hover {
   opacity: 0.9;
 }
-.team-portraits__item--hover:hover .team-portraits__item--bio {
-  -webkit-transform: translateY(-50%) rotate(45deg);
-  -ms-transform: translateY(-50%) rotate(45deg);
-  transform: translateY(-50%) rotate(45deg);
-}
 
 .team-portraits__item--bio {
-  position: absolute;
-  -webkit-transition: all 0.25s;
-  -o-transition: all 0.25s;
-  transition: all 0.25s;
-  top: 50%;
-  -webkit-transform: translateY(50px) rotate(45deg);
-  -ms-transform: translateY(50px) rotate(45deg);
-  transform: translateY(50px) rotate(45deg);
-  text-align: center;
-  width: 100%;
+  text-align: left;
+  padding: 4px 10px;
   font-size: 12px;
   color: white;
-  line-height: 1.6;
+  line-height: 1.2;
+}
+.team-portraits__item--bio .-name {
+  font-size: 17px;
+  color: #07160e;
+}
+.team-portraits__item--bio .-position {
+  font-size: 13px;
+  color: #4B49FF;
+}
+.team-portraits__item--bio .-contact-icons a {
+  text-decoration: none;
 }
 
 .team-portraits__item--image {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
-  height: 120%;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+  height: 217px;
+  border-radius: 8px 8px 0 0;
 }
 .team-portraits__item--image.-bret {
-  left: -8px;
-  top: -5px;
   background: transparent url(../images/portraits/bret.jpg) 50% 50% no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 .team-portraits__item--image.-dmitri {
   left: 2px;
@@ -1473,6 +1508,12 @@ section {
   top: -5px;
   background: transparent url(../images/portraits/kori.jpg) 50% 50% no-repeat;
   background-size: 120%;
+}
+
+.team-portraits__row:after {
+  content: '';
+  clear: both;
+  display: table;
 }
 
 /* Footer styles
