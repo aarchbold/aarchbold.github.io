@@ -41,13 +41,13 @@ $.fn.handleNav = function() {
 
     $mobileToggle.click(function(e) {
         if ($(this).hasClass('-open')) {
-            $closeIcon.show();
-            $openIcon.hide();
+            $closeIcon.hide();
+            $openIcon.show();
             $(this).removeClass('-open');
             $mobileNav.hide();
         } else {
-            $closeIcon.hide();
-            $openIcon.show();
+            $closeIcon.show();
+            $openIcon.hide();
             $(this).addClass('-open');
             $mobileNav.show();
         }
@@ -141,9 +141,7 @@ $(function(){
     $('.roadmap-graphs').rotateGraphs();
 
     
-    if ($(window).width() > 700) {
-        doHeaderParallax();
-    }
+    doHeaderParallax();
 });
 
 $(document).ready(function(){
