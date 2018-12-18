@@ -14,9 +14,9 @@
         <link rel="shortcut icon" href="https://s3.amazonaws.com/shyftassets/images/favicon.png" type="image/x-icon">
         <link rel="icon" href="https://s3.amazonaws.com/shyftassets/images/favicon.png" type="image/x-icon">
         -->
-        <script src="static/js/vendors.js?cache=bust7"></script>
+        <script src="static/js/vendors.js?cache=bust8"></script>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-        <link rel="stylesheet" href="static/css/styles.css?cache=bust7">
+        <link rel="stylesheet" href="static/css/styles.css?cache=bust8">
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -60,16 +60,19 @@
                             <a href="#" data-scroll-to="whatIsTrue" class="top-nav__link">How it works</a>
                         </li>
                         <li class="top-nav__item">
-                            <a href="#" data-scroll-to="theTeam" class="top-nav__link">Token Sale</a>
+                            <a href="#" data-scroll-to="features" class="top-nav__link">Features</a>
+                        </li>
+                        <li class="top-nav__item">
+                            <a href="#" data-scroll-to="tokenSale" class="top-nav__link">Token Sale</a>
                         </li>
                         <li class="top-nav__item">
                             <a href="#" data-scroll-to="theRoadmap" class="top-nav__link">Roadmap</a>
                         </li>
                         <li class="top-nav__item">
-                            <a href="#" data-scroll-to="theTeam" class="top-nav__link">Team</a>
+                            <a href="#" data-scroll-to="theNews" class="top-nav__link">News</a>
                         </li>
                         <li class="top-nav__item">
-                            <a href="#" data-scroll-to="theNews" class="top-nav__link">News</a>
+                            <a href="#" data-scroll-to="theTeam" class="top-nav__link">Team</a>
                         </li>
                         <li class="top-nav__item">
                             <a href="#" data-scroll-to="downloadApp" class="top-nav__link">Try True</a>
@@ -78,6 +81,10 @@
                             <a href="#" class="button-topnav">Whitepaper</a>
                         </li>
                     </ul>
+                    <div class="mobile-nav-toggle">
+                        <img class="-open" src="static/images/icons/icon-hamburger.svg" />
+                        <img class="-close" src="static/images/icons/icon-close.svg" />
+                    </div>
                     
                 </nav>
 
@@ -214,15 +221,15 @@
 
             </section>
 
-            <section class="home-video">
-                <div class="home-video__container">
+            <section class="home-video__container">
                     <div id="whatIsTrue" class="home-video__header">How It Works</div>
-                    <video width="714" height="407" controls poster="static/images/poster.png">
-                        <source src="static/video/true-intro.mp4" type="video/mp4">
-                        <source src="movie.ogg" type="video/ogg">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
+                    <div class="home-video">
+                        <video width="714" height="407" controls poster="static/images/poster.png">
+                            <source src="static/video/true-intro.mp4" type="video/mp4">
+                            <source src="movie.ogg" type="video/ogg">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
             </section>
             <section class="social-media">
                 <div class="social-media__row">
@@ -254,7 +261,7 @@
             </section>
 
             <section class="home-main-features">
-                <h2>Features</h2>
+                <h2 id="features">Features</h2>
                 <div class="phone-carousel">
                     <div class="phone-item phone-1">
                         <img src="static/images/features/phone-3.png" />
@@ -305,7 +312,7 @@
                 </div>
             </section>
             <section class="download-cta">
-                <h2>Try True & See The Difference</h2>
+                <h2 id="tokenSale">Try True & See The Difference</h2>
                 <a href="#"><img src="static/images/buttons/button-appstore.png" width="157" /></a>
                 <a href="#"><img src="static/images/buttons/button-google-play.png" width="157" /></a>
             </section>
@@ -489,10 +496,10 @@
                         </div>
                         <div class="team-portraits__item">
                             <div class="team-portraits__item--inner">
-                                <div class="team-portraits__item--image -bret"></div>
+                                <div class="team-portraits__item--image -kori"></div>
                                 <div class="team-portraits__item--bio">
-                                    <div class="-name">Bret Cox</div>
-                                    <div class="-position">CEO</div>
+                                    <div class="-name">Kori Handy</div>
+                                    <div class="-position">Lead Designer</div>
                                     <div class="-contact-icons">
                                         <a href="#" target="_blank">
                                             <img src="static/images/icons/icon-team-true.svg" />    
@@ -509,10 +516,10 @@
                         </div>
                         <div class="team-portraits__item">
                             <div class="team-portraits__item--inner">
-                                <div class="team-portraits__item--image -bret"></div>
+                                <div class="team-portraits__item--image -jer"></div>
                                 <div class="team-portraits__item--bio">
-                                    <div class="-name">Bret Cox</div>
-                                    <div class="-position">CEO</div>
+                                    <div class="-name">Jeremy Kotai</div>
+                                    <div class="-position">Senior iOS Engineer</div>
                                     <div class="-contact-icons">
                                         <a href="#" target="_blank">
                                             <img src="static/images/icons/icon-team-true.svg" />    
@@ -529,10 +536,10 @@
                         </div>
                         <div class="team-portraits__item">
                             <div class="team-portraits__item--inner">
-                                <div class="team-portraits__item--image -bret"></div>
+                                <div class="team-portraits__item--image -helen"></div>
                                 <div class="team-portraits__item--bio">
-                                    <div class="-name">Bret Cox</div>
-                                    <div class="-position">CEO</div>
+                                    <div class="-name">Helen Floersh</div>
+                                    <div class="-position">Content Manager</div>
                                     <div class="-contact-icons">
                                         <a href="#" target="_blank">
                                             <img src="static/images/icons/icon-team-true.svg" />    
@@ -549,10 +556,10 @@
                         </div>
                         <div class="team-portraits__item">
                             <div class="team-portraits__item--inner">
-                                <div class="team-portraits__item--image -bret"></div>
+                                <div class="team-portraits__item--image -ryan"></div>
                                 <div class="team-portraits__item--bio">
-                                    <div class="-name">Bret Cox</div>
-                                    <div class="-position">CEO</div>
+                                    <div class="-name">Ryan Cox</div>
+                                    <div class="-position">Director of Operations</div>
                                     <div class="-contact-icons">
                                         <a href="#" target="_blank">
                                             <img src="static/images/icons/icon-team-true.svg" />    
@@ -569,10 +576,10 @@
                         </div>
                         <div class="team-portraits__item">
                             <div class="team-portraits__item--inner">
-                                <div class="team-portraits__item--image -bret"></div>
+                                <div class="team-portraits__item--image -petra"></div>
                                 <div class="team-portraits__item--bio">
-                                    <div class="-name">Bret Cox</div>
-                                    <div class="-position">CEO</div>
+                                    <div class="-name">Petra Hanson</div>
+                                    <div class="-position">Designer</div>
                                     <div class="-contact-icons">
                                         <a href="#" target="_blank">
                                             <img src="static/images/icons/icon-team-true.svg" />    
@@ -589,10 +596,10 @@
                         </div>
                         <div class="team-portraits__item">
                             <div class="team-portraits__item--inner">
-                                <div class="team-portraits__item--image -bret"></div>
+                                <div class="team-portraits__item--image -alex"></div>
                                 <div class="team-portraits__item--bio">
-                                    <div class="-name">Bret Cox</div>
-                                    <div class="-position">CEO</div>
+                                    <div class="-name">Alex Fedosseev</div>
+                                    <div class="-position">Vice President, Marketing</div>
                                     <div class="-contact-icons">
                                         <a href="#" target="_blank">
                                             <img src="static/images/icons/icon-team-true.svg" />    
@@ -609,10 +616,10 @@
                         </div>
                         <div class="team-portraits__item">
                             <div class="team-portraits__item--inner">
-                                <div class="team-portraits__item--image -bret"></div>
+                                <div class="team-portraits__item--image -roman"></div>
                                 <div class="team-portraits__item--bio">
-                                    <div class="-name">Bret Cox</div>
-                                    <div class="-position">CEO</div>
+                                    <div class="-name">Roman Dobrõnin</div>
+                                    <div class="-position">Backend Software Developer</div>
                                     <div class="-contact-icons">
                                         <a href="#" target="_blank">
                                             <img src="static/images/icons/icon-team-true.svg" />    
@@ -629,10 +636,10 @@
                         </div>
                         <div class="team-portraits__item">
                             <div class="team-portraits__item--inner">
-                                <div class="team-portraits__item--image -bret"></div>
+                                <div class="team-portraits__item--image -pjotr"></div>
                                 <div class="team-portraits__item--bio">
-                                    <div class="-name">Bret Cox</div>
-                                    <div class="-position">CEO</div>
+                                    <div class="-name">Pjotr Mjakošin</div>
+                                    <div class="-position">Vice President, Engineering</div>
                                     <div class="-contact-icons">
                                         <a href="#" target="_blank">
                                             <img src="static/images/icons/icon-team-true.svg" />    
@@ -649,10 +656,150 @@
                         </div>
                         <div class="team-portraits__item">
                             <div class="team-portraits__item--inner">
-                                <div class="team-portraits__item--image -bret"></div>
+                                <div class="team-portraits__item--image -juri"></div>
                                 <div class="team-portraits__item--bio">
-                                    <div class="-name">Bret Cox</div>
-                                    <div class="-position">CEO</div>
+                                    <div class="-name">Juri Bojarski</div>
+                                    <div class="-position">Quality Assurance Engineer</div>
+                                    <div class="-contact-icons">
+                                        <a href="#" target="_blank">
+                                            <img src="static/images/icons/icon-team-true.svg" />    
+                                        </a>
+                                        <a href="#" target="_blank">
+                                            <img src="static/images/icons/icon-team-linkedin.svg" />    
+                                        </a>
+                                        <a href="#" target="_blank">
+                                            <img src="static/images/icons/icon-team-twitter.svg" />    
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-portraits__item">
+                            <div class="team-portraits__item--inner">
+                                <div class="team-portraits__item--image -dmitri"></div>
+                                <div class="team-portraits__item--bio">
+                                    <div class="-name">Dmitri Maruhh</div>
+                                    <div class="-position">Backend Server Engineer</div>
+                                    <div class="-contact-icons">
+                                        <a href="#" target="_blank">
+                                            <img src="static/images/icons/icon-team-true.svg" />    
+                                        </a>
+                                        <a href="#" target="_blank">
+                                            <img src="static/images/icons/icon-team-linkedin.svg" />    
+                                        </a>
+                                        <a href="#" target="_blank">
+                                            <img src="static/images/icons/icon-team-twitter.svg" />    
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-portraits__item">
+                            <div class="team-portraits__item--inner">
+                                <div class="team-portraits__item--image -ahmed"></div>
+                                <div class="team-portraits__item--bio">
+                                    <div class="-name">Ahmed Abdelhady</div>
+                                    <div class="-position">Backend Software Engineer</div>
+                                    <div class="-contact-icons">
+                                        <a href="#" target="_blank">
+                                            <img src="static/images/icons/icon-team-true.svg" />    
+                                        </a>
+                                        <a href="#" target="_blank">
+                                            <img src="static/images/icons/icon-team-linkedin.svg" />    
+                                        </a>
+                                        <a href="#" target="_blank">
+                                            <img src="static/images/icons/icon-team-twitter.svg" />    
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-portraits__item">
+                            <div class="team-portraits__item--inner">
+                                <div class="team-portraits__item--image -ilya"></div>
+                                <div class="team-portraits__item--bio">
+                                    <div class="-name">Ilja Radjuhhin</div>
+                                    <div class="-position">Senior iOS Engineer</div>
+                                    <div class="-contact-icons">
+                                        <a href="#" target="_blank">
+                                            <img src="static/images/icons/icon-team-true.svg" />    
+                                        </a>
+                                        <a href="#" target="_blank">
+                                            <img src="static/images/icons/icon-team-linkedin.svg" />    
+                                        </a>
+                                        <a href="#" target="_blank">
+                                            <img src="static/images/icons/icon-team-twitter.svg" />    
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-portraits__item">
+                            <div class="team-portraits__item--inner">
+                                <div class="team-portraits__item--image -rustam"></div>
+                                <div class="team-portraits__item--bio">
+                                    <div class="-name">Rustam Nadrshin</div>
+                                    <div class="-position">Engineering Manager</div>
+                                    <div class="-contact-icons">
+                                        <a href="#" target="_blank">
+                                            <img src="static/images/icons/icon-team-true.svg" />    
+                                        </a>
+                                        <a href="#" target="_blank">
+                                            <img src="static/images/icons/icon-team-linkedin.svg" />    
+                                        </a>
+                                        <a href="#" target="_blank">
+                                            <img src="static/images/icons/icon-team-twitter.svg" />    
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-portraits__item">
+                            <div class="team-portraits__item--inner">
+                                <div class="team-portraits__item--image -stanislav"></div>
+                                <div class="team-portraits__item--bio">
+                                    <div class="-name">Stanislav Mistsenko</div>
+                                    <div class="-position">Senior Software Engineer</div>
+                                    <div class="-contact-icons">
+                                        <a href="#" target="_blank">
+                                            <img src="static/images/icons/icon-team-true.svg" />    
+                                        </a>
+                                        <a href="#" target="_blank">
+                                            <img src="static/images/icons/icon-team-linkedin.svg" />    
+                                        </a>
+                                        <a href="#" target="_blank">
+                                            <img src="static/images/icons/icon-team-twitter.svg" />    
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-portraits__item">
+                            <div class="team-portraits__item--inner">
+                                <div class="team-portraits__item--image -oxana"></div>
+                                <div class="team-portraits__item--bio">
+                                    <div class="-name">Oxana Nebis</div>
+                                    <div class="-position">Quality Assurance Manager</div>
+                                    <div class="-contact-icons">
+                                        <a href="#" target="_blank">
+                                            <img src="static/images/icons/icon-team-true.svg" />    
+                                        </a>
+                                        <a href="#" target="_blank">
+                                            <img src="static/images/icons/icon-team-linkedin.svg" />    
+                                        </a>
+                                        <a href="#" target="_blank">
+                                            <img src="static/images/icons/icon-team-twitter.svg" />    
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-portraits__item">
+                            <div class="team-portraits__item--inner">
+                                <div class="team-portraits__item--image -anna"></div>
+                                <div class="team-portraits__item--bio">
+                                    <div class="-name">Anna Iokhimovich</div>
+                                    <div class="-position">Development Project Manager</div>
                                     <div class="-contact-icons">
                                         <a href="#" target="_blank">
                                             <img src="static/images/icons/icon-team-true.svg" />    
@@ -764,11 +911,6 @@
                     <a href="#"><img src="static/images/buttons/button-appstore.png" width="157" /></a>
                     <a href="#"><img src="static/images/buttons/button-google-play.png" width="157" /></a>
                 </div>
-                <!-- <img class="site-footer__phone" src="static/images/phone.png" /> -->
-                <div class="site-footer__bg5"></div>
-                <div class="site-footer__bg4"></div>
-                <div class="site-footer__bg3"></div>
-                <div class="site-footer__bg2"></div>
                 <div class="site-footer__bg"></div>
                 <footer class="true-footer">
                     <div class="footer-social">
@@ -797,6 +939,6 @@
             </section>
         </div>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <script src="static/js/app.js?cache=bust7"></script>
+        <script src="static/js/app.js?cache=bust8"></script>
     </body>
 </html>
