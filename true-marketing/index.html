@@ -14,9 +14,9 @@
         <link rel="shortcut icon" href="https://s3.amazonaws.com/shyftassets/images/favicon.png" type="image/x-icon">
         <link rel="icon" href="https://s3.amazonaws.com/shyftassets/images/favicon.png" type="image/x-icon">
         -->
-        <script src="static/js/vendors.js?cache=bust9"></script>
+        <script src="static/js/vendors.js?cache=bust10"></script>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-        <link rel="stylesheet" href="static/css/styles.css?cache=bust9">
+        <link rel="stylesheet" href="static/css/styles.css?cache=bust10">
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -57,28 +57,28 @@
                     </div>
                     <ul class="top-nav__menu">
                         <li class="top-nav__item">
-                            <a href="#" data-scroll-to="whatIsTrue" class="top-nav__link">How it works</a>
+                            <a href="#" data-text="topnavhowitworks" data-scroll-to="whatIsTrue" class="top-nav__link">How it works</a>
                         </li>
                         <li class="top-nav__item">
-                            <a href="#" data-scroll-to="features" class="top-nav__link">Features</a>
+                            <a href="#" data-text="topnavfeatures" data-scroll-to="features" class="top-nav__link">Features</a>
                         </li>
                         <li class="top-nav__item">
-                            <a href="#" data-scroll-to="tokenSale" class="top-nav__link">Token Sale</a>
+                            <a href="#" data-text="topnavtokensale" data-scroll-to="tokenSale" class="top-nav__link">Token Sale</a>
                         </li>
                         <li class="top-nav__item">
-                            <a href="#" data-scroll-to="theRoadmap" class="top-nav__link">Roadmap</a>
+                            <a href="#" data-text="topnavroadmap" data-scroll-to="theRoadmap" class="top-nav__link">Roadmap</a>
                         </li>
                         <li class="top-nav__item">
-                            <a href="#" data-scroll-to="theNews" class="top-nav__link">News</a>
+                            <a href="#" data-text="topnavvideos" data-scroll-to="theNews" class="top-nav__link">Videos</a>
                         </li>
                         <li class="top-nav__item">
-                            <a href="#" data-scroll-to="theTeam" class="top-nav__link">Team</a>
+                            <a href="#" data-text="topnavteam" data-scroll-to="theTeam" class="top-nav__link">Team</a>
                         </li>
                         <li class="top-nav__item">
-                            <a href="#" data-scroll-to="downloadApp" class="top-nav__link">Try True</a>
+                            <a href="#" data-text="topnavtrytrue" data-scroll-to="downloadApp" class="top-nav__link">Try True</a>
                         </li>
                         <li class="top-nav__item">
-                            <a href="#" class="button-topnav">Whitepaper</a>
+                            <a href="#" data-text="topnavwhitepaper" class="button-topnav">Whitepaper</a>
                         </li>
                     </ul>
                     <div class="mobile-nav-toggle">
@@ -90,37 +90,37 @@
 
                 <div class="home-header">
                     <div class="home-header-scroller">
-                        <h1>Facebook can’t be fixed, so we’re going to replace it.</h1>
-                        <p>Our mission is to create a better social community that focuses on authenticity, meaningful connections, and helping the world share their experiences in a meaningful way that respects thier privacy.</p>
+                        <h1 data-text="header">Facebook can’t be fixed, so we’re going to replace it.</h1>
+                        <p data-text="subheader">Our mission is to create a better social community that focuses on authenticity, meaningful connections, and helping the world share their experiences in a meaningful way that respects thier privacy.</p>
                         <div class="home-header__cta">
-                            <a href="#" class="button button--alt">I'm Interested, Sign Me Up</a>
+                            <a data-text="formbutton" href="#" class="button button--alt">I'm Interested, Sign Me Up</a>
                             <!-- <a href="#" class="button">Get The Whitepaper</a> -->
                         </div>
                     </div>
 
                     <div id="countdownContainer" class="presale-countdown">
-                        <div class="presale-countdown__header">Pre Sale Starts In</div>
+                        <div data-text="presaleintro" class="presale-countdown__header">Pre Sale Starts In</div>
                         <!-- <div class="presale-countdown__subheader">Oct 27, 2018</div> -->
                         <div class="presale-countdown__counter">
                             <div class="presale-countdown__slot">
                                 <span id="counterDays">&nbsp;</span>
-                                <div class="presale-countdown__label">Days</div>
+                                <div data-text="days" class="presale-countdown__label">Days</div>
                             </div>
                             <div class="presale-countdown__slot -hours">
                                 <span id="counterHours">&nbsp;</span>
-                                <div class="presale-countdown__label">Hours</div>
+                                <div data-text="hours" class="presale-countdown__label">Hours</div>
                             </div>
                             <div class="presale-countdown__slot -minutes">
                                 <span id="counterMinutes">&nbsp;</span>
-                                <div class="presale-countdown__label">Minutes</div>
+                                <div data-text="minutes" class="presale-countdown__label">Minutes</div>
                             </div>
                             <div class="presale-countdown__slot -minutes">
                                 <span id="counterSeconds">&nbsp;</span>
-                                <div class="presale-countdown__label">Seconds</div>
+                                <div data-text="seconds" class="presale-countdown__label">Seconds</div>
                             </div>
                         </div>
                         <div class="presale-countdown__cta">
-                            <a href="#" class="button button--alt">Learn More</a>
+                            <a data-text="learnmore" href="#" class="button button--alt">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -175,7 +175,7 @@
                             <div style="display:none" id="submissionErrorMssg" data-text="submissionerrormssg">We couldn’t validate your data. Please re-check your information and try again.</div>
 
                             <div class="home-signup__cta">
-                                <button data-text="formbutton" type="submit" id="formSubmit" class="button button--alt">Sign Me Up</button>
+                                <button data-text="formbutton2" type="submit" id="formSubmit" class="button button--alt">Sign Me Up</button>
                             </div>
                         </div>
                     </form>
@@ -213,7 +213,7 @@
                     </div>
 
                     <div class="features-item">
-                            <img class="feature-item__image text-animation" src="static/images/features/feature-users.png" />
+                        <img class="feature-item__image text-animation" src="static/images/features/feature-users.png" />
                         <h2 class="feature-item__header text-animation" data-text="feature4header">Our users want TRUE!</h2>
                         <p class="feature-item__description text-animation" data-text="feature4body1">True has already raised $10M in venture capital and is a real company with a real product with thousands of users using the application daily. We’re changing the paradigm to an honest solution that protects & safeguards users privacy & data from deep intrusive harvesting techniques & data mining.</p>
                     </div>
@@ -222,7 +222,7 @@
             </section>
 
             <section class="home-video__container">
-                    <div id="whatIsTrue" class="home-video__header">How It Works</div>
+                    <div id="whatIsTrue" data-text="howitworks" class="home-video__header">How It Works</div>
                     <div class="home-video">
                         <video width="714" height="407" controls poster="static/images/poster.png">
                             <source src="static/video/true-intro.mp4" type="video/mp4">
@@ -233,26 +233,26 @@
             </section>
             <section class="social-media">
                 <div class="social-media__row">
-                    <h2 class="social-media__header">Why is Social Networking Broken?</h2>
+                    <h2 data-text="socialheader" class="social-media__header">Why is Social Networking Broken?</h2>
                     <div class="social-media__col">
-                        <p>The largest social media platforms have become surveillance empires that prepetually manipulate your attention, secretly harvest your personal data and influence your behavior in order to profit.</p>
+                        <p data-text="socialsubheader">The largest social media platforms have become surveillance empires that prepetually manipulate your attention, secretly harvest your personal data and influence your behavior in order to profit.</p>
                     </div>
                     <div class="social-media__col">
                         <div class="social-media__infographic">
                             <div class="social-media__tag -brother">
                                 <img src="static/images/icons/icon-eye.svg" />
-                                <strong>Big Brother</strong>
-                                Surveillance
+                                <strong data-text="bigbrother">Big Brother</strong>
+                                <span data-text="bigbrother2">Surveillance</span>
                             </div>
                             <div class="social-media__tag -leaks">
                                 <img src="static/images/icons/icon-warning.svg" />
-                                <strong>Privacy</strong>
-                                Leaks
+                                <strong data-text="privacy">Privacy</strong>
+                                <span data-text="privacy2">Leaks</span>
                             </div>
                             <div class="social-media__tag -fakenews">
                                 <img src="static/images/icons/icon-paper.svg" />
-                                <strong>Influence</strong>
-                                Fake News
+                                <strong data-text="influence">Influence</strong>
+                                <span data-text="influence2">Fake News</span>
                             </div>
                             <img class="cyclist" src="static/images/cyclist.png" />
                         </div>
@@ -261,7 +261,7 @@
             </section>
 
             <section class="home-main-features">
-                <h2 id="features">Features</h2>
+                <h2 data-text="features" id="features">Features</h2>
                 <div class="phone-carousel">
                     <div class="phone-item phone-1">
                         <img src="static/images/features/phone-3.png" />
@@ -282,112 +282,112 @@
                 <div class="main-features__container">
                     <div class="home-main-features__inner">
                         <div class="feature-phone-item">
-                            <h3>Be Real</h3>
-                            <p>True is about sharing genuine moments with your best friends.</p>
-                            <p>It’s not a place for news or political arguments, it's for connecting and staying in touch with the people you care most about.</p>
+                            <h3 data-text="feature1">Be Real</h3>
+                            <p data-text="feature1body1">True is about sharing genuine moments with your best friends.</p>
+                            <p data-text="feature1body2">It’s not a place for news or political arguments, it's for connecting and staying in touch with the people you care most about.</p>
                         </div>
                         <div class="feature-phone-item">
-                            <h3>Stay True</h3>
-                            <p>Social media has become a phony place. Fake news, fake friends and big brands paying for your eyeballs.</p>
-                            <p>We don't do that.</p>
+                            <h3 data-text="feature2">Stay True</h3>
+                            <p data-text="feature2body1">Social media has become a phony place. Fake news, fake friends and big brands paying for your eyeballs.</p>
+                            <p data-text="feature2body2">We don't do that.</p>
                         </div>
                         <div class="feature-phone-item">
-                            <h3>Moments</h3>
-                            <p>True is original content and real sharing by real people, with features you haven't seen before like Days - an automatic story built by your location and motion to share.</p>
+                            <h3 data-text="feature3">Moments</h3>
+                            <p data-text="feature3body1">True is original content and real sharing by real people, with features you haven't seen before like Days - an automatic story built by your location and motion to share.</p>
                         </div>
                         <div class="feature-phone-item">
-                            <h3>Be Honest</h3>
-                            <p>What's the best part about checking your feed? Updates from real friends.</p>
-                            <p>That's all we do.</p>
+                            <h3 data-text="feature4">Be Honest</h3>
+                            <p data-text="feature4body1">What's the best part about checking your feed? Updates from real friends.</p>
+                            <p data-text="feature4body2">That's all we do.</p>
                         </div>
                         <div class="feature-phone-item">
-                            <h3>It's Free</h3>
-                            <p>Live location sharing with total privacy controls are included for the first time in a social network to keep up and stay connected to the ones you love.</p>
+                            <h3 data-text="feature5">It's Free</h3>
+                            <p data-text="feature5body1">Live location sharing with total privacy controls are included for the first time in a social network to keep up and stay connected to the ones you love.</p>
                         </div>
                         <div class="feature-phone-item">
-                            <h3>Private & Safe</h3>
-                            <p>Respect for privacy and sharing control are cornerstones of the user experience. Powerful controls allow you to be sure how you share and who sees your posts.</p>
+                            <h3 data-text="feature6">Private & Safe</h3>
+                            <p data-text="feature6body1">Respect for privacy and sharing control are cornerstones of the user experience. Powerful controls allow you to be sure how you share and who sees your posts.</p>
                         </div>
                     </div>
                 </div>
             </section>
             <section class="download-cta">
-                <h2 id="tokenSale">Try True & See The Difference</h2>
+                <h2 data-text="trytrue" id="tokenSale">Try True & See The Difference</h2>
                 <a href="#"><img src="static/images/buttons/button-appstore.png" width="157" /></a>
                 <a href="#"><img src="static/images/buttons/button-google-play.png" width="157" /></a>
             </section>
             <section class="market-cap">
-                <h2>Token Sale</h2>
-                <div class="current-stage__label">Stage 1: 5M (Soft Cap)</div>
+                <h2 data-text="tokensale">Token Sale</h2>
+                <div data-text="tokensalestage1" class="current-stage__label">Stage 1: 5M (Soft Cap)</div>
                 <div class="current-stage">
-                    <div class="current-stage__header">Current Stage: Private Pre-sale</div>
+                    <div data-text="tokensalestage2" class="current-stage__header">Current Stage: Private Pre-sale</div>
                     <div class="current-stage__meter">
                         <div class="current-stage__widget"></div>
                     </div>
                     <div class="current-stage__bullet">
                         <ul>
-                            <li class="current-stage__bullet-item -active">5M Allocated In Private Pre-Sale</li>
-                            <li class="current-stage__bullet-item">44M To Be Distributed In Public Sale</li>
+                            <li data-text="tokensalestage3" class="current-stage__bullet-item -active">5M Allocated In Private Pre-Sale</li>
+                            <li data-text="tokensalestage4" class="current-stage__bullet-item">44M To Be Distributed In Public Sale</li>
                         </ul>
                     </div>
                     <div class="current-stage__subheader">
-                        <span>STARTING PRICE: $0.20</span>
+                        <span data-text="tokensalestage5">STARTING PRICE: $0.20</span>
                         <img src="static/images/icons/icon-cap-bounds.svg" />
-                        <span>UPPER BOUND: TBD</span>
+                        <span data-text="tokensalestage6">UPPER BOUND: TBD</span>
                     </div>
                 </div>
             </section>
 
             <section class="roadmap">
                 <div class="roadmap-header">
-                    <h2 id="theRoadmap">The Roadmap</h2>
+                    <h2 data-text="theroadmap" id="theRoadmap">The Roadmap</h2>
                 </div>
                 <div class="roadmap-scroller">
                     <div class="roadmap-map">
                         <div class="roadmap-map__line"></div>
                         <div class="roadmap-map__item">
-                            <div class="roadmap-map__label">DEC 2018</div>
+                            <div data-text="theroadmap1" class="roadmap-map__label">DEC 2018</div>
                             <div class="roadmap-map__bullet--mask"></div>
                             <div class="roadmap-map__bullet">
                                 <img src="static/images/icons/icon-check.svg" />
                             </div>
-                            <div class="roadmap-map__description">Private Pre-Sale</div>
+                            <div data-text="theroadmap2" class="roadmap-map__description">Private Pre-Sale</div>
                         </div>
                         <div class="roadmap-map__item">
-                            <div class="roadmap-map__label">Q2 2019</div>
+                            <div data-text="theroadmap3" class="roadmap-map__label">Q2 2019</div>
                             <div class="roadmap-map__bullet--mask"></div>
                             <div class="roadmap-map__bullet"></div>
-                            <div class="roadmap-map__description">Public Token Sale</div>
+                            <div data-text="theroadmap4" class="roadmap-map__description">Public Token Sale</div>
                         </div>
                         <div class="roadmap-map__item">
-                            <div class="roadmap-map__label">Q4 2019</div>
+                            <div data-text="theroadmap5" class="roadmap-map__label">Q4 2019</div>
                             <div class="roadmap-map__bullet--mask"></div>
                             <div class="roadmap-map__bullet"></div>
-                            <div class="roadmap-map__description">Testnet Launch</div>
+                            <div data-text="theroadmap6" class="roadmap-map__description">Testnet Launch</div>
                         </div>
                         <div class="roadmap-map__item">
-                            <div class="roadmap-map__label">Q4 2019</div>
+                            <div data-text="theroadmap7" class="roadmap-map__label">Q4 2019</div>
                             <div class="roadmap-map__bullet--mask"></div>
                             <div class="roadmap-map__bullet"></div>
-                            <div class="roadmap-map__description">Consensus Network Launch</div>
+                            <div data-text="theroadmap8" class="roadmap-map__description">Consensus Network Launch</div>
                         </div>
                         <div class="roadmap-map__item">
-                            <div class="roadmap-map__label">Q1 2020</div>
+                            <div data-text="theroadmap9" class="roadmap-map__label">Q1 2020</div>
                             <div class="roadmap-map__bullet--mask"></div>
                             <div class="roadmap-map__bullet"></div>
-                            <div class="roadmap-map__description">Integration with Wallets</div>
+                            <div data-text="theroadmap10" class="roadmap-map__description">Integration with Wallets</div>
                         </div>
                         <div class="roadmap-map__item">
-                            <div class="roadmap-map__label">Q2 2020</div>
+                            <div data-text="theroadmap11" class="roadmap-map__label">Q2 2020</div>
                             <div class="roadmap-map__bullet--mask"></div>
                             <div class="roadmap-map__bullet"></div>
-                            <div class="roadmap-map__description">Phase 2 Launch</div>
+                            <div data-text="theroadmap12" class="roadmap-map__description">Phase 2 Launch</div>
                         </div>                 
                         <div class="roadmap-map__item">
-                            <div class="roadmap-map__label">Q3 2020</div>
+                            <div data-text="theroadmap13" class="roadmap-map__label">Q3 2020</div>
                             <div class="roadmap-map__bullet--mask"></div>
                             <div class="roadmap-map__bullet"></div>
-                            <div class="roadmap-map__description">Future Releases</div>
+                            <div data-text="theroadmap14" class="roadmap-map__description">Future Releases</div>
                         </div> 
                     </div>
                 </div>
@@ -395,29 +395,29 @@
                     <div class="roadmap-graphs">
                         <div class="roadmap-graphs__col">
                             <div class="roadmap-graphs__inner">
-                                <h3>Token Distribution</h3>
+                                <h3 data-text="distributionheader">Token Distribution</h3>
                                 <img class="roadmap-graphs__svg -left-graph" src="static/images/roadmap/data-viz1.svg" />
                                 <ul class="roadmap-graphs__ul">
-                                    <li class="roadmap-graphs__item -blue"><span>35%</span> Crowds</li>
-                                    <li class="roadmap-graphs__item -red"><span>25%</span> Foundation</li>
-                                    <li class="roadmap-graphs__item -lightblue"><span>24%</span> Corporation</li>
-                                    <li class="roadmap-graphs__item -lightgreen"><span>10%</span> Reward Pool</li>
-                                    <li class="roadmap-graphs__item -darkgreen"><span>7%</span> Teams & Advisors</li>
-                                    <li class="roadmap-graphs__item -yellow"><span>1%</span> Transation Cost</li>
+                                    <li data-text="distributionbullet1" class="roadmap-graphs__item -blue"><span>35%</span> Crowds</li>
+                                    <li data-text="distributionbullet2" class="roadmap-graphs__item -red"><span>25%</span> Foundation</li>
+                                    <li data-text="distributionbullet3" class="roadmap-graphs__item -lightblue"><span>24%</span> Corporation</li>
+                                    <li data-text="distributionbullet4" class="roadmap-graphs__item -lightgreen"><span>10%</span> Reward Pool</li>
+                                    <li data-text="distributionbullet5" class="roadmap-graphs__item -darkgreen"><span>7%</span> Teams & Advisors</li>
+                                    <li data-text="distributionbullet6" class="roadmap-graphs__item -yellow"><span>1%</span> Transation Cost</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="roadmap-graphs__col">
                             <div class="roadmap-graphs__inner">
-                                <h3>Use of Proceeds</h3>
+                                <h3 data-text="proceedsheader">Use of Proceeds</h3>
                                 <img class="roadmap-graphs__svg -right-graph" src="static/images/roadmap/data-viz2.svg" />
                                 <ul class="roadmap-graphs__ul">
-                                    <li class="roadmap-graphs__item -blue"><span>30%</span> R&D Software</li>
-                                    <li class="roadmap-graphs__item -red"><span>25%</span> Ecosystem Development</li>
-                                    <li class="roadmap-graphs__item -lightblue"><span>20%</span> Partnerships & Marketing</li>
-                                    <li class="roadmap-graphs__item -lightgreen"><span>10%</span> Reserve</li>
-                                    <li class="roadmap-graphs__item -darkgreen"><span>10%</span> Legal</li>
-                                    <li class="roadmap-graphs__item -yellow"><span>5%</span> Operations</li>
+                                    <li data-text="proceedsbullet1" class="roadmap-graphs__item -blue"><span>30%</span> R&D Software</li>
+                                    <li data-text="proceedsbullet2" class="roadmap-graphs__item -red"><span>25%</span> Ecosystem Development</li>
+                                    <li data-text="proceedsbullet3" class="roadmap-graphs__item -lightblue"><span>20%</span> Partnerships & Marketing</li>
+                                    <li data-text="proceedsbullet4" class="roadmap-graphs__item -lightgreen"><span>10%</span> Reserve</li>
+                                    <li data-text="proceedsbullet5" class="roadmap-graphs__item -darkgreen"><span>10%</span> Legal</li>
+                                    <li data-text="proceedsbullet6" class="roadmap-graphs__item -yellow"><span>5%</span> Operations</li>
                                 </ul>   
                             </div>
                         </div>
@@ -427,7 +427,7 @@
 
             <section class="true-news">
                 <div class="true-news__inner">
-                    <h2 id="theNews">True In The News</h2>
+                    <h2 data-text="topnavvideos" id="theNews">Videos</h2>
                     <div class="news-carousel__container">
                         <a href="#" class="news-carousel__nav -previous">
                             <img src="static/images/icons/icon-left-arrow.svg" />
@@ -438,40 +438,44 @@
                         <div id="newsCarousel" class="news-carousel">
                             <div class="news-carousel__item">
                                 <div class="news-carousel__item--inner">
-                                    <img src="static/images/logos/logo-huffington-post.png" />
+                                    <div class="video-wrapper">
+                                        <!-- Copy & Pasted from YouTube -->
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/tZARgdCseRE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                    <!-- <img src="static/images/logos/logo-huffington-post.png" />
                                     <p>Crypto powers social network, launches digital token aimed at powering social interactions.</p>
-                                    <a href="#" class="button button-news">View Article</a>
+                                    <a href="#" class="button button-news">View Article</a> -->
                                 </div>
                             </div>
                             <div class="news-carousel__item">
                                 <div class="news-carousel__item--inner">
-                                    <img src="static/images/logos/logo-techcrunch.png" />
+                                    <div class="video-wrapper">
+                                        <!-- Copy & Pasted from YouTube -->
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/WwxRfG1NQMQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                    <!-- <img src="static/images/logos/logo-techcrunch.png" />
                                     <p>True is raising $100M to take on Facebook and other social media platforms, its the first of its kind to do an ICO.</p>
-                                    <a href="#" class="button button-news">View Article</a>
+                                    <a href="#" class="button button-news">View Article</a> -->
                                 </div>
                             </div>
                             <div class="news-carousel__item">
                                 <div class="news-carousel__item--inner">
-                                    <img src="static/images/logos/logo-ico-alert.png" />
+                                    <div class="video-wrapper">
+                                        <!-- Copy & Pasted from YouTube -->
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/lUlHQxb88TI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                    <!-- <img src="static/images/logos/logo-ico-alert.png" />
                                     <p>ICO Alerta: True Coins, its the first established social networking platform to do an ICO.</p>
-                                    <a href="#" class="button button-news">View Article</a>
+                                    <a href="#" class="button button-news">View Article</a> -->
                                 </div>
                             </div>
-                            <div class="news-carousel__item">
-                                <div class="news-carousel__item--inner">
-                                    <img src="static/images/logos/logo-ico-alert.png" />
-                                    <p>ICO Alerta: True Coins, its the first established social networking platform to do an ICO.</p>
-                                    <a href="#" class="button button-news">View Article</a>
-                                </div>
-                            </div>
-                            
                         </div>
                     </div>
                 </div>
             </section>
 
             <section class="true-team">
-                <h2 id="theTeam">The Team</h2>
+                <h2 data-text="theteam" id="theTeam">The Team</h2>
                 <div class="team-protraits">
                     <div class="team-portraits__row">
                         <div class="team-portraits__item">
@@ -816,98 +820,13 @@
                         </div>
                     </div>
 
-                    <!-- <div class="team-protraits-col">
-                        <div class="team-portraits__item">
-                            <div class="team-portraits__item--image -bret"></div>
-                            <div class="team-portraits__item--hover">
-                                <div class="team-portraits__item--bio">
-                                    Bret Cox<br />
-                                    Co-Founder &amp; CEO
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-portraits__item">
-                            <div class="team-portraits__item--image -dmitri"></div>
-                            <div class="team-portraits__item--hover">
-                                <div class="team-portraits__item--bio">
-                                    Dmitri Maruhh<br />
-                                    Backend Engineer
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-protraits-col">
-                        <div class="team-portraits__item">
-                            <div class="team-portraits__item--image -ilya"></div>
-                            <div class="team-portraits__item--hover">
-                                <div class="team-portraits__item--bio">
-                                    Ilya Radyukhin
-                                    <br />
-                                    Founding Mobile Engineer
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-portraits__item">
-                            <div class="team-portraits__item--image -stanislav"></div>
-                            <div class="team-portraits__item--hover">
-                                <div class="team-portraits__item--bio">
-                                    Stanislav Mischenko
-                                    <br />
-                                    Senior Mobile Engineer
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-protraits-col">
-                        <div class="team-portraits__item">
-                            <div class="team-portraits__item--image -ryan"></div>
-                            <div class="team-portraits__item--hover">
-                                <div class="team-portraits__item--bio">
-                                    Ryan Cox
-                                    <br />
-                                    Director of Marketing
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-portraits__item">
-                            <div class="team-portraits__item--image -roman"></div>
-                            <div class="team-portraits__item--hover">
-                                <div class="team-portraits__item--bio">
-                                    Roman Dobrynin
-                                    <br />
-                                    Web Front End Engineer
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-protraits-col">
-                        <div class="team-portraits__item">
-                            <div class="team-portraits__item--image -rustam"></div>
-                            <div class="team-portraits__item--hover">
-                                <div class="team-portraits__item--bio">
-                                    Rustam Nadrshin
-                                    <br />
-                                    iOS Engineer
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-portraits__item">
-                            <div class="team-portraits__item--image -kori"></div>
-                            <div class="team-portraits__item--hover">
-                                <div class="team-portraits__item--bio">
-                                    Kori Handy
-                                    <br />
-                                    Lead Product Designer
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </section>
 
             <section class="site-footer">
                 <div class="site-footer__inner">
-                    <h2>Try True & See The Difference</h2>
+                    <h2 data-text="trytrue">Try True & See The Difference</h2>
                     <a href="#"><img src="static/images/buttons/button-appstore.png" width="157" /></a>
                     <a href="#"><img src="static/images/buttons/button-google-play.png" width="157" /></a>
                 </div>
@@ -927,18 +846,18 @@
                             <a href="#" data-scroll-to="theTeam" class="footer-link">Team</a>
                             <a href="#" data-scroll-to="theRoadmap" class="footer-link">Key Dates</a>
                         </div>
-                        <div class="footer-app__links">
+                        <div class="footer-app__links">&copy;&copy;&copy;&copy;
                             <a href="#"><img src="static/images/buttons/button-appstore.png" width="157" /></a>
                             <a href="#"><img src="static/images/buttons/button-google-play.png" width="157" /></a>
                         </div>
                     </div>
-                    <div class="footer-copyright">
+                    <div data-text="footer" class="footer-copyright">
                         &copy; 2018 Hello Mobile Inc. All rights reserved.
                     </div>
                 </footer>
             </section>
         </div>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <script src="static/js/app.js?cache=bust9"></script>
+        <script src="static/js/app.js?cache=bust10"></script>
     </body>
 </html>

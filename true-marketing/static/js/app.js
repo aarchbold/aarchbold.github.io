@@ -1,35 +1,35 @@
-$.fn.localizr = function() {
-    var $context = $(this),
-        $current = $('.language-selector__current', $context),
-        $arrow = $('.language-selector__arrow', $context),
-        $layer = $('.language-selector__layer', $context),
-        $languages = $('.language-selector__item', $context);
+// $.fn.localizr = function() {
+//     var $context = $(this),
+//         $current = $('.language-selector__current', $context),
+//         $arrow = $('.language-selector__arrow', $context),
+//         $layer = $('.language-selector__layer', $context),
+//         $languages = $('.language-selector__item', $context);
 
-    function toggleLayer() {
-        if ($layer.hasClass('-active')) {
-            $arrow.removeClass('-active');
-            $layer.removeClass('-active');
-            $layer.hide();
-        } else {
-            $layer.show();
-            setTimeout(function() {
-                $arrow.addClass('-active');
-                $layer.addClass('-active');
-            },100)
-        }
-    }
+//     function toggleLayer() {
+//         if ($layer.hasClass('-active')) {
+//             $arrow.removeClass('-active');
+//             $layer.removeClass('-active');
+//             $layer.hide();
+//         } else {
+//             $layer.show();
+//             setTimeout(function() {
+//                 $arrow.addClass('-active');
+//                 $layer.addClass('-active');
+//             },100)
+//         }
+//     }
 
-    $current.click(function() {
-        toggleLayer();
-    });
+//     $current.click(function() {
+//         toggleLayer();
+//     });
 
-    $languages.click(function(e) {
-        // var currentLang = $(e.target).data('language');
-        // localStorage.setItem('trueLanguage2',currentLang);
-        // handleLocalizaion(currentLang);
-        toggleLayer();
-    });
-}
+//     $languages.click(function(e) {
+//         // var currentLang = $(e.target).data('language');
+//         // localStorage.setItem('trueLanguage2',currentLang);
+//         // handleLocalizaion(currentLang);
+//         toggleLayer();
+//     });
+// }
 
 $.fn.handleNav = function() {
     var $topnavLinks = $('.top-nav__link');
@@ -135,7 +135,7 @@ function doHeaderParallax() {
 }
 
 $(function(){
-    $('.language-selector').localizr();
+    // $('.language-selector').localizr();
     $('body').handleNav();
     // $('.home-header-scroller').fadeOnScroll();
     $('.roadmap-graphs').rotateGraphs();
@@ -148,14 +148,14 @@ $(document).ready(function(){
     $('#newsCarousel').slick({
         prevArrow: $('.news-carousel__nav.-previous'),
         nextArrow: $('.news-carousel__nav.-next'),
-        slidesToShow: 3,
+        slidesToShow: 2,
         responsive: [
-            {
-                breakpoint: 1050,
-                settings: {
-                  slidesToShow: 2,
-                }
-            },
+            // {
+            //     breakpoint: 1050,
+            //     settings: {
+            //       slidesToShow: 2,
+            //     }
+            // },
             {
                 breakpoint: 815,
                 settings: {
@@ -207,6 +207,110 @@ $(function(){
     console.log($);
     $('#countdownContainer').initCountdown();
 });
+var english = {
+    topnavhowitworks: "How It Works",
+    topnavfeatures: "Features",
+    topnavtokensale: "Token Sale",
+    topnavroadmap: "Roadmap",
+    topnavvideos: "Videos",
+    topnavteam: "Team",
+    topnavtrytrue: "Try True",
+    topnavwhitepaper: "Whitepaper",
+    header: "Facebook can't be fixed, so we're going to replace it.",
+    subheader: "Our mission is to create a better social community that focuses on authenticity, meaningful connections, and helping the world share their experiences in a meaningful way that respects thier privacy.",
+    formbutton: "I'm Interested, Sign Me Up",
+    presaleintro: "Pre Sale Starts In",
+    days: "Days",
+    hours: "Hours",
+    minutes: "Minutes",
+    seconds: "Seconds",
+    learnmore: "Learn More",
+    spinnertext: "Guaranteeing your discount...",
+    signuptext: "Sign up to receive token sale updates & be the first to know about promotions & discounts.",
+    formfirstname: "First Name",
+    formlastname: "Last Name",
+    formemail: "Email Address",
+    formcurrencytype: "How would you like to invest?",
+    formamount: "Amount Interested in Investing",
+    formerror: "Please enter a first name, last name, and valid email address.",
+    submissionerrormssg: "We couldn't validate your data. Please re-check your information and try again.",
+    formbutton2: "Sign Me Up",
+    success: "Success",
+    successbody1: "Your 25% discount is now guaranteed. We’ll send an email to <email> with your discount code before the sale goes live.",
+    successbody2: "Have a great day.",
+    successbody3: "- The Team @ True",
+    feature3header: "TRU Tokens",
+    feature3body: "We're creating a new social media economy.Tru tokens will allow users to interact on social network with a built-in end-to-end decentralized privacy solution. User’s data will always be owned & governed by the user. Period.",
+    feature1header: "The promise of social media to connect the whole world was a wonderful idea... but it has come at a cost.",
+    feature1body: "In pursuit of growth at all costs, social media platforms have made you the product. The only way they can maintain this growth is through monetization of your personal data by intrusive data mining & harvesting techniques with no regards to privacy.",
+    feature2header: "True has an honest data agreement guaranteed by blockchain.",
+    feature2body: "Our users own and control access to their personal data powered by blockchain technology. We’re building a decentralized system that bakes privacy and trust into our core features.",
+    feature4header: "Our users want TRUE!",
+    feature4body: "True has already raised $10M in venture capital and is a real company with a real product with thousands of users using the application daily. We’re changing the paradigm to an honest solution that protects & safeguards users privacy & data from deep intrusive harvesting techniques & data mining.",
+    howitworks: "How It Works",
+    socialheader: "Why is Social Networking Broken?",
+    socialsubheader: "The largest social media platforms have become surveillance empires that prepetually manipulate your attention, secretly harvest your personal data and influence your behavior in order to profit.",
+    bigbrother: "Big Brother",
+    bigbrother2: "Surveillance",
+    privacy: "Privacy",
+    privacy2: "Leaks",
+    influence: "Influence",
+    influence2: "Fake News",
+    features: "Features",
+    feature1: "Be Real",
+    feature1body1: "True is about sharing genuine moments with your best friends.",
+    feature1body2: "It’s not a place for news or political arguments, it's for connecting and staying in touch with the people you care most about.",
+    feature2: "Stay True",
+    feature2body1: "Social media has become a phony place. Fake news, fake friends and big brands paying for your eyeballs.",
+    feature2body2: "We don't do that.",
+    feature3: "Moments",
+    feature3body1: "True is original content and real sharing by real people, with features you haven't seen before like Days - an automatic story built by your location and motion to share.",
+    feature4: "Be Honest",
+    feature4body1: "What's the best part about checking your feed? Updates from real friends.",
+    feature4body2: "That's all we do.",
+    feature5: "It's Free",
+    feature5body1: "Live location sharing with total privacy controls are included for the first time in a social network to keep up and stay connected to the ones you love.",
+    feature6: "Private & Safe",
+    feature6body1: "Respect for privacy and sharing control are cornerstones of the user experience. Powerful controls allow you to be sure how you share and who sees your posts.",
+    trytrue: "Try True & See The Difference",
+    tokensalestage1: "Stage 1: 5M (Soft Cap)",
+    tokensalestage2: "Current Stage: Private Pre-sale",
+    tokensalestage3: "5M Allocated In Private Pre-Sale",
+    tokensalestage4: "44M To Be Distributed In Public Sale",
+    tokensalestage5: "STARTING PRICE: $0.20",
+    tokensalestage6: "UPPER BOUND: TBD",
+    theroadmap: "The Roadmap",
+    theroadmap1: "DEC 2018",
+    theroadmap2: "Private Pre-Sale",
+    theroadmap3: "Q2 2019",
+    theroadmap4: "Public Token Sale",
+    theroadmap5: "Q4 2019",
+    theroadmap6: "Testnet Launch",
+    theroadmap7: "Q4 2019",
+    theroadmap8: "Consensus Network Launch",
+    theroadmap9: "Q1 2020",
+    theroadmap10: "Integration with Wallets",
+    theroadmap11: "Q2 2020",
+    theroadmap12: "Phase 2 Launch",
+    theroadmap13: "Q3 2020",
+    theroadmap14: "Future Releases",
+    distributionheader: "Token Distribution",
+    distributionbullet1: "35% Crowds",
+    distributionbullet2: "25% Foundation",
+    distributionbullet3: "24% Corporation",
+    distributionbullet4: "10% Reward Pool",
+    distributionbullet5: "7% Teams & Advisors",
+    distributionbullet6: "1% Transation Cost",
+    proceedsheader: "Use of Proceeds",
+    proceedsbullet1: "30% R&D Software",
+    proceedsbullet2: "25% Ecosystem Development",
+    proceedsbullet3: "20% Partnerships & Marketing",
+    proceedsbullet4: "10% Reserve",
+    proceedsbullet5: "10% Legal",
+    proceedsbullet6: "5% Operations",  
+    theteam: "The Team",
+    footer: "© 2018 Hello Mobile Inc. All rights reserved."
+}
 $.fn.handlePhoneCarousel = function() {
     var $container = $(this),
         $phones = $('.phone-item',$container),
@@ -238,6 +342,102 @@ $.fn.handlePhoneCarousel = function() {
 
 $(document).ready(function(){
     $('.phone-carousel').handlePhoneCarousel();
+});
+function handleLocalizaion(language) {
+    var currentLang;
+	var flag;
+    $('.language-selector__item').each(function(i,e){
+        $(e).removeClass('-active');
+    });
+    $('[data-language='+language+']').addClass('-active');
+    //$('.language-selector__current span').text(language);
+	
+	// 
+    if (language === 'EN') {
+        currentLang = english;
+		flag = "us";
+    } else if (language === 'KO') {
+        currentLang = korean;
+		flag = "korea";
+    } else if (language === 'RU') {
+        currentLang = russian;
+		flag = "russia";
+    } else if (language === 'JP') {
+        currentLang = japanese;
+		flag = "japan";
+    } else if (language === 'CH') {
+        currentLang = chinese;
+		flag = "china";
+    }
+    for (key in currentLang) {
+        if (key === 'formfirstname' ||
+            key === 'formlastname' ||
+            key === 'formemail') {
+                $('[data-text='+key+']').attr('placeholder', currentLang[key]);
+        } else {
+            $('[data-text='+key+']').text(currentLang[key]);
+        }
+    }
+	$('.language-selector__current span').html('<img src="static/images/icons/'+ flag +'.png" class="flag" /> ' + language);
+   
+}
+
+$.fn.localizr = function() {
+    var $context = $(this),
+        $current = $('.language-selector__current', $context),
+        $arrow = $('.language-selector__arrow', $context),
+        $layer = $('.language-selector__layer', $context),
+        $languages = $('.language-selector__item', $context);
+
+    function toggleLayer() {
+        if ($layer.hasClass('-active')) {
+            $arrow.removeClass('-active');
+            $layer.removeClass('-active');
+            $layer.hide();
+        } else {
+            $layer.show();
+            setTimeout(function() {
+                $arrow.addClass('-active');
+                $layer.addClass('-active');
+            },100)
+        }
+    }
+
+    $current.click(function() {
+        toggleLayer();
+    });
+
+    $languages.click(function(e) {
+        e.preventDefault();
+        var currentLang = $(e.target).data('language');
+        localStorage.setItem('trueLanguage2',currentLang);
+        handleLocalizaion(currentLang);
+        toggleLayer();
+    });
+}
+
+var getParameterByName = function (name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+};
+
+$(function(){
+    console.log('Localizer');
+    if (localStorage.getItem('trueLanguage')) {
+        localStorage.removeItem('trueLanguage');
+    }
+    if (getParameterByName('lang')) {
+        localStorage.setItem('trueLanguage2',getParameterByName('lang').toLocaleUpperCase());
+        handleLocalizaion(getParameterByName('lang').toUpperCase());
+    } else if (localStorage.getItem('trueLanguage2')) {
+        handleLocalizaion(localStorage.getItem('trueLanguage2'));
+    }
+    $('.language-selector').localizr();
 });
 function getParam(name) {
     SCH = document.location.search;
