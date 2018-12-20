@@ -1,0 +1,355 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Content Marketing with Quietly</title>
+        <meta property="og:title" content="Content Marketing with Quietly">
+        <meta name="description" content="Quietly helps brands and publishers develop data-driven content.">
+        <meta property="og:image" content="https://www.quiet.ly/static/images/others/og.png">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Quietly">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@QuietlyApp">
+        <script src="static/js/vendors.js?cache=bust1"></script>
+        <link rel="stylesheet" href="static/css/styles.css?cache=bust1">
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="page-outer home-hero">
+            <nav>
+    <div class="page-inner">
+        <div class="topnav-container">
+            <a href="index.html"><img class="topnav-logo" src="static/images/logos/logo-quietly.svg" /></a>
+            <div class="topnav-main-menu">
+                <div class="topnav-main-menu__inner">
+                    <div class="topnav-main-menu__item">
+                        <a  href="services.html">Services</a>
+                    </div>
+                    <div class="topnav-main-menu__item">
+                        <a  href="#">Case Studies</a>
+                    </div>
+                    <div class="topnav-main-menu__item">
+                        <a href="#">Blog</a>
+                    </div>
+                    <div class="topnav-main-menu__item">
+                        <a  href="#">Careers</a>
+                    </div>
+                    <div class="topnav-main-menu__item">
+                        <a  href="#">About</a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="topnav-mobile__menu">
+                <img class="-open" src="static/images/icons/icon-hamburger.svg" />
+                <img class="-close" src="static/images/icons/icon-close.svg" />
+            </a>
+        </div>
+    </div>
+</nav>
+            <div class="page-inner">
+                <div class="page-content">
+                    <h1 class="page-header">Drive your business with content</h1>
+                    <div class="tile tile-float-left tile-12">
+                        <div class="tile-no-bg">
+                            <div class="page-sub-header">Quietly gain an edge on your competition with unique data and insight.</div>
+                            <a href="#" class="button button-icon">Learn More</a>
+                            &nbsp;
+                            <a href="#" class="button button-icon">Contact Us</a>
+                        </div>
+                    </div>
+
+                    
+
+<div id="homeTestimonial">
+                        
+</div>
+
+<script id="testimonial-template" type="text/x-handlebars-template">
+    <div class="tile tile-float-right tile-22">
+        <div class="tile-quote">
+            <div class="icon-circular blog-feature__pull-quote--icon">
+                <img src="static/images/icons/icon-quote.svg" />
+            </div>
+            <p>{{ quote }}</p>
+            <div class="quote-info">
+                {{ author }}<br />
+                {{ title }}<br />
+                {{ company }}
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/javascript">
+    var data = {
+        quote: "Quietly plays that perfect role of detail-obsessed planner and big-picture visionary, like having the most attuned project manager and wisest board member in one package.",
+        author: "Ryan McKee",
+        title: "Director of Brand Engagement",
+        company: "MEC"
+    };
+    var template = Handlebars.compile(document.getElementById('testimonial-template').innerHTML);
+    var testimonialData = template(data);
+    document.getElementById('homeTestimonial').innerHTML += testimonialData;
+</script>
+
+                    <div id="homeCaseStudies">
+                        
+</div>
+
+<script id="case-studies-template" type="text/x-handlebars-template">
+    {{#each caseStudies}}
+    {{#ifEven @index}}
+        <div class="tile tile-float-left tile-12">
+    {{else}}
+        <div class="tile tile-float-right tile-22">
+    {{/ifEven}}
+    {{#ifFirst @index}}
+        <h2 class="tile-h2">Customer Stories</h2>
+    {{/ifFirst}}
+        <div class="tile-inner">
+            <div class="tile-image">
+                <img class="tile-image__logo{{#ifEven @index}} -left{{/ifEven}}" src={{this.logoImg}} />
+                <img class="tile-image__thumb" src={{this.thumbnailImg}} />
+            </div>
+            <div class="tile-padding">
+                <h3>{{this.title}}</h3>
+                <p>{{this.description}}</p>
+                <a class="tile-read-more" href={{this.link}}>Read the full case study</a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</script>
+
+<script type="text/javascript">
+    Handlebars.registerHelper('ifEven', function (index, options) {
+        if(index%2 == 0){
+            return options.fn(this);
+        } else {
+            return options.inverse(this);
+        }
+    });
+    Handlebars.registerHelper('ifFirst', function (index, options) {
+        if(index === 0){
+            return options.fn(this);
+        }
+    });
+    var data = {
+        caseStudies: [
+            {
+                title: "Driving growth in new markets",
+                description: "As the content partner to Canada's most trusted brand, we work with MEC to bring their mission online, engaging with audiences digitally to help them discover new ways of enjoying the outdoors.",
+                thumbnailImg: 'static/images/case-studies/thumb-mec.jpg',
+                logoImg: 'static/images/case-studies/logo-mec.png',
+                link: 'someCoolLink'
+            },
+            {
+                title: "Engaging a global audience",
+                description: "Herschel is a leading lifestyle, travel, and apparel brand with global appeal. With that comes the challenge of creating content for discerning readers worldwide—stylish travelers who are curious about other cultures and passionate about discovering new destinations.",
+                thumbnailImg: 'static/images/case-studies/thumb-herschel.jpg',
+                logoImg: 'static/images/case-studies/logo-herschel.png',
+                link: 'someCoolLink'
+            },
+            {
+                title: "Humanizing technical topics",
+                description: "Okta is the leading independent provider of identity management solutions—but they face fierce competition from companies like Microsoft, RSA, and OneLogin.",
+                thumbnailImg: 'static/images/case-studies/thumb-okta.jpg',
+                logoImg: 'static/images/case-studies/logo-okta.png',
+                link: 'someCoolLink'
+            },
+            {
+                title: "Changing consumer perceptions",
+                description: "When consumers have a variety of seafood to choose from—salmon, shrimp, tuna—the lesser-known tilapia has to work harder to stand out.",
+                thumbnailImg: 'static/images/case-studies/thumb-regal-springs.jpg',
+                logoImg: 'static/images/case-studies/logo-regal-springs.png',
+                link: 'someCoolLink'
+            }
+        ]
+    };
+    var template = Handlebars.compile(document.getElementById('case-studies-template').innerHTML);
+    var caseStudiesData = template(data);
+    document.getElementById('homeCaseStudies').innerHTML += caseStudiesData;
+</script>
+
+                </div>
+                <div class="our-services__cta">
+                    <a href="#">View all Our Services <img src="static/images/icons/icon-arrow-white.svg" /></a>
+                </div>
+            </div>
+            <div class="quietly-clients">
+    <div class="page-inner">
+        <div class="quietly-clients__row">
+            <div class="quietly-clients__item">
+                <img src="static/images/clients/logo-pwc.png" />
+            </div>
+            <div class="quietly-clients__item">
+                <img src="static/images/clients/logo-herschel.png" />
+            </div>
+            <div class="quietly-clients__item">
+                <img src="static/images/clients/logo-red.png" />
+            </div>
+            <div class="quietly-clients__item">
+                <img src="static/images/clients/logo-sothebys.png" />
+            </div>
+            <div class="quietly-clients__item">
+                <img src="static/images/clients/logo-unbounce.png" />
+            </div>
+            <div class="quietly-clients__item">
+                <img src="static/images/clients/logo-tmx.png" />
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="our-services">
+                <div class="page-inner">
+                    <h2>Our Services</h2>
+                    <div class="our-services__row">
+                        <div class="our-services__item">
+                            <h3>Discover</h3>
+                            <p>We help brands define content and understand where it plays a role in their organization.</p>
+                            <a href="#">Learn More</a>
+                        </div>
+                        <div class="our-services__item">
+                            <h3>Plan</h3>
+                            <p>We devise strategies that align with your overall brand strategy.</p>
+                            <a href="#">Learn More</a>
+                        </div>
+                        <div class="our-services__item">
+                            <h3>Execute</h3>
+                            <p>From implementing technical projects to producing custom, original content, we combine…</p>
+                            <a href="#">Learn More</a>
+                        </div>
+                        <div class="our-services__item">
+                            <h3>Build</h3>
+                            <p>Our customized systems and tools, coupled with teachable best practices, build on the…</p>
+                            <a href="#">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="our-services__cta">
+                        <a href="#">View all Our Services <img src="static/images/icons/icon-arrow-white.svg" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="page-inner">
+                <div class="blog-feature">
+                    <div class="blog-feature__col1">
+                        <img class="blog-feature__image" src="static/images/placeholder/blog.jpg" />
+                        <div class="blog-feature__photo-credit">Photo by Soi Disantra</div>
+                        <div class="blog-feature__pull-quote">
+                            <div class="icon-circular blog-feature__pull-quote--icon">
+                                <img src="static/images/icons/icon-quote.svg" />
+                            </div>
+                            <p>It’s important to make the path to conversion as streamlined as possible for your visitors.</p>
+                        </div>
+                    </div>
+                    <div class="blog-feature__col2">
+                        <div class="blog-feature__meta">
+                            <div class="blog-feature__category">From the Blog:</div>
+                            <div class="blog-feature__title">How to Increase Your Content Conversion Rate</div>
+                            <div class="blog-feature__author">Posted on September 20, 2018 in Insights by Carlin Leung</div>
+                        </div>
+                        <p>You defined and set up your content marketing goals, published content, let your analytics software collect data, and were excited to take a look at the results. But your conversion rate was way lower than expected. Now your work is cut out for you: you need to drive more conversions—but how? Let’s take a look at a few strategies and tactics to increase that conversion rate.</p>
+                        <a href="#" target="_blank">Keep reading</a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-container">
+    <div class="page-inner">
+        <div class="contact-row">
+            <div class="contact-col">
+                <h3>What can we do for you?</h3>
+            </div>
+            <div class="contact-col">
+                <div class="contact-col__row">
+                    <label for="contactName">Names<span class="form-required">required</span></label>
+                    <input type="text" id="contactName" name="contactName" class="contact-input" value="" />
+                </div>
+                <div class="contact-col__row">
+                    <label for="contactEmail">Email<span class="form-required">required</span></label>
+                    <input type="email" id="contactEmail" name="contactEmail" class="contact-input" value="" />
+                </div>
+                <div class="contact-col__row">
+                    <label for="contactCompany">Company<span class="form-required">required</span></label>
+                    <input type="text" id="contactCompany" name="contactCompany" class="contact-input" value="" />
+                </div>
+                <div class="contact-col__row">
+                    <label for="contactPhone">Telephone<span class="form-required">required</span></label>
+                    <input type="text" id="contactPhone" name="contactPhone" class="contact-input" value="" />
+                </div>
+            </div>
+            <div class="contact-col">
+                <div class="contact-col__row">
+                    <label for="contactWebsite">Website address<span class="form-required">required</span></label>
+                    <input type="text" id="contactWebsite" name="contactWebsite" class="contact-input" value="" />
+                </div>
+                <div class="contact-col__row">
+                    <label for="contactBudget">What's your budget...</label>
+                    <input type="text" id="contactBudget" name="contactBudget" class="contact-input" value="" />
+                </div>
+                <div class="contact-col__row">
+                    <label for="contactText">What do you want to achieve</label>
+                    <textarea id="contactText" name="contactText" class="contact-input" value=""></textarea>
+                </div>
+                <div class="contact-col__row">
+                    <button class="button button-submit -block" type="button">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <footer>
+    <div class="page-inner">
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h3>Contact us</h3>
+                    <ul>
+                        <li>(855) 578 4385</li>
+                        <li><a href="mailto:info@quiet.ly">info@quiet.ly</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>For Writers</h3>
+                    <ul>
+                        <li><a href="#">Become a writer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Keep in touch</h3>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/company/quietly/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://twitter.com/quietlycontent" target="_blank">Twitter</a></li>
+                        <li><a href="https://www.facebook.com/Quietly/" target="_blank">Facebook</a></li>
+                        <li><a href="#" target="_blank">Medium</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter-signup">
+                    <h3>Get smart and sign up for our newsletter</h3>
+                    <div class="footer-newsletter-signup__form">
+                        <input type="email" class="footer-newsletter-signup__input" placeholder="Your email address please" value="" />
+                        <button class="button button-submit" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright footer-row">
+                <div class="footer-col -double">
+                    <img class="footer-logo" src="static/images/logos/logo-q.svg" />
+                    <div class="footer-copyright-text">&copy; 2018 Quietly. All rights reserved.</div>
+                </div>
+                <div class="footer-col">
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+        </div>
+
+        <script src="static/js/app.js?cache=bust1"></script>
+    </body>
+</html>
