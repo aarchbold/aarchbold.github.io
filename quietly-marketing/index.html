@@ -95,8 +95,11 @@
     var testimonialData = template(data);
     document.getElementById('homeTestimonial').innerHTML += testimonialData;
 </script>
-
-                    <div id="homeCaseStudies">
+                    <div class="tile tile-float-left tile-12 tile-no-margin">
+                        <h2 class="tile-h2">Customer Stories</h2>
+                    </div>
+                    <div class="tiles__scroller" id="caseStudiesScroller">
+                        <div class="tiles__scroller--inner" id="homeCaseStudies">
                         
 </div>
 
@@ -107,9 +110,6 @@
     {{else}}
         <div class="tile tile-float-right tile-22">
     {{/ifEven}}
-    {{#ifFirst @index}}
-        <h2 class="tile-h2">Customer Stories</h2>
-    {{/ifFirst}}
         <div class="tile-inner">
             <div class="tile-image">
                 <img class="tile-image__logo{{#ifEven @index}} -left{{/ifEven}}" src={{this.logoImg}} />
@@ -131,11 +131,6 @@
             return options.fn(this);
         } else {
             return options.inverse(this);
-        }
-    });
-    Handlebars.registerHelper('ifFirst', function (index, options) {
-        if(index === 0){
-            return options.fn(this);
         }
     });
     var data = {
@@ -175,9 +170,10 @@
     document.getElementById('homeCaseStudies').innerHTML += caseStudiesData;
 </script>
 
+                    </div>
                 </div>
                 <div class="our-services__cta">
-                    <a href="#">View all Our Services <img src="static/images/icons/icon-arrow-white.svg" /></a>
+                    <a href="services.html">View all Our Services <img src="static/images/icons/icon-arrow-white.svg" /></a>
                 </div>
             </div>
             <div class="quietly-clients">
