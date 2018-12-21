@@ -980,7 +980,24 @@ label {
   margin-top: 30px;
 }
 
+@media (max-width: 840px) {
+  .tile {
+    margin-bottom: 40px;
+  }
+
+  .tile-12 {
+    padding-right: 20px;
+  }
+
+  .tile-22 {
+    padding-left: 20px;
+  }
+}
 @media (max-width: 650px) {
+  .tile {
+    margin-bottom: 20px;
+  }
+
   .tile-quote {
     text-align: left;
     padding: 30px 20px;
