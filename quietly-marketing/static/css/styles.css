@@ -170,7 +170,7 @@ body {
 }
 
 .topnav-container {
-  padding: 32px 0;
+  padding: 34px 0 32px;
 }
 
 .topnav-main-menu__item {
@@ -182,7 +182,7 @@ body {
   -o-transition: all 0.3s;
   transition: all 0.3s;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 400;
   padding: 4px 12px 5px;
   color: #ffffff;
@@ -196,21 +196,26 @@ body {
 
 .topnav-logo {
   position: absolute;
-  top: 20px;
+  top: 14px;
   z-index: 1;
+  width: 140px;
 }
 
 .topnav-mobile__menu {
   display: none;
   position: absolute;
   right: 20px;
-  top: 20px;
+  top: 22px;
 }
 .topnav-mobile__menu .-close {
   display: none;
 }
 
 @media (max-width: 840px) {
+  .topnav-container {
+    padding: 31px 0;
+  }
+
   .topnav-main-menu {
     display: none;
     position: fixed;
