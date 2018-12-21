@@ -622,7 +622,7 @@ label {
     padding: 6px;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .quietly-clients__item {
     width: 50%;
     padding: 6px;
@@ -709,6 +709,9 @@ label {
   border-radius: 50%;
   border: 2px solid #c7b9dc;
 }
+.services-feature .feature-description {
+  display: block;
+}
 
 .services-example__image {
   position: relative;
@@ -784,10 +787,59 @@ label {
   padding-bottom: 30px;
 }
 
+@media (max-width: 675px) {
+  .services-col__13, .services-col__23 {
+    width: 100%;
+    float: none;
+    padding-right: 0;
+  }
+
+  .services-header {
+    margin-bottom: 20px;
+  }
+
+  .services-feature h3 {
+    position: relative;
+    margin: 0;
+    padding: 15px 0 15px 30px;
+    border-top: 1px solid #707070;
+    cursor: pointer;
+  }
+  .services-feature h3:before {
+    content: '+';
+    position: absolute;
+    top: 3px;
+    left: 0px;
+    font-size: 30px;
+    color: #c7b9dc;
+  }
+  .services-feature h3.-active:before {
+    content: '-';
+  }
+  .services-feature .feature-description {
+    display: none;
+  }
+  .services-feature .feature-description.-active {
+    display: block;
+  }
+
+  .services-row {
+    margin-bottom: 50px;
+  }
+
+  .services-example__image, .services-example__description {
+    float: none;
+  }
+
+  .services-example__description {
+    width: 100%;
+  }
+}
 @media (max-width: 840px) {
   .our-services__item {
     width: 50%;
-    min-height: 250px;
+    min-height: 280px;
+    padding-bottom: 20px;
   }
 
   .services-hero .tile-float-left {
@@ -800,6 +852,31 @@ label {
   }
   .services-row.-alternate {
     padding: 0;
+  }
+}
+@media (max-width: 530px) {
+  .services-example__image {
+    width: 100%;
+  }
+
+  .services-example__logo {
+    position: absolute;
+    right: auto;
+    top: auto;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    bottom: -86px;
+    left: 20px;
+    width: 120px;
+  }
+
+  .services-example__photo-credit {
+    padding-left: 160px;
+  }
+
+  .services-example__description {
+    padding-left: 0;
   }
 }
 @media (max-width: 400px) {
@@ -988,5 +1065,14 @@ label {
     box-sizing: border-box;
     padding: 20px 20px 10px;
     background-color: #424242;
+  }
+
+  .inline-nav__list li {
+    padding: 20px 0 20px 36px;
+  }
+  .inline-nav__list a:after {
+    content: url(../images/icons/icon-down-arrow.svg);
+    right: auto;
+    left: 0px;
   }
 }

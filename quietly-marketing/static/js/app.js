@@ -30,16 +30,39 @@ $(function(){
 });
 $.fn.handleScroll = function() {
     var $link = $(this);
+    var offset = 40;
     $link.click(function() {
         target = '#' + $(this).attr('data-scroll-target');
+        if ($(window).width() < 800) {
+            offset = 80;
+        }
         $('html, body').animate({
-            scrollTop: $(target).offset().top - 40
+            scrollTop: $(target).offset().top - offset
         }, 400);
     });
 }
 
 $(function(){    
     $('.inline-scroll').handleScroll();
+});
+$.fn.handleMobileServicesFeatures = function() {
+    var $feature = $(this),
+        $h3 = $('h3',$feature),
+        $text = $('.feature-description',$feature);
+
+    
+    $h3.click(function() {
+        if ($(window).width() < 675) {
+            var $currentFeature = $('.feature-description', $(this).parent());
+            console.log($(this));
+            $(this).hasClass('-active') ? $(this).removeClass('-active') : $(this).addClass('-active');
+            $currentFeature.hasClass('-active') ? $currentFeature.removeClass('-active') : $currentFeature.addClass('-active');
+        }
+    });
+}
+
+$(function(){    
+    $('.services-feature').handleMobileServicesFeatures();
 });
 // function getParam(name) {
 //     SCH = document.location.search;
