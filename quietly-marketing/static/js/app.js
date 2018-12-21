@@ -61,19 +61,19 @@ $.fn.handleCarousel = function(reset) {
     // });
     $tiles.each(function(index,elem) {
         $(elem).hammer().bind('swiperight', function(ev) {
-            if (index === $tiles.length - 1) {
+            if (index === 0) {
                 return false;
             }
-            $container.scrollTo($($tiles[index + 1]),{
+            $container.scrollTo($($tiles[index - 1]),{
                 duration: 230,
                 easing: 'linear'
             });
         });
         $(elem).hammer().bind('swipeleft', function(ev) {
-            if (index === 0) {
+            if (index === $tiles.length - 1) {
                 return false;
             }
-            $container.scrollTo($($tiles[index - 1]),{
+            $container.scrollTo($($tiles[index + 1]),{
                 duration: 230,
                 easing: 'linear'
             });
