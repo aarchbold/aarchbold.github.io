@@ -54,6 +54,37 @@ $.fn.handleCarousel = function(reset) {
         $tileScroller.width(winWidth * $tiles.length);
         console.log(winWidth);
     }
+
+    // var hammertime = new Hammer($tileScroller, {});
+    // $tileScroller.hammertime.on('swipe', function(ev) {
+    //     console.log(ev);
+    // });
+    $tiles.each(function(index,elem) {
+        $(elem).hammer().bind('swiperight', function(ev) {
+            if (index === $tiles.length - 1) {
+                return false;
+            }
+            $container.scrollTo($($tiles[index + 1]),{
+                duration: 230,
+                easing: 'linear'
+            });
+        });
+        $(elem).hammer().bind('swipeleft', function(ev) {
+            if (index === 0) {
+                return false;
+            }
+            $container.scrollTo($($tiles[index - 1]),{
+                duration: 230,
+                easing: 'linear'
+            });
+        });
+    })
+
+
+
+
+    //$tiles.swiperight()
+
     setTileWidth();
 }
 
