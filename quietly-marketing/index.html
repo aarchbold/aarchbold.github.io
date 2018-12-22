@@ -12,8 +12,8 @@
         <meta property="og:site_name" content="Quietly">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@QuietlyApp">
-        <script src="static/js/vendors.js?cache=1545418176942"></script>
-        <link rel="stylesheet" href="static/css/styles.css?cache=1545418176942">
+        <script src="static/js/vendors.js?cache=1545440371261"></script>
+        <link rel="stylesheet" href="static/css/styles.css?cache=1545440371261">
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -30,7 +30,7 @@
                         <a  href="services.html">Services</a>
                     </div>
                     <div class="topnav-main-menu__item">
-                        <a  href="#">Case Studies</a>
+                        <a  href="case-studies.html">Case Studies</a>
                     </div>
                     <div class="topnav-main-menu__item">
                         <a href="#">Blog</a>
@@ -256,44 +256,48 @@
             <div class="contact-container">
     <div class="page-inner">
         <div class="contact-row">
-            <div class="contact-col">
-                <h3>What can we do for you?</h3>
-            </div>
-            <div class="contact-col">
-                <div class="contact-col__row">
-                    <label for="contactName">Names<span class="form-required">required</span></label>
-                    <input type="text" id="contactName" name="contactName" class="contact-input" value="" />
+            <form id="contactForm">
+                <div class="contact-col">
+                    <h3>What can we do for you?</h3>
                 </div>
-                <div class="contact-col__row">
-                    <label for="contactEmail">Email<span class="form-required">required</span></label>
-                    <input type="email" id="contactEmail" name="contactEmail" class="contact-input" value="" />
+                <div class="contact-col">
+                    <div class="contact-col__row">
+                        <label for="name">Name<span class="form-required">required</span></label>
+                        <input type="text" id="name" name="name" class="contact-input" value="" />
+                    </div>
+                    <div class="contact-col__row">
+                        <label for="email">Email<span class="form-required">required</span></label>
+                        <input type="email" id="email" name="email" class="contact-input" value="" />
+                    </div>
+                    <div class="contact-col__row">
+                        <label for="company">Company<span class="form-required">required</span></label>
+                        <input type="text" id="company" name="company" class="contact-input" value="" />
+                    </div>
+                    <div class="contact-col__row">
+                        <label for="telephone">Telephone<span class="form-required">required</span></label>
+                        <input type="text" id="telephone" name="telephone" class="contact-input" value="" />
+                    </div>
                 </div>
-                <div class="contact-col__row">
-                    <label for="contactCompany">Company<span class="form-required">required</span></label>
-                    <input type="text" id="contactCompany" name="contactCompany" class="contact-input" value="" />
+                <div class="contact-col">
+                    <div class="contact-col__row">
+                        <label for="website">Website address<span class="form-required">required</span></label>
+                        <input type="text" id="website" name="website" class="contact-input" value="" />
+                    </div>
+                    <div class="contact-col__row">
+                        <label for="budget">What's your budget...</label>
+                        <input type="text" id="budget" name="budget" class="contact-input" value="" />
+                    </div>
+                    <div class="contact-col__row">
+                        <label for="comments">What do you want to achieve</label>
+                        <textarea id="comments" name="comments" class="contact-input" value=""></textarea>
+                    </div>
+                    <div class="contact-col__row">
+                        <button class="button button-submit -block" type="submit">Submit</button>
+                        <div class="form-error"></div>
+                        <div class="form-success"></div>
+                    </div>
                 </div>
-                <div class="contact-col__row">
-                    <label for="contactPhone">Telephone<span class="form-required">required</span></label>
-                    <input type="text" id="contactPhone" name="contactPhone" class="contact-input" value="" />
-                </div>
-            </div>
-            <div class="contact-col">
-                <div class="contact-col__row">
-                    <label for="contactWebsite">Website address<span class="form-required">required</span></label>
-                    <input type="text" id="contactWebsite" name="contactWebsite" class="contact-input" value="" />
-                </div>
-                <div class="contact-col__row">
-                    <label for="contactBudget">What's your budget...</label>
-                    <input type="text" id="contactBudget" name="contactBudget" class="contact-input" value="" />
-                </div>
-                <div class="contact-col__row">
-                    <label for="contactText">What do you want to achieve</label>
-                    <textarea id="contactText" name="contactText" class="contact-input" value=""></textarea>
-                </div>
-                <div class="contact-col__row">
-                    <button class="button button-submit -block" type="button">Submit</button>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>
@@ -325,10 +329,14 @@
                 </div>
                 <div class="footer-newsletter-signup">
                     <h3>Get smart and sign up for our newsletter</h3>
-                    <div class="footer-newsletter-signup__form">
-                        <input type="email" class="footer-newsletter-signup__input" placeholder="Your email address please" value="" />
-                        <button class="button button-submit" type="button">Subscribe</button>
-                    </div>
+                    <form id="newsletterSignupForm" novalidate>
+                        <div class="footer-newsletter-signup__form">
+                            <input type="email" class="footer-newsletter-signup__input" placeholder="Your email address please" value="" />
+                            <button class="button button-submit" type="submit">Subscribe</button>
+                        </div>
+                        <div class="form-error"></div>
+                        <div class="form-success">Thanks for signing up for our newsletter. Stay tuned for the latest edition, updates from the team and exclusive freebies.</div>
+                    </form>
                 </div>
             </div>
             <div class="footer-copyright footer-row">
@@ -346,6 +354,6 @@
 </footer>
         </div>
 
-        <script src="static/js/app.js?cache=1545418176942"></script>
+        <script src="static/js/app.js?cache=1545440371261"></script>
     </body>
 </html>
