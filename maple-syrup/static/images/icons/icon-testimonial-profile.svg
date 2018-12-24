@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="40" cy="40" r="40"></circle>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Placeholders-/-Userpic-/-80px">
+            <g id="Group-4">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="◼️-Background" fill="#F3F3F3" xlink:href="#path-1"></use>
+                <path d="M58.8,58.9 C58.8,60.059798 57.859798,61 56.7,61 C55.540202,61 54.6,60.059798 54.6,58.9 L54.6,54.7 C54.6,51.2206061 51.7793939,48.4 48.3,48.4 L31.5,48.4 C28.0206061,48.4 25.2,51.2206061 25.2,54.7 L25.2,58.9 C25.2,60.059798 24.259798,61 23.1,61 C21.940202,61 21,60.059798 21,58.9 L21,54.7 C21,48.9010101 25.7010101,44.2 31.5,44.2 L48.3,44.2 C54.0989899,44.2 58.8,48.9010101 58.8,54.7 L58.8,58.9 Z M39.9,40 C34.1010101,40 29.4,35.2989899 29.4,29.5 C29.4,23.7010101 34.1010101,19 39.9,19 C45.6989899,19 50.4,23.7010101 50.4,29.5 C50.4,35.2989899 45.6989899,40 39.9,40 Z M39.9,35.8 C43.3793939,35.8 46.2,32.9793939 46.2,29.5 C46.2,26.0206061 43.3793939,23.2 39.9,23.2 C36.4206061,23.2 33.6,26.0206061 33.6,29.5 C33.6,32.9793939 36.4206061,35.8 39.9,35.8 Z" id="🔹-Icon-Color" fill="#B9B9B9" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="10px" viewBox="0 0 14 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>🔹 Icon Color</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M6,17 L9,17 L11,13 L11,7 L5,7 L5,13 L8,13 L6,17 Z M14,17 L17,17 L19,13 L19,7 L13,7 L13,13 L16,13 L14,17 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons-/-Quote" transform="translate(-5.000000, -7.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="🔹-Icon-Color" fill="#B9B9B9" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

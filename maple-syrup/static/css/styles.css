@@ -1208,6 +1208,39 @@ footer input[type=text]:disabled, footer input[type=email]:disabled {
   min-height: 200px;
 }
 
+.home-testimonials {
+  padding: 80px 0 160px;
+}
+
+.tile-testimonial__profile {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
+.tile-testimonial__icon {
+  width: 25px;
+  margin: 10px 0;
+}
+
+.tile-testimonial__author {
+  position: absolute;
+  left: 130px;
+  bottom: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.tile-testimonial__social {
+  position: absolute;
+  right: 30px;
+  bottom: 28px;
+}
+.tile-testimonial__social a {
+  display: inline-block;
+  margin-left: 5px;
+}
+
 /* animations styles
 */
 .animate-slide {
@@ -1242,6 +1275,10 @@ footer input[type=text]:disabled, footer input[type=email]:disabled {
   width: 25%;
 }
 
+.tile-col13 {
+  width: 33.3%;
+}
+
 .tile-inner {
   min-height: 160px;
   border-radius: 10px;
@@ -1261,4 +1298,12 @@ footer input[type=text]:disabled, footer input[type=email]:disabled {
 }
 .tile-inner.-border-grocery {
   border-top: 10px solid #FEBCBC;
+}
+
+.tile-inner__lean {
+  min-height: 160px;
+  border-radius: 10px;
+  padding: 20px 20px 70px 120px;
+  margin: 0 10px;
+  border: 1px solid #E6E6E6;
 }
