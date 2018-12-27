@@ -15,32 +15,65 @@ function isElementInViewport (el) {
 }
 
 $.fn.flyInFromRight = function() {
-    $this = $(this),
-        $elements = $('.fly-from-right', $this);
+    $this = $(this);
 
-    window.setTimeout(function() {
-        $elements.removeClass('fly-from-right');
-    },400);
+    $(window).on('DOMContentLoaded load resize scroll', function() {
+        var delay = 100;
+        $this.each(function(i,e) {
+            if (isElementInViewport($(e).parent())) {
+                delay = delay + 100;
+                window.setTimeout(function() {
+                    $(e).removeClass('fly-from-right');
+                },delay);
+            }
+        })
 
+    }); 
+}
 
-    // console.log(isElementInViewport($this));
-    // console.log($this);
-    // console.log($elements);
-    // console.log($this);
+$.fn.flyInFromLeft = function() {
+    $this = $(this);
 
-    // $(window).on('DOMContentLoaded load resize scroll', function() {
-    //     console.log(isElementInViewport($this));
-    //     if (isElementInViewport($this)) {
-            
-    //     } else {
-    //         //$elements.addClass('fly-from-right');
-    //     }
-    // }); 
+    $(window).on('DOMContentLoaded load resize scroll', function() {
+        var delay = 100;
+        $this.each(function(i,e) {
+            if (isElementInViewport($(e).parent())) {
+                delay = delay + 100;
+                window.setTimeout(function() {
+                    $(e).removeClass('fly-from-left');
+                },delay);
+            }
+        })
+
+    }); 
 }
 
 $(function(){    
-    $('.home-hero__inner').flyInFromRight();
+    $('.animate-slide').flyInFromRight();
+    $('.animate-slide').flyInFromLeft();
     //$('.home-solutions').flyInFromRight();
+});
+$(function(){    
+    $('.home-testimonials .tile-row').slick({
+        dots: true,
+        slidesToShow: 3,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+            breakpoint: 770,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+            }
+        ]
+    });
 });
 // function getParam(name) {
 //     SCH = document.location.search;
@@ -109,17 +142,15 @@ $.fn.handleTextLink = function() {
 
     $button.click(function(e){
         submitting();
-        console.log($success);
         branch.sendSMS($form.val(), linkData, options, callback);
     });
 
 }
 
 $(function(){
-    console.log($);
-    console.log('hello');
-    
-    $('#downloadLinkForm').handleTextLink();
+    $('#downloadLinkForm').handleTextLink({
+        dots: true
+    });
 });
 // Handles all the stuffs with the request demo modal
 $.fn.handleModal = function() {
