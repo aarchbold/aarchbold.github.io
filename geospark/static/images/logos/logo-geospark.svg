@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="204px" height="51px" viewBox="0 0 204 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy" transform="translate(-26.000000, -22.000000)">
+            <g id="Group" transform="translate(26.000000, 13.000000)">
+                <text id="Geospark" font-family="TruenoRg, Trueno" font-size="36.2666667" font-weight="normal" fill="#070707">
+                    <tspan x="33.6761905" y="36">Geospark</tspan>
+                </text>
+                <polygon id="Triangle" fill="#DEDEDE" transform="translate(13.923810, 26.228571) scale(1, -1) translate(-13.923810, -26.228571) " points="13.9238095 15.5428571 27.847619 36.9142857 0 36.9142857"></polygon>
+                <polygon id="Triangle" fill="#1E1E1E" transform="translate(13.600000, 18.780952) scale(1, -1) translate(-13.600000, -18.780952) " points="13.6 12.3047619 22.0190476 25.2571429 5.18095238 25.2571429"></polygon>
+                <text id="Analytics" font-family="TruenoRg, Trueno" font-size="15.5428571" font-weight="normal" fill="#A5A5A5">
+                    <tspan x="133.409524" y="55.5047619">Analytics</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
