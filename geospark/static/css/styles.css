@@ -511,6 +511,7 @@ footer {
   background: #ff496f;
   -webkit-box-shadow: 0 0 0 rgba(255, 73, 111, 0.4);
   box-shadow: 0 0 0 rgba(255, 73, 111, 0.4);
+  opacity: 0;
 }
 .home-hyperion__map--blip.-blip1 {
   top: 48%;
@@ -558,34 +559,60 @@ footer {
   -webkit-animation-delay: 1.8s;
   animation-delay: 1.8s;
 }
+.home-hyperion__map--blip.-blip7 {
+  top: 42%;
+  left: 12%;
+  -webkit-animation: map-pulse 3.1s infinite;
+  animation: map-pulse 3.1s infinite;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
 
 @-webkit-keyframes map-pulse {
   0% {
+    opacity: 0;
     -webkit-box-shadow: 0 0 0 0 rgba(255, 73, 111, 0.9);
     box-shadow: 0 0 0 0 rgba(255, 73, 111, 0.9);
   }
+  20% {
+    opacity: 1;
+  }
   70% {
+    opacity: 1;
     -webkit-box-shadow: 0 0 0 20px rgba(255, 73, 111, 0);
     box-shadow: 0 0 0 20px rgba(255, 73, 111, 0);
+  }
+  90% {
+    opacity: 0;
   }
   100% {
     -webkit-box-shadow: 0 0 0 0 rgba(255, 73, 111, 0);
     box-shadow: 0 0 0 0 rgba(255, 73, 111, 0);
+    opacity: 0;
   }
 }
 
 @keyframes map-pulse {
   0% {
+    opacity: 0;
     -webkit-box-shadow: 0 0 0 0 rgba(255, 73, 111, 0.9);
     box-shadow: 0 0 0 0 rgba(255, 73, 111, 0.9);
   }
+  20% {
+    opacity: 1;
+  }
   70% {
+    opacity: 1;
     -webkit-box-shadow: 0 0 0 20px rgba(255, 73, 111, 0);
     box-shadow: 0 0 0 20px rgba(255, 73, 111, 0);
+  }
+  90% {
+    opacity: 0;
   }
   100% {
     -webkit-box-shadow: 0 0 0 0 rgba(255, 73, 111, 0);
     box-shadow: 0 0 0 0 rgba(255, 73, 111, 0);
+    opacity: 0;
   }
 }
 /* global styles
