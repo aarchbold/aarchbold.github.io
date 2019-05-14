@@ -10,8 +10,8 @@
 <meta property="og:image" content="">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Geospark">
-<script src="static/js/vendors.js?cache=1557092958786"></script>
-<link rel="stylesheet" href="static/css/styles.css?cache=1557092958786">
+<script src="static/js/vendors.js?cache=1557801641158"></script>
+<link rel="stylesheet" href="static/css/styles.css?cache=1557801641158">
 <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.png">
 
     </head>
@@ -26,10 +26,58 @@
             <img class="topnav-logo" src="static/images/logos/logo-geospark.svg" />
             <div class="topnav-links-container">
                 <ul class="topnav-links">
-                    <li><a class="topnav-links__item" href="#">Home</a></li>
-                    <li><a class="topnav-links__item" href="#">Features</a></li>
+                    <li><a class="topnav-links__item -active"  href="#">Home</a></li>
+                    <li>
+                        <a class="topnav-links__item topnav-dropdown__trigger" href="#">Features</a>
+                        <div class="topnav-dropdown">
+                            <ul class="topnav-dropdown__list">
+                                <li class="topnav-dropdown__item">
+                                    <a href="#">
+                                        <img class="topnav-dropdown__icon" src="static/images/icons/icon-hotspots.svg" />
+                                        Hotspots
+                                    </a>
+                                </li>
+                                <li class="topnav-dropdown__item">
+                                    <a href="#">
+                                        <img class="topnav-dropdown__icon" src="static/images/icons/icon-forecasting.svg" />
+                                        Forecasting
+                                    </a>
+                                </li>
+                                <li class="topnav-dropdown__item">
+                                    <a href="#">
+                                        <img class="topnav-dropdown__icon" src="static/images/icons/icon-pulse.svg" />
+                                        Pulse
+                                    </a>
+                                </li>
+                                <li class="topnav-dropdown__item">
+                                    <a href="#">
+                                        <img class="topnav-dropdown__icon" src="static/images/icons/icon-events.svg" />
+                                        Events
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
                     <li><a class="topnav-links__item" href="#">Videos</a></li>
-                    <li><a class="topnav-links__item" href="#">About</a></li>
+                    <li>
+                        <a class="topnav-links__item topnav-dropdown__trigger" href="#">About</a>
+                        <div class="topnav-dropdown">
+                            <ul class="topnav-dropdown__list">
+                                <li class="topnav-dropdown__item">
+                                    <a href="#">
+                                        <img class="topnav-dropdown__icon" src="static/images/icons/icon-hotspots.svg" />
+                                        Hotspots
+                                    </a>
+                                </li>
+                                <li class="topnav-dropdown__item">
+                                    <a href="#">
+                                        <img class="topnav-dropdown__icon" src="static/images/icons/icon-forecasting.svg" />
+                                        Forecasting
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
                     <li><a class="topnav-links__item" href="#">Blog</a></li>
                     <li><a class="button button-topnav" href="#">Sign Up | Login</a></li>
                 </ul>
@@ -42,8 +90,57 @@
     </div>
 </nav>
             <div class="page-inner">
-                Home
+                <section class="home-intro">
+                    <h1 class="page-h1">A Pulse For Your World</h1>
+                    <p class="page-subheader">Powered by applied machine learning, Hyperion drives decisions that seize new opportunities, secure operations and employees, and protect brand equity.</p>
+                    <div class="home-video__cta">
+                        <a href="#" class="button button-play">
+                            <img class="button-icon" src="static/images/icons/icon-play.svg" />
+                            Watch and Learn
+                        </a>
+                    </div>
+                    <div class="home-intro__background">
+                        <img src="static/images/ui/home/bg-home-pulse.png" />
+                    </div>
+                </section>
+                <section class="home-hyperion">
+                    <h2 class="page-h2">
+                        <div class="page-h2__hr"></div>
+                        Hyperion
+                    </h2>
+                    <p class="page-subheader">Geospark Analytics is powering our new platform called Hyperion. This new platform is the central nervous system for real-time world data. We take complex data and make it simple so you can make quick decisions and aviod costly trip wires today and tomorrow.</p>
+                    <div class="home-hyperion__container">
+                        <div class="home-hyperion__list">
+                            <div class="home-hyperion__list--item -active">
+                                <img src="static/images/ui/home/target-hotspot.svg" />
+                                <strong>Hotspots</strong>
+                                Pin point chatter as it’s happening so you can make faster decisions.
+                            </div>
+                            <div class="home-hyperion__list--item">
+                                <img src="static/images/ui/home/target-pulse.svg" />
+                                <strong>Pulse</strong>
+                                Quickly understand stability on a global scale all the way down to a specific area of interest. 
+                            </div>
+                            <div class="home-hyperion__list--item">
+                                <img src="static/images/ui/home/target-forecast.svg" />
+                                <strong>Forecast</strong>
+                                Plan for the future, get a leg up on the competition so you can win tomorrow.
+                            </div>
+                        </div>
+                        <div class="home-hyperion__map">
+                            <div class="home-hyperion__map--blip -blip1"></div>
+                            <div class="home-hyperion__map--blip -blip2"></div>
+                            <div class="home-hyperion__map--blip -blip3"></div>
+                            <div class="home-hyperion__map--blip -blip4"></div>
+                            <div class="home-hyperion__map--blip -blip5"></div>
+                            <div class="home-hyperion__map--blip -blip6"></div>
+                            <img class="home-hyperion__map--image" src="static/images/ui/home/hyperion-map.png" />
+                        </div>
+                    </div>
+                </section>
             </div>
+        </div>
+        <div class="page-outer">
             <footer>
     <div class="navigation-inner">
         <div class="footer-container">
@@ -91,6 +188,6 @@
 </footer>
         </div>
 
-        <script src="static/js/app.js?cache=1557092958786"></script>
+        <script src="static/js/app.js?cache=1557801641158"></script>
     </body>
 </html>

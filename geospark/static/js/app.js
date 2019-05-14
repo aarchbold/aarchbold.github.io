@@ -104,6 +104,24 @@ $.fn.handleTopNav = function() {
     window.addEventListener('resize', initNav);
 }
 
+$.fn.handleDropDowns = function() {
+    var $context = $(this),
+        $triggers = $('.topnav-dropdown__trigger', $context);
+
+    $triggers.click(function() {
+        var $parent = $(this).parent();
+        console.log($parent);
+        if ($parent.hasClass('-active')) {
+            $parent.removeClass('-active');
+            $('.topnav-dropdown', $parent).fadeOut('fast');
+        } else {
+            $parent.addClass('-active');
+            $('.topnav-dropdown', $parent).fadeIn('fast');
+        }
+    });
+}
+
 $(function(){
     $('.topnav-container').handleTopNav();
+    $('.topnav-links-container').handleDropDowns();
 })
