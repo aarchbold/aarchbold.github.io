@@ -456,8 +456,9 @@ footer {
 .home-hyperion__container {
   position: relative;
   margin-top: 100px;
-  min-height: 800px;
+  min-height: auto;
   padding-left: 30%;
+  padding-bottom: 120px;
 }
 
 .home-hyperion__list {
@@ -844,4 +845,90 @@ button.button-modal, .button.button-modal {
   font-family: 'TruenoRegular', sans-serif;
   -webkit-box-shadow: 1px 1px 10px 1px rgba(75, 73, 255, 0.37);
   box-shadow: 1px 1px 10px 1px rgba(75, 73, 255, 0.37);
+}
+
+/* custom alerts styles
+*/
+.page-outer__custom-alerts {
+  position: relative;
+  background-color: #4B49FF;
+}
+
+.section-custom-alerts {
+  padding: 80px 34% 80px 0;
+}
+
+.text-alerts__container {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 34%;
+}
+
+.text-alert {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 20px 40px 20px 90px;
+  background-color: #ffffff;
+  font-size: 20px;
+  font-family: 'TruenoRegular', sans-serif;
+  color: #000000;
+  width: 370px;
+  line-height: 1.2;
+}
+.text-alert.-position1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  -webkit-transform: translate(50px, -50px);
+  -ms-transform: translate(50px, -50px);
+  transform: translate(50px, -50px);
+  z-index: 3;
+}
+.text-alert.-position2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  -webkit-transform: translate(-40px, -10px) scale(0.75);
+  -ms-transform: translate(-40px, -10px) scale(0.75);
+  transform: translate(-40px, -10px) scale(0.75);
+  z-index: 2;
+}
+.text-alert.-position3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  -webkit-transform: translate(100px, -116px) scale(0.75);
+  -ms-transform: translate(100px, -116px) scale(0.75);
+  transform: translate(100px, -116px) scale(0.75);
+  z-index: 1;
+}
+
+.text-alert__icon {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #FF496F;
+}
+.text-alert__icon img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
