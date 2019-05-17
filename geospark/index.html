@@ -4,16 +4,18 @@
         <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Quietly | Content Marketing Agency</title>
-<meta property="og:title" content="Quietly | Content Marketing Agency">
+<title>Geospark Analytics</title>
+<meta property="og:title" content="Geospark Analytics">
 <meta name="description" content="Quietly is a content marketing agency that can help your business gain an edge on the competition with unique data and insight.">
 <meta property="og:image" content="">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Geospark">
-<script src="static/js/vendors.js?cache=1557969824310"></script>
-<link rel="stylesheet" href="static/css/styles.css?cache=1557969824310">
+<script src="static/js/vendors.js?cache=1558059274957"></script>
+<link rel="stylesheet" href="static/css/styles.css?cache=1558059274957">
 <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.png">
 
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -24,7 +26,7 @@
                 <div class="home-video">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/PMku-GbafEg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <a href="#" class="button button-modal">Start 3 Day FREE Trial</a>
+                <a href="#" class="button button-trial">Start 3 Day FREE Trial</a>
                 <br />
                 <a href="#" class="home-overlay-close">
                     Close
@@ -242,6 +244,103 @@
             </div>
         </div>
         <div class="page-outer">
+            <div class="page-inner">
+                <section class="section-testimonials__header">
+                    <h2 class="page-h2">
+                        Who Uses Hyperion?
+                    </h2>
+                    <p class="page-subheader">Why not use Geospark is the real question here, we’ll keep you updated 24/7  learn where the noise is coming from before anyone else.</p>
+                </section>
+            </div>
+        </div>
+        <div class="page-outer">
+            <div id="homeTestimonial">
+</div>
+
+<script id="testimonial-template" type="text/x-handlebars-template">
+    {{#each testimonials}}
+    <div class="testimonial-item testimonial-background" style="background-image: url({{this.background}});">
+        <div class="page-inner testimonial-inner">
+            <img class="testimonial-profile" src="{{this.profile}}" />
+            <div class="testimonial-name">
+                {{this.name}}
+            </div>
+            <div class="testimonial-occupation">
+                {{this.occupation}}
+            </div>
+            <div class="testimonial-bio">
+                {{this.quote}}
+            </div>
+            <a href="#" class="button button-trial">Sign Up Now</a>
+        </div>
+    </div>
+    {{/each}}
+</script>
+
+<script type="text/javascript">
+    var data = {
+        testimonials: [
+            {
+                background: "static/images/ui/testimonials/bg-dana.jpg",
+                profile: "static/images/ui/testimonials/dana.jpg",
+                name: "Dana Kopřivová",
+                occupation: "Traveller",
+                quote: "I use Hyperions platform while I travel, this keeps me heavily informed about local events that could put me in dangers path. I also use Hyperion to preplan my trips using thier forecasting abilites, definetly a part of my travel toolkit now."
+            },
+            {
+                background: "static/images/ui/testimonials/bg-dana.jpg",
+                profile: "static/images/ui/testimonials/dana.jpg",
+                name: "Another person",
+                occupation: "an occupation",
+                quote: "I use Hyperions platform while I travel, this keeps me heavily informed about local events that could put me in dangers path. I also use Hyperion to preplan my trips using thier forecasting abilites, definetly a part of my travel toolkit now."
+            },
+            {
+                background: "static/images/ui/testimonials/bg-dana.jpg",
+                profile: "static/images/ui/testimonials/dana.jpg",
+                name: "Yet Another person",
+                occupation: "an occupation again",
+                quote: "I use Hyperions platform while I travel, this keeps me heavily informed about local events that could put me in dangers path. I also use Hyperion to preplan my trips using thier forecasting abilites, definetly a part of my travel toolkit now."
+            }
+        ]
+    };
+    var template = Handlebars.compile(document.getElementById('testimonial-template').innerHTML);
+    var testimonialData = template(data);
+    document.getElementById('homeTestimonial').innerHTML += testimonialData;
+</script>
+        </div>
+        <div class="page-outer page-outer__facts">
+            <div class="page-inner">
+                <h2 class="page-h2 -inverse">
+                    Hyperion Facts
+                </h2>
+                <p class="page-subheader -inverse">Just to give you a better understanding how we operate compaired to the competition.</p>
+            </div>
+            <div class="hyperion-facts">
+                <div class="hyperion-facts__intro">
+                    <h2 class="hyperion-facts__h2">$2,395,290</h2>
+                    <p class="hyperion-facts__subheader">Dollars saved yearly using Geospark based on 100+ person team</p>
+                </div>
+                <div class="hyperion-facts__comparison">
+                    <div class="hyperion-facts__comparison--row">
+                        <div class="hyperion-facts__comparison--col1"></div>
+                        <div class="hyperion-facts__comparison--col2"></div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-outer page-outer__get-started">
+            <div class="page-inner">
+                <section class="section-getting-started">
+                    <h2 class="get-started-h2">
+                        Get Started Today, Be up and running in minutes.
+                    </h2>
+                    <div class="section-cta">
+                        <a href="#" class="button button-trial">Start 3 Day FREE Trial</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="page-outer">
             <footer>
     <div class="navigation-inner">
         <div class="footer-container">
@@ -289,6 +388,6 @@
 </footer>
         </div>
 
-        <script src="static/js/app.js?cache=1557969824310"></script>
+        <script src="static/js/app.js?cache=1558059274957"></script>
     </body>
 </html>

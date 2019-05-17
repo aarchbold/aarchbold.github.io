@@ -68,6 +68,18 @@ function debounce(func, wait, immediate) {
 		if (callNow) func.apply(context, args);
 	};
 };
+$(function(){
+    $('#homeTestimonial').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        arrows: false,
+        autoplay: true,
+        fade: true,
+        cssEase: 'linear',
+        dotsClass: 'home-carousel__dots'
+      });
+})
 
 
 $.fn.handleHomeVideo = function() {
@@ -152,8 +164,6 @@ $.fn.handleHyperionMap = function() {
 $(function(){
     $('.home-hyperion__container').handleHyperionMap();
 })
-
-
 $.fn.handleTopNav = function() {
     var $context = $(this),
         $nav = $('.topnav-links-container', $context),
@@ -186,6 +196,18 @@ $.fn.handleTopNav = function() {
     }, 250);
 
     window.addEventListener('resize', initNav);
+
+    // do the scroll
+    var lastScrollTop = 0;
+    window.addEventListener('scroll', function(){ 
+        var st = window.pageYOffset || document.documentElement.scrollTop; 
+        if (st > 20) {
+            $context.addClass('-slim');
+        } else {
+            $context.removeClass('-slim');
+        }
+        lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+    }, false);
 }
 
 $.fn.handleDropDowns = function() {
