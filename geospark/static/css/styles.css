@@ -81,6 +81,12 @@ a {
   font-family: 'TruenoRegular', sans-serif;
 }
 
+.page-section__h1 {
+  font-size: 44px;
+  padding: 120px 0 40px;
+  color: #000000;
+}
+
 .page-h2 {
   position: relative;
   font-size: 50px;
@@ -118,6 +124,11 @@ a {
   margin-top: 60px;
 }
 
+@media (max-width: 650px) {
+  .page-h1 {
+    font-size: 50px;
+  }
+}
 /* navigation styles
 */
 nav {
@@ -448,6 +459,10 @@ footer {
   position: relative;
   width: 100%;
   overflow: hidden;
+}
+
+.page-outer__header {
+  background-color: #ffffff;
 }
 
 .page-inner {
@@ -1217,4 +1232,21 @@ button.button-trial, .button.button-trial {
   .hyperion-facts__label {
     font-size: 16px;
   }
+}
+/* features 
+*/
+.feature-section__hotspots {
+  background-color: #FF496F;
+}
+
+.feature-section__forecasting {
+  background-color: #003155;
+}
+
+.feature-section__pulse {
+  background-color: #FFD66F;
+}
+
+.feature-section__events {
+  background-color: #01AEEB;
 }

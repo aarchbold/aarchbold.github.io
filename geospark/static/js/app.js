@@ -37,6 +37,11 @@ $.fn.handleAnimatedText = function() {
 $(function(){
     $('.text-animation-group').handleAnimatedText();
 })
+$(function() {
+    // $.scrollify({
+    //     section : '.scroll-me'
+    // });
+});
 $.fn.handleScreenHeight = function() {
     var $context = $(this);
 
@@ -48,6 +53,11 @@ $.fn.handleScreenHeight = function() {
 
 $(function(){
     $('.screen-height').handleScreenHeight();
+    $.scrollify({
+        section : '.scroll-me',
+        setHeights: false,
+        standardScrollElements: '.no-scroll'
+    });
 })
 function getParam(name) {
     SCH = document.location.search;
