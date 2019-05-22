@@ -37,7 +37,24 @@ $.fn.handleAnimatedText = function() {
 $(function(){
     $('.text-animation-group').handleAnimatedText();
 })
+function showAnimation(el,className) {
+    el.addClass(className);
+}
+function hideAnimation(el,className) {
+    el.removeClass(className);
+}
+
+
 $(function() {
+    $(window).on('DOMContentLoaded load resize scroll', function() {
+        if (isElementInViewport($('#featuresForecasting'))) {
+            console.log('feature in view');
+            showAnimation($('.element-to-animate',$('#featuresForecasting')),'animate-clip');
+        } else {
+            hideAnimation($('.element-to-animate',$('#featuresForecasting')),'animate-clip');
+            console.log('feature not in view');
+        }
+    }); 
     // $.scrollify({
     //     section : '.scroll-me'
     // });
@@ -56,7 +73,8 @@ $(function(){
     $.scrollify({
         section : '.scroll-me',
         setHeights: false,
-        standardScrollElements: '.no-scroll'
+        standardScrollElements: '.no-scroll',
+        offset: 0
     });
 })
 function getParam(name) {
@@ -90,6 +108,22 @@ function debounce(func, wait, immediate) {
 		if (callNow) func.apply(context, args);
 	};
 };
+
+function isElementInViewport (el) {
+    //special bonus for those using jQuery
+    if (typeof jQuery !== 'undefined' && el instanceof jQuery) el = el[0];
+
+    var rect = el.getBoundingClientRect();
+    // DOMRect { x: 8, y: 8, width: 100, height: 100, top: 8, right: 108, bottom: 108, left: 8 }
+    var windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+    var windowWidth = (window.innerWidth || document.documentElement.clientWidth);
+
+    // http://stackoverflow.com/questions/325933/determine-whether-two-date-ranges-overlap
+    var vertInView = (rect.top <= windowHeight) && ((rect.top + rect.height) >= 0);
+    var horInView = (rect.left <= windowWidth) && ((rect.left + rect.width) >= 0);
+
+    return (vertInView && horInView);
+}
 $(function(){
     $('#homeTestimonial').slick({
         dots: true,

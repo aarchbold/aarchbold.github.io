@@ -889,6 +889,27 @@ button.button-trial, .button.button-trial {
   color: #000000;
   background: #ffffff;
 }
+button.button-hotspots, .button.button-hotspots {
+  background-color: #FF496F;
+  -webkit-box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
+}
+button.button-forecasting, .button.button-forecasting {
+  background-color: #003155;
+  -webkit-box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
+}
+button.button-pulse, .button.button-pulse {
+  color: #000000;
+  background-color: #FFD66F;
+  -webkit-box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
+}
+button.button-events, .button.button-events {
+  background-color: #01AEEB;
+  -webkit-box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
+}
 
 .button-icon {
   position: absolute;
@@ -1249,4 +1270,96 @@ button.button-trial, .button.button-trial {
 
 .feature-section__events {
   background-color: #01AEEB;
+}
+
+.feature-section {
+  position: relative;
+  z-index: 1;
+}
+
+.features-section__content {
+  position: relative;
+  padding: 200px 10px 0 55%;
+  color: #ffffff;
+}
+.features-section__content.-inverse {
+  padding: 200px 55% 0 10px;
+}
+.features-section__content.-inverse-color {
+  color: #000000;
+}
+
+.feature-h2 {
+  font-size: 40px;
+  font-family: 'TruenoRegular', sans-serif;
+  padding-bottom: 30px;
+}
+
+.feature-description {
+  font-size: 16px;
+  line-height: 1.4;
+  padding-bottom: 30px;
+}
+
+.feature-hotspots__map {
+  position: absolute;
+  right: 50%;
+  top: 0;
+  height: 100%;
+}
+.feature-hotspots__map img {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  height: 100%;
+}
+
+.feature-section__forecasting-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.feature-section__forecasting-bg img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 300px;
+  -webkit-clip-path: inset(0% 0% 0% 0%);
+  clip-path: inset(0% 0% 0% 0%);
+}
+.feature-section__forecasting-bg img.element-to-animate {
+  -webkit-clip-path: inset(0% 100% 0% 0%);
+  clip-path: inset(0% 100% 0% 0%);
+}
+.feature-section__forecasting-bg img.animate-clip {
+  -webkit-transition: all 2s;
+  -o-transition: all 2s;
+  transition: all 2s;
+  -webkit-clip-path: inset(0% 0% 0% 0%);
+  clip-path: inset(0% 0% 0% 0%);
+  -webkit-animation: clippy 6s;
+  animation: clippy 6s;
+}
+
+@-webkit-keyframes clippy {
+  0% {
+    -webkit-clip-path: inset(0% 100% 0% 0%);
+    clip-path: inset(0% 100% 0% 0%);
+  }
+  100% {
+    -webkit-clip-path: inset(0% 0% 0% 0%);
+    clip-path: inset(0% 0% 0% 0%);
+  }
+}
+
+@keyframes clippy {
+  0% {
+    -webkit-clip-path: inset(0% 100% 0% 0%);
+    clip-path: inset(0% 100% 0% 0%);
+  }
+  100% {
+    -webkit-clip-path: inset(0% 0% 0% 0%);
+    clip-path: inset(0% 0% 0% 0%);
+  }
 }
