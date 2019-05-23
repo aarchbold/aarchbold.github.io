@@ -48,11 +48,18 @@ function hideAnimation(el,className) {
 $(function() {
     $(window).on('DOMContentLoaded load resize scroll', function() {
         if (isElementInViewport($('#featuresForecasting'))) {
-            console.log('feature in view');
             showAnimation($('.element-to-animate',$('#featuresForecasting')),'animate-clip');
         } else {
             hideAnimation($('.element-to-animate',$('#featuresForecasting')),'animate-clip');
-            console.log('feature not in view');
+        }
+        if (isElementInViewport($('.event-cards__container'))) {
+            $('.event-cards__item').each(function(i,e) {
+                showAnimation($(e),'-animate-me');
+            })
+        } else {
+            $('.event-cards__item').each(function(i,e) {
+                hideAnimation($(e),'-animate-me');
+            })
         }
     }); 
     // $.scrollify({
