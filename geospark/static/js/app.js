@@ -75,6 +75,28 @@ $.fn.handleScreenHeight = function() {
     });
 }
 
+$.fn.handleScrolling = function() {
+    var $context = $(this),
+        $links = $('.go-to-link');
+
+    $links.click(function(e) {
+        console.log($(e));
+    })
+
+    // $('html, body').animate({
+    //     scrollTop: ($('#element').offset().top)
+    // },500);
+}
+
+goToSection = function() {
+    var el = $("div[data-target='" + window.location.hash +"']");
+    if (el.length) {
+        $('html, body').animate({
+            scrollTop: el.offset().top
+        },300);
+    }
+}
+
 $(function(){
     $('.screen-height').handleScreenHeight();
     $.scrollify({
@@ -83,6 +105,13 @@ $(function(){
         standardScrollElements: '.no-scroll',
         offset: 0
     });
+    // $('.topnav-links').handleScrolling();
+    window.addEventListener('hashchange', function() {
+        goToSection();
+    });
+    $(document).ready(function() {
+        goToSection();
+    })
 })
 function getParam(name) {
     SCH = document.location.search;
@@ -277,7 +306,8 @@ $.fn.handleDropDowns = function() {
     var $context = $(this),
         $triggers = $('.topnav-dropdown__trigger', $context);
 
-    $triggers.click(function() {
+    $triggers.click(function(e) {
+        e.preventDefault();
         var $parent = $(this).parent();
         console.log($parent);
         if ($parent.hasClass('-active')) {

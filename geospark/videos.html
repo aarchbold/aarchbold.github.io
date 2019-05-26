@@ -14,8 +14,6 @@
 <link rel="stylesheet" href="static/css/styles.css?cache=1558850840223">
 <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.png">
 
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     </head>
     <body class="scrollify">
         <!--[if lt IE 8]>
@@ -30,7 +28,7 @@
                 <ul class="topnav-links">
                     <li><a  class="topnav-links__item" href="/">Home</a></li>
                     <li>
-                        <a class="topnav-links__item -active topnav-dropdown__trigger"  href="features.html#hotspots">Features</a>
+                        <a  class="topnav-links__item topnav-dropdown__trigger" href="features.html#hotspots">Features</a>
                         <div class="topnav-dropdown">
                             <ul class="topnav-dropdown__list">
                                 <li class="topnav-dropdown__item">
@@ -60,7 +58,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a  class="topnav-links__item" href="videos.html">Videos</a></li>
+                    <li><a class="topnav-links__item -active"  href="videos.html">Videos</a></li>
                     <li>
                         <a class="topnav-links__item" href="about.html">About</a>
                         <!-- <div class="topnav-dropdown">
@@ -94,105 +92,31 @@
         </div>
         <div class="page-outer page-outer__header">
             <div class="page-inner">
-                <div class="page-h1 page-section__h1">Features</div>
+                <div class="page-h1 page-section__h1">Videos</div>
             </div>
         </div>
 
-        <div id="featuresHotspot" data-target="#hotspots" class="page-outer feature-section__hotspots screen-height scroll-me">
+        <div class="page-outer">
             <div class="page-inner">
-                <section class="feature-section">
-                    <div class="feature-hotspots__map">
-                        <div class="feature-blip -blip1"></div>
-                        <div class="feature-blip -blip2"></div>
-                        <div class="feature-blip -blip3"></div>
-                        <div class="feature-blip -blip4"></div>
-                        <img src="static/images/ui/features/feature-hotspots.png" />
+                <section class="video-section">
+                    <div class="embed-container">
+                        <iframe src="https://www.youtube.com/embed/Tx0dUDrh_hE" frameborder="0" allowfullscreen></iframe>
                     </div>
-                    <div class="features-section__content">
-                        <h2 class="feature-h2">Hotspots</h2>
-                        <p class="feature-description">Hyperion’s trained machine learning algorithms analyze information from breaking news, social media, space and IoT channels and continually updates global stability and activity levels at country, region and city levels. Hyperion’s artificial intelligence defines patterns of normal human activity across the globe and alerts users to abnormal patterns informing organizations what is happening and why.</p>
-                        <a href="#" class="button button-feature button-hotspots">Get the Power of Hotspots</a>
+                    <h2 class="video-title">What is Hyperion?</h2>
+                    <div class="video-description">Hyperion’s trained machine learning algorithms analyze information from breaking news, social media, space and IoT channels and continually updates global stability and activity levels at country, region and city levels. Hyperion’s artificial intelligence defines patterns of normal human activity across the globe and alerts users to abnormal patterns informing organizations what is happening and why.</div>
+                </section>
+
+                <section class="video-section">
+                    <div class="embed-container">
+                        <iframe src="https://www.youtube.com/embed/Tx0dUDrh_hE" frameborder="0" allowfullscreen></iframe>
                     </div>
+                    <h2 class="video-title">How to use Hyperion</h2>
+                    <div class="video-description">Hyperion’s trained machine learning algorithms analyze information from breaking news, social media, space and IoT channels and continually updates global stability and activity levels at country, region and city levels. Hyperion’s artificial intelligence defines patterns of normal human activity across the globe and alerts users to abnormal patterns informing organizations what is happening and why.</div>
                 </section>
             </div>
         </div>
 
-        <div id="featuresForecasting" data-target="#forecasting" class="page-outer feature-section__forecasting screen-height scroll-me">
-            <div class="page-inner">
-                <section class="feature-section">
-                    <div class="features-section__content -inverse">
-                        <h2 class="feature-h2">Forecasting the Future</h2>
-                        <p class="feature-description">Hyperion’s trained machine learning algorithms analyze information from breaking news, social media, space and IoT channels and continually updates global stability and activity levels at country, region and city levels. Hyperion’s artificial intelligence defines patterns of normal human activity across the globe and alerts users to abnormal patterns informing organizations what is happening and why.</p>
-                        <a href="#" class="button button-feature button-forecasting">Start Forecasting Today</a>
-                    </div>
-                </section>
-            </div>
-            <div class="feature-section__forecasting-bg">
-                <img class="element-to-animate" src="static/images/ui/features/feature-forecasting-over.png" />
-                <img src="static/images/ui/features/feature-forecasting.png" />
-            </div>
-        </div>
-
-        <div id="featuresPulse" data-target="#pulse" class="page-outer feature-section__pulse screen-height scroll-me">
-            <div class="features-section__pulse">
-                <div class="feature-pulse__main-pulse">
-                    TODAY
-                </div>
-                <div class="feature-pulse__main-pulse -pulse1"></div>
-                <div class="feature-pulse__main-pulse -pulse2"></div>
-                <div class="feature-pulse__main-pulse -pulse3"></div>
-                <div class="feature-pulse__main-pulse -pulse4"></div>
-                <!-- <div class="feature-pulse__main-pulse -pulse5"></div>
-                <div class="feature-pulse__main-pulse -pulse6"></div> -->
-            </div>
-            <div class="page-inner">
-                <section class="feature-section">
-                    <div class="features-section__content -inverse-color">
-                        <h2 class="feature-h2">Pulse AI</h2>
-                        <p class="feature-description">Hyperion’s trained machine learning algorithms analyze information from breaking news, social media, space and IoT channels and continually updates global stability and activity levels at country, region and city levels. Hyperion’s artificial intelligence defines patterns of normal human activity across the globe and alerts users to abnormal patterns informing organizations what is happening and why.</p>
-                        <a href="#" class="button button-feature button-pulse">Try Hyperion Now</a>
-                    </div>
-                </section>
-            </div>
-        </div>
-
-        <div id="featuresEvents" data-target="#events" class="page-outer feature-section__events screen-height scroll-me">
-            <div class="page-inner">
-                <section class="feature-section">
-                    <div class="features-section__content -inverse">
-                        <h2 class="feature-h2">Events</h2>
-                        <p class="feature-description">Hyperion’s trained machine learning algorithms analyze information from breaking news, social media, space and IoT channels and continually updates global stability and activity levels at country, region and city levels. Hyperion’s artificial intelligence defines patterns of normal human activity across the globe and alerts users to abnormal patterns informing organizations what is happening and why.</p>
-                        <a href="#" class="button button-feature button-events">Get Events Now</a>
-                    </div>
-                </section>
-            </div>
-            <div class="event-cards__container">
-                <div class="event-cards__item -card1">
-                    <div class="event-cards__item--icon">
-                        <img src="static/images/icons/icon-armed-conflict.svg" />
-                    </div>
-                    Armed Conflict
-                </div>
-                <div class="event-cards__item -card2">
-                    <div class="event-cards__item--icon">
-                        <img src="static/images/icons/icon-social-unrest.svg" />
-                    </div>
-                    Social Unrest
-                </div>
-                <div class="event-cards__item -card3">
-                    <div class="event-cards__item--icon">
-                        <img src="static/images/icons/icon-travel-warnings.svg" />
-                    </div>
-                    Travel Warnings
-                </div>
-                <div class="event-cards__item -card4">
-                    <div class="event-cards__item--icon">
-                        <img src="static/images/icons/icon-disasters.svg" />
-                    </div>
-                    Disasters
-                </div>
-            </div>
-        </div>
+        
         
         <div class="scroll-me">
             <div class="page-outer page-outer__get-started">
