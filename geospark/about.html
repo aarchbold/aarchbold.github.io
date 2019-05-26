@@ -10,8 +10,8 @@
 <meta property="og:image" content="">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Geospark">
-<script src="static/js/vendors.js?cache=1558850840223"></script>
-<link rel="stylesheet" href="static/css/styles.css?cache=1558850840223">
+<script src="static/js/vendors.js?cache=1558914206147"></script>
+<link rel="stylesheet" href="static/css/styles.css?cache=1558914206147">
 <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.png">
 
     </head>
@@ -92,33 +92,82 @@
         </div>
         <div class="page-outer page-outer__header">
             <div class="page-inner">
-                <div class="page-h1 page-section__h1">Videos</div>
+                <div class="page-h1 page-section__h1">About</div>
             </div>
         </div>
 
         <div class="page-outer">
             <div class="page-inner">
-                <section class="video-section">
-                    <div class="embed-container">
-                        <iframe src="https://www.youtube.com/embed/Tx0dUDrh_hE" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <h2 class="video-title">What is Hyperion?</h2>
-                    <div class="video-description">Hyperion’s trained machine learning algorithms analyze information from breaking news, social media, space and IoT channels and continually updates global stability and activity levels at country, region and city levels. Hyperion’s artificial intelligence defines patterns of normal human activity across the globe and alerts users to abnormal patterns informing organizations what is happening and why.</div>
-                </section>
+                <div class="section-about">
+                    <h1 class="page-h2 -about-section">Our Story</h1>
+                    <div class="page-description">Hyperion’s trained machine learning algorithms analyze information from breaking news, social media, space and IoT channels and continually updates global stability and activity levels at country, region and city levels. Hyperion’s artificial intelligence defines patterns of normal human activity across the globe and alerts users to abnormal patterns informing organizations what is happening and why.</div>
+                </div>
 
-                <section class="video-section">
-                    <div class="embed-container">
-                        <iframe src="https://www.youtube.com/embed/Tx0dUDrh_hE" frameborder="0" allowfullscreen></iframe>
+                <div class="section-about">
+                    <h2 class="page-h2 -about-section">The Team</h2>
+                    <div class="team-container">
+                        <div id="team">
+</div>
+
+<script id="team-template" type="text/x-handlebars-template">
+    {{#each team}}
+        <div class="team-column">
+            <div class="team-item">
+                <div class="team-item__image" style="background-image:url({{this.imageUrl}});"></div>
+                <div class="team-item__content">
+                    <h2 class="team-item__name">{{this.name}}</h2>
+                    <p class="team-item__position">{{this.description}}</p>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</script>
+
+<script type="text/javascript">
+    var data = {
+        // the below content populates the team section on the about page
+        // if you want to add a new team member, just add a new object
+        // don't forget the comma after each object
+        team: [
+            {
+                imageUrl: "static/images/ui/testimonials/dana.jpg",
+                name: "Dana Danerssen",
+                description: "Founder - CEO"
+            },
+            {
+                imageUrl: "static/images/ui/testimonials/dana.jpg",
+                name: "Dana Danerssen",
+                description: "Founder - CEO"
+            },
+            {
+                imageUrl: "static/images/ui/testimonials/dana.jpg",
+                name: "Dana Danerssen",
+                description: "Founder - CEO"
+            },
+            {
+                imageUrl: "static/images/ui/testimonials/dana.jpg",
+                name: "Dana Danerssen",
+                description: "Founder - CEO"
+            }
+        ]
+    };
+    var template = Handlebars.compile(document.getElementById('team-template').innerHTML);
+    var teamData = template(data);
+    document.getElementById('team').innerHTML += teamData;
+</script>
                     </div>
-                    <h2 class="video-title">How to use Hyperion</h2>
-                    <div class="video-description">Hyperion’s trained machine learning algorithms analyze information from breaking news, social media, space and IoT channels and continually updates global stability and activity levels at country, region and city levels. Hyperion’s artificial intelligence defines patterns of normal human activity across the globe and alerts users to abnormal patterns informing organizations what is happening and why.</div>
-                </section>
+                </div>
+
+                <div class="section-about">
+                    <h2 class="page-h2 -about-section">We're Hiring</h2>
+                    <div class="page-description">We are growing as a company and looking to add some super smart people who have amazing talent. We pride ourseleves on company culture, and we’re a close  family here at Geospark, please send all resumes to <a href="mailto:jobs@geospark.io">jobs@geospark.io</a></div>
+                </div>
             </div>
         </div>
 
         
         
-        <div class="scroll-me">
+        <div>
             <div class="page-outer page-outer__get-started">
     <div class="page-inner">
         <section class="section-getting-started">
@@ -181,6 +230,6 @@
             </div>
         </div>
 
-        <script src="static/js/app.js?cache=1558850840223"></script>
+        <script src="static/js/app.js?cache=1558914206147"></script>
     </body>
 </html>

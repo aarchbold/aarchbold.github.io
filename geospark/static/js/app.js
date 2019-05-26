@@ -146,6 +146,9 @@ function debounce(func, wait, immediate) {
 };
 
 function isElementInViewport (el) {
+    if (!el || el.length < 1) {
+        return false;
+    }
     //special bonus for those using jQuery
     if (typeof jQuery !== 'undefined' && el instanceof jQuery) el = el[0];
 
@@ -161,7 +164,8 @@ function isElementInViewport (el) {
     return (vertInView && horInView);
 }
 $(function(){
-    $('#homeTestimonial').slick({
+    if ($('#homeTestimonial').length > 0) {
+      $('#homeTestimonial').slick({
         dots: true,
         infinite: true,
         speed: 500,
@@ -171,6 +175,7 @@ $(function(){
         cssEase: 'linear',
         dotsClass: 'home-carousel__dots'
       });
+    }
 })
 
 
