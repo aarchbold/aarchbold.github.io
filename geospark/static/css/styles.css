@@ -1856,7 +1856,7 @@ button.button-signup, .button.button-signup {
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 2000;
+  z-index: 3000;
 }
 
 .signup-overlay {
