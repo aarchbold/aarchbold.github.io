@@ -80,7 +80,7 @@ $.fn.handleScrolling = function() {
         $links = $('.go-to-link');
 
     $links.click(function(e) {
-        console.log($(e));
+        // window.location.reload();
     })
 
     // $('html, body').animate({
@@ -88,24 +88,26 @@ $.fn.handleScrolling = function() {
     // },500);
 }
 
-goToSection = function() {
-    var el = $("div[data-target='" + window.location.hash +"']");
-    if (el.length) {
-        $('html, body').animate({
-            scrollTop: el.offset().top
-        },300);
-    }
+goToSection = function(section) {
+    // var el = $("div[data-target='" + window.location.hash +"']");
+    $.scrollify.move(window.location.hash);
+    // if (el.length) {
+    //     $('html, body').animate({
+    //         scrollTop: el.offset().top
+    //     },300);
+    // }
 }
 
 $(function(){
     $('.screen-height').handleScreenHeight();
     $.scrollify({
         section : '.scroll-me',
+        sectionName : 'section-name',
         setHeights: false,
         standardScrollElements: '.no-scroll',
         offset: 0
     });
-    // $('.topnav-links').handleScrolling();
+    $('.topnav-links').handleScrolling();
     window.addEventListener('hashchange', function() {
         goToSection();
     });
@@ -309,20 +311,32 @@ $.fn.handleTopNav = function() {
 
 $.fn.handleDropDowns = function() {
     var $context = $(this),
-        $triggers = $('.topnav-dropdown__trigger', $context);
+        $triggers = $('.topnav-dropdown__trigger', $context),
+        $dropdownlinks = $('.topnav-dropdown__list a', $context);
 
     $triggers.click(function(e) {
         e.preventDefault();
         var $parent = $(this).parent();
-        console.log($parent);
-        if ($parent.hasClass('-active')) {
+        var $dropdown = $('.topnav-dropdown', $parent);
+
+        console.log($dropdown.hasClass('-active'))
+
+        if ($dropdown.hasClass('-active')) {
             $parent.removeClass('-active');
-            $('.topnav-dropdown', $parent).fadeOut('fast');
+            $dropdown.removeClass('-active');
+            $dropdown.fadeOut('fast');
         } else {
             $parent.addClass('-active');
-            $('.topnav-dropdown', $parent).fadeIn('fast');
+            $dropdown.addClass('-active');
+            $dropdown.fadeIn('fast');
         }
     });
+
+    $dropdownlinks.click(function() {
+        var $dropdown = $(this).closest('.topnav-dropdown');
+        $dropdown.removeClass('-active');
+        $dropdown.fadeOut('fast');
+    })
 }
 
 $(function(){
