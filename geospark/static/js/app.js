@@ -104,7 +104,7 @@ $(function(){
         section : '.scroll-me',
         sectionName : 'section-name',
         setHeights: false,
-        standardScrollElements: '.no-scroll',
+        //standardScrollElements: '.no-scroll',
         offset: 0
     });
     $('.topnav-links').handleScrolling();

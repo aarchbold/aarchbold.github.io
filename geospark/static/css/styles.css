@@ -905,11 +905,13 @@ button.button-trial, .button.button-trial {
 }
 button.button-hotspots, .button.button-hotspots {
   background-color: #FF496F;
+  color: #ffffff;
   -webkit-box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
 }
 button.button-forecasting, .button.button-forecasting {
   background-color: #003155;
+  color: #ffffff;
   -webkit-box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
 }
@@ -921,6 +923,7 @@ button.button-pulse, .button.button-pulse {
 }
 button.button-events, .button.button-events {
   background-color: #01AEEB;
+  color: #ffffff;
   -webkit-box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
 }
@@ -1802,6 +1805,7 @@ button.button-signup, .button.button-signup {
   height: 200px;
   background-size: cover;
   border-radius: 20px 0 0 0;
+  background-position: 50% 55%;
 }
 
 .team-item__content {
@@ -1822,6 +1826,7 @@ button.button-signup, .button.button-signup {
 .team-item__position {
   font-size: 16px;
   opacity: 0.5;
+  line-height: 1.3;
 }
 
 @media (max-width: 1000px) {
