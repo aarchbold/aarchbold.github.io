@@ -10,8 +10,8 @@
 <meta property="og:image" content="">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Geospark">
-<script src="static/js/vendors.js?cache=1560214003881"></script>
-<link rel="stylesheet" href="static/css/styles.css?cache=1560214003881">
+<script src="static/js/vendors.js?cache=1560489212230"></script>
+<link rel="stylesheet" href="static/css/styles.css?cache=1560489212230">
 <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.png">
 
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
@@ -25,22 +25,32 @@
     <div class="signup-content">
         <img class="signup-logo" src="static/images/logos/logo-geospark.svg" />
         <a href="#" class="signup-close"><img src="static/images/icons/icon-close.svg" /></a>
-        <section class="signup-content__input"> 
-            <input class="modal-input" id="fullName" placeholder="Full Name" />
-        </section>
-        <section class="signup-content__input"> 
-            <input class="modal-input" id="email" placeholder="Email" />
-        </section>
-        <section class="signup-content__input"> 
-            <input class="modal-input" id="organization" placeholder="Organization (Company)" />
-        </section>
-        <section class="signup-content__input"> 
-            <select class="modal-input">
-                <option value="0-25">0-25</option>
-            </select>
-        </section>
-        <div class="signup-content__cta">
-            <a href="#" class="button button-signup">Send</a>
+        <div id="signupForm">
+            <section class="signup-content__input"> 
+                <input class="modal-input" id="fullName" placeholder="Full Name" />
+            </section>
+            <section class="signup-content__input"> 
+                <input class="modal-input" id="email" placeholder="Email" />
+            </section>
+            <section class="signup-content__input"> 
+                <input class="modal-input" id="organization" placeholder="Organization (Company)" />
+            </section>
+            <section class="signup-content__input"> 
+                <select class="modal-input">
+                    <option value="1-25">1 - 25</option>
+                </select>
+            </section>
+            <div class="error-container">
+                <div class="form-error error-name">Please enter your name</div>
+                <div class="form-error error-email">Please enter a valid Email</div>
+                <div class="form-error error-company">Please enter a company name</div>
+            </div>
+            <div class="signup-content__cta">
+                <a href="#" class="button button-signup">Send</a>
+            </div>
+        </div>
+        <div id="signupSuccess">
+            Thanks for signing up
         </div>
         <div class="signup-content__legal">
             <a href="https://www.geospark.io/privacypolicy" target="_blank">Privacy Policy</a>  | <a href="https://www.geospark.io/terms-and-conditions" target="_blank">Terms of Service</a>
@@ -496,6 +506,6 @@
     
         </div>
 
-        <script src="static/js/app.js?cache=1560214003881"></script>
+        <script src="static/js/app.js?cache=1560489212230"></script>
     </body>
 </html>
