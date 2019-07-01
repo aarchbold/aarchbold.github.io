@@ -52,12 +52,16 @@ setHeroHeight = debounce(function() {
     $heroContainer = $('#heroStage');
     $sun = $('.hero-stage__sun',$heroContainer);
     $fogs = $('.hero-stage__fog',$heroContainer);
-    $header = $('.hero-stage__header',$heroContainer)
+    $header = $('.hero-stage__header',$heroContainer);
+    $clouds = $('.animated-cloud',$heroContainer);
+    $birds = $('.animated-bird',$heroContainer);
     $heroContainer.height($(window).height());
     startAnimations = function() {
         $sun.addClass('-animate');
         $fogs.addClass('-animate');
         $heroContainer.addClass('-animate');
+        $clouds.addClass('-animate');
+        $birds.addClass('-animate');
     }
     startHeaderTextAnimation = function() {
         $header.addClass('-animate');

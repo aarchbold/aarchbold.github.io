@@ -335,3 +335,114 @@ button.button-signup, .button.button-signup {
   font-family: 'TruenoRegular', sans-serif;
   box-shadow: 1px 1px 10px 1px rgba(75, 73, 255, 0.37);
 }
+
+/* animated cloud styles
+*/
+.animated-cloud {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  position: absolute;
+  background: url("../images/ui/scenery/cloud.png") 50% 50% no-repeat;
+  background-size: cover;
+  z-index: 1000;
+}
+.animated-cloud.cloud1 {
+  top: 40%;
+  left: 0;
+  width: 200px;
+  height: 100px;
+  -webkit-transform: translateX(-200px);
+  -ms-transform: translateX(-200px);
+  transform: translateX(-200px);
+}
+.animated-cloud.cloud1.-animate {
+  -webkit-animation: movecloud 30s linear infinite;
+  animation: movecloud 30s linear infinite;
+}
+.animated-cloud.cloud2 {
+  top: 50%;
+  left: 0;
+  width: 160px;
+  height: 80px;
+  -webkit-transform: translateX(-200px);
+  -ms-transform: translateX(-200px);
+  transform: translateX(-200px);
+}
+.animated-cloud.cloud2.-animate {
+  -webkit-animation: movecloud 40s linear infinite;
+  animation: movecloud 40s linear infinite;
+}
+
+@-webkit-keyframes movecloud {
+  0% {
+    left: -200px;
+  }
+  100% {
+    left: 120%;
+  }
+}
+
+@keyframes movecloud {
+  0% {
+    left: -200px;
+  }
+  100% {
+    left: 120%;
+  }
+}
+/* animated cloud styles
+*/
+.animated-bird {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  position: absolute;
+  background: url("../images/ui/scenery/bird1.gif") 50% 50% no-repeat;
+  background-size: cover;
+  z-index: 1000;
+}
+.animated-bird.bird1 {
+  top: 80%;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  -webkit-transform: translateX(-200px);
+  -ms-transform: translateX(-200px);
+  transform: translateX(-200px);
+}
+.animated-bird.bird1.-animate {
+  -webkit-animation: movebird 8s linear infinite;
+  animation: movebird 8s linear infinite;
+}
+.animated-bird.bird2 {
+  top: 120%;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  -webkit-transform: translateX(-200px);
+  -ms-transform: translateX(-200px);
+  transform: translateX(-200px);
+}
+.animated-bird.bird2.-animate {
+  -webkit-animation: movebird 12s linear infinite;
+  animation: movebird 12s linear infinite;
+}
+
+@-webkit-keyframes movebird {
+  0% {
+    left: -200px;
+  }
+  100% {
+    left: 120%;
+    top: 10%;
+  }
+}
+
+@keyframes movebird {
+  0% {
+    left: -200px;
+  }
+  100% {
+    left: 120%;
+    top: 10%;
+  }
+}
