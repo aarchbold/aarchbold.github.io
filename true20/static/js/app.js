@@ -48,14 +48,17 @@ function isElementInViewport (el) {
 
     return (vertInView && horInView);
 }
-setHeroHeight = debounce(function() { 
+initHero = debounce(function() { 
     $heroContainer = $('#heroStage');
     $sun = $('.hero-stage__sun',$heroContainer);
     $fogs = $('.hero-stage__fog',$heroContainer);
     $header = $('.hero-stage__header',$heroContainer);
     $clouds = $('.animated-cloud',$heroContainer);
     $birds = $('.animated-bird',$heroContainer);
-    $heroContainer.height($(window).height());
+    
+    // Enable this if we want the hero to take up the window height
+    //$heroContainer.height($(window).height());
+    
     startAnimations = function() {
         $sun.addClass('-animate');
         $fogs.addClass('-animate');
@@ -73,11 +76,11 @@ setHeroHeight = debounce(function() {
     },1000)
     setTimeout(function() {
         startHeaderTextAnimation();
-    },1500)
+    },2500)
 },250);
 
 
 $(function() {
-    setHeroHeight();
-    window.addEventListener('resize', setHeroHeight);
+    initHero();
+    // window.addEventListener('resize', setHeroHeight);
 });

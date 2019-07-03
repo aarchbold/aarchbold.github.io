@@ -7,6 +7,7 @@
    This is a Sass partial
 */
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500);
+@import url(https://fontlibrary.org/face/trueno);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -64,12 +65,12 @@ table {
 */
 body {
   background-color: #ffffff;
-  color: #0F0F16;
+  color: #095274;
   font-family: 'TruenoUltraLight', sans-serif;
 }
 
 a {
-  color: #0F0F16;
+  color: #095274;
   text-decoration: underline;
 }
 
@@ -106,7 +107,7 @@ a {
   left: 4px;
   width: 32px;
   height: 6px;
-  background-color: #0F0F16;
+  background-color: #095274;
 }
 .page-h2__hr.-inverse {
   background-color: #ffffff;
@@ -140,12 +141,19 @@ a {
 }
 /* navigation styles
 */
+.topnav-container {
+  position: absolute;
+}
+
+.navigation-inner {
+  padding: 20px;
+}
+
 /* layout styles
 */
 .page-outer {
   position: relative;
   width: 100%;
-  overflow: hidden;
 }
 
 .page-outer__header {
@@ -167,38 +175,47 @@ a {
 /* home styles
 */
 .hero-stage {
-  -webkit-transition: all 0.9s;
-  transition: all 0.9s;
+  -webkit-transition: opacity 0.9s;
+  transition: opacity 0.9s;
   overflow: hidden;
   position: relative;
   width: 100%;
-  background-color: black;
-  opacity: 0.8;
+  height: 560px;
+  background-color: #ffffff;
+  background: url("../images/ui/scenery/bg-hero.jpg") 50% 50% no-repeat;
+  background-size: cover;
+  opacity: 0;
 }
 .hero-stage.-animate {
-  background-color: white;
   opacity: 1;
 }
 
+.hero-stage__bottom {
+  position: relative;
+  top: -134px;
+}
+
 .hero-stage__header {
-  -webkit-transition: all 0.9s;
-  transition: all 0.9s;
-  position: absolute;
-  width: 100%;
-  height: 50%;
-  box-sizing: border-box;
-  text-align: center;
-  font-size: 30px;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
+  font-size: 60px;
   top: 50%;
-  -webkit-transform: translateY(100%);
-  -ms-transform: translateY(100%);
-  transform: translateY(100%);
-  z-index: 20px;
+  font-family: TruenoBlack;
+  opacity: 0;
+  line-height: 1;
+  padding: 10% 30% 10% 10%;
 }
 .hero-stage__header.-animate {
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  opacity: 1;
+}
+.hero-stage__header h1 {
+  font-size: 60px;
+}
+.hero-stage__header p {
+  padding-top: 20px;
+  line-height: 1.3;
+  font-size: 22px;
+  font-family: TruenoRegular;
 }
 
 .hero-stage__tree {
@@ -250,18 +267,17 @@ a {
 }
 
 .hero-stage__sun {
-  -webkit-transition: all 0.9s;
-  transition: all 0.9s;
+  -webkit-transition: all 2s;
+  transition: all 2s;
   position: absolute;
-  width: 180px;
-  height: 180px;
-  top: 10%;
+  width: 480px;
+  height: 460px;
+  top: 40%;
   left: 60%;
-  border-radius: 50%;
-  background-color: yellow;
   -webkit-transform: translate(400%, 400%);
   -ms-transform: translate(400%, 400%);
   transform: translate(400%, 400%);
+  background: url("../images/ui/scenery/mr-sun.png") 50% 50% no-repeat;
 }
 .hero-stage__sun.-animate {
   -webkit-transform: translate(0, 0);
@@ -296,12 +312,12 @@ button.button-trial, .button.button-trial {
 }
 button.button-hotspots, .button.button-hotspots {
   background-color: #FF496F;
-  color: #0F0F16;
+  color: #095274;
   box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
 }
 button.button-forecasting, .button.button-forecasting {
   background-color: #003155;
-  color: #0F0F16;
+  color: #095274;
   box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
 }
 button.button-pulse, .button.button-pulse {
@@ -311,12 +327,12 @@ button.button-pulse, .button.button-pulse {
 }
 button.button-events, .button.button-events {
   background-color: #01AEEB;
-  color: #0F0F16;
+  color: #095274;
   box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
 }
 button.button-signup, .button.button-signup {
   background-color: #21C4D0;
-  color: #0F0F16;
+  color: #095274;
   box-shadow: 1px 4px 8px 1px rgba(33, 196, 208, 0.2);
 }
 
@@ -329,7 +345,7 @@ button.button-signup, .button.button-signup {
 
 .button-topnav {
   padding: 8px 15px !important;
-  color: #0F0F16;
+  color: #095274;
   background-color: #4B49FF;
   font-size: 15px;
   font-family: 'TruenoRegular', sans-serif;
