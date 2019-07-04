@@ -175,11 +175,11 @@ a {
 /* home styles
 */
 .hero-stage {
-  position: absolute;
-  top: 0px;
-  left: 0px;
   -webkit-transition: opacity 0.9s;
   transition: opacity 0.9s;
+  position: fixed;
+  top: 0px;
+  left: 0px;
   overflow: hidden;
   width: 100%;
   height: 560px;
@@ -291,6 +291,29 @@ a {
   position: relative;
   z-index: 1;
   padding-top: 60px;
+}
+
+.main-site__trees1 {
+  position: absolute;
+  top: 13%;
+  z-index: 3;
+}
+
+.main-site__trees2 {
+  position: absolute;
+  top: 24%;
+  z-index: 3;
+}
+
+.main-site__mountains {
+  position: absolute;
+  top: 13.7%;
+  z-index: 1;
+}
+
+.main-site__background {
+  position: relative;
+  z-index: 2;
 }
 
 /* button styles
