@@ -198,8 +198,8 @@ a {
 }
 
 .hero-stage__header {
-  -webkit-transition: opacity 2s;
-  transition: opacity 2s;
+  -webkit-transition: opacity 0.9s;
+  transition: opacity 0.9s;
   font-size: 60px;
   top: 50%;
   font-family: TruenoBlack;
@@ -209,6 +209,9 @@ a {
 }
 .hero-stage__header.-animate {
   opacity: 1;
+}
+.hero-stage__header.-fade {
+  opacity: 0;
 }
 .hero-stage__header h1 {
   font-size: 60px;
@@ -293,16 +296,28 @@ a {
   padding-top: 60px;
 }
 
-.main-site__trees1 {
+.main-site__hills1 {
   position: absolute;
-  top: 13%;
+  top: 11.6%;
   z-index: 3;
 }
 
-.main-site__trees2 {
+.main-site__hills2 {
   position: absolute;
-  top: 24%;
-  z-index: 3;
+  top: 11.2%;
+  z-index: 4;
+}
+
+.main-site__hills3 {
+  position: absolute;
+  top: 15%;
+  z-index: 5;
+}
+
+.main-site__hills4 {
+  position: absolute;
+  top: 31%;
+  z-index: 6;
 }
 
 .main-site__mountains {
