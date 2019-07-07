@@ -134,6 +134,10 @@ a {
   margin-top: 60px;
 }
 
+section {
+  margin: 0 auto;
+}
+
 @media (max-width: 650px) {
   .page-h1 {
     font-size: 50px;
@@ -165,6 +169,32 @@ a {
   margin: 0 auto;
   padding: 0 40px;
   box-sizing: border-box;
+}
+
+.card-outer {
+  position: relative;
+  width: 50%;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  padding: 50px 50px;
+  box-shadow: 2px 2px 50px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 100px;
+  margin-top: 20px;
+}
+.card-outer.-right {
+  margin-left: 50%;
+}
+.card-outer h2 {
+  text-align: center;
+  font-size: 40px;
+  font-family: TruenoBlack;
+  margin-bottom: 40px;
+}
+.card-outer p {
+  font-size: 20px;
+  font-family: TruenoBold;
+  line-height: 1.4;
+  margin-bottom: 40px;
 }
 
 @media (max-width: 400px) {
@@ -331,6 +361,39 @@ a {
   z-index: 2;
 }
 
+.section-starts {
+  position: absolute;
+  top: 32%;
+  z-index: 1000;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.section-sharing, .section-friends, .section-secure {
+  position: relative;
+  margin-bottom: 340px;
+}
+.section-sharing:last-child, .section-friends:last-child, .section-secure:last-child {
+  margin-bottom: 0;
+}
+
+.section-image {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 38%;
+}
+.section-image.-left {
+  right: auto;
+  left: 0px;
+}
+
 /* button styles
 */
 button, .button {
@@ -338,64 +401,20 @@ button, .button {
   transition: all 0.4s;
   display: inline-block;
   margin: 0;
-  padding: 14px 30px !important;
-  border-radius: 5px;
-  font-family: 'TruenoUltraLight', sans-serif;
+  padding: 18px 40px !important;
+  border-radius: 25px;
+  font-family: TruenoBold;
   text-decoration: none;
-  font-size: 18px;
-  background: #21C4D0;
+  font-size: 20px;
+  background: #3EAEFF;
+  color: #ffffff;
 }
 button:hover, .button:hover {
   opacity: 0.7;
 }
-button.button-play, .button.button-play {
-  position: relative;
-  padding-left: 60px !important;
-}
-button.button-trial, .button.button-trial {
-  color: #000000;
-  background: #ffffff;
-}
-button.button-hotspots, .button.button-hotspots {
-  background-color: #FF496F;
-  color: #095274;
-  box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
-}
-button.button-forecasting, .button.button-forecasting {
-  background-color: #003155;
-  color: #095274;
-  box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
-}
-button.button-pulse, .button.button-pulse {
-  color: #ffffff;
-  background-color: #FFD66F;
-  box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
-}
-button.button-events, .button.button-events {
-  background-color: #01AEEB;
-  color: #095274;
-  box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
-}
-button.button-signup, .button.button-signup {
-  background-color: #21C4D0;
-  color: #095274;
-  box-shadow: 1px 4px 8px 1px rgba(33, 196, 208, 0.2);
-}
 
-.button-icon {
-  position: absolute;
-  left: 20px;
-  top: 10px;
-  width: 26px;
-}
-
-.button-topnav {
-  padding: 8px 15px !important;
-  color: #095274;
-  background-color: #4B49FF;
-  font-size: 15px;
-  font-family: 'TruenoRegular', sans-serif;
-  box-shadow: 1px 1px 10px 1px rgba(75, 73, 255, 0.37);
+.button-center {
+  text-align: center;
 }
 
 /* animated cloud styles
