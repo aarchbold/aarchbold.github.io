@@ -76,14 +76,17 @@ moveItItem.prototype.update = function(scrollTop){
 
 initHero = debounce(function() { 
     $heroContainer = $('#heroStage');
+    $mainSite = $('.main-site__container');
     $sun = $('.hero-stage__sun',$heroContainer);
     $fogs = $('.hero-stage__fog',$heroContainer);
     $header = $('.hero-stage__header',$heroContainer);
     $clouds = $('.animated-cloud',$heroContainer);
-    $birds = $('.animated-bird',$heroContainer);
+    $birds = $('.animated-bird',$mainSite);
     $baloon1 = $('.main-site__balloon1',$heroContainer);
     $baloon2 = $('.main-site__balloon2',$heroContainer);
     var $window = $(window);
+
+    console.log($birds);
     
     // Enable this if we want the hero to take up the window height
     //$heroContainer.height($(window).height());
