@@ -81,6 +81,8 @@ initHero = debounce(function() {
     $header = $('.hero-stage__header',$heroContainer);
     $clouds = $('.animated-cloud',$heroContainer);
     $birds = $('.animated-bird',$heroContainer);
+    $baloon1 = $('.main-site__balloon1',$heroContainer);
+    $baloon2 = $('.main-site__balloon2',$heroContainer);
     var $window = $(window);
     
     // Enable this if we want the hero to take up the window height
@@ -92,6 +94,8 @@ initHero = debounce(function() {
         $heroContainer.addClass('-animate');
         $clouds.addClass('-animate');
         $birds.addClass('-animate');
+        $baloon1.addClass('-animate');
+        $baloon2.addClass('-animate');
     }
     startHeaderTextAnimation = function() {
         $header.addClass('-animate');

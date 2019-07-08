@@ -376,11 +376,36 @@ section {
   -ms-transform: translate(400%, 400%);
   transform: translate(400%, 400%);
   background: url("../images/ui/scenery/mr-sun.png") 50% 50% no-repeat;
+  z-index: 1;
 }
 .hero-stage__sun.-animate {
   -webkit-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
   transform: translate(0, 0);
+}
+
+.main-site__balloon1 {
+  -webkit-transition: all 38s;
+  transition: all 38s;
+  position: absolute;
+  top: 42%;
+  left: 78%;
+  z-index: 100;
+}
+.main-site__balloon1.-animate {
+  top: -30%;
+}
+
+.main-site__balloon2 {
+  -webkit-transition: all 55s;
+  transition: all 55s;
+  position: absolute;
+  top: 60%;
+  left: 75%;
+  z-index: 100;
+}
+.main-site__balloon2.-animate {
+  top: -20%;
 }
 
 .main-site__container {
@@ -479,7 +504,9 @@ button, .button {
   color: #ffffff;
 }
 button:hover, .button:hover {
-  opacity: 0.7;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .button-center {
@@ -492,12 +519,19 @@ button:hover, .button:hover {
 }
 
 .button-social {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
   float: left;
   position: relative;
   width: 55px;
   height: 55px;
   border-radius: 10px;
   margin-right: 20px;
+}
+.button-social:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
 }
 .button-social.-facebook {
   background-color: #1b76c9;

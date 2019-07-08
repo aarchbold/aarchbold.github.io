@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="26px" viewBox="0 0 18 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Group 27</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M7.97698343,22.4137931 L9.77389211,22.4137931 C15.257964,15.7466884 18,11.0446693 18,8.30773581 C18,3.71950002 13.9705627,1.77635684e-15 9,1.77635684e-15 C4.02943725,1.77635684e-15 0,3.71950002 0,8.30773581 C0,11.3665597 2.65899448,16.0685788 7.97698343,22.4137931 Z" id="path-1"></path>
+    </defs>
+    <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="MainSite" transform="translate(-933.000000, -344.000000)">
+            <g id="Group-27" transform="translate(933.000000, 344.000000)">
+                <g id="Path-105">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#8E97AF" xlink:href="#path-1"></use>
+                    <path d="M6.55566406,-1.5862069 C10.3154717,1.10776074 12.2492987,4.57589607 12.3571451,8.81819908 C12.4649915,13.0605021 11.0355983,17.9663191 8.06896552,23.5356501 L17.815145,16.8493139 L20.5556641,-1.5862069 L6.55566406,-1.5862069 Z" fill-opacity="0.402589598" fill="#FFFFFF" mask="url(#mask-2)"></path>
+                </g>
+                <path d="M9.62068966,22.0413973 L9.62068966,23.5356501" id="Path-74" stroke="#777E91" stroke-width="0.6"></path>
+                <path d="M8.06896552,22.0413973 L8.06896552,23.5356501" id="Path-74" stroke="#777E91" stroke-width="0.6"></path>
+                <rect id="Rectangle" fill="#818798" x="7.13793103" y="23.5356501" width="3.4137931" height="2.3908046" rx="0.6"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
