@@ -694,8 +694,13 @@ section {
 
 .main-site__container {
   position: relative;
-  z-index: 1;
+  z-index: 5;
   padding-top: 60px;
+}
+
+.main-site__container--inner {
+  position: relative;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -725,7 +730,7 @@ section {
 
 .main-site__mountains {
   position: absolute;
-  top: 13.7%;
+  top: 12%;
   z-index: 1;
 }
 
@@ -747,17 +752,44 @@ section {
 }
 
 .section-sharing, .section-friends, .section-secure {
-  position: relative;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  position: absolute;
+  left: 50%;
   margin-bottom: 340px;
+  -webkit-transform: translate(-50%, 200px);
+  -ms-transform: translate(-50%, 200px);
+  transform: translate(-50%, 200px);
+  opacity: 1;
+  width: 100%;
+}
+.section-sharing.-animate, .section-friends.-animate, .section-secure.-animate {
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
 }
 .section-sharing:last-child, .section-friends:last-child, .section-secure:last-child {
   margin-bottom: 0;
 }
 
+.section-sharing {
+  top: 0;
+}
+
+.section-friends {
+  top: 760px;
+}
+
+.section-secure {
+  top: 1600px;
+}
+
 .section-image {
   position: absolute;
   top: 50%;
-  right: 50px;
+  right: 0;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -765,7 +797,7 @@ section {
 }
 .section-image.-left {
   right: auto;
-  left: 0px;
+  left: -50px;
 }
 
 .section-footer {
@@ -899,7 +931,7 @@ button:hover, .button:hover {
   position: absolute;
   background: url("../images/ui/scenery/bird1.png") 50% 50% no-repeat;
   background-size: cover;
-  z-index: 4;
+  z-index: 10;
 }
 .animated-bird.bird1, .animated-bird.bird3 {
   top: 22%;

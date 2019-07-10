@@ -1,3 +1,26 @@
+$.fn.bounceIn = function(){
+    
+}
+
+
+$(function() {
+    $(window).on('DOMContentLoaded load resize scroll', function() {
+
+        if (isElementInViewport($('#sharingSection'))) {
+            $('#sharingSection').addClass('-animate');
+        }
+        if (isElementInViewport($('#friendsSection'))) {
+            $('#friendsSection').addClass('-animate');
+        }
+        if (isElementInViewport($('#secureSection'))) {
+            $('#secureSection').addClass('-animate');
+        } 
+        // else {
+        //     console.log('not in view');
+        //     $('#sharingSection').removeClass('-animate');
+        // }
+    }); 
+});
 function getParam(name) {
     SCH = document.location.search;
     if(window['W3T'] && (W3T['MORE_ARGS'] != "")) {
@@ -85,8 +108,6 @@ initHero = debounce(function() {
     $baloon1 = $('.main-site__balloon1',$heroContainer);
     $baloon2 = $('.main-site__balloon2',$heroContainer);
     var $window = $(window);
-
-    console.log($birds);
     
     // Enable this if we want the hero to take up the window height
     //$heroContainer.height($(window).height());
@@ -106,7 +127,6 @@ initHero = debounce(function() {
 
     window.addEventListener('scroll', function(){
       var scrollTop = $window.scrollTop();
-      console.log(scrollTop);
       if (scrollTop > 20) {
         $header.addClass('-fade');
       } else {
