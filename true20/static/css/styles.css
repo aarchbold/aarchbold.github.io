@@ -656,7 +656,7 @@ section {
   width: 100%;
   height: 560px;
   background-color: #ffffff;
-  background: url("../images/ui/scenery/bg-hero.jpg") 50% 50% no-repeat;
+  background: url("../images/ui/scenery/bg-hero.png") 50% 50% no-repeat;
   background-size: cover;
   opacity: 0;
 }
@@ -670,17 +670,23 @@ section {
 }
 
 .hero-stage__header {
-  -webkit-transition: opacity 0.9s;
-  transition: opacity 0.9s;
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
   font-size: 60px;
   top: 50%;
   font-family: TruenoBlack, sans-serif;
   opacity: 0;
   line-height: 1;
   padding: 10% 30% 10% 10%;
+  -webkit-transform: translateY(60px);
+  -ms-transform: translateY(60px);
+  transform: translateY(60px);
 }
 .hero-stage__header.-animate {
   opacity: 1;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
 }
 .hero-stage__header.-fade {
   opacity: 0;
@@ -764,27 +770,27 @@ section {
 }
 
 .main-site__balloon1 {
-  -webkit-transition: all 38s;
-  transition: all 38s;
+  -webkit-transition: all 68s;
+  transition: all 68s;
   position: absolute;
   top: 42%;
-  left: 78%;
+  left: 68%;
   z-index: 100;
 }
 .main-site__balloon1.-animate {
-  top: -30%;
+  left: 110%;
 }
 
 .main-site__balloon2 {
-  -webkit-transition: all 55s;
-  transition: all 55s;
+  -webkit-transition: all 125s;
+  transition: all 125s;
   position: absolute;
   top: 60%;
-  left: 75%;
+  left: 64%;
   z-index: 100;
 }
 .main-site__balloon2.-animate {
-  top: -20%;
+  left: 110%;
 }
 
 .main-site__container {
@@ -801,25 +807,25 @@ section {
 
 .main-site__hills1 {
   position: absolute;
-  top: 11.6%;
-  z-index: 3;
+  top: 9%;
+  z-index: 5;
 }
 
 .main-site__hills2 {
   position: absolute;
   top: 11.2%;
-  z-index: 4;
+  z-index: 5;
 }
 
 .main-site__hills3 {
   position: absolute;
-  top: 15%;
+  top: 12%;
   z-index: 5;
 }
 
 .main-site__hills4 {
   position: absolute;
-  top: 31%;
+  top: 30%;
   z-index: 6;
 }
 
@@ -832,7 +838,20 @@ section {
 .main-site__background {
   display: block;
   position: relative;
+  z-index: 4;
+  margin-top: 35%;
+}
+
+.main-site__shim {
+  position: absolute;
   z-index: 2;
+  top: 14.25%;
+}
+
+.main-site__shine {
+  position: fixed;
+  z-index: 3;
+  top: 20%;
 }
 
 .section-starts {
@@ -847,10 +866,10 @@ section {
 }
 
 .section-sharing, .section-friends, .section-secure {
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: -webkit-transform 0.75s ease-in-out;
+  transition: -webkit-transform 0.75s ease-in-out;
+  transition: transform 0.75s ease-in-out;
+  transition: transform 0.75s ease-in-out, -webkit-transform 0.75s ease-in-out;
   position: absolute;
   left: 50%;
   margin-bottom: 340px;
@@ -903,7 +922,7 @@ section {
 
 .house-scene {
   position: absolute;
-  top: 53.5%;
+  top: 51.5%;
   z-index: 9;
   left: 0;
   width: 35%;
