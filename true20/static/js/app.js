@@ -7,13 +7,13 @@ $(function() {
     $(window).on('DOMContentLoaded load resize scroll', function() {
 
         if (isElementInViewport($('#sharingSection'))) {
-            $('#sharingSection').addClass('-animate');
+            //$('#sharingSection').addClass('-animate');
         }
         if (isElementInViewport($('#friendsSection'))) {
-            $('#friendsSection').addClass('-animate');
+            //$('#friendsSection').addClass('-animate');
         }
         if (isElementInViewport($('#secureSection'))) {
-            $('#secureSection').addClass('-animate');
+            //$('#secureSection').addClass('-animate');
         } 
         // else {
         //     console.log('not in view');
@@ -154,12 +154,12 @@ $(function() {
     // $.scrollSpeed(100, 800, 'easeOutCubic');
 
 
-    $.scrollify({
-      section : '.scroll-me',
-      sectionName : 'section-name',
-      setHeights: false,
-      //standardScrollElements: '.no-scroll',
-      touchScroll: false,
-      offset: -350
-    });
+    // $.scrollify({
+    //   section : '.scroll-me',
+    //   sectionName : 'section-name',
+    //   setHeights: false,
+    //   //standardScrollElements: '.no-scroll',
+    //   touchScroll: false,
+    //   offset: -350
+    // });
 });
