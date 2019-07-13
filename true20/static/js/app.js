@@ -101,7 +101,7 @@ initHero = debounce(function() {
     $heroContainer = $('#heroStage');
     $mainSite = $('.main-site__container');
     $sun = $('.hero-stage__sun',$heroContainer);
-    $fogs = $('.hero-stage__fog',$heroContainer);
+    $fogs = $('.hero-stage__fog',$mainSite);
     $header = $('.hero-stage__header',$heroContainer);
     $clouds = $('.animated-cloud',$heroContainer);
     $birds = $('.animated-bird',$mainSite);
@@ -109,8 +109,8 @@ initHero = debounce(function() {
     $baloon2 = $('.main-site__balloon2',$heroContainer);
     var $window = $(window);
     
-    // Enable this if we want the hero to take up the window height
-    //$heroContainer.height($(window).height());
+    // set the fog to the screen height
+    $fogs.height($(window).height());
     
     startAnimations = function() {
         $sun.addClass('-animate');
