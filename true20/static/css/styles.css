@@ -731,8 +731,8 @@ html.-static, body.-static {
   height: 100%;
 }
 .hero-stage__fog.fog1 {
-  background: -webkit-linear-gradient(transparent, white 20%);
-  background: linear-gradient(transparent, white 20%);
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.2), white 20%);
+  background: linear-gradient(rgba(255, 255, 255, 0.2), white 20%);
   z-index: 5;
 }
 .hero-stage__fog.fog1.-animate {
@@ -744,8 +744,8 @@ html.-static, body.-static {
   animation-fill-mode: forwards;
 }
 .hero-stage__fog.fog2 {
-  background: -webkit-linear-gradient(transparent, white 20%);
-  background: linear-gradient(transparent, white 20%);
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.2), white 20%);
+  background: linear-gradient(rgba(255, 255, 255, 0.2), white 20%);
   z-index: 12;
 }
 .hero-stage__fog.fog2.-animate {
@@ -927,6 +927,21 @@ html.-static, body.-static {
 }
 .section-sharing:last-child, .section-friends:last-child, .section-secure:last-child {
   margin-bottom: 0;
+}
+
+.section-sharing__scroller {
+  position: absolute;
+  top: 31.5%;
+}
+
+.section-friends__scroller {
+  position: absolute;
+  top: 62.5%;
+}
+
+.section-secure__scroller {
+  position: absolute;
+  top: 92%;
 }
 
 .section-sharing {

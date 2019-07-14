@@ -71,6 +71,9 @@ function isElementInViewport (el) {
 
     return (vertInView && horInView);
 }
+var isScrollingDown = false;
+var scrollDirection;
+
 $.fn.moveIt = function(){
     var $window = $(window);
     var instances = [];
@@ -146,6 +149,25 @@ initHero = debounce(function() {
     },2500)
 },250);
 
+// function throttle(fn, wait) {
+//   var time = Date.now();
+//   return function() {
+//     if ((time + wait - Date.now()) < 0) {
+//       fn();
+//       time = Date.now();
+//     }
+//   }
+// }
+
+// function scrollToSection() {
+//   let docHeight = $(document).height();
+//   console.log('is scrolling');
+//   console.log('whole height');
+//   console.log(docHeight);
+//   console.log($(window).scrollTop());
+//   console.log(scrollDirection);
+//   // $(window).scrollTo('23%', 1200);
+// }
 
 $(function() {
     initHero();
@@ -158,14 +180,15 @@ $(function() {
     // $.scrollSpeed(100, 800, 'easeOutCubic');
 
 
-    // $.scrollify({
-    //   section : '.scroll-me',
-    //   sectionName : 'section-name',
-    //   setHeights: false,
-    //   //standardScrollElements: '.no-scroll',
-    //   touchScroll: false,
-    //   offset: -350
-    // });
+    $.scrollify({
+      section : '.scroll-me',
+      sectionName : 'section-name',
+      setHeights: false,
+      //standardScrollElements: '.no-scroll',
+      scrollSpeed: 1400,
+      touchScroll: false,
+      offset: 0
+    });
 
     $('#scroll-test-1').click(function(e) {
       e.preventDefault();
@@ -185,4 +208,21 @@ $(function() {
       $(window).scrollTo('65%', 1200)
       // $(window).scrollTo({top:'50%'}, 800);
     });
+
+
+
+    // // scroll fun
+    // var lastScrollTop = 0;
+    // // element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
+    // window.addEventListener('scroll', function(){ // or window.addEventListener("scroll"....
+    //   var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+    //   if (st > lastScrollTop){
+    //       scrollDirection = 'down';
+    //   } else {
+    //     scrollDirection = 'up';
+    //   }
+    //   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+    // }, false);
+
+    //window.addEventListener('scroll', throttle(scrollToSection, 1000));
 });
