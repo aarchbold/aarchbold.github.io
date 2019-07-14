@@ -185,7 +185,7 @@ $(function() {
       sectionName : 'section-name',
       setHeights: false,
       //standardScrollElements: '.no-scroll',
-      scrollSpeed: 1400,
+      scrollSpeed: 1600,
       touchScroll: false,
       offset: 0
     });
