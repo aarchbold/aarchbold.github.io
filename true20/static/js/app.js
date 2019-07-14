@@ -140,6 +140,10 @@ initHero = debounce(function() {
     setTimeout(function() {
         startHeaderTextAnimation();
     },2500)
+    setTimeout(function() {
+        //make body scrollable 
+        $('body').removeClass('-static');
+    },2500)
 },250);
 
 
@@ -162,4 +166,23 @@ $(function() {
     //   touchScroll: false,
     //   offset: -350
     // });
+
+    $('#scroll-test-1').click(function(e) {
+      e.preventDefault();
+      //$.scrollTo($("#sharingSection"), 1200);
+      $(window).scrollTo('23%', 1200)
+      // $(window).scrollTo({top:'50%'}, 800);
+    });
+    $('#scroll-test-2').click(function(e) {
+      e.preventDefault();
+      //$.scrollTo($("#sharingSection"), 1200);
+      $(window).scrollTo('44%', 1200)
+      // $(window).scrollTo({top:'50%'}, 800);
+    });
+    $('#scroll-test-3').click(function(e) {
+      e.preventDefault();
+      //$.scrollTo($("#sharingSection"), 1200);
+      $(window).scrollTo('65%', 1200)
+      // $(window).scrollTo({top:'50%'}, 800);
+    });
 });
