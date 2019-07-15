@@ -3,7 +3,15 @@ $.fn.bounceIn = function(){
 }
 
 
+
 $(function() {
+    $('#waitListButton').click(function(e) {
+        e.preventDefault();
+        $(window).animate({
+            scrollTop: ($('#joinUs').offset().top)
+        },1000);
+    })
+
     $(window).on('DOMContentLoaded load resize scroll', function() {
 
         if (isElementInViewport($('#sharingSection'))) {
@@ -176,7 +184,11 @@ $(function() {
     // var parallaxInstance = new Parallax(scene);
     // console.log(parallaxInstance)
     // $('.main-site__container').paroller();
+    
+    
     $('[data-scroll-speed]').moveIt();
+    
+    
     // $.scrollSpeed(100, 800, 'easeOutCubic');
 
 

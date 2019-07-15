@@ -1215,6 +1215,10 @@ html.-static, body.-static {
   }
 }
 @media (max-width: 800px) {
+  .main-site__shine {
+    display: none;
+  }
+
   .hero-stage__header h1 {
     font-size: 40px;
   }
