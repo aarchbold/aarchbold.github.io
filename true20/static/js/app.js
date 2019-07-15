@@ -180,15 +180,15 @@ $(function() {
     // $.scrollSpeed(100, 800, 'easeOutCubic');
 
 
-    $.scrollify({
-      section : '.scroll-me',
-      sectionName : 'section-name',
-      setHeights: false,
-      //standardScrollElements: '.no-scroll',
-      scrollSpeed: 1600,
-      touchScroll: false,
-      offset: 0
-    });
+    // $.scrollify({
+    //   section : '.scroll-me',
+    //   sectionName : 'section-name',
+    //   setHeights: false,
+    //   //standardScrollElements: '.no-scroll',
+    //   scrollSpeed: 1600,
+    //   touchScroll: false,
+    //   offset: 0
+    // });
 
     $('#scroll-test-1').click(function(e) {
       e.preventDefault();
