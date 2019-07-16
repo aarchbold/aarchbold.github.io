@@ -477,6 +477,11 @@ section {
   margin-bottom: 140px;
 }
 
+#clipboardCopy {
+  width: 1px;
+  opacity: 0;
+}
+
 @-webkit-keyframes waterfall {
   0% {
     -webkit-transform: translateY(-100%);
