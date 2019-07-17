@@ -163,18 +163,19 @@ moveItItem.prototype.update = function(scrollTop){
 
 
 initHero = debounce(function() { 
-    $heroContainer = $('#heroStage');
-    $mainSite = $('.main-site__container');
-    $sun = $('.hero-stage__sun',$heroContainer);
-    $shine = $('.main-site__shine',$mainSite);
-    $fogs = $('.hero-stage__fog',$mainSite);
-    $header = $('.hero-stage__header',$heroContainer);
-    $clouds = $('.animated-cloud',$heroContainer);
-    $birds = $('.animated-bird',$mainSite);
-    $baloon1 = $('.main-site__balloon1',$heroContainer);
-    $baloon2 = $('.main-site__balloon2',$heroContainer);
-    $nav = $('.topnav-container');
-    $navInner = $('.navigation-inner');
+    var $heroContainer = $('#heroStage');
+    var $mainSite = $('.main-site__container');
+    var $sun = $('.hero-stage__sun',$heroContainer);
+    var $shine = $('.main-site__shine',$mainSite);
+    var $fogs = $('.hero-stage__fog',$mainSite);
+    var $header = $('.hero-stage__header',$heroContainer);
+    var $clouds = $('.animated-cloud',$heroContainer);
+    var $birds = $('.animated-bird',$mainSite);
+    var $baloon1 = $('.main-site__balloon1',$heroContainer);
+    var $baloon2 = $('.main-site__balloon2',$heroContainer);
+    var $nav = $('.topnav-container');
+    var $navInner = $('.navigation-inner');
+    var $heroClouds = $('.hero-sky',$heroContainer);
     var $window = $(window);
     
     // set the fog to the screen height
@@ -189,6 +190,7 @@ initHero = debounce(function() {
         $birds.addClass('-animate');
         $baloon1.addClass('-animate');
         $baloon2.addClass('-animate');
+        $heroClouds.addClass('-animate');
     }
     startHeaderTextAnimation = function() {
         $header.addClass('-animate');
@@ -221,7 +223,7 @@ initHero = debounce(function() {
     setTimeout(function() {
         //make body scrollable 
         $('body').removeClass('-static');
-    },2500)
+    },3500)
 },250);
 
 // function throttle(fn, wait) {
