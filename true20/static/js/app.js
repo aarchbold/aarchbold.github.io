@@ -55,10 +55,10 @@ var initCopyToClip = function() {
 
 
 $(function() {
-    $('#waitListButton').click(function(e) {
+    $('.go-to-footer').click(function(e) {
         e.preventDefault();
         $(window).animate({
-            scrollTop: ($('#joinUs').offset().top)
+            scrollTop: ($('#joinUs').offset().top - 100)
         },1000);
     })
 
