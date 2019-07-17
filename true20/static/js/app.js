@@ -184,7 +184,6 @@ initHero = debounce(function() {
     startAnimations = function() {
         $sun.addClass('-animate');
         $shine.addClass('-animate');
-        //$fogs.addClass('-animate');
         $heroContainer.addClass('-animate');
         $clouds.addClass('-animate');
         $birds.addClass('-animate');
@@ -221,9 +220,13 @@ initHero = debounce(function() {
         startHeaderTextAnimation();
     },1250)
     setTimeout(function() {
+      // fade fogs
+      $fogs.addClass('-animate');
+    },3000)
+    setTimeout(function() {
         //make body scrollable 
         $('body').removeClass('-static');
-    },3500)
+    },4000)
 },250);
 
 // function throttle(fn, wait) {

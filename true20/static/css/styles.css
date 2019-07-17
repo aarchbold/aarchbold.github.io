@@ -298,8 +298,8 @@ section {
   text-align: right;
 }
 .topnav-links a {
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   font-family: TruenoBold, sans-serif;
   display: inline-block;
   padding-left: 40px;
@@ -529,8 +529,8 @@ section {
     transform: translateY(-100%);
   }
   100% {
-    -webkit-transform: translateY(400%);
-    transform: translateY(400%);
+    -webkit-transform: translateY(200%) scale(0.5);
+    transform: translateY(200%) scale(0.5);
   }
 }
 
@@ -540,8 +540,8 @@ section {
     transform: translateY(-100%);
   }
   100% {
-    -webkit-transform: translateY(400%);
-    transform: translateY(400%);
+    -webkit-transform: translateY(200%) scale(0.5);
+    transform: translateY(200%) scale(0.5);
   }
 }
 @media (max-width: 1000px) {
@@ -1049,33 +1049,44 @@ html.-static, body.-static {
   height: 100%;
 }
 .hero-stage__fog.fog1 {
-  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.2), white 20%);
-  background: linear-gradient(rgba(255, 255, 255, 0.2), white 20%);
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.01), white 20%);
+  background: linear-gradient(rgba(255, 255, 255, 0.01), white 20%);
   z-index: 5;
+  top: 11%;
 }
 .hero-stage__fog.fog1.-animate {
-  -webkit-animation: foggydew 2s;
-  animation: foggydew 2s;
-  -webkit-animation-delay: 1.4s;
-  animation-delay: 1.4s;
+  -webkit-animation: foggydew 1.7s;
+  animation: foggydew 1.7s;
+  -webkit-animation-delay: .2s;
+  animation-delay: .2s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 .hero-stage__fog.fog2 {
-  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.2), white 20%);
-  background: linear-gradient(rgba(255, 255, 255, 0.2), white 20%);
-  z-index: 12;
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.01), white 20%);
+  background: linear-gradient(rgba(255, 255, 255, 0.01), white 20%);
+  z-index: 5;
+  top: 12%;
 }
 .hero-stage__fog.fog2.-animate {
-  -webkit-animation: foggydew 1.5s;
-  animation: foggydew 1.5s;
-  -webkit-animation-delay: 1.4s;
-  animation-delay: 1.4s;
+  -webkit-animation: foggydew 1.4s;
+  animation: foggydew 1.4s;
+  -webkit-animation-delay: .1s;
+  animation-delay: .1s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 .hero-stage__fog.fog3 {
-  background-color: blue;
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.01), white 20%);
+  background: linear-gradient(rgba(255, 255, 255, 0.01), white 20%);
+  z-index: 5;
+  top: 17%;
+}
+.hero-stage__fog.fog3.-animate {
+  -webkit-animation: foggydew 1.2s;
+  animation: foggydew 1.2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes foggydew {
