@@ -580,20 +580,30 @@ section {
   0% {
     -webkit-transform: translateY(-100%);
     transform: translateY(-100%);
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
   }
   100% {
-    -webkit-transform: translateY(200%) scale(0.5);
-    transform: translateY(200%) scale(0.5);
+    opacity: 1;
+    -webkit-transform: translateY(150%) scale(0.7);
+    transform: translateY(150%) scale(0.7);
   }
 }
 @keyframes waterfall {
   0% {
     -webkit-transform: translateY(-100%);
     transform: translateY(-100%);
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
   }
   100% {
-    -webkit-transform: translateY(200%) scale(0.5);
-    transform: translateY(200%) scale(0.5);
+    opacity: 1;
+    -webkit-transform: translateY(150%) scale(0.7);
+    transform: translateY(150%) scale(0.7);
   }
 }
 @media (max-width: 1000px) {
@@ -891,6 +901,9 @@ html.-static, body.-static {
   transform: scale(1);
   background: url("../images/ui/backgrounds/bg-sky-box.png") 50% 50% no-repeat;
 }
+.hero-stage.-animate {
+  opacity: 0;
+}
 
 .hero-sky {
   -webkit-transition: all 1.2s;
@@ -902,10 +915,7 @@ html.-static, body.-static {
   height: 100%;
   background: url("../images/ui/backgrounds/bg-sky-box-clouds.png") 50% 50% no-repeat;
   background-size: cover;
-  opacity: 0;
-  -webkit-transform: scale(3);
-  -ms-transform: scale(3);
-  transform: scale(3);
+  opacity: 1;
 }
 .hero-sky.-animate {
   -webkit-animation: headerclouds 1.2s;
@@ -977,9 +987,9 @@ html.-static, body.-static {
 .hero-stage__header img {
   opacity: 1;
   margin-bottom: 10px;
-  -webkit-transform: scale(1.5) translateY(80px);
-  -ms-transform: scale(1.5) translateY(80px);
-  transform: scale(1.5) translateY(80px);
+  -webkit-transform: scale(1.7) translateY(80px);
+  -ms-transform: scale(1.7) translateY(80px);
+  transform: scale(1.7) translateY(80px);
 }
 .hero-stage__header h1 {
   opacity: 0;
@@ -1017,8 +1027,8 @@ html.-static, body.-static {
 
 @-webkit-keyframes headerzoom {
   0% {
-    -webkit-transform: scale(1.5) translateY(80px);
-    transform: scale(1.5) translateY(80px);
+    -webkit-transform: scale(1.7) translateY(80px);
+    transform: scale(1.7) translateY(80px);
   }
   80% {
     -webkit-transform: scale(0.95) translateY(0);
@@ -1032,8 +1042,8 @@ html.-static, body.-static {
 
 @keyframes headerzoom {
   0% {
-    -webkit-transform: scale(1.5) translateY(80px);
-    transform: scale(1.5) translateY(80px);
+    -webkit-transform: scale(1.7) translateY(80px);
+    transform: scale(1.7) translateY(80px);
   }
   80% {
     -webkit-transform: scale(0.95) translateY(0);
@@ -1197,9 +1207,9 @@ html.-static, body.-static {
   z-index: 1;
 }
 .hero-stage__sun.-animate {
-  -webkit-transform: translate(5%, -17%);
-  -ms-transform: translate(5%, -17%);
-  transform: translate(5%, -17%);
+  -webkit-transform: translate(-20%, -30%);
+  -ms-transform: translate(-20%, -30%);
+  transform: translate(-20%, -30%);
 }
 
 .main-site__balloon1 {
@@ -1837,4 +1847,14 @@ button:hover, .button:hover {
   50% {
     background-image: url("../images/ui/scenery/bird2.png");
   }
+}
+/* modal styles
+*/
+.modal-waitlist {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
 }

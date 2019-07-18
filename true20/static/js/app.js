@@ -184,12 +184,12 @@ initHero = debounce(function() {
     startAnimations = function() {
         $sun.addClass('-animate');
         $shine.addClass('-animate');
-        $heroContainer.addClass('-animate');
+        // $heroContainer.addClass('-animate');
         $clouds.addClass('-animate');
         $birds.addClass('-animate');
         $baloon1.addClass('-animate');
         $baloon2.addClass('-animate');
-        $heroClouds.addClass('-animate');
+        // $heroClouds.addClass('-animate');
     }
     startHeaderTextAnimation = function() {
         $header.addClass('-animate');
@@ -206,10 +206,10 @@ initHero = debounce(function() {
       }
       if (scrollTop > 400) {
         $navInner.addClass('-compact');
-        $heroContainer.hide();
+        $heroContainer.addClass('-animate');
       } else {
         $navInner.removeClass('-compact');
-        $heroContainer.show();
+        $heroContainer.removeClass('-animate');
       }
     });
     // start animations
@@ -221,33 +221,13 @@ initHero = debounce(function() {
     },1250)
     setTimeout(function() {
       // fade fogs
-      $fogs.addClass('-animate');
+      // $fogs.addClass('-animate');
     },3000)
     setTimeout(function() {
         //make body scrollable 
         $('body').removeClass('-static');
     },4000)
 },250);
-
-// function throttle(fn, wait) {
-//   var time = Date.now();
-//   return function() {
-//     if ((time + wait - Date.now()) < 0) {
-//       fn();
-//       time = Date.now();
-//     }
-//   }
-// }
-
-// function scrollToSection() {
-//   let docHeight = $(document).height();
-//   console.log('is scrolling');
-//   console.log('whole height');
-//   console.log(docHeight);
-//   console.log($(window).scrollTop());
-//   console.log(scrollDirection);
-//   // $(window).scrollTo('23%', 1200);
-// }
 
 
 $(window).on('load', function (e) {
