@@ -72,10 +72,10 @@ $(function() {
             //$('#sharingSection').addClass('-animate');
         }
         if (isElementInViewport($('#friendsSection'))) {
-            //$('#friendsSection').addClass('-animate');
+            // $('#friendsSection').addClass('-animate');
         }
-        if (isElementInViewport($('#secureSection'))) {
-            //$('#secureSection').addClass('-animate');
+        if (isElementInViewport($('.footer-waterfall__mist'))) {
+            $('.footer-container').addClass('-animate');
         } 
         // else {
         //     console.log('not in view');
@@ -215,10 +215,10 @@ initHero = debounce(function() {
     // start animations
     setTimeout(function() {
         startAnimations();
-    },1000)
+    },1600)
     setTimeout(function() {
         startHeaderTextAnimation();
-    },1250)
+    },2000)
     setTimeout(function() {
       // fade fogs
       // $fogs.addClass('-animate');
@@ -226,7 +226,7 @@ initHero = debounce(function() {
     setTimeout(function() {
         //make body scrollable 
         $('body').removeClass('-static');
-    },4000)
+    },5000)
 },250);
 
 
@@ -240,3 +240,34 @@ $(window).on('load', function (e) {
     $('[data-scroll-speed]').moveIt();
   }
 })
+
+var handleWaitlist = function() {
+    var $modal = $('.modal-waitlist');
+    var $closeModal = $('#closeOverlay');
+    var $modalSpinner = $('.modal-waitlist__preloader');
+    var $formInput = $('.footer-input input');
+    var $formSubmit = $('.footer-input .footer-signup');
+
+    $formSubmit.click(function(e) {
+        e.preventDefault();
+        console.log($modal);
+        $modal.fadeIn();
+        // do the waitlist functionality
+        setTimeout(function() {
+            $modalSpinner.fadeOut();
+        },2000)
+    })
+
+    $modal.click(function(e) {
+        $modal.fadeOut();
+    })
+    $closeModal.click(function(e) {
+        e.preventDefault();
+        $modal.fadeOut();
+    })
+}
+
+
+$(function() {
+    handleWaitlist();
+});
