@@ -1408,6 +1408,18 @@ html.-static, body.-static {
   right: auto;
   left: -50px;
 }
+.section-image img {
+  width: 100%;
+}
+.section-image .video {
+  position: absolute;
+  top: 8.1%;
+  left: 27.1%;
+  width: 57.6%;
+}
+.section-image .video video {
+  width: 100%;
+}
 
 .section-footer {
   background-color: #103a31;
