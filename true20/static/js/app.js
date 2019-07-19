@@ -1,3 +1,58 @@
+var wagthedog = function() {
+    $dogs = $('.footer-doggers img');
+    $dogs.hide();
+    $($dogs[0]).show();
+    
+
+    setInterval(function() {
+        // loop through the dogs and show 1 at a time
+        setTimeout(function() {
+            $dogs.hide();
+            $($dogs[0]).show();
+        },100);
+        setTimeout(function() {
+            $dogs.hide();
+            $($dogs[1]).show();
+        },200);
+        setTimeout(function() {
+            $dogs.hide();
+            $($dogs[2]).show();
+        },300);
+        setTimeout(function() {
+            $dogs.hide();
+            $($dogs[1]).show();
+        },400);
+        setTimeout(function() {
+            $dogs.hide();
+            $($dogs[0]).show();
+        },400);
+        setTimeout(function() {
+            $dogs.hide();
+            $($dogs[1]).show();
+        },500);
+        setTimeout(function() {
+            $dogs.hide();
+            $($dogs[2]).show();
+        },600);
+        setTimeout(function() {
+            $dogs.hide();
+            $($dogs[1]).show();
+        },700);
+        setTimeout(function() {
+            $dogs.hide();
+            $($dogs[0]).show();
+        },800);
+    },8000);
+
+
+
+    console.log($dogs[0])
+}
+
+
+$(function() {
+    wagthedog();
+});
 var getWindowOptions = function() {
     var width = 500;
     var height = 450;
@@ -229,6 +284,19 @@ initHero = debounce(function() {
     },5000)
 },250);
 
+$(function() {
+  window.scroll({
+    top: 0, 
+    left: 0, 
+    behavior: 'smooth' 
+   });
+
+   
+});
+
+// $(window).unload(function() {
+//   $('body').scrollTop(0);
+// });
 
 $(window).on('load', function (e) {
   // executes when complete page is fully loaded, including all frames, objects and images
@@ -247,15 +315,26 @@ var handleWaitlist = function() {
     var $modalSpinner = $('.modal-waitlist__preloader');
     var $formInput = $('.footer-input input');
     var $formSubmit = $('.footer-input .footer-signup');
+    var emailPattern = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
+
+    $formInput.keyup(function() {
+        if (emailPattern.test($formInput.val())) {
+            $formSubmit.removeClass('-disabled')
+        } else {
+            $formSubmit.addClass('-disabled')
+        }
+    })
 
     $formSubmit.click(function(e) {
         e.preventDefault();
-        console.log($modal);
-        $modal.fadeIn();
-        // do the waitlist functionality
-        setTimeout(function() {
-            $modalSpinner.fadeOut();
-        },2000)
+        if (!$formSubmit.hasClass('-disabled')) {
+            console.log($modal);
+            $modal.fadeIn();
+            // do the waitlist functionality
+            setTimeout(function() {
+                $modalSpinner.fadeOut();
+            },2000)
+        }
     })
 
     $modal.click(function(e) {
