@@ -505,6 +505,7 @@ section {
   position: absolute;
   top: 0;
   right: 0;
+  width: 100%;
 }
 .footer-doggers img.-floof2 {
   display: none;
@@ -657,6 +658,12 @@ section {
     transform: translateY(150%) scale(0.7);
   }
 }
+@media (max-width: 1100px) {
+  .footer-doggers {
+    max-width: 13%;
+    width: 13%;
+  }
+}
 @media (max-width: 1000px) {
   .footer-header {
     font-size: 34px;
@@ -699,11 +706,10 @@ section {
   }
 
   .footer-doggers {
-    position: absolute;
     top: 8px;
     left: 400px;
-    max-width: 9%;
-    width: auto;
+    max-width: 13%;
+    width: 13%;
   }
 
   .section-footer {
@@ -726,8 +732,14 @@ section {
   }
 
   .footer-doggers {
-    top: 8px;
-    left: 300px;
+    top: -8px;
+    left: 265px;
+    width: 11%;
+    max-width: 11%;
+  }
+
+  .footer-container {
+    bottom: -84px;
   }
 }
 @media (max-width: 640px) {
@@ -761,8 +773,8 @@ section {
   }
 
   .footer-doggers {
-    top: 93px;
-    left: 266px;
+    top: 72px;
+    left: 230px;
   }
 
   .footer-subheader {
@@ -1251,7 +1263,7 @@ html.-static, body.-static {
   -webkit-transition: all 80s linear;
   transition: all 80s linear;
   position: absolute;
-  top: 52%;
+  top: 42%;
   left: 74%;
   z-index: 100;
 }
@@ -1263,8 +1275,8 @@ html.-static, body.-static {
   -webkit-transition: all 135s linear;
   transition: all 135s linear;
   position: absolute;
-  top: 60%;
-  left: 68%;
+  top: 50%;
+  left: 70%;
   z-index: 100;
 }
 .main-site__balloon2.-animate {
@@ -1327,17 +1339,10 @@ html.-static, body.-static {
 }
 
 .main-site__shine {
-  -webkit-transition: all 1.8s;
-  transition: all 1.8s;
-  -webkit-transition-delay: .6s;
-  transition-delay: .6s;
   position: fixed;
-  opacity: 0;
+  opacity: 1;
   z-index: 3;
   top: 20%;
-}
-.main-site__shine.-animate {
-  opacity: 1;
 }
 
 .section-starts {
@@ -1581,11 +1586,11 @@ html.-static, body.-static {
   }
 
   .main-site__balloon1 {
-    top: 42%;
+    top: 30%;
   }
 
   .main-site__balloon2 {
-    top: 50%;
+    top: 40%;
   }
 
   .section-sharing {
@@ -1700,6 +1705,14 @@ html.-static, body.-static {
   .section-secure {
     top: 105%;
   }
+
+  .main-site__balloon1 {
+    top: 5%;
+  }
+
+  .main-site__balloon2 {
+    top: 15%;
+  }
 }
 @media (max-width: 520px) {
   .section-sharing {
@@ -1712,6 +1725,15 @@ html.-static, body.-static {
 
   .section-secure {
     top: 125%;
+  }
+}
+@media (max-width: 500px) {
+  .main-site__balloon1 {
+    display: none;
+  }
+
+  .main-site__balloon2 {
+    display: none;
   }
 }
 /* button styles
