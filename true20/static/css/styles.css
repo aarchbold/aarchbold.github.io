@@ -1334,15 +1334,17 @@ html.-static, body.-static {
 
 .main-site__shim {
   position: absolute;
-  z-index: 2;
+  z-index: 1;
   top: 14.25%;
 }
 
 .main-site__shine {
   position: fixed;
   opacity: 1;
-  z-index: 3;
+  z-index: 1;
   top: 20%;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .section-starts {
@@ -1357,8 +1359,12 @@ html.-static, body.-static {
 }
 
 .section-sharing, .section-friends, .section-secure {
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+  -webkit-transition: -webkit-transform 0.15s ease-out;
+  transition: -webkit-transform 0.15s ease-out;
+  transition: transform 0.15s ease-out;
+  transition: transform 0.15s ease-out, -webkit-transform 0.15s ease-out;
   position: absolute;
   margin-left: auto;
   margin-right: auto;
@@ -1397,7 +1403,7 @@ html.-static, body.-static {
 }
 
 .section-secure {
-  top: 123%;
+  top: 120%;
 }
 
 .section-image {
