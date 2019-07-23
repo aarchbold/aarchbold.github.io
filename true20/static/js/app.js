@@ -25,24 +25,24 @@ var wagthedog = function() {
         setTimeout(function() {
             $dogs.hide();
             $($dogs[0]).show();
-        },400);
-        setTimeout(function() {
-            $dogs.hide();
-            $($dogs[1]).show();
         },500);
         setTimeout(function() {
             $dogs.hide();
-            $($dogs[2]).show();
+            $($dogs[1]).show();
         },600);
         setTimeout(function() {
             $dogs.hide();
-            $($dogs[1]).show();
+            $($dogs[2]).show();
         },700);
         setTimeout(function() {
             $dogs.hide();
-            $($dogs[0]).show();
+            $($dogs[1]).show();
         },800);
-    },8000);
+        setTimeout(function() {
+            $dogs.hide();
+            $($dogs[0]).show();
+        },900);
+    },800);
 
 
 
@@ -328,12 +328,25 @@ var handleWaitlist = function() {
     $formSubmit.click(function(e) {
         e.preventDefault();
         if (!$formSubmit.hasClass('-disabled')) {
-            console.log($modal);
-            $modal.fadeIn();
-            // do the waitlist functionality
-            setTimeout(function() {
-                $modalSpinner.fadeOut();
-            },2000)
+            $.ajax({
+                url: '/ajaxController/postWaitingList',
+                type: 'POST',
+                data: {email: $formInput.val()},
+                dataType: 'json',
+                cache: false,
+                beforeSend: function() {
+                    $modal.fadeIn();
+                },
+                success: function(data) {
+                },
+                error: function(xhr, ajaxOptions, thrownError) { // if error occured
+                },
+                complete: function() {
+                    setTimeout(function() {
+                        $modalSpinner.fadeOut();
+                    },2000)
+                }
+            });
         }
     })
 
