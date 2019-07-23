@@ -83,7 +83,7 @@ var shareOnFacebook = function() {
 
 var shareOnTwitter = function() {
     var tweetBtn = $('.twitter-share');
-    var title = encodeURIComponent('Just joined the waitlist for a private social network called True. Check it out. #DeleteFacebook #BeTrue');
+    var title = encodeURIComponent('Just joined the waitlist for a private social network called True 🎉 Check it out. #DeleteFacebook #BeTrue');
     var shareUrl = 'https://twitter.com/intent/tweet?text=' + title + '&url=' + location.href;
     tweetBtn.href = shareUrl; // 1
 
