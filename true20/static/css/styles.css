@@ -419,8 +419,8 @@ section {
 }
 
 .footer-container {
-  -webkit-transition: all 1.2s;
-  transition: all 1.2s;
+  -webkit-transition: all .8s;
+  transition: all .8s;
   -webkit-transition-delay: .3s;
   transition-delay: .3s;
   position: absolute;
@@ -1035,7 +1035,7 @@ html.-static, body.-static {
 .hero-stage {
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
-  position: fixed;
+  position: absolute;
   top: 0px;
   left: 0px;
   overflow: hidden;
