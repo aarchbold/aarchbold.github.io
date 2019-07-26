@@ -9,31 +9,15 @@ var wagthedog = function() {
         setTimeout(function() {
             $dogs.hide();
             $($dogs[0]).show();
-        },100);
-        setTimeout(function() {
-            $dogs.hide();
-            $($dogs[1]).show();
         },200);
-        setTimeout(function() {
-            $dogs.hide();
-            $($dogs[2]).show();
-        },300);
         setTimeout(function() {
             $dogs.hide();
             $($dogs[1]).show();
         },400);
         setTimeout(function() {
             $dogs.hide();
-            $($dogs[0]).show();
-        },500);
-        setTimeout(function() {
-            $dogs.hide();
-            $($dogs[1]).show();
-        },600);
-        setTimeout(function() {
-            $dogs.hide();
             $($dogs[2]).show();
-        },700);
+        },600);
         setTimeout(function() {
             $dogs.hide();
             $($dogs[1]).show();
@@ -41,8 +25,24 @@ var wagthedog = function() {
         setTimeout(function() {
             $dogs.hide();
             $($dogs[0]).show();
-        },900);
-    },800);
+        },1000);
+        setTimeout(function() {
+            $dogs.hide();
+            $($dogs[1]).show();
+        },1200);
+        setTimeout(function() {
+            $dogs.hide();
+            $($dogs[2]).show();
+        },1400);
+        setTimeout(function() {
+            $dogs.hide();
+            $($dogs[1]).show();
+        },1600);
+        setTimeout(function() {
+            $dogs.hide();
+            $($dogs[0]).show();
+        },1800);
+    },6000);
 
 
 
