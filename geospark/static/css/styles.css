@@ -7,6 +7,7 @@
    This is a Sass partial
 */
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500);
+@import url(https://fontlibrary.org/face/trueno);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -115,7 +116,7 @@ a {
 .page-subheader {
   position: relative;
   z-index: 1;
-  font-size: 18px;
+  font-size: 22px;
   line-height: 1.3;
 }
 .page-subheader.-inverse {
@@ -226,10 +227,13 @@ nav {
 .topnav-links li:last-child a {
   margin-left: 40px;
 }
+.topnav-links li.-active .topnav-dropdown {
+  display: block !important;
+}
 
 .topnav-dropdown {
   position: absolute;
-  top: 45px;
+  top: 40px;
   left: 50%;
   min-width: 160px;
   -webkit-transform: translateX(-50%);
@@ -321,6 +325,16 @@ footer {
 .footer-col__legal p {
   margin-bottom: 20px;
 }
+.footer-col__legal a {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #000000;
+  text-decoration: none;
+}
+.footer-col__legal a:hover {
+  color: #4B49FF;
+}
 
 .footer-icon {
   -webkit-transition: all 0.3s;
@@ -333,7 +347,8 @@ footer {
 }
 
 .footer-row {
-  margin-bottom: 40px;
+  position: relative;
+  margin-bottom: 20px;
 }
 .footer-row:after {
   content: '';
@@ -347,7 +362,7 @@ footer {
 }
 
 .footer-col__legal {
-  float: left;
+  float: right;
   width: 37%;
 }
 
@@ -366,6 +381,10 @@ footer {
 
 .footer-legal-text {
   font-family: 'TruenoUltraLight', sans-serif;
+  color: #000000;
+  opacity: 0.6;
+  float: left;
+  width: 63%;
 }
 .footer-legal-text a {
   -webkit-transition: all 0.3s;
@@ -377,7 +396,45 @@ footer {
   color: #4B49FF;
 }
 
+.footer-legal-text__inner {
+  position: absolute;
+  bottom: 20px;
+  width: 60%;
+}
+
+.footer-buttons img {
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  width: 168px;
+  display: block;
+  margin-bottom: 10px;
+}
+.footer-buttons img:hover {
+  opacity: 0.7;
+}
+
 @media (max-width: 860px) {
+  footer {
+    padding-bottom: 20px;
+  }
+
+  .footer-legal-text {
+    width: 100%;
+  }
+
+  .footer-legal-text__inner, .footer-buttons {
+    position: relative;
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-buttons img {
+    width: 168px;
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+
   .topnav-mobile-cta {
     display: block;
   }
@@ -462,6 +519,11 @@ footer {
     right: -5px;
   }
 }
+@media (max-width: 400px) {
+  .footer-buttons img {
+    width: 130px;
+  }
+}
 /* layout styles
 */
 .page-outer {
@@ -500,9 +562,9 @@ footer {
 .home-intro__background {
   position: absolute;
   right: 0;
-  top: 240px;
-  width: 46%;
-  max-width: 550px;
+  top: 160px;
+  width: 56%;
+  max-width: 608px;
 }
 .home-intro__background img {
   width: 100%;
@@ -754,6 +816,41 @@ footer {
   text-decoration: none;
 }
 
+.home-featured-items {
+  padding-top: 100px;
+}
+
+.home-featured-items__header {
+  font-size: 20px;
+}
+
+.home-featured-items__row {
+  padding-top: 40px;
+  margin: 0 -2%;
+}
+.home-featured-items__row:after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+.home-featured-item {
+  float: left;
+  width: 25%;
+  min-height: 50px;
+  text-align: center;
+}
+
+.home-featured-item__inner {
+  width: 80%;
+  border: 1px solid #454545;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+.home-featured-item__inner img {
+  width: 100%;
+}
+
 @media (max-width: 990px) {
   .home-hyperion__container {
     padding-left: 0;
@@ -890,7 +987,10 @@ button, .button {
   font-family: 'TruenoUltraLight', sans-serif;
   text-decoration: none;
   font-size: 18px;
-  background: #21C4D0;
+  color: #ffffff;
+  background-color: #4B49FF;
+  -webkit-box-shadow: 1px 1px 10px 1px rgba(75, 73, 255, 0.37);
+  box-shadow: 1px 1px 10px 1px rgba(75, 73, 255, 0.37);
 }
 button:hover, .button:hover {
   opacity: 0.7;

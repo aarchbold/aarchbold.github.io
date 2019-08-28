@@ -317,19 +317,16 @@ $.fn.handleDropDowns = function() {
 
     $triggers.click(function(e) {
         e.preventDefault();
-        var $parent = $(this).parent();
-        var $dropdown = $('.topnav-dropdown', $parent);
+        var $lists = $('.topnav-links li'),
+            $parent = $(this).parent(),
+            $dropdown = $('.topnav-dropdown', $parent);
 
-        console.log($dropdown.hasClass('-active'))
-
-        if ($dropdown.hasClass('-active')) {
+        if ($parent.hasClass('-active')) {
             $parent.removeClass('-active');
-            $dropdown.removeClass('-active');
-            $dropdown.fadeOut('fast');
+
         } else {
+            $lists.removeClass('-active');
             $parent.addClass('-active');
-            $dropdown.addClass('-active');
-            $dropdown.fadeIn('fast');
         }
     });
 
@@ -417,8 +414,16 @@ $.fn.handleSignUp = function() {
         e.preventDefault();
         resetErrors();
         if (isFromValid()) {
-            $signupForm.hide();
-            $signupSuccess.show();
+            $.ajax({
+                url: 'https://forms.hsforms.com/submissions/v3/public/submit/formsnext/multipart/5391972/242a5fc0-bc05-477d-8199-bb7aa6afa176',
+                type: 'POST',
+                data: $('#trialForm').serialize(),
+                contentType: 'application/x-www-form-urlencoded',
+                success: function(data) {
+                    $signupForm.hide();
+                    $signupSuccess.show();
+                }
+            });
         } 
     })
 }

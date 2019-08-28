@@ -10,8 +10,8 @@
 <meta property="og:image" content="">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Geospark">
-<script src="static/js/vendors.js?cache=1560489212230"></script>
-<link rel="stylesheet" href="static/css/styles.css?cache=1560489212230">
+<script src="static/js/vendors.js?cache=1566972161323"></script>
+<link rel="stylesheet" href="static/css/styles.css?cache=1566972161323">
 <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.png">
 
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
@@ -26,28 +26,30 @@
         <img class="signup-logo" src="static/images/logos/logo-geospark.svg" />
         <a href="#" class="signup-close"><img src="static/images/icons/icon-close.svg" /></a>
         <div id="signupForm">
-            <section class="signup-content__input"> 
-                <input class="modal-input" id="fullName" placeholder="Full Name" />
-            </section>
-            <section class="signup-content__input"> 
-                <input class="modal-input" id="email" placeholder="Email" />
-            </section>
-            <section class="signup-content__input"> 
-                <input class="modal-input" id="organization" placeholder="Organization (Company)" />
-            </section>
-            <section class="signup-content__input"> 
-                <select class="modal-input">
-                    <option value="1-25">1 - 25</option>
-                </select>
-            </section>
-            <div class="error-container">
-                <div class="form-error error-name">Please enter your name</div>
-                <div class="form-error error-email">Please enter a valid Email</div>
-                <div class="form-error error-company">Please enter a company name</div>
-            </div>
-            <div class="signup-content__cta">
-                <a href="#" class="button button-signup">Send</a>
-            </div>
+            <form id="trialForm">
+                <section class="signup-content__input"> 
+                    <input class="modal-input" name="fullName" id="fullName" placeholder="Full Name" />
+                </section>
+                <section class="signup-content__input"> 
+                    <input class="modal-input" name="email" id="email" placeholder="Email" />
+                </section>
+                <section class="signup-content__input"> 
+                    <input class="modal-input" name="organization" id="organization" placeholder="Organization (Company)" />
+                </section>
+                <section class="signup-content__input"> 
+                    <select class="modal-input" name="size">
+                        <option value="1-25">1 - 25</option>
+                    </select>
+                </section>
+                <div class="error-container">
+                    <div class="form-error error-name">Please enter your name</div>
+                    <div class="form-error error-email">Please enter a valid Email</div>
+                    <div class="form-error error-company">Please enter a company name</div>
+                </div>
+                <div class="signup-content__cta">
+                    <a href="#" class="button button-signup">Send</a>
+                </div>
+            </form>
         </div>
         <div id="signupSuccess">
             Thanks for signing up
@@ -84,6 +86,12 @@
                         <div class="topnav-dropdown">
                             <ul class="topnav-dropdown__list">
                                 <li class="topnav-dropdown__item">
+                                    <a class="go-to-link" href="features.html#pulse">
+                                        <img class="topnav-dropdown__icon" src="static/images/icons/icon-pulse.svg" />
+                                        Pulse
+                                    </a>
+                                </li>
+                                <li class="topnav-dropdown__item">
                                     <a class="go-to-link" href="features.html#hotspots">
                                         <img class="topnav-dropdown__icon" src="static/images/icons/icon-hotspots.svg" />
                                         Hotspots
@@ -96,23 +104,47 @@
                                     </a>
                                 </li>
                                 <li class="topnav-dropdown__item">
-                                    <a class="go-to-link" href="features.html#pulse">
-                                        <img class="topnav-dropdown__icon" src="static/images/icons/icon-pulse.svg" />
-                                        Pulse
-                                    </a>
-                                </li>
-                                <li class="topnav-dropdown__item">
                                     <a class="go-to-link" href="features.html#events">
                                         <img class="topnav-dropdown__icon" src="static/images/icons/icon-events.svg" />
                                         Events
                                     </a>
                                 </li>
+                                <li class="topnav-dropdown__item">
+                                    <a class="go-to-link" href="features.html#alerts">
+                                        <img class="topnav-dropdown__icon" src="static/images/icons/icon-alerts.svg" />
+                                        Alerts
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </li>
-                    <li><a  class="topnav-links__item" href="videos.html">Videos</a></li>
+                    <!-- <li><a  class="topnav-links__item" href="videos.html">Videos</a></li> -->
+                    <li>
+                        <a  class="topnav-links__item topnav-dropdown__trigger" href="media.html">Media</a>
+                        <div class="topnav-dropdown">
+                            <ul class="topnav-dropdown__list">
+                                <li class="topnav-dropdown__item">
+                                    <a href="https://blog.geospark.io">
+                                        <img class="topnav-dropdown__icon" src="static/images/icons/icon-videos.svg" />
+                                        Videos
+                                    </a>
+                                </li>
+                                <li class="topnav-dropdown__item">
+                                    <a href="https://blog.geospark.io">
+                                        <img class="topnav-dropdown__icon" src="static/images/icons/icon-press.svg" />
+                                        Press
+                                    </a>
+                                </li>
+                                <li class="topnav-dropdown__item">
+                                    <a href="https://blog.geospark.io" target="_blank">
+                                        <img class="topnav-dropdown__icon" src="static/images/icons/icon-blog.svg" />
+                                        Blog
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
                     <li><a  class="topnav-links__item" href="about.html">About</a></li>
-                    <li><a class="topnav-links__item" href="https://blog.geospark.io" target="_blank">Blog</a></li>
                     <li><a class="button button-topnav" href="https://hyperion.geospark.io/login" target="_blank">Sign Up | Login</a></li>
                 </ul>
             </div>
@@ -126,15 +158,46 @@
             <div class="page-inner">
                 <section class="home-intro">
                     <h1 class="page-h1">The Pulse of Your World</h1>
-                    <p class="page-subheader">The information you need, before you need it.</p>
+                    <p class="page-subheader">Alerting for today. Analysis for tomorrow.</p>
                     <div class="home-video__cta">
-                        <a href="#" class="button button-play home-video-open">
+                        <!-- <a href="#" class="button button-play home-video-open">
                             <img class="button-icon" src="static/images/icons/icon-play.svg" />
                             Watch and Learn
+                        </a> -->
+                        <a href="#" class="button">
+                            Get Hyperion Today
                         </a>
                     </div>
                     <div class="home-intro__background">
-                        <img src="static/images/ui/home/bg-home-pulse.png" />
+                        <div class="home-hyperion__map--blip -blip1"></div>
+                        <div class="home-hyperion__map--blip -blip2"></div>
+                        <div class="home-hyperion__map--blip -blip3"></div>
+                        <div class="home-hyperion__map--blip -blip4"></div>
+                        <div class="home-hyperion__map--blip -blip5"></div>
+                        <div class="home-hyperion__map--blip -blip6"></div>
+                        <div class="home-hyperion__map--blip -blip7"></div>
+                        <img class="home-hyperion__map--image" src="static/images/ui/home/hyperion-map.png" />
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div data-section-name="featured-users" class="page-outer scroll-me">
+            <div class="page-inner">
+                <section class="home-featured-items">
+                    <div class="home-featured-items__header">Featured Users</div>
+                    <div class="home-featured-items__row">
+                        <div class="home-featured-item">
+                            <div class="home-featured-item__inner"><img src="static/images/logos/logo-international-sos.png" /></div>
+                        </div>
+                        <div class="home-featured-item">
+                            <div class="home-featured-item__inner"><img src="static/images/logos/logo-idb.png" /></div>
+                        </div>
+                        <div class="home-featured-item">
+                            <div class="home-featured-item__inner"><img src="static/images/logos/logo-bill-melinda.png" /></div>
+                        </div>
+                        <div class="home-featured-item">
+                            <div class="home-featured-item__inner"><img src="static/images/logos/logo-og-systems.png" /></div>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -442,22 +505,23 @@
             <div class="footer-row">
                 <div class="footer-col">
                     <a class="footer-link" href="features.html">Features</a>
+                    <a class="footer-link" href="features.html#pulse">Pulse</a>
                     <a class="footer-link" href="features.html#hotspots">Hotspots</a>
                     <a class="footer-link" href="features.html#forecasting">Forcasting</a>
-                    <a class="footer-link" href="features.html#pulse">Pulse</a>
                     <a class="footer-link" href="features.html#events">Events</a>
-                    <!-- <a class="footer-link" href="#">API</a> -->
+                    <a class="footer-link" href="features.html#alerts">Alerts</a>
+                    <a class="footer-link" href="#">API</a>
                 </div>
                 <div class="footer-col">
-                    <a class="footer-link" href="videos.html">Videos</a>
-                    <a class="footer-link" href="https://blog.geospark.io" target="_blank">Blog</a>
+                    <a class="footer-link" href="https://blog.geospark.io">Videos</a>
                     <a class="footer-link" href="https://www.geospark.io/press-and-awards" target="_blank">Press</a>
+                    <a class="footer-link" href="https://blog.geospark.io" target="_blank">Blog</a>
                 </div>
                 <div class="footer-col">
                     <a class="footer-link" href="about.html">About</a>
                     <a class="footer-link" href="about.html">Team</a>
-                    <!-- <a class="footer-link" href="#">Contact</a>
-                    <a class="footer-link" href="#">Careers</a> -->
+                    <a class="footer-link" href="#">Contact</a>
+                    <a class="footer-link" href="#">Careers</a>
                 </div>
                 <div class="footer-col__legal">
                     <p>
@@ -466,7 +530,7 @@
                         Herndon, VA 20171
                     </p>
                     <p>
-                        E: hello@geospark.io<br />
+                        E: <a href="mailto:info@geospark.io">info@geospark.io</a><br />
                         P: 855.878.3278
                     </p>
                     <p>
@@ -476,7 +540,24 @@
                     </p>
                 </div>
             </div>
-            <div class="footer-legal-text">&copy; 2019 Geospark Analytics Inc.  |  <a href="https://www.geospark.io/privacypolicy" target="_blank">Privacy Policy</a>  | <a href="https://www.geospark.io/terms-and-conditions" target="_blank">Terms of Service</a></div>
+            <div class="footer-row">
+                <div class="footer-col__legal">
+                    <div class="footer-buttons">
+                        <a href="#" target="_blank">
+                            <img src="static/images/buttons/button-app-store.png" />
+                        </a>
+                        <a href="#" target="_blank">
+                            <img src="static/images/buttons/button-google-play.png" />
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-legal-text">
+                    &nbsp;
+                    <div class="footer-legal-text__inner">
+                        &copy; 2019 Geospark Analytics Inc.  |  <a href="https://www.geospark.io/privacypolicy" target="_blank">Privacy Policy</a>  | <a href="https://www.geospark.io/terms-and-conditions" target="_blank">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </footer>
@@ -506,6 +587,6 @@
     
         </div>
 
-        <script src="static/js/app.js?cache=1560489212230"></script>
+        <script src="static/js/app.js?cache=1566972161323"></script>
     </body>
 </html>

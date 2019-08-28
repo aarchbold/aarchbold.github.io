@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
-    <title>Group 2</title>
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Group 3</title>
     <desc>Created with Sketch.</desc>
     <g id="Web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Desktop-HD-Copy" transform="translate(-883.000000, -219.000000)">
-            <g id="DropdwonMenu" transform="translate(858.000000, 67.000000)">
-                <g id="Group-2" transform="translate(25.000000, 152.000000)">
-                    <circle id="Oval" fill="#000000" cx="15" cy="15" r="15"></circle>
-                    <polygon id="Star" stroke="#FFFFFF" points="15 19.3121745 10.8855032 20.663119 10.8988784 16.3325352 8.34260439 12.836881 12.4653674 11.5113776 15 8 17.5346326 11.5113776 21.6573956 12.836881 19.1011216 16.3325352 19.1144968 20.663119"></polygon>
-                </g>
+        <g id="Desktop-HD-Copy" transform="translate(-872.000000, -219.000000)">
+            <g id="Group-3" transform="translate(872.000000, 219.000000)">
+                <circle id="Oval" fill="#FFD66F" cx="15" cy="15" r="15"></circle>
+                <polygon id="Star" stroke="#0F0F0F" points="15 19.3121745 10.8855032 20.663119 10.8988784 16.3325352 8.34260439 12.836881 12.4653674 11.5113776 15 8 17.5346326 11.5113776 21.6573956 12.836881 19.1011216 16.3325352 19.1144968 20.663119"></polygon>
             </g>
         </g>
     </g>
