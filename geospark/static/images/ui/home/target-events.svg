@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Group 11</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="15" cy="15" r="15"></circle>
+        <filter x="-38.3%" y="-31.7%" width="176.7%" height="176.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.136916893 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy" transform="translate(-124.000000, -1661.000000)">
+            <g id="Group-11" transform="translate(124.000000, 1661.000000)">
+                <g id="DatePickerButton">
+                    <circle id="Oval" fill="#F5A623" opacity="0.359723772" cx="30" cy="30" r="30"></circle>
+                    <g id="Group-2" transform="translate(15.000000, 15.000000)">
+                        <g id="Oval">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <use fill="#F5A623" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        </g>
+                    </g>
+                </g>
+                <polygon id="Star" stroke="#FFFFFF" stroke-width="2" points="30 34.5638021 25.297718 36.472136 25.6595663 31.4102924 22.3915479 27.527864 27.3174644 26.3078066 30 22 32.6825356 26.3078066 37.6084521 27.527864 34.3404337 31.4102924 34.702282 36.472136"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

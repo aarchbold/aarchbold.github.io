@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="25px" viewBox="0 0 24 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Group 9</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="12" cy="12" r="12"></circle>
+    </defs>
+    <g id="Web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy-3" transform="translate(-709.000000, -2854.000000)">
+            <g id="Group-5" transform="translate(661.000000, 2634.000000)">
+                <g id="Group-9" transform="translate(48.000000, 220.800000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#000000" xlink:href="#path-1"></use>
+                    <g id="Group" mask="url(#mask-2)" fill="#FFFFFF" fill-rule="nonzero">
+                        <g transform="translate(4.800000, 4.800000)" id="Path">
+                            <path d="M7.2,0 C3.264,0 0.064,3.168 0,7.104 L2.64,7.104 L4.144,4.832 L5.792,8.528 L7.92,2.464 L9.984,7.728 L10.528,7.088 L14.4,7.088 C14.336,3.168 11.136,0 7.2,0 Z"></path>
+                            <path d="M9.552,10.176 L7.968,6.144 L5.92,11.984 L3.92,7.488 L3.328,8.384 L0.096,8.384 C0.656,11.792 3.632,14.4 7.2,14.4 C10.768,14.4 13.744,11.792 14.304,8.384 L11.104,8.384 L9.552,10.176 Z"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
