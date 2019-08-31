@@ -10,8 +10,8 @@
 <meta property="og:image" content="">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Geospark">
-<script src="static/js/vendors.js?cache=1567143423271"></script>
-<link rel="stylesheet" href="static/css/styles.css?cache=1567143423271">
+<script src="static/js/vendors.js?cache=1567230368515"></script>
+<link rel="stylesheet" href="static/css/styles.css?cache=1567230368515">
 <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.png">
 
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
@@ -28,18 +28,29 @@
         <div id="signupForm">
             <form id="trialForm">
                 <section class="signup-content__input"> 
-                    <input class="modal-input" name="fullName" id="fullName" placeholder="Full Name" />
+                    <input type="text" class="modal-input" name="fullName" id="fullName" placeholder="Full Name" />
                 </section>
                 <section class="signup-content__input"> 
-                    <input class="modal-input" name="email" id="email" placeholder="Email" />
+                    <input type="email" class="modal-input" name="email" id="email" placeholder="Email" />
                 </section>
                 <section class="signup-content__input"> 
-                    <input class="modal-input" name="organization" id="organization" placeholder="Organization (Company)" />
+                    <input type="text" class="modal-input" name="organization" id="organization" placeholder="Organization (Company)" />
+                </section>
+                <section class="signup-content__input"> 
+                    <input type="tel" class="modal-input" name="phone" id="phone" placeholder="Phone Number" />
                 </section>
                 <section class="signup-content__input"> 
                     <select class="modal-input" name="size">
-                        <option value="1-25">1 - 25</option>
+                        <option value="demo-sales">Demo | Sales</option>
+                        <option value="partnering">Partnering</option>
+                        <option value="employment">Employment</option>
+                        <option value="help">Help</option>
+                        <option value="general-inquiry">General Inquiry</option>
+                        <option value="media-inquiry">Media Inquiry</option>
                     </select>
+                </section>
+                <section class="signup-content__input"> 
+                    <textarea class="modal-input modal-textarea" name="message" id="message" placeholder="Add Message"></textarea>
                 </section>
                 <div class="error-container">
                     <div class="form-error error-name">Please enter your name</div>
@@ -58,8 +69,9 @@
             <a href="https://www.geospark.io/privacypolicy" target="_blank">Privacy Policy</a>  | <a href="https://www.geospark.io/terms-and-conditions" target="_blank">Terms of Service</a>
         </div>
     </div>
-    <div class="signup-overlay"></div>
+    
 </div>
+<div class="signup-overlay"></div>
         <div class="home-video-container">
             <div class="home-video-content">
                 <div class="home-video">
@@ -767,6 +779,6 @@
     
         </div>
 
-        <script src="static/js/app.js?cache=1567143423271"></script>
+        <script src="static/js/app.js?cache=1567230368515"></script>
     </body>
 </html>

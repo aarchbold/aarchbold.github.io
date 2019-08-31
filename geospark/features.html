@@ -10,8 +10,8 @@
 <meta property="og:image" content="">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Geospark">
-<script src="static/js/vendors.js?cache=1567143423271"></script>
-<link rel="stylesheet" href="static/css/styles.css?cache=1567143423271">
+<script src="static/js/vendors.js?cache=1567230368515"></script>
+<link rel="stylesheet" href="static/css/styles.css?cache=1567230368515">
 <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.png">
 
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
@@ -28,18 +28,29 @@
         <div id="signupForm">
             <form id="trialForm">
                 <section class="signup-content__input"> 
-                    <input class="modal-input" name="fullName" id="fullName" placeholder="Full Name" />
+                    <input type="text" class="modal-input" name="fullName" id="fullName" placeholder="Full Name" />
                 </section>
                 <section class="signup-content__input"> 
-                    <input class="modal-input" name="email" id="email" placeholder="Email" />
+                    <input type="email" class="modal-input" name="email" id="email" placeholder="Email" />
                 </section>
                 <section class="signup-content__input"> 
-                    <input class="modal-input" name="organization" id="organization" placeholder="Organization (Company)" />
+                    <input type="text" class="modal-input" name="organization" id="organization" placeholder="Organization (Company)" />
+                </section>
+                <section class="signup-content__input"> 
+                    <input type="tel" class="modal-input" name="phone" id="phone" placeholder="Phone Number" />
                 </section>
                 <section class="signup-content__input"> 
                     <select class="modal-input" name="size">
-                        <option value="1-25">1 - 25</option>
+                        <option value="demo-sales">Demo | Sales</option>
+                        <option value="partnering">Partnering</option>
+                        <option value="employment">Employment</option>
+                        <option value="help">Help</option>
+                        <option value="general-inquiry">General Inquiry</option>
+                        <option value="media-inquiry">Media Inquiry</option>
                     </select>
+                </section>
+                <section class="signup-content__input"> 
+                    <textarea class="modal-input modal-textarea" name="message" id="message" placeholder="Add Message"></textarea>
                 </section>
                 <div class="error-container">
                     <div class="form-error error-name">Please enter your name</div>
@@ -58,8 +69,9 @@
             <a href="https://www.geospark.io/privacypolicy" target="_blank">Privacy Policy</a>  | <a href="https://www.geospark.io/terms-and-conditions" target="_blank">Terms of Service</a>
         </div>
     </div>
-    <div class="signup-overlay"></div>
+    
 </div>
+<div class="signup-overlay"></div>
         <div class="page-outer">
             <nav>
     <div class="topnav-container">
@@ -149,44 +161,6 @@
             </div>
         </div>
 
-        <div id="featuresHotspot" data-section-name="hotspots" data-target="#hotspots" class="page-outer feature-section__hotspots screen-height scroll-me">
-            <div class="page-inner">
-                <section class="feature-section">
-                    <div class="feature-hotspots__map">
-                        <div class="feature-blip -blip1"></div>
-                        <div class="feature-blip -blip2"></div>
-                        <div class="feature-blip -blip3"></div>
-                        <div class="feature-blip -blip4"></div>
-                        <img src="static/images/ui/features/feature-hotspots.png" />
-                    </div>
-                    <div class="features-section__content">
-                        <h2 class="feature-h2">Hotspots</h2>
-                        <p class="feature-description">Hyperion continuously assesses activity levels across the globe to define normal patterns of human behavior and alert users to abnormal events that could pose a disruption to their operations and people. This machine learning model notifies users of breaking events where they didn't even know to look.</p>
-                        <a href="#" class="button button-trial button-feature button-hotspots">Get the Power of Hotspots</a>
-                    </div>
-                </section>
-            </div>
-        </div>
-
-        <div id="featuresForecasting" data-section-name="forecasting" data-target="#forecasting" class="page-outer feature-section__forecasting screen-height scroll-me">
-            <div class="page-inner">
-                <section class="feature-section">
-                    <div class="features-section__content -inverse">
-                        <h2 class="feature-h2">Forecast</h2>
-                        <p class="feature-description">
-                            Hyperion’s machine learning algorithms and AI produce continuously updating risk forecasts for any area of the world.<br /><br />
-                            Hyperion knows what normal risk patterns look like across the globe and can forecast whether risk levels will increase or decrease enabling you to make decisions to avoid disruptions or capitalize on opportunities.
-                        </p>
-                        <a href="#" class="button button-trial button-feature button-forecasting">Start Forecasting Today</a>
-                    </div>
-                </section>
-            </div>
-            <div class="feature-section__forecasting-bg">
-                <img class="element-to-animate" src="static/images/ui/features/feature-forecasting-over.png" />
-                <img src="static/images/ui/features/feature-forecasting.png" />
-            </div>
-        </div>
-
         <div id="featuresPulse" data-section-name="pulse" data-target="#pulse" class="page-outer feature-section__pulse screen-height scroll-me">
             <div class="features-section__pulse">
                 <div class="feature-pulse__main-pulse">
@@ -203,10 +177,55 @@
                 <section class="feature-section">
                     <div class="features-section__content -inverse-color">
                         <h2 class="feature-h2">Pulse</h2>
-                        <p class="feature-description">Hyperion’s machine learning algorithms produce real-time stability assessments for every country, 1,200 cities and 6,000 regions across the globe providing users a constant understanding of global volatility and how it shapes the world.</p>
-                        <a href="#" class="button button-trial button-feature button-pulse">Try Hyperion Now</a>
+                        <p class="feature-description">
+                            Pulse is a machine learning model that generates continuously updating risk assessments for every country, 1,200 cities, and 6,000+ regions - covering every spot on the globe.<br /><br />
+                            Pulse learns what normal risk patterns look like anywhere in the world. These patterns allow the strategic thinker to identify long-term trends and the tactical operator to take action when stability is impacted by disruptive events.
+                        </p>
+                        <a href="#" class="button button-trial button-feature">Take the Pulse of the World</a>
                     </div>
                 </section>
+            </div>
+        </div>
+
+
+        <div id="featuresHotspot" data-section-name="hotspots" data-target="#hotspots" class="page-outer feature-section__hotspots screen-height scroll-me">
+            <div class="page-inner">
+                <section class="feature-section">
+                    <div class="feature-hotspots__map">
+                        <div class="feature-blip -blip1"></div>
+                        <div class="feature-blip -blip2"></div>
+                        <div class="feature-blip -blip3"></div>
+                        <div class="feature-blip -blip4"></div>
+                        <img src="static/images/ui/features/feature-hotspots.png" />
+                    </div>
+                    <div class="features-section__content">
+                        <h2 class="feature-h2">Hotspots</h2>
+                        <p class="feature-description">
+                            Hotspots AI identifies and alerts to disruptive events around the world, even in places you didn’t know to look.<br /><br />
+                            Hotspots tracks normal patterns of activity across the globe and provides a visual cue to flag disruptive events that could impact your employees, operations, and investments and result in billions of dollars in economic losses. ​
+                        </p>
+                        <a href="#" class="button button-trial button-feature button-hotspots">Experience the Power of Hotspots</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div id="featuresForecasting" data-section-name="forecasting" data-target="#forecasting" class="page-outer feature-section__forecasting screen-height scroll-me">
+            <div class="page-inner">
+                <section class="feature-section">
+                    <div class="features-section__content -inverse">
+                        <h2 class="feature-h2">Forecast</h2>
+                        <p class="feature-description">
+                            Forecast is a machine learning model that analyzes data from Pulse and Hotspots to produce real-time risk forecasts for every point on the globe.<br /><br />
+                            Forecast predicts future risk trends, enabling you to evolve from a reactive to a proactive strategy. Make better decisions, avoid disruptions, and seize opportunities.​
+                        </p>
+                        <a href="#" class="button button-trial button-feature">See the Future</a>
+                    </div>
+                </section>
+            </div>
+            <div class="feature-section__forecasting-bg">
+                <img class="element-to-animate" src="static/images/ui/features/feature-forecasting-over.png" />
+                <img src="static/images/ui/features/feature-forecasting.png" />
             </div>
         </div>
 
@@ -215,8 +234,11 @@
                 <section class="feature-section">
                     <div class="features-section__content -inverse">
                         <h2 class="feature-h2">Events</h2>
-                        <p class="feature-description">Hyperion automatically identifies and alerts to risk-related events happening worldwide. This machine learning model constantly monitors the globe for events such as protests, crimes, conflicts and disasters that might impact your people and disrupt your operations.</p>
-                        <a href="#" class="button button-trial button-feature button-events">Get Events Now</a>
+                        <p class="feature-description">
+                            Events identifies a wide range of risk-related incidents breaking worldwide.<br /><br />
+                            Events knows what matters to you. It constantly monitors the globe (so you don’t have to) to identify incidents that disrupt your plans, such as a protest, conflict, a disease outbreak, and much more.
+                        </p>
+                        <a href="#" class="button button-trial button-feature">Try Events Now</a>
                     </div>
                 </section>
             </div>
@@ -225,13 +247,13 @@
                     <div class="event-cards__item--icon">
                         <img src="static/images/icons/icon-armed-conflict.svg" />
                     </div>
-                    Armed Conflict
+                    Conflict
                 </div>
                 <div class="event-cards__item -card2">
                     <div class="event-cards__item--icon">
                         <img src="static/images/icons/icon-social-unrest.svg" />
                     </div>
-                    Social Unrest
+                    Unrest
                 </div>
                 <div class="event-cards__item -card3">
                     <div class="event-cards__item--icon">
@@ -245,6 +267,22 @@
                     </div>
                     Disasters
                 </div>
+            </div>
+        </div>
+
+        <div id="featuresAlerts" data-section-name="alerts" data-target="#alerts" class="page-outer feature-section__alerts screen-height scroll-me">
+            <img src="static/images/ui/features/bg-feature-alerts.png" class="feature-alerts__image" />
+            <div class="page-inner">
+                <section class="feature-section">
+                    <div class="features-section__content">
+                        <h2 class="feature-h2">Alerts</h2>
+                        <p class="feature-description">
+                            Alerts are your fail-safe option that ensure you get the information you need, even when you’re away from your desk. Hyperion enables alerts for every feature, such as Pulse alerts, Hotspot alerts, Event alerts, and customized keyword alerts to catch anything you may be looking for. <br /><br />
+                            Alerts ultimately act as your early warning system that allows you to receive the information you need to take action. 
+                        </p>
+                        <a href="#" class="button button-trial button-feature button-alerts">Stay In-the-Know</a>
+                    </div>
+                </section>
             </div>
         </div>
         
@@ -367,6 +405,6 @@
             </div>
         </div>
 
-        <script src="static/js/app.js?cache=1567143423271"></script>
+        <script src="static/js/app.js?cache=1567230368515"></script>
     </body>
 </html>
