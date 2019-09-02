@@ -134,6 +134,23 @@ a {
   margin-top: 60px;
 }
 
+.header-icons {
+  display: inline-block;
+  margin-left: 20px;
+}
+.header-icons img {
+  width: 30px;
+  margin-right: 10px;
+}
+.header-icons a {
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.header-icons a:hover {
+  opacity: 0.7;
+}
+
 @media (max-width: 650px) {
   .page-h1 {
     font-size: 50px;
@@ -1207,6 +1224,12 @@ button.button-signup, .button.button-signup {
   -webkit-box-shadow: 1px 4px 8px 1px rgba(33, 196, 208, 0.2);
   box-shadow: 1px 4px 8px 1px rgba(33, 196, 208, 0.2);
 }
+button.button-api, .button.button-api {
+  background-color: #CDCDD6;
+  color: #000000;
+  -webkit-box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
+}
 
 .button-icon {
   position: absolute;
@@ -1360,6 +1383,34 @@ button.button-signup, .button.button-signup {
   text-transform: uppercase;
   font-size: 18px;
   padding-top: 20px;
+}
+.get-started__item--header a {
+  text-decoration: none;
+}
+
+/* getting started styles
+*/
+.investors__row {
+  padding: 0 0 20px;
+}
+.investors__row:after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+.investors__item {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+.investors__item img {
+  width: 60%;
+  max-width: 300px;
+}
+.investors__item img.-gc {
+  position: relative;
+  top: 20px;
 }
 
 /* testimonial styles
@@ -1901,10 +1952,34 @@ button.button-signup, .button.button-signup {
 }
 
 .feature-alerts__image {
+  -webkit-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 55%;
   width: 450px;
+  -webkit-transform: translate(-200%, -50%);
+  -ms-transform: translate(-200%, -50%);
+  transform: translate(-200%, -50%);
+}
+.feature-alerts__image.-animate-me {
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+.feature-section__api {
+  background-color: #F0F0F5;
+  color: #000000;
+}
+
+.feature-api__image {
+  max-width: 500px;
+  width: 35%;
+  position: absolute;
+  right: 58%;
+  top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -2131,6 +2206,7 @@ button.button-signup, .button.button-signup {
   min-height: 200px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  border-radius: 0 0 20px 20px;
 }
 
 .team-item__name {

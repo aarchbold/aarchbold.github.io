@@ -61,6 +61,12 @@ $(function() {
                 hideAnimation($(e),'-animate-me');
             })
         }
+        //featuresAlerts
+        if (isElementInViewport($('#featuresAlerts .feature-section'))) {
+            showAnimation($('.feature-alerts__image',$('#featuresAlerts')),'-animate-me');
+        } else {
+            hideAnimation($('.feature-alerts__image',$('#featuresAlerts')),'-animate-me');
+        }
     }); 
     // $.scrollify({
     //     section : '.scroll-me'

@@ -15,7 +15,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.png">
 
     </head>
-    <body>
+    <body class="scrollify">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -79,7 +79,7 @@
                 <ul class="topnav-links">
                     <li><a  class="topnav-links__item" href="index.html">Home</a></li>
                     <li>
-                        <a  class="topnav-links__item topnav-dropdown__trigger" href="features.html">Features</a>
+                        <a class="topnav-links__item -active topnav-dropdown__trigger"  href="features.html">Features</a>
                         <div class="topnav-dropdown">
                             <ul class="topnav-dropdown__list">
                                 <li class="topnav-dropdown__item">
@@ -115,7 +115,7 @@
                             </ul>
                         </div>
                     </li>
-                    <!-- <li><a class="topnav-links__item -active"  href="videos.html">Videos</a></li> -->
+                    <!-- <li><a  class="topnav-links__item" href="videos.html">Videos</a></li> -->
                     <li>
                         <a  class="topnav-links__item topnav-dropdown__trigger" href="media.html">Media</a>
                         <div class="topnav-dropdown">
@@ -155,82 +155,27 @@
         </div>
         <div class="page-outer page-outer__header">
             <div class="page-inner">
-                <div class="page-h1 page-section__h1">Videos</div>
+                <div class="page-h1 page-section__h1">Features</div>
             </div>
         </div>
 
-        <div class="page-outer">
+        <div id="featuresAPI" class="page-outer feature-section__api screen-height">
+            <img src="static/images/ui/features/bg-feature-api.png" class="feature-api__image" />
             <div class="page-inner">
-                <div id="videos">
-</div>
-
-<script id="videos-template" type="text/x-handlebars-template">
-    {{#each videos}}
-        <section class="video-section">
-            <div class="embed-container">
-                <iframe src="{{this.url}}" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <h2 class="video-title">{{this.title}}</h2>
-            <div class="video-description">{{{this.description}}}</div>
-        </section>
-    {{/each}}
-</script>
-
-<script type="text/javascript">
-    var data = {
-        // the below content populates the home page carousel
-        // if you want to add a new testimonial, just add a new object
-        // don't forget the comma after each object
-        videos: [
-            {
-                url: "https://www.youtube.com/embed/Tx0dUDrh_hE",
-                title: "What is Hyperion?",
-                description: "Hyperion, a single solution for global risk and threat assessment, delivers real-time insights and AI-driven forecasts of events that could pose a risk to your people, operations, and interests.<br /><br />Simply put, Hyperion delivers you the information you need before you need it."
-            },
-            {
-                url: "https://www.youtube.com/embed/Ws4908LsEAo",
-                title: "Who can use Hyperion",
-                description: 'Hyperion makes global risk and threat assessment easy, scalable, and available to everyone, independent of skill, manpower, and resources. The platform is currently in use by IC agencies, global commercial corporations, and NGOs to help them understand the threat and risk environment<br /><br />All you need to get started is an account (<a href="" class="button-trial">Sign up for a Free Trial Today</a>) and an internet connection.'
-            }
-        ]
-    };
-    var template = Handlebars.compile(document.getElementById('videos-template').innerHTML);
-    var videosData = template(data);
-    document.getElementById('videos').innerHTML += videosData;
-</script>
+                <section class="feature-section">
+                    <div class="features-section__content -inverse-color">
+                        <h2 class="feature-h2">API</h2>
+                        <p class="feature-description">
+                            Tap into the future. Create a custom user experience with our robust API that puts the power of Hyperion in your application.<br /><br />
+                            Hyperion was built from the start as an API-first application and can be seamlessly integrated into other applications.
+                        </p>
+                        <a href="#" class="button button-trial button-feature button-api">Hyperion for developers</a>
+                    </div>
+                </section>
             </div>
         </div>
-
         
-        
-        <div>
-            <div class="page-outer page-outer__get-started">
-    <div class="page-inner">
-        <section class="section-getting-started">
-            <h2 class="get-started-h2">
-                    Get started with the solution for you faster than it takes to brew a cup of coffee
-            </h2>
-            <div class="get-started__row">
-                <div class="get-started__item">
-                    <img src="static/images/ui/getting-started/icon-platform.svg" />
-                    <div class="get-started__item--header">Platform</div>
-                </div>
-                <div class="get-started__item">
-                    <img src="static/images/ui/getting-started/icon-mobile.svg" />
-                    <div class="get-started__item--header">Mobile</div>
-                </div>
-                <div class="get-started__item">
-                    <a href="api.html"><img src="static/images/ui/getting-started/icon-api.svg" /></a>
-                    <div class="get-started__item--header"><a href="api.html">API</a></div>
-                </div>
-            </div>
-            <div class="section-cta">
-                <a href="#" class="button button-trial">Contact Us</a>
-            </div>
-        </section>
-    </div>
-</div>
-        
+        <div data-section-name="get-started">
             <div class="page-outer">
                 <footer>
     <div class="navigation-inner">
