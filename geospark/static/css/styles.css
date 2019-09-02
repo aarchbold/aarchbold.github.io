@@ -1541,6 +1541,11 @@ button.button-signup, .button.button-signup {
   padding-top: 10px;
   font-size: 18px;
 }
+.hyperion-facts__label p {
+  max-width: 200px;
+  display: inline-block;
+  line-height: 1.2;
+}
 
 @media (max-width: 650px) {
   .page-outer__facts {
