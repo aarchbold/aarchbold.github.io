@@ -110,7 +110,7 @@ $(function(){
         section : '.scroll-me',
         sectionName : 'section-name',
         setHeights: false,
-        //standardScrollElements: '.no-scroll',
+        standardScrollElements: '.no-scroll',
         touchScroll: false,
         offset: 0
     });
