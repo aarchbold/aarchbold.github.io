@@ -6,28 +6,45 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>True</title>
 <meta property="og:title" content="True">
-<meta name="description" content="True - a safe, happy place to remember and share your life without fear of surveillance.">
-<meta property="og:image" content="https://truetokensale.com/static/images/logos/logo-share-true.png">
+<meta property="og:description" content="True is a private sharing network for real friends.">
+<meta name="description" content="True is a private sharing network for real friends.">
+<!-- <meta property="og:image" content="https://truetokensale.com/static/images/logos/logo-share-true.png"> -->
+<meta property="og:image" content="https://trueappco-website.firebaseapp.com/static/images/ui/logos/share-true.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="True">
-<script src="static/js/vendors.js?cache=1564123123085"></script>
-<link rel="stylesheet" href="static/css/styles.css?cache=1564123123085">
+<script src="static/js/vendors.js?cache=1568171048303"></script>
+<link rel="stylesheet" href="static/css/styles.css?cache=1568171048303">
 <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.png">
+<script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0087/6974.js" async="async"></script>
 
     </head>
     <body>
         <div class="modal-waitlist">
+    <input id="clipboardCopy" type="text" value="" contenteditable="true" readonly="false" />
     <div class="modal-waitlist__inner">
         <div class="modal-waitlist__preloader">
             <div class="modal-waitlist__preloader--inner">
-                <p>Reserving your place in line...</p>
+                <p>Reserving your spot...</p>
                 <img src="static/images/ui/backgrounds/ajax-loader.gif" />
             </div>
         </div>
-        <h2>Thanks for signing up</h2>
-        <!-- <p>You're on the waitlist. We just sent you an exclusive link to share with three friends. When they sign up to try True, you get bumped up the list.</p> -->
-        <p>A confirmation email is on the way.</p>
-        <a href="#" id="closeOverlay" class="button">Close</a>
+        <div id="emailModal">
+            <h2>Be first in line. 🥇</h2>
+            <!-- <p>You're on the waitlist. We just sent you an exclusive link to share with three friends. When they sign up to try True, you get bumped up the list.</p> -->
+            <p>Spread the love for a super early sneak peek. Get three friends to sign up for the waitlist and be one of the first 1,000 people to try True.</p>
+        </div>
+        <div id="inviteModal">
+            <h2>Congrats, you're<br />on the list. 🙌</h2>
+            <!-- <p>You're on the waitlist. We just sent you an exclusive link to share with three friends. When they sign up to try True, you get bumped up the list.</p> -->
+            <p>Wanna get a super early sneak peek? Share this link with 3 friends and when they sign up you'll be one of the first 1,000 people to try True.</p>
+        </div>
+        <div class="modal-social__ctas">
+            <a id="copyUrl" href="#" class="button button-block__modal button-weblink">Copy Link</a>
+            <a class="button-social -facebook facebook-share button-block__modal" href="#">Share on Facebook</a>
+            <a class="button-social -twitter twitter-share button-block__modal" href="#">Share on Twitter</a>
+            <a href="#" class="button-send-email">or send an email</a>
+        </div>
+        <a href="#" id="closeOverlay" class="button button-close">Close</a>
     </div>
 </div>
         <!-- <div data-section-name="home" class="scroll-me page-outer">
@@ -59,8 +76,8 @@
                 <img class="main-site__balloon2" src="static/images/ui/scenery/balloon2.svg" />
                 <div class="hero-stage__sun"></div>
                 <div class="hero-stage__header">
-                    <img src="static/images/ui/logos/logo-true__large.png" width="240" />
-                    <h1>Welcome to our Happy Valley</h1>
+                    <img src="static/images/ui/logos/logo-true__large.png" width="320" />
+                    <h1>Welcome to our<br />Happy Valley</h1>
                     <!-- <p>True is a new social platform that focuses on ad free private sharing.</p> -->
                 </div>
             </div>
@@ -79,37 +96,63 @@
                     <img class="main-site__hills3" data-scroll-speed="8" src="static/images/ui/scenery/stage-hills3-4.png" width="100%" />
                     <!-- <div class="hero-stage__fog fog3"></div> -->
                     <img class="main-site__hills4" data-scroll-speed="5" src="static/images/ui/scenery/stage-hills4-5.png" width="100%" />
-                    <img class="main-site__background" src="static/images/ui/backgrounds/bg-main-site11.png" width="100%" />
+                    <img class="main-site__background" src="static/images/ui/backgrounds/bg-main-site14.png" width="100%" />
                     <img class="main-site__background--mobile" src="static/images/ui/backgrounds/bg-main-site-mobile.png" width="100%" />
                     <!-- <img class="main-site__shim" src="static/images/ui/backgrounds/bg-main-shim2.png" width="100%" /> -->
                     <!-- <img class="main-site__shine" data-scroll-speed="4" src="static/images/ui/backgrounds/bg-main-shine3.png" width="100%" /> -->
                     <img class="main-site__mountains" data-scroll-speed="-12" src="static/images/ui/scenery/stage-mountains2.png" width="100%" />
                 
-
-                    <!-- <div class="animated-bird bird1"></div>
-                    <div class="animated-bird bird2"></div>
-                    <div class="animated-bird bird3"></div>
-                    <div class="animated-bird bird4"></div> -->
+                    <!-- <div class="animated-bird__container">
+                        <div class="animated-bird bird1">
+                            <div class="animated-bird__inner">
+                                <img src="static/images/ui/scenery/bird1.png" />
+                                <img src="static/images/ui/scenery/bird2.png" />
+                                <img src="static/images/ui/scenery/bird3.png" />
+                            </div>
+                        </div>
+                        <div class="animated-bird bird2">
+                            <div class="animated-bird__inner">
+                                <img src="static/images/ui/scenery/bird1.png" />
+                                <img src="static/images/ui/scenery/bird2.png" />
+                                <img src="static/images/ui/scenery/bird3.png" />
+                            </div>
+                        </div>
+                        <div class="animated-bird bird3">
+                            <div class="animated-bird__inner">
+                                <img src="static/images/ui/scenery/bird1.png" />
+                                <img src="static/images/ui/scenery/bird2.png" />
+                                <img src="static/images/ui/scenery/bird3.png" />
+                            </div>
+                        </div>
+                        <div class="animated-bird bird4">
+                            <div class="animated-bird__inner">
+                                <img src="static/images/ui/scenery/bird1.png" />
+                                <img src="static/images/ui/scenery/bird2.png" />
+                                <img src="static/images/ui/scenery/bird3.png" />
+                            </div>
+                        </div>
+                    </div> -->
                 </div>
                 <div class="section-starts">
                     <div class="scroll-me section-sharing__scroller" data-section-name="sharing"></div>
                     <section id="sharingSection" data-scroll-speed="3" data-section-name="sharing" class="section-sharing page-inner">
+                        
                         <div class="card-outer">
                             <div class="card-inner">
-                                <h2>Private, threaded, beautiful sharing.</h2>
+                                <h2>Private, threaded,<br />beautiful sharing.</h2>
                                 <p>
-                                    Social media shouldn’t be creepy and it doesn’t have to be. True has been designed to protect your privacy with private threaded sharing.<br /><br />
-                                    Focused on sharing with people you really know, we’re working to make social a safe, happy place again without personal data mining.
+                                    Social media shouldn’t be creepy and it doesn’t have to be. True has been designed to protect your privacy with private threaded sharing. <br /><br />
+                                    Focused on people you really know, we’re making social a safe, happy place again without personal data mining.
                                 </p>
                                 <div class="button-center">
-                                    <a href="#" id="waitListButton" class="button go-to-footer">Join the wait list</a>
+                                    <a href="#" id="waitListButton" class="button go-to-footer">Try it</a>
                                 </div>
                             </div>
                         </div>
                         <div class="section-image">
                             <div class="video">
-                                <video autoplay loop>
-                                    <source src="static/video/threadspost2.mp4" type="video/mp4">
+                                <video loop muted playsinline id="firstVideo">
+                                    <source src="static/video/posting_iphone.mp4" type="video/mp4">
                                     <!-- <source src="movie.ogg" type="video/ogg"> -->
                                     Your browser does not support the video tag.
                                 </video>        
@@ -120,43 +163,75 @@
 
                     <div class="scroll-me section-friends__scroller" data-section-name="friends"></div>
                     <section id="friendsSection" data-scroll-speed="3" data-section-name="friends" class="section-friends page-inner">
+                        
                         <div class="card-outer -right">
                             <div class="card-inner">
-                                <h2>We’re giving you the real deal. </h2>
+                                <h2>We’re giving you<br /> the real deal. </h2>
                                 <p>
-                                        It’s the quality of relationships, not quantity, that make us happier. We’re building new ways to tell your story that connect with friends and strengthen your community.<br /><br />
-                                        Genuine connections, real people sharing original content, a positive place to remember and share your life.
+                                    It’s the quality of relationships, not quantity, that make us happier. We’re building new ways to tell your story that connect with friends and strengthen your community. <br /><br />
+                                    Genuine connections, real people sharing original content, a positive place to remember and share your life.
                                 </p>
                                 <div class="button-center">
-                                    <a href="#" class="button go-to-footer">Get notified when we launch</a>
+                                    <a href="#" class="button go-to-footer">Be real</a>
                                 </div>
                             </div>
                         </div>
-                        <img class="section-image -left" src="static/images/ui/phones/phone2.png" />
+                        <div class="section-image -left">
+                            <div class="video">
+                                <video loop muted playsinline id="secondVideo">
+                                    <source src="static/video/creatingday.mp4" type="video/mp4">
+                                    <!-- <source src="movie.ogg" type="video/ogg"> -->
+                                    Your browser does not support the video tag.
+                                </video>        
+                            </div>
+                            <img src="static/images/ui/phones/phone2.png" />
+                        </div>
+                        
                     </section>
 
                     <div class="scroll-me section-secure__scroller" data-section-name="secure"></div>
                     <section id="secureSection" data-scroll-speed="3" class="section-secure page-inner">
+                        
                         <div class="card-outer">
                             <div class="card-inner">
-                                <h2>Your business is not our business.</h2>
+                                <h2>Your business is <br />not our business.</h2>
                                 <p>
-                                    Traditional social companies are not really social anymore. They’re an advertising business. You are the product they sell in this business.<br /><br />
-                                    You’re free to leave anytime you want, so we don’t spy on you, read your cookies or follow you around the internet. You own your data, forever, and we’ll never sell or share it with anyone.<br /><br />
-                                    We stay out of your business. You are not our product.
+                                    Big social companies are not really social anymore. They’re an advertising business and you are the product they sell in this business.<br /><br />
+                                    We don’t spy on you, read your cookies or follow you around the internet. You own your data, forever, and we’ll never sell or share it with anyone. We stay out of your business. You are not our product.
                                 </p>
                                 <div class="button-center">
-                                    <a href="#" class="button go-to-footer">Tell all your friends</a>
+                                    <a href="#" class="button go-to-footer">Let's do it</a>
                                 </div>
                             </div>
                         </div>
-                        <img class="section-image" src="static/images/ui/phones/phone3.png" />
+                        <div class="section-image">
+                            <div class="video">
+                                <video loop muted playsinline id="thirdVideo">
+                                    <source src="static/video/deletethread.mp4" type="video/mp4">
+                                    <!-- <source src="movie.ogg" type="video/ogg"> -->
+                                    Your browser does not support the video tag.
+                                </video>        
+                            </div>
+                            <img src="static/images/ui/phones/phone3.png" />
+                        </div>
+                        
                     </section>
-                    
+                    <!-- <div class="mobile-waterfall__gradiient"></div> -->
+                    <img class="mobile-waterfall" src="static/images/ui/backgrounds/bg-waterfall-mobile.png" />
+                    <div class="footer-waterfall__animation--mobile">
+                        <div class="waterfall-drop -drop1"></div>
+                        <div class="waterfall-drop -drop2"></div>
+                        <div class="waterfall-drop -drop3"></div>
+                        <div class="waterfall-drop -drop4"></div>
+                        <div class="waterfall-drop -drop5"></div>
+                        <div class="waterfall-drop -drop6"></div>
+                        <div class="waterfall-drop -drop7"></div>
+                        <div class="waterfall-drop -drop8"></div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="page-outer">
+        <div id="ogFooterPosition" class="page-outer">
             <section class="section-footer">
                 <div data-section-name="footer" class="scroll-me footer-container">
                     <div class="footer-cast">
@@ -169,17 +244,18 @@
                         </div>
                     </div>
                     <div id="joinUs" class="footer-inner">
-                        <div class="footer-header">Join Us</div>
-                        <div class="footer-subheader">It’s time to try something different and we’re excited to show it to you. Join our waitlist and we’ll let you know when True drops later this year.</div>
+                        <div class="footer-header">We can do this.</div>
+                        <div class="footer-subheader">It’s time to try an honest solution. Join our waitlist for an exclusive look and we’ll let you know when True drops later this year.</div>
                         <div class="footer-hashtag">#DeleteFacebook and #BeTrue.</div>
                         <div class="footer-input">
-                            <input type="text" placeholder="Enter Your Email" />
+                            <input id="trueFirstName" type="text" placeholder="First Name" />
+                            <input id="trueLastName" type="text" placeholder="Last Name" />
+                            <input id="trueEmail" type="email" placeholder="Email" />
                             <a href="#" class="button footer-signup -disabled">Sign Up</a>
                         </div>
 
-                        <div class="footer-social">
+                        <!-- <div class="footer-social">
                             <div class="footer-social__header">Share True so your friends can get on the waitlist too.</div>
-                            <!-- <div class="footer-social__description">Just share True with friends after you sign up.</div> -->
                         </div>
 
                         <div class="footer-social__links">
@@ -191,9 +267,30 @@
                             </a>
                             <input id="clipboardCopy" type="text" value="" />
                             <a id="copyUrl" href="#" class="button button-weblink">Copy Web Link</a>
-                        </div>
+                        </div> -->
+
+                        <!-- <div class="footer-social__links">
+                            <a href="https://www.facebook.com/trueappco/" target="_blank" class="button-social__mini -facebook">
+                                <img src="static/images/ui/logos/logo-facebook2.png" />
+                            </a>
+                            <a href="https://twitter.com/trytrueapp" target="_blank" class="button-social__mini -twitter">
+                                <img src="static/images/ui/logos/logo-twitter.svg" />
+                            </a>
+                            <a href="https://www.linkedin.com/company/3495839/admin/" target="_blank" class="button-social__mini -linkedin">
+                                <img src="static/images/ui/logos/logo-linkedin.png" />
+                            </a>
+                            <a href="https://instagram.com/trueappco" target="_blank" class="button-social__mini -instagram">
+                                <img src="static/images/ui/logos/logo-instagram.png" />
+                            </a>
+                            <a href="https://angel.co/company/true" target="_blank" class="button-social__mini -angellist">
+                                <img src="static/images/ui/logos/logo-angellist.png" />
+                            </a>
+                        </div> -->
+
                         <div class="footer-legal">
-                            &copy; 2019 Hello Mobile Inc.
+                            Questions? Email us at <a href="mailto:betrue@trueapp.co">betrue@trueapp.co</a><br />
+                            We're hiring. See our jobs on <a href="https://angel.co/company/true/jobs" target="_blank">AngelList</a> or <a href="mailto:careers@trueapp.co">email</a> your resume.<br /><br />
+                            &copy; 2019 Hello Mobile Inc. 
                         </div>
                     </div>
                     <img class="footer-background" src="static/images/ui/scenery/footer-cliff.png" />
@@ -223,8 +320,7 @@
     
         </div> -->
         </div>
-        <script src="static/js/app.js?cache=1564123123085"></script>
-        <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0087/6974.js" async="async"></script>
+        <script src="static/js/app.js?cache=1568171048303"></script>
         <!-- Google Analytics -->
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -236,5 +332,17 @@
             ga('send', 'pageview');
         </script>
         <!-- End Google Analytics -->
+        <script>
+            window.fbAsyncInit = function() {
+                FB.init({
+                appId            : '661381354365929',
+                autoLogAppEvents : true,
+                xfbml            : true,
+                version          : 'v4.0'
+                });
+            };
+        </script>
+        <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+
     </body>
 </html>

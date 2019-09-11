@@ -1,114 +1,103 @@
+$.fn.flappyBird = function() {
+    var $context = $(this);
+    var $birdCage = $('.animated-bird__inner',$context);
+
+    $birdCage.each(function(i,e) {
+        console.log($(e));
+        var $birds = $('img',$(e));
+        $birds.hide();
+        
+        setInterval(function() {
+            setTimeout(function() {
+                $birds.hide();
+                $($birds[0]).show();
+            },200);
+            setTimeout(function() {
+                $birds.hide();
+                $($birds[1]).show();
+            },400);
+            setTimeout(function() {
+                $birds.hide();
+                $($birds[2]).show();
+            },600);
+        },600);
+        console.log($birds);
+    });
+
+    // $birds = $('img',$context);
+    // $birds.hide();
+
+    // setInterval(function() {
+    //     setTimeout(function() {
+    //         $birds.hide();
+    //         $($birds[0]).show();
+    //     },200);
+    //     setTimeout(function() {
+    //         $birds.hide();
+    //         $($birds[1]).show();
+    //     },400);
+    //     setTimeout(function() {
+    //         $birds.hide();
+    //         $($birds[2]).show();
+    //     },600);
+    // },600);
+}
+
 var wagthedog = function() {
+    var wagcounter = 0
+    var tailrotations = 0;
+    var waglimit = 6;
     $dogs = $('.footer-doggers img');
     $dogs.hide();
     $($dogs[0]).show();
+
+    function tailwag1() {
+        var tail1 = setInterval(function() {
+            tailrotations++;
+            // loop through the dogs and show 1 at a time
+            setTimeout(function() {
+                $dogs.hide();
+                $($dogs[0]).show();
+            },120);
+            setTimeout(function() {
+                $dogs.hide();
+                $($dogs[1]).show();
+            },240);
+            setTimeout(function() {
+                $dogs.hide();
+                $($dogs[2]).show();
+            },360);
+            setTimeout(function() {
+                $dogs.hide();
+                $($dogs[1]).show();
+            },480);
+            setTimeout(function() {
+                $dogs.hide();
+                $($dogs[0]).show();
+            },600);
     
+            if (tailrotations >= waglimit)
+            {
+                clearInterval(tail1);
+                tailrotations = 0;
+            }
+        },525);
+    }
 
+    tailwag1();
     setInterval(function() {
-        // loop through the dogs and show 1 at a time
-        setTimeout(function() {
-            $dogs.hide();
-            $($dogs[0]).show();
-        },200);
-        setTimeout(function() {
-            $dogs.hide();
-            $($dogs[1]).show();
-        },400);
-        setTimeout(function() {
-            $dogs.hide();
-            $($dogs[2]).show();
-        },600);
-        setTimeout(function() {
-            $dogs.hide();
-            $($dogs[1]).show();
-        },800);
-        setTimeout(function() {
-            $dogs.hide();
-            $($dogs[0]).show();
-        },1000);
-        setTimeout(function() {
-            $dogs.hide();
-            $($dogs[1]).show();
-        },1200);
-        setTimeout(function() {
-            $dogs.hide();
-            $($dogs[2]).show();
-        },1400);
-        setTimeout(function() {
-            $dogs.hide();
-            $($dogs[1]).show();
-        },1600);
-        setTimeout(function() {
-            $dogs.hide();
-            $($dogs[0]).show();
-        },1800);
-    },6000);
-
-
-
-    console.log($dogs[0])
+        wagcounter++;
+        waglimit = wagcounter % 2 ? 6 : 2;
+        tailwag1();
+    }, 6000);
+    
 }
 
 
 $(function() {
     wagthedog();
+    $('.animated-bird__container').flappyBird();
 });
-var getWindowOptions = function() {
-    var width = 500;
-    var height = 450;
-    var left = (window.innerWidth / 2) - (width / 2);
-    var top = (window.innerHeight / 2) - (height / 2);
-  
-    return [
-      'resizable,scrollbars,status',
-      'height=' + height,
-      'width=' + width,
-      'left=' + left,
-      'top=' + top,
-    ].join();
-  };
-
-var shareOnFacebook = function() {
-    var fbBtn = $('.facebook-share');
-    var title = encodeURIComponent('Just joined the waitlist for a private social network called True. Check it out. #DeleteFacebook #BeTrue');
-    var shareUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + location.href + '&title=' + title;
-    fbBtn.href = shareUrl; // 1
-
-    fbBtn.click(function(e) {
-        e.preventDefault();
-        var win = window.open(shareUrl, 'ShareOnFb', getWindowOptions());
-        win.opener = null; // 2
-    });
-}
-
-var shareOnTwitter = function() {
-    var tweetBtn = $('.twitter-share');
-    var title = encodeURIComponent('Just joined the waitlist for a private social network called True 🎉 Check it out. #DeleteFacebook #BeTrue');
-    var shareUrl = 'https://twitter.com/intent/tweet?text=' + title + '&url=' + location.href;
-    tweetBtn.href = shareUrl; // 1
-
-    tweetBtn.click(function(e) {
-        e.preventDefault();
-        var win = window.open(shareUrl, 'ShareOnTwitter', getWindowOptions());
-        win.opener = null; // 2
-    });
-}
-
-var initCopyToClip = function() {
-    var $input = $('#clipboardCopy');
-    var $button = $('#copyUrl');
-
-    $input.attr('value',window.location.href);
-
-    $button.click(function(e) {
-        e.preventDefault();
-        $input.select();
-        document.execCommand('copy');
-        $button.text('Link Copied!');
-    });
-}
-
-
 $(function() {
     $('.go-to-footer').click(function(e) {
         e.preventDefault();
@@ -117,9 +106,18 @@ $(function() {
         },1000);
     })
 
-    shareOnFacebook();
-    shareOnTwitter();
-    initCopyToClip();
+    // slow down video playback
+    var $firstVideo = $('#firstVideo');
+    $firstVideo[0].playbackRate = 0.65;
+    $firstVideo[0].play();
+
+    var $secondVideo = $('#secondVideo');
+    $secondVideo[0].playbackRate = 0.65;
+    $secondVideo[0].play();
+
+    var $thirdVideo = $('#thirdVideo');
+    $thirdVideo[0].playbackRate = 0.65;
+    $thirdVideo[0].play();
 
     $(window).on('DOMContentLoaded load resize scroll', function() {
 
@@ -247,12 +245,18 @@ initHero = debounce(function() {
         // $heroClouds.addClass('-animate');
     }
     startHeaderTextAnimation = function() {
-        $header.addClass('-animate');
+        if (!$header.hasClass('-fixed')) {
+          $header.addClass('-animate');
+        }
     }
 
     window.addEventListener('scroll', function(){
       var scrollTop = $window.scrollTop();
-      if (scrollTop > 20) {
+      // if (scrollTop > 10) {
+      //   $header.addClass('-fixed');
+      //   $header.removeClass('-animate');
+      // } 
+      if (scrollTop > 200) {
         $header.addClass('-fade');
         $nav.addClass('-show');
       } else {
@@ -289,9 +293,7 @@ $(function() {
     top: 0, 
     left: 0, 
     behavior: 'smooth' 
-   });
-
-   
+  });  
 });
 
 // $(window).unload(function() {
@@ -299,11 +301,30 @@ $(function() {
 // });
 
 $(window).on('load', function (e) {
-  // executes when complete page is fully loaded, including all frames, objects and images
+  
+
+  
+  
+   // executes when complete page is fully loaded, including all frames, objects and images
   // fade out the preload spinner.
   $('.preloader-shim').addClass('-animate');
+  
+  
+  // setTimeout(function() {
+  //   $('body').removeClass('-static');
+  //   window.scroll({
+  //     top: 0, 
+  //     left: 0, 
+  //     behavior: 'smooth' 
+  //   });  
+  // },4500) 
 
-  initHero();    
+
+
+  initHero(); 
+
+  var ogWidth = $(window).width();
+
   if ($(window).width() > 800) {
     $('[data-scroll-speed]').moveIt();
   }
@@ -311,18 +332,180 @@ $(window).on('load', function (e) {
     // move footer
     $('.section-footer').appendTo('.section-starts');
   }
+  
+  var resizeTimeout;
+  $(window).resize(function(){
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(function(){    
+          if (ogWidth < 800 && $(window).width() > 800) {
+            // init the parallax if the site starts at mobile and resizes to not mobile
+            $('[data-scroll-speed]').moveIt();
+          }
+          if (ogWidth < 640 && $(window).width() > 640) {
+            // check if the footer has been moved.
+            $('.section-footer').appendTo('#ogFooterPosition');
+          } else if (ogWidth > 640 && $(window).width() < 640) {
+            $('.section-footer').appendTo('.section-starts');
+          } else if (ogWidth < 640 && $(window).width() < 640) {
+            $('.section-footer').appendTo('.section-starts');
+          } else {
+            $('.section-footer').appendTo('#ogFooterPosition');
+          }
+      }, 500);
+  });
+
+  $(window).resize(function() {
+    // if ($(window).width() > 800) {
+    //   window.location.reload();
+    // }
+    // if ($(window).width() < 640) {
+    //   // move footer
+    //   window.location.reload();
+    // }
+  });
 })
+
+var getWindowOptions = function() {
+    var width = 500;
+    var height = 450;
+    var left = (window.innerWidth / 2) - (width / 2);
+    var top = (window.innerHeight / 2) - (height / 2);
+  
+    return [
+      'resizable,scrollbars,status',
+      'height=' + height,
+      'width=' + width,
+      'left=' + left,
+      'top=' + top,
+    ].join();
+  };
+
+var shareOnFacebook = function(inviteCode) {
+    var url = [location.protocol, '//', location.host, location.pathname].join('');
+    var fbBtn = $('.facebook-share');
+    // var title = 'Just signed up to try this new app, check it out. #DeleteFacebook #BeTrue';
+    var title = 'Just signed up to try this new app, check it out.';
+    var shareUrl = url + inviteCode + '&title=' + title;
+    fbBtn.href = shareUrl; // 1
+
+    fbBtn.click(function(e) {
+        // e.preventDefault();
+        // var win = window.open(shareUrl, 'ShareOnFb', getWindowOptions());
+        // win.opener = null; // 2
+
+        FB.ui({
+            method: 'share',
+            href: shareUrl,
+            // hashtag: '#BeTrue',
+            // quote: title,
+        }, function(response){});
+    });
+}
+
+var shareOnTwitter = function(inviteCode) {
+    var url = [location.protocol, '//', location.host, location.pathname].join('');
+    var tweetBtn = $('.twitter-share');
+    var title = encodeURIComponent('Y\'all I just signed up for True, try it with me 😎');
+    var shareUrl = 'https://twitter.com/intent/tweet?text=' + title + '&url=' + url + inviteCode;
+    tweetBtn.href = shareUrl; // 1
+
+    tweetBtn.click(function(e) {
+        e.preventDefault();
+        var win = window.open(shareUrl, 'ShareOnTwitter', getWindowOptions());
+        win.opener = null; // 2
+    });
+}
+
+var initCopyToClip = function(inviteCode) {
+    var $input = $('#clipboardCopy');
+    var $button = $('#copyUrl');
+    var url = [location.protocol, '//', location.host, location.pathname].join('');
+
+    $input.attr('value',url + inviteCode);
+
+    $button.click(function(e) {
+        e.preventDefault();
+        // $input.select();
+        $button.text('Link Copied!');
+        $input.focus();
+        setTimeout(function() {
+            $input[0].setSelectionRange(0, 9999);
+        }, 1);
+        setTimeout(function() {
+            document.execCommand('copy');
+        }, 100);
+    });
+}
+
+
+
+var initEmailShare = function(inviteCode) {
+    var $button = $('.button-send-email');
+    var url = [location.protocol, '//', location.host, location.pathname].join('');
+
+    $button.attr('href','mailto:?subject=Hey, just signed up for True 👏&body=True is a new way to share privately with friends, would love for you to try it with me 😁 '+url+inviteCode)
+}
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
 
 var handleWaitlist = function() {
     var $modal = $('.modal-waitlist');
+    var referrerCode = getParameterByName('inviteCode') || null;
+    var showModal = getParameterByName('showModal') || false;
     var $closeModal = $('#closeOverlay');
     var $modalSpinner = $('.modal-waitlist__preloader');
-    var $formInput = $('.footer-input input');
+    var $formFirstName = $('.footer-input #trueFirstName');
+    var $formLastName = $('.footer-input #trueLastName');
+    var $formInput = $('.footer-input #trueEmail');
     var $formSubmit = $('.footer-input .footer-signup');
     var emailPattern = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
 
+    if (showModal) {
+        $('#emailModal').show();
+        $modal.fadeIn();
+        $modalSpinner.fadeOut();
+        shareOnFacebook('?inviteCode='+referrerCode);
+        shareOnTwitter('?inviteCode='+referrerCode);
+        initCopyToClip('?inviteCode='+referrerCode);
+        initEmailShare('?inviteCode='+referrerCode);
+    } else {
+        $('#inviteModal').show();
+    }
+
+    $formInput.on('click', function(){
+        $(window).off('resize');
+    });
+    $formFirstName.on('click', function(){
+        $(window).off('resize');
+    });
+    $formLastName.on('click', function(){
+        $(window).off('resize');
+    });
+
     $formInput.keyup(function() {
-        if (emailPattern.test($formInput.val())) {
+        if ($formLastName.val() !== '' && $formFirstName.val() !== '' && emailPattern.test($formInput.val())) {
+            $formSubmit.removeClass('-disabled')
+        } else {
+            $formSubmit.addClass('-disabled')
+        }
+    })
+    $formFirstName.keyup(function() {
+        if ($formLastName.val() !== '' && $formFirstName.val() !== '' && emailPattern.test($formInput.val())) {
+            $formSubmit.removeClass('-disabled')
+        } else {
+            $formSubmit.addClass('-disabled')
+        }
+    })
+    $formLastName.keyup(function() {
+        if ($formLastName.val() !== '' && $formFirstName.val() !== '' && emailPattern.test($formInput.val())) {
             $formSubmit.removeClass('-disabled')
         } else {
             $formSubmit.addClass('-disabled')
@@ -330,32 +513,52 @@ var handleWaitlist = function() {
     })
 
     $formSubmit.click(function(e) {
+        var postData = {
+            email: $formInput.val(),
+            first_name: $formFirstName.val(),
+            last_name: $formLastName.val(),
+            referrer_code: referrerCode
+        }
         e.preventDefault();
         if (!$formSubmit.hasClass('-disabled')) {
             $.ajax({
-                url: '/ajaxController/postWaitingList',
+                url: 'https://us-central1-trueappco-website.cloudfunctions.net/waitlist',
                 type: 'POST',
-                data: {email: $formInput.val()},
+                data: postData,
                 dataType: 'json',
                 cache: false,
                 beforeSend: function() {
+                    $('#emailModal').hide();
+                    $('#inviteModal').show();
                     $modal.fadeIn();
                 },
                 success: function(data) {
                 },
                 error: function(xhr, ajaxOptions, thrownError) { // if error occured
                 },
-                complete: function() {
-                    setTimeout(function() {
-                        $modalSpinner.fadeOut();
-                    },2000)
+                complete: function(data) {
+                    let inviteCode = '';
+                    console.log(data.responseJSON);
+                    if (data.responseJSON && data.responseJSON.inviteCode) {
+                        inviteCode = data.responseJSON.inviteCode;
+                    }
+                    shareOnFacebook(inviteCode);
+                    shareOnTwitter(inviteCode);
+                    initCopyToClip(inviteCode);
+                    initEmailShare(inviteCode);
+                    $modalSpinner.fadeOut();
+                    $formInput.val('');
+                    $formFirstName.val('');
+                    $formLastName.val('');
                 }
             });
         }
     })
 
     $modal.click(function(e) {
-        $modal.fadeOut();
+        if(e.target == this){
+            $modal.fadeOut();
+        }
     })
     $closeModal.click(function(e) {
         e.preventDefault();
