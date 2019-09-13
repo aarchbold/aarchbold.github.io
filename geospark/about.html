@@ -10,8 +10,8 @@
 <meta property="og:image" content="">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Geospark">
-<script src="static/js/vendors.js?cache=1567642684604"></script>
-<link rel="stylesheet" href="static/css/styles.css?cache=1567642684604">
+<script src="static/js/vendors.js?cache=1568347520133"></script>
+<link rel="stylesheet" href="static/css/styles.css?cache=1568347520133">
 <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.png">
 
     </head>
@@ -140,6 +140,17 @@
                 <div class="team-item__content">
                     <h2 class="team-item__name">{{this.name}}</h2>
                     <p class="team-item__position">{{this.description}}</p>
+                    <div class="team-item__social">
+                        {{#this.linkedIn}}
+                            <a href="{{& this}}" target="_blank" class="team-item__social--image"><img src="static/images/icons/icon-linkedin.svg" /></a>
+                        {{/this.linkedIn}}
+                        {{#this.facebook}}
+                            <a href="{{& this}}" target="_blank" class="team-item__social--image"><img src="static/images/icons/icon-facebook.svg" /></a>
+                        {{/this.facebook}}
+                        {{#this.twitter}}
+                            <a href="{{& this}}" target="_blank" class="team-item__social--image"><img src="static/images/icons/icon-twitter.svg" /></a>
+                        {{/this.twitter}}
+                    </div>
                 </div>
             </div>
         </div>
@@ -155,7 +166,10 @@
             {
                 imageUrl: "static/images/ui/team/omar.jpg",
                 name: "Omar Balkissoon",
-                description: "Founder and Chief Executive Officer"
+                description: "Founder and Chief Executive Officer",
+                linkedIn: "http://www.linkedin.com",
+                facebook: "http://www.facebook.com",
+                twitter: "http://www.twitter.com"
             },
             {
                 imageUrl: "static/images/ui/team/john.jpg",
@@ -372,6 +386,6 @@
             </div>
         </div>
 
-        <script src="static/js/app.js?cache=1567642684604"></script>
+        <script src="static/js/app.js?cache=1568347520133"></script>
     </body>
 </html>
