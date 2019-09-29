@@ -279,7 +279,7 @@ initHero = debounce(function() {
       //   $header.removeClass('-fade');
       //   $nav.removeClass('-show');
       // }
-      if (scrollTop > 800) {
+      if (scrollTop > 40) {
         $navInner.addClass('-compact');
         $heroContainer.addClass('-animate');
       } else {

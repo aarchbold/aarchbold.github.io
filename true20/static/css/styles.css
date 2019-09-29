@@ -327,6 +327,7 @@ section {
 .navigation-inner.-compact {
   padding: 10px 20px;
   background-color: white;
+  box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.1);
 }
 .navigation-inner.-compact .topnav-links {
   top: 10px;
