@@ -136,6 +136,22 @@ $(function() {
         // }
     }); 
 });
+$.fn.handleFAQ = function() {
+    var $context = $(this);
+    var $questions = $('.faq-questions__item', $context);
+    $questions.each(function(i,e) {
+        $('.faq-questions__item-question',$(this)).click(function() {
+            $('.faq-questions__item-anwser',$(this).parent()).toggleClass('-open');
+            $('.faq-questions__item-control',$(this)).toggleClass('-open');
+        })
+    })
+}
+
+$(function() {
+    if ($('.faq-questions').length > 0) {
+        $('.faq-questions').handleFAQ();
+    }
+});
 function getParam(name) {
     SCH = document.location.search;
     if(window['W3T'] && (W3T['MORE_ARGS'] != "")) {
@@ -256,13 +272,13 @@ initHero = debounce(function() {
       //   $header.addClass('-fixed');
       //   $header.removeClass('-animate');
       // } 
-      if (scrollTop > 200) {
-        $header.addClass('-fade');
-        $nav.addClass('-show');
-      } else {
-        $header.removeClass('-fade');
-        $nav.removeClass('-show');
-      }
+      // if (scrollTop > 200) {
+      //   $header.addClass('-fade');
+      //   $nav.addClass('-show');
+      // } else {
+      //   $header.removeClass('-fade');
+      //   $nav.removeClass('-show');
+      // }
       if (scrollTop > 800) {
         $navInner.addClass('-compact');
         $heroContainer.addClass('-animate');
@@ -289,11 +305,16 @@ initHero = debounce(function() {
 },250);
 
 $(function() {
-  window.scroll({
-    top: 0, 
-    left: 0, 
-    behavior: 'smooth' 
-  });  
+  if (window.location.hash !== '#waitlist') {
+    window.scroll({
+      top: 0, 
+      left: 0, 
+      behavior: 'smooth' 
+    });  
+  }
+  if (window.location.hash === '#waitlist') {
+    $('.footer-container').addClass('-animate');
+  }
 });
 
 // $(window).unload(function() {
@@ -301,10 +322,14 @@ $(function() {
 // });
 
 $(window).on('load', function (e) {
-  
 
   
-  
+  if (window.location.hash === '#waitlist') {
+    $('.footer-container').addClass('-animate');
+    $(window).animate({
+        scrollTop: ($('#joinUs').offset().top - 100)
+    },100);
+  }
    // executes when complete page is fully loaded, including all frames, objects and images
   // fade out the preload spinner.
   $('.preloader-shim').addClass('-animate');
@@ -354,15 +379,6 @@ $(window).on('load', function (e) {
       }, 500);
   });
 
-  $(window).resize(function() {
-    // if ($(window).width() > 800) {
-    //   window.location.reload();
-    // }
-    // if ($(window).width() < 640) {
-    //   // move footer
-    //   window.location.reload();
-    // }
-  });
 })
 
 var getWindowOptions = function() {
@@ -522,7 +538,7 @@ var handleWaitlist = function() {
         e.preventDefault();
         if (!$formSubmit.hasClass('-disabled')) {
             $.ajax({
-                url: 'https://us-central1-trueappco-website.cloudfunctions.net/waitlist',
+                url: 'https://us-central1-trytruecom-website.cloudfunctions.net/waitlist',
                 type: 'POST',
                 data: postData,
                 dataType: 'json',
