@@ -2923,6 +2923,11 @@ button.-small, .button.-small {
     padding: 26px 30px;
   }
 }
+@media (max-width: 650px) {
+  .faq-questions__item-anwser {
+    height: auto !important;
+  }
+}
 @media (max-width: 361px) {
   .faq-more__row {
     max-width: 640px;
