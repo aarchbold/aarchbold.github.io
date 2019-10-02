@@ -12,38 +12,53 @@
 <meta property="og:image" content="https://trueapp.co/static/images/ui/logos/share-true-2.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="True">
-<script src="static/js/vendors.js?cache=1569905930806"></script>
-<link rel="stylesheet" href="static/css/styles.css?cache=1569905930806">
+<script src="static/js/vendors.js?cache=1569992546905"></script>
+<link rel="stylesheet" href="static/css/styles.css?cache=1569992546905">
 <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.png">
 <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0087/6974.js" async="async"></script>
     </head>
     <body>
         <div class="modal-waitlist">
-    <input id="clipboardCopy" type="text" value="" contenteditable="true" readonly="false" />
     <div class="modal-waitlist__inner">
-        <div class="modal-waitlist__preloader">
+        <div id="contactPreloader" class="modal-waitlist__preloader">
             <div class="modal-waitlist__preloader--inner">
-                <p>Reserving your spot...</p>
+                <p>Submitting form...</p>
                 <img src="static/images/ui/backgrounds/ajax-loader.gif" />
             </div>
         </div>
-        <div id="emailModal">
-            <h2>Be first in line. 🥇</h2>
-            <!-- <p>You're on the waitlist. We just sent you an exclusive link to share with three friends. When they sign up to try True, you get bumped up the list.</p> -->
-            <p>Spread the love for a super early sneak peek. Get three friends to sign up for the waitlist and be one of the first 1,000 people to try True.</p>
+        <div id="pressModal">
+            <h2>Press</h2>
+            <div class="modal-form">
+                <input id="pressFirstName" type="text" placeholder="First Name" />
+                <input id="pressLastName" class="-right" type="text" placeholder="Last Name" />
+                <input id="pressEmail" type="email" placeholder="Email" />
+                <input id="pressOutlet" class="-right" type="text" placeholder="Media Outlet" />
+                <textarea id="pressComments" placeholder="What do you need?"></textarea>
+            </div>
+            <div class="modal-contact__ctas">
+                <a id="submitPress" href="#" class="button button-modal -disabled">Submit</a>
+                <a id="closeOverlay" href="#" class="button button-close">Cancel</a>
+            </div>
         </div>
-        <div id="inviteModal">
-            <h2>Congrats, you're<br />on the list. 🙌</h2>
-            <!-- <p>You're on the waitlist. We just sent you an exclusive link to share with three friends. When they sign up to try True, you get bumped up the list.</p> -->
-            <p>Wanna get a super early sneak peek? Share this link with 3 friends and when they sign up you'll be one of the first 1,000 people to try True.</p>
+        <div id="investorsModal">
+            <h2>Investors</h2>
+            <div class="modal-form">
+                <input id="investorsFirstName" type="text" placeholder="First Name" />
+                <input id="investorsLastName" class="-right" type="text" placeholder="Last Name" />
+                <input id="investorsEmail" type="email" placeholder="Email" />
+                <input id="investorsFirm" class="-right" type="text" placeholder="Firm" />
+            </div>
+            <div class="modal-contact__ctas">
+                <a id="submitInvestors" href="#" class="button button-modal -disabled">Submit</a>
+                <a id="closeOverlay" href="#" class="button button-close">Cancel</a>
+            </div>
         </div>
-        <div class="modal-social__ctas">
-            <a id="copyUrl" href="#" class="button button-block__modal button-weblink">Copy Link</a>
-            <a class="button-social -facebook facebook-share button-block__modal" href="#">Share on Facebook</a>
-            <a class="button-social -twitter twitter-share button-block__modal" href="#">Share on Twitter</a>
-            <a href="#" class="button-send-email">or send an email</a>
+        <div id="successModal">
+            <h2>You're all set. We'll be in touch.</h2>
+            <div class="modal-contact__ctas">
+                <a id="successClose" href="#" class="button button-close">Close</a>
+            </div>
         </div>
-        <a href="#" id="closeOverlay" class="button button-close">Close</a>
     </div>
 </div>
         <div data-section-name="home" class="scroll-me page-outer">
@@ -146,9 +161,9 @@
                             Careers
                         </div>
                         <div class="faq-more__item--content">
-                            With a focused Team and top investors, we’re looking for people who are passionate about building great social sharing products.
+                            We're looking for people passionate about building great products. See our jobs on <a href="https://angel.co/company/true/jobs" target="_blank">AngelList</a> or <a href="mailto:careers@trytrue.com">submit your resume</a>.
                         </div>
-                        <a href="#" class="button -small">Contact Us</a>
+                        <a href="https://angel.co/company/true/jobs" target="_blank" class="button -small">Work With Us</a>
                     </div>
                 </div>
                 <div class="faq-more__item">
@@ -159,7 +174,7 @@
                         <div class="faq-more__item--content">
                             True is launching in 2019 and we’re taking questions. Email press@trytrue.com directly with your request and ask for our press kit.
                         </div>
-                        <a href="#" class="button -small">Press Kit</a>
+                        <a href="#" class="button -small button-press">Press Kit</a>
                     </div>
                 </div>
                 <div class="faq-more__item">
@@ -170,7 +185,7 @@
                         <div class="faq-more__item--content">
                             True has raised $14M in Seed. If you’re a Venture investor serious about breaking the social monopoly sign up for investor updates today.
                         </div>
-                        <a href="#" class="button -small">Sign Up</a>
+                        <a href="#" class="button -small button-investors">Contact Us</a>
                     </div>
                 </div>
             </div>
@@ -185,7 +200,7 @@
         </div>
 
 
-        <script src="static/js/app.js?cache=1569905930806"></script>
+        <script src="static/js/app.js?cache=1569992546905"></script>
         <!-- Google Analytics -->
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

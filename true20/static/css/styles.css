@@ -2235,6 +2235,12 @@ button.-small, .button.-small {
   background-color: #a9adb6;
 }
 
+.button-modal {
+  padding: 15px 30px !important;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
 .button-social {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
@@ -2616,8 +2622,59 @@ button.-small, .button.-small {
   margin: 0 auto 30px;
 }
 
-#emailModal, #inviteModal {
+.modal-contact__ctas {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+#emailModal, #inviteModal, #pressModal, #contactPreloader, #successModal, #investorsModal {
   display: none;
+}
+
+.modal-form {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.modal-form:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.modal-form input, .modal-form textarea {
+  font-size: 18px;
+  border: 1px solid black;
+  border-radius: 20px 0 0 20px;
+  padding: 12px 14px;
+  width: 48%;
+  margin-right: 2px;
+  box-sizing: border-box;
+  margin-right: 0;
+  font-family: TruenoRegular, sans-serif;
+  margin-bottom: 3px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  outline: none;
+}
+.modal-form input:focus, .modal-form textarea:focus {
+  border: 1px solid #3EAEFF;
+}
+.modal-form input.-right, .modal-form textarea.-right {
+  border-radius: 0 20px 20px 0;
+}
+.modal-form input#trueEmail, .modal-form textarea#trueEmail {
+  border-radius: 20px;
+  margin-right: 10px;
+  width: 72%;
+}
+.modal-form input#trueLastName, .modal-form textarea#trueLastName {
+  border-radius: 0 25px 25px 0;
+  margin-right: 0;
+}
+.modal-form textarea {
+  border-radius: 25px;
+  width: 97%;
+  padding: 12px 14px;
+  height: 100px;
 }
 
 @media (max-width: 540px) {
@@ -2771,10 +2828,10 @@ button.-small, .button.-small {
 }
 
 .faq-more__item--content {
-  font-size: 16px;
+  font-size: 15px;
   font-family: TruenoRegular, sans-serif;
   opacity: 0.8;
-  line-height: 1.2;
+  line-height: 1.3;
   padding: 20px 0;
   color: #9B9C9B;
 }
