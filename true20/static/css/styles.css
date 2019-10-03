@@ -2591,6 +2591,15 @@ button.-small, .button.-small {
   margin-bottom: 30px;
 }
 
+.modal-close__button {
+  position: absolute;
+  right: 20px;
+  top: 14px;
+  font-family: TruenoRegular, sans-serif;
+  font-size: 26px;
+  text-decoration: none;
+}
+
 .modal-waitlist__preloader {
   position: absolute;
   top: 0;
@@ -2679,7 +2688,7 @@ button.-small, .button.-small {
 
 @media (max-width: 540px) {
   .modal-waitlist__inner {
-    padding: 20px 35px;
+    padding: 20px 20px;
   }
   .modal-waitlist__inner h2 {
     font-size: 28px;
@@ -2687,6 +2696,24 @@ button.-small, .button.-small {
   }
   .modal-waitlist__inner p {
     font-size: 16px;
+  }
+
+  .modal-form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .modal-form input, .modal-form textarea {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+}
+@media (max-width: 361px) {
+  .modal-waitlist__inner {
+    padding: 20px 10px;
+  }
+
+  .modal-waitlist__inner {
+    border-radius: 25px;
   }
 }
 /* FAQ styles
@@ -2834,6 +2861,7 @@ button.-small, .button.-small {
   line-height: 1.3;
   padding: 20px 0;
   color: #9B9C9B;
+  min-height: 105px;
 }
 
 .faq-more__item--content {

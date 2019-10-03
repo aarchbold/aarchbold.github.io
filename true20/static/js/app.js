@@ -111,6 +111,7 @@ function getParameterByName(name, url) {
 var handleContact = function() {
     var $modal = $('.modal-waitlist'),
         $closeModal = $('#closeOverlay'),
+        $closeBtn = $('.modal-close__button'),
         $pressOpen = $('.button-press'),
         $investorsOpen = $('.button-investors'),
         $pressFirstName = $('#pressFirstName'),
@@ -119,10 +120,73 @@ var handleContact = function() {
         $pressOutlet = $('#pressOutlet'),
         $pressComments = $('#pressComments'),
         $submitPress = $('#submitPress'),
+        $investorsFirstName = $('#investorsFirstName'),
+        $investorsLastName = $('#investorsLastName'),
+        $investorsEmail = $('#investorsEmail'),
+        $investorsFirm = $('#investorsFirm'),
+        $submitInvestors = $('#submitInvestors'),
         $spinner = $('#contactPreloader'),
         $success = $('#successModal'),
         $successClose = $('#successClose'),
         emailPattern = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
+
+    function validateInvestorsForm() {
+        if ($investorsFirstName.val() !== '' && 
+            $investorsLastName.val() !== '' && 
+            emailPattern.test($investorsEmail.val()) &&
+            $investorsFirm.val() !== '') {
+            $submitInvestors.removeClass('-disabled')
+        } else {
+            $submitInvestors.addClass('-disabled')
+        }
+    }
+
+    $investorsFirstName.keyup(function() {
+        validateInvestorsForm(); 
+    })
+    $investorsLastName.keyup(function() {
+        validateInvestorsForm(); 
+    })
+    $investorsEmail.keyup(function() {
+        validateInvestorsForm(); 
+    })
+    $investorsFirm.keyup(function() {
+        validateInvestorsForm(); 
+    })
+
+    $submitInvestors.click(function(e) {
+        var postData = {
+            email: $investorsEmail.val(),
+            first_name: $investorsFirstName.val(),
+            last_name: $investorsLastName.val(),
+            firm: $investorsFirm.val()
+        }
+        e.preventDefault();
+        if (!$submitInvestors.hasClass('-disabled')) {
+            $spinner.show();
+            $.ajax({
+                url: 'https://us-central1-trytruecom-website.cloudfunctions.net/investorInfo',
+                type: 'POST',
+                data: postData,
+                dataType: 'json',
+                cache: false,
+                beforeSend: function() {
+
+                },
+                success: function(data) {
+                },
+                error: function(xhr, ajaxOptions, thrownError) { // if error occured
+                    $spinner.hide();
+                },
+                complete: function(data) {
+                    console.log(data);
+                    $success.show();
+                    $('#investorsModal').hide();
+                    $spinner.hide();
+                }
+            });
+        }
+    })
 
     function validatePressForm() {
         if ($pressFirstName.val() !== '' && 
@@ -193,6 +257,10 @@ var handleContact = function() {
         }
     })
     $closeModal.click(function(e) {
+        e.preventDefault();
+        $modal.fadeOut();
+    })
+    $closeBtn.click(function(e) {
         e.preventDefault();
         $modal.fadeOut();
     })
