@@ -2289,6 +2289,18 @@ button.-small, .button.-small {
   background-color: black;
   margin-right: 12px;
 }
+.button-social__mini.-modal {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  margin-right: 5px;
+}
+.button-social__mini.-modal.-linkedin img {
+  height: 20px;
+}
+.button-social__mini.-modal.-angellist img {
+  height: 22px;
+}
 .button-social__mini img {
   position: absolute;
   left: 50%;
@@ -2684,6 +2696,12 @@ button.-small, .button.-small {
   width: 97%;
   padding: 12px 14px;
   height: 100px;
+}
+
+.modal-social__links {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
 
 @media (max-width: 540px) {
