@@ -584,7 +584,8 @@ $(window).on('load', function (e) {
   if (window.location.hash === '#waitlist') {
     $('.footer-container').addClass('-animate');
     $(window).animate({
-        scrollTop: ($('#joinUs').offset().top - 100)
+        //scrollTop: ($('#joinUs').offset().top - 100)
+        scrollTop: $(document).height()
     },100);
   }
    // executes when complete page is fully loaded, including all frames, objects and images
