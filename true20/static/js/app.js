@@ -399,10 +399,11 @@ $(window).on('load', function(){
 });
 
 var resizeTimeout;
+var width = $(window).width();
 $(window).resize(function(){
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(function(){    
-        if ($('.faq-questions').length > 0) {
+        if ($('.faq-questions').length > 0 && $(window).width() != width) {
             setAnserHeights();
             resetFAQ();
             // $('.faq-questions').unbind();
