@@ -2752,6 +2752,7 @@ button.-small, .button.-small {
   width: 97%;
   padding: 12px 14px;
   height: 100px;
+  resize: none;
 }
 
 .modal-social__links {
@@ -2770,11 +2771,11 @@ button.-small, .button.-small {
 
 @media (max-width: 540px) {
   .modal-waitlist__inner {
-    padding: 20px 20px;
+    padding: 40px 20px;
   }
   .modal-waitlist__inner h2 {
     font-size: 28px;
-    margin-bottom: 18px;
+    margin-bottom: 10px;
   }
   .modal-waitlist__inner h3 {
     font-size: 20px;
@@ -2786,12 +2787,14 @@ button.-small, .button.-small {
   }
 
   .modal-form {
-    margin-top: 20px;
     margin-bottom: 20px;
   }
-  .modal-form input, .modal-form textarea {
+  .modal-form input, .modal-form textarea, .modal-form .-right {
     font-size: 14px;
     padding: 10px 12px;
+    width: 97%;
+    border-radius: 20px !important;
+    margin-bottom: 5px;
   }
 }
 @media (max-width: 361px) {
@@ -3040,7 +3043,7 @@ button.-small, .button.-small {
 }
 @media (max-width: 650px) {
   .faq-questions__item-anwser {
-    height: auto !important;
+    min-height: auto !important;
   }
 }
 @media (max-width: 361px) {

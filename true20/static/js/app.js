@@ -130,6 +130,13 @@ var handleContact = function() {
         $successClose = $('#successClose'),
         emailPattern = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
 
+    function resetInvestorsForm() {
+        $investorsFirstName.val('');
+        $investorsLastName.val('');
+        $investorsEmail.val('');
+        $investorsFirm.val('');
+    }
+
     function validateInvestorsForm() {
         if ($investorsFirstName.val() !== '' && 
             $investorsLastName.val() !== '' && 
@@ -183,10 +190,19 @@ var handleContact = function() {
                     $success.show();
                     $submitInvestors.hide();
                     $spinner.hide();
+                    resetInvestorsForm();
                 }
             });
         }
     })
+
+    function resetPressForm() {
+        $pressFirstName.val('');
+        $pressLastName.val('');
+        $pressEmail.val('');
+        $pressOutlet.val('');
+        $pressComments.val('');
+    }
 
     function validatePressForm() {
         if ($pressFirstName.val() !== '' && 
@@ -246,6 +262,7 @@ var handleContact = function() {
                     $success.show();
                     $submitPress.hide();
                     $spinner.hide();
+                    resetPressForm();
                 }
             });
         }
@@ -331,6 +348,13 @@ $(function() {
 function setAnserHeights() {
     var $answers = $('.faq-questions__item-anwser');
 
+    $('.faq-questions').css('opacity',0);
+
+    $answers.each(function(i,e) {
+        $(e).css('display','block');
+        $(e).css('height','auto');
+    })
+
     // get height of the answers
     setTimeout(function() {
         $answers.each(function(i,e) {
@@ -338,7 +362,14 @@ function setAnserHeights() {
             $(e).height($(e).outerHeight());
             $(e).hide();
         })
+        $('.faq-questions').css('opacity',1);
     },10)
+}
+
+function resetFAQ() {
+    $('.faq-questions__item-control').each(function(i,e) {
+        $(e).removeClass('-open');
+    })
 }
 
 $.fn.handleFAQ = function() {
@@ -367,8 +398,16 @@ $(window).on('load', function(){
     }
 });
 
-$(window).on('resize', function(){
-    // setAnserHeights();
+var resizeTimeout;
+$(window).resize(function(){
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(function(){    
+        if ($('.faq-questions').length > 0) {
+            setAnserHeights();
+            resetFAQ();
+            // $('.faq-questions').unbind();
+        }
+    }, 200);
 });
 function getParam(name) {
     SCH = document.location.search;
