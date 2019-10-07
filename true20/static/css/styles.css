@@ -2700,9 +2700,9 @@ button.-small, .button.-small {
 .modal-form input, .modal-form textarea {
   font-size: 18px;
   border: 1px solid #0A5174;
-  border-radius: 20px 0 0 20px;
+  border-radius: 20px;
   padding: 12px 14px;
-  width: 48%;
+  width: 97%;
   margin-right: 2px;
   box-sizing: border-box;
   margin-right: 0;
@@ -2715,7 +2715,11 @@ button.-small, .button.-small {
 .modal-form input:focus, .modal-form textarea:focus {
   border: 1px solid #3EAEFF;
 }
-.modal-form input.-right, .modal-form textarea.-right {
+.modal-form input#pressFirstName, .modal-form input#pressLastName, .modal-form input#investorsFirstName, .modal-form input#investorsLastName, .modal-form textarea#pressFirstName, .modal-form textarea#pressLastName, .modal-form textarea#investorsFirstName, .modal-form textarea#investorsLastName {
+  width: 48%;
+  border-radius: 20px 0 0 20px;
+}
+.modal-form input#pressLastName, .modal-form input#investorsLastName, .modal-form textarea#pressLastName, .modal-form textarea#investorsLastName {
   border-radius: 0 20px 20px 0;
 }
 .modal-form input#trueEmail, .modal-form textarea#trueEmail {
@@ -2793,7 +2797,6 @@ button.-small, .button.-small {
     font-size: 14px;
     padding: 10px 12px;
     width: 97%;
-    border-radius: 20px !important;
     margin-bottom: 5px;
   }
 }
