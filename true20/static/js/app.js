@@ -163,15 +163,27 @@ var handleContact = function() {
 
     $investorsFirstName.on('click', function(){
         $(window).off('resize');
+        setTimeout(function() {
+            $investorsFirstName.focus()
+        },100)
     });
     $investorsLastName.on('click', function(){
         $(window).off('resize');
+        setTimeout(function() {
+            $investorsLastName.focus()
+        },100)
     });
     $investorsEmail.on('click', function(){
         $(window).off('resize');
+        setTimeout(function() {
+            $investorsEmail.focus()
+        },100)
     });
     $investorsFirm.on('click', function(){
         $(window).off('resize');
+        setTimeout(function() {
+            $investorsFirm.focus()
+        },100)
     });
 
     $submitInvestors.click(function(e) {
@@ -247,18 +259,33 @@ var handleContact = function() {
 
     $pressFirstName.on('click', function(){
         $(window).off('resize');
+        setTimeout(function() {
+            $pressFirstName.focus()
+        },100)
     });
     $pressLastName.on('click', function(){
         $(window).off('resize');
+        setTimeout(function() {
+            $pressLastName.focus()
+        },100)
     });
     $pressEmail.on('click', function(){
         $(window).off('resize');
+        setTimeout(function() {
+            $pressEmail.focus()
+        },100)
     });
     $pressOutlet.on('click', function(){
         $(window).off('resize');
+        setTimeout(function() {
+            $pressOutlet.focus()
+        },100)
     });
     $pressComments.on('click', function(){
         $(window).off('resize');
+        setTimeout(function() {
+            $pressComments.focus()
+        },100)
     });
 
     $submitPress.click(function(e) {
@@ -428,18 +455,18 @@ $(window).on('load', function(){
     }
 });
 
-// var resizeTimeout;
-// var width = $(window).width();
-// $(window).resize(function(){
-//     clearTimeout(resizeTimeout);
-//     resizeTimeout = setTimeout(function(){    
-//         if ($('.faq-questions').length > 0 && $(window).width() != width) {
-//             setAnserHeights();
-//             resetFAQ();
-//             // $('.faq-questions').unbind();
-//         }
-//     }, 200);
-// });
+var resizeTimeout;
+var width = $(window).width();
+$(window).resize(function(){
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(function(){    
+        if ($('.faq-questions').length > 0 && $(window).width() != width) {
+            setAnserHeights();
+            resetFAQ();
+            // $('.faq-questions').unbind();
+        }
+    }, 200);
+});
 function getParam(name) {
     SCH = document.location.search;
     if(window['W3T'] && (W3T['MORE_ARGS'] != "")) {
