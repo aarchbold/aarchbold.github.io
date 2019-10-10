@@ -2178,7 +2178,7 @@ button.-disabled:hover, .button.-disabled:hover {
   transform: scale(1);
 }
 button.-small, .button.-small {
-  padding: 12px 40px !important;
+  padding: 12px 28px !important;
   font-size: 14px;
   font-family: TruenoRegular;
   border-radius: 20px;
@@ -3049,7 +3049,7 @@ button.-small, .button.-small {
     min-height: auto !important;
   }
 }
-@media (max-width: 361px) {
+@media (max-width: 450px) {
   .faq-more__row {
     max-width: 640px;
     width: 100%;
