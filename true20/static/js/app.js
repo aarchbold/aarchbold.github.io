@@ -428,18 +428,18 @@ $(window).on('load', function(){
     }
 });
 
-var resizeTimeout;
-var width = $(window).width();
-$(window).resize(function(){
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(function(){    
-        if ($('.faq-questions').length > 0 && $(window).width() != width) {
-            setAnserHeights();
-            resetFAQ();
-            // $('.faq-questions').unbind();
-        }
-    }, 200);
-});
+// var resizeTimeout;
+// var width = $(window).width();
+// $(window).resize(function(){
+//     clearTimeout(resizeTimeout);
+//     resizeTimeout = setTimeout(function(){    
+//         if ($('.faq-questions').length > 0 && $(window).width() != width) {
+//             setAnserHeights();
+//             resetFAQ();
+//             // $('.faq-questions').unbind();
+//         }
+//     }, 200);
+// });
 function getParam(name) {
     SCH = document.location.search;
     if(window['W3T'] && (W3T['MORE_ARGS'] != "")) {
