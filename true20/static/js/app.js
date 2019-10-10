@@ -161,6 +161,19 @@ var handleContact = function() {
         validateInvestorsForm(); 
     })
 
+    $investorsFirstName.on('click', function(){
+        $(window).off('resize');
+    });
+    $investorsLastName.on('click', function(){
+        $(window).off('resize');
+    });
+    $investorsEmail.on('click', function(){
+        $(window).off('resize');
+    });
+    $investorsFirm.on('click', function(){
+        $(window).off('resize');
+    });
+
     $submitInvestors.click(function(e) {
         var postData = {
             email: $investorsEmail.val(),
@@ -231,6 +244,22 @@ var handleContact = function() {
     $pressComments.keyup(function() {
         validatePressForm(); 
     })
+
+    $pressFirstName.on('click', function(){
+        $(window).off('resize');
+    });
+    $pressLastName.on('click', function(){
+        $(window).off('resize');
+    });
+    $pressEmail.on('click', function(){
+        $(window).off('resize');
+    });
+    $pressOutlet.on('click', function(){
+        $(window).off('resize');
+    });
+    $pressComments.on('click', function(){
+        $(window).off('resize');
+    });
 
     $submitPress.click(function(e) {
         var postData = {

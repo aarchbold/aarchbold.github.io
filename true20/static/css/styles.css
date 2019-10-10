@@ -2773,6 +2773,16 @@ button.-small, .button.-small {
   z-index: 100;
 }
 
+.modal-success__message {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 @media (max-width: 540px) {
   .modal-waitlist__inner {
     padding: 40px 20px;
