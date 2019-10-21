@@ -3267,47 +3267,74 @@ button.-small, .button.-small {
   height: 260px;
 }
 
-.blog-post__container {
+.blog-post__container, .legal__container {
   margin: 0 auto;
   max-width: 1100px;
   padding: 20px 20px 100px;
 }
 
-.blog-post__inner {
+.legal__container {
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 260px;
+}
+
+.legal-nav {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 240px;
+  text-align: left;
+}
+.legal-nav a {
+  display: block;
+  font-size: 18px;
+  font-family: TruenoBold, sans-serif;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.blog-post__inner, .legal__inner {
   border-top: 1px solid #808080;
   margin: 0 20px;
-  padding: 40px 0;
+  padding: 10px 0 40px;
   font-size: 18px;
   font-family: TruenoRegular, sans-serif;
   line-height: 1.4;
   color: #535353;
 }
-.blog-post__inner strong {
+.blog-post__inner strong, .legal__inner strong {
   font-family: TruenoBold, sans-serif;
 }
-.blog-post__inner h1, .blog-post__inner h2 {
+.blog-post__inner h1, .blog-post__inner h2, .legal__inner h1, .legal__inner h2 {
+  font-size: 30px;
+  font-family: TruenoBold, sans-serif;
+  padding-bottom: 30px;
+}
+.blog-post__inner h2, .legal__inner h2 {
   font-size: 20px;
-  font-family: TruenoBold, sans-serif;
-}
-.blog-post__inner h2 {
   padding-bottom: 30px;
 }
-.blog-post__inner p {
+.blog-post__inner p, .legal__inner p {
   padding-bottom: 30px;
 }
-.blog-post__inner ol {
+.blog-post__inner ol, .legal__inner ol {
   padding: 0 20px 30px;
   list-style-type: decimal;
 }
-.blog-post__inner ul {
+.blog-post__inner ul, .legal__inner ul {
   padding: 0 20px 30px;
   list-style-type: disc;
 }
-.blog-post__inner ul li {
+.blog-post__inner ul li, .legal__inner ul li {
   padding: 4px 0;
 }
-.blog-post__inner ul ul {
+.blog-post__inner ul ul, .legal__inner ul ul {
   padding: 10px 20px 10px;
+}
+
+.legal__inner {
+  border: none;
 }
 
 @media (max-width: 850px) {
