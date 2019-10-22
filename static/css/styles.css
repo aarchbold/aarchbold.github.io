@@ -3440,4 +3440,38 @@ button.-small, .button.-small {
     min-height: auto;
     margin-bottom: 40px;
   }
+
+  .legal__inner {
+    padding: 10px 0 0;
+    margin: 0;
+  }
+  .legal__inner h1 {
+    font-size: 32px;
+  }
+  .legal__inner p {
+    font-size: 22px;
+    padding-bottom: 30px;
+  }
+  .legal__inner ol {
+    font-size: 22px;
+    padding: 0 0 30px 30px;
+    list-style-type: decimal;
+  }
+  .legal__inner ul {
+    font-size: 22px;
+    padding: 0 0 30px 30px;
+    list-style-type: disc;
+  }
+  .legal__inner ul li {
+    padding: 4px 0;
+  }
+  .legal__inner ul ul {
+    padding: 10px 0 30px 30px;
+  }
+
+  .legal-nav a {
+    font-size: 18px;
+    margin: 0 4px 10px;
+    padding: 0 2px 8px;
+  }
 }
