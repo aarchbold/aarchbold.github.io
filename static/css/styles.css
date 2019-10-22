@@ -3306,6 +3306,8 @@ button.-small, .button.-small {
   text-align: center;
 }
 .legal-nav a {
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
   display: inline-block;
   font-size: 22px;
   font-family: TruenoSemiBold, sans-serif;
