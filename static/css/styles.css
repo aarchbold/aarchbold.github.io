@@ -3354,6 +3354,12 @@ button.-small, .button.-small {
   padding: 0 20px 30px 60px;
   list-style-type: decimal;
 }
+.blog-post__inner ol li, .legal__inner ol li {
+  padding: 4px 0;
+}
+.blog-post__inner ol ol, .legal__inner ol ol {
+  padding: 10px 20px 30px 60px;
+}
 .blog-post__inner ul, .legal__inner ul {
   font-size: 22px;
   padding: 0 20px 30px 60px;
