@@ -134,7 +134,7 @@ table {
   src: local("Trueno Bold Outline Italic"), url("../fonts/TruenoBdOlIt.woff") format("woff");
 }
 @font-face {
-  font-family: 'Trueno ExtraBold';
+  font-family: 'TruenoExtraBold';
   font-style: normal;
   font-weight: normal;
   src: local("Trueno ExtraBold"), url("../fonts/TruenoExBd.woff") format("woff");
@@ -3080,12 +3080,12 @@ button.-small, .button.-small {
 }
 .legal-header h2 {
   font-size: 34px;
-  font-family: TruenoSemiBold, sans-serif;
+  font-family: TruenoExtraBold, sans-serif;
   margin-bottom: 10px;
 }
 .legal-header p {
   font-size: 22px;
-  font-family: TruenoRegular, sans-serif;
+  font-family: TruenoSemiBold, sans-serif;
   color: #535353;
 }
 
@@ -3338,8 +3338,8 @@ button.-small, .button.-small {
   padding-bottom: 18px;
 }
 .blog-post__inner h1, .legal__inner h1 {
-  font-size: 40px;
-  font-family: TruenoSemiBold, sans-serif;
+  font-size: 34px;
+  font-family: TruenoExtraBold, sans-serif;
 }
 .blog-post__inner h2, .legal__inner h2 {
   font-size: 22px;
