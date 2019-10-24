@@ -3079,6 +3079,7 @@ button.-small, .button.-small {
   padding: 0 15px;
 }
 .legal-header h2 {
+  color: #414141;
   font-size: 34px;
   font-family: TruenoExtraBold, sans-serif;
   margin-bottom: 10px;
