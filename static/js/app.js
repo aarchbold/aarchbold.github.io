@@ -919,6 +919,7 @@ var handleWaitlist = function() {
                 error: function(xhr, ajaxOptions, thrownError) { // if error occured
                 },
                 complete: function(data) {
+                    fbq('track', 'CompleteRegistration');
                     let inviteCode = '';
                     console.log(data.responseJSON);
                     if (data.responseJSON && data.responseJSON.inviteCode) {
