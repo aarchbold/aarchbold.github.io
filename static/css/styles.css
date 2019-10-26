@@ -2836,7 +2836,7 @@ button.-small, .button.-small {
   text-align: center;
   font-size: 35px;
   font-family: TruenoBlack, sans-serif;
-  color: #535353;
+  color: #414141;
 }
 
 .faq-header__img {
@@ -3070,6 +3070,14 @@ button.-small, .button.-small {
 }
 /* Blog styles
 */
+#privacy, #terms {
+  display: none;
+}
+
+.legal__outer {
+  min-height: 500px;
+}
+
 .legal-header {
   text-align: center;
   color: #747474;
@@ -3289,7 +3297,7 @@ button.-small, .button.-small {
 
 .blog-post__container, .legal__container {
   margin: 0 auto;
-  max-width: 1100px;
+  max-width: 1000px;
   padding: 20px 20px 100px;
 }
 
@@ -3300,9 +3308,6 @@ button.-small, .button.-small {
 }
 
 .legal-nav {
-  position: absolute;
-  left: 0;
-  top: 0;
   width: 100%;
   text-align: center;
 }
@@ -3347,11 +3352,11 @@ button.-small, .button.-small {
   padding-bottom: 30px;
 }
 .blog-post__inner p, .legal__inner p {
-  font-size: 22px;
+  font-size: 16px;
   padding-bottom: 30px;
 }
 .blog-post__inner ol, .legal__inner ol {
-  font-size: 22px;
+  font-size: 16px;
   padding: 0 20px 30px 60px;
   list-style-type: decimal;
 }
@@ -3362,7 +3367,7 @@ button.-small, .button.-small {
   padding: 10px 20px 30px 60px;
 }
 .blog-post__inner ul, .legal__inner ul {
-  font-size: 22px;
+  font-size: 16px;
   padding: 0 20px 30px 60px;
   list-style-type: disc;
 }
