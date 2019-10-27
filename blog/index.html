@@ -12,8 +12,8 @@
 <meta property="og:image" content="https://trueapp.co/static/images/ui/logos/share-true-2.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="True">
-<script src="/static/js/vendors.js?cache=1572105786513"></script>
-<link rel="stylesheet" href="/static/css/styles.css?cache=1572105786513">
+<script src="/static/js/vendors.js?cache=1572210636756"></script>
+<link rel="stylesheet" href="/static/css/styles.css?cache=1572210636756">
 <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.png">
 <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0087/6974.js" async="async"></script>
 
@@ -99,107 +99,233 @@
         
         <div class="blog-home">
             <div class="blog-feature">
-                <div class="blog-feature__image">
-                    <a href="page.html" class="blog-feature__image--inner"  style="background-image: url(/static/images/ui/placeholder/blog.jpg);"></a>
+                
+<div id="blogFeature">
+</div>
+
+<script id="posts-feature-template" type="text/x-handlebars-template">
+        
+    {{#each posts}}
+        {{#unless @index}}
+        <div class="blog-feature__image">
+            <a href="page.html" class="blog-feature__image--inner"  style="background-image: url({{this.articleImg}});"></a>
+        </div>
+        <div class="blog-feature__content">
+            <div class="blog-feature__header">
+                {{this.articleHeadline}}
+            </div>
+            <div class="blog-feature__description">
+                {{this.articleExcerpt}}
+            </div>
+            <div class="blog-author">
+                <div class="blog-author__thumbnail">
+                    <a href="page.html"><img src="{{this.authorImg}}" /></a>
                 </div>
-                <div class="blog-feature__content">
-                    <div class="blog-feature__header">
-                        Article headling goes here. Article headling goes here. 
-                    </div>
-                    <div class="blog-feature__description">
-                        Article description here. Article description here.
-                    </div>
-                    <div class="blog-author">
-                        <div class="blog-author__thumbnail">
-                            <a href="page.html"><img src="/static/images/ui/placeholder/profile.png" /></a>
-                        </div>
-                        <div class="blog-author__name"><a href="#">Errol Morris</a></div>
-                        <div class="blog-author__date">May 6 - 4 min read</div>
-                    </div>
+                <div class="blog-author__name"><a href="#">{{this.authorName}}</a></div>
+                <div class="blog-author__date">{{this.articleDate}}</div>
+            </div>
+        </div>
+        <!-- <div class="blog-list__item">
+            <div class="blog-list__item--inner">
+                <div class="blog-list__item--image" style="background-image: url({{this.articleImg}});">
+                    <a href="#"></a>
                 </div>
+                <div class="blog-list__item--title">{{this.articleHeadline}}</div>
+                <div class="blog-list__item--description">{{this.articleExcerpt}}</div>
+                <div class="blog-author">
+                    <div class="blog-author__thumbnail">
+                        <a href="page.html"><img src="{{this.authorImg}}" /></a>
+                    </div>
+                    <div class="blog-author__name"><a href="#">{{this.authorName}}</a></div>
+                    <div class="blog-author__date">{{this.articleDate}}</div>
+                </div>
+            </div>
+        </div> -->
+        {{/unless}}
+    {{/each}}
+</script>
+
+<script type="text/javascript">
+    var featureObj = {
+        authorName: '',
+        authorImg: '',
+        articleDate: '',
+        articleId: '',
+        articleHeadline: '',
+        articleExcerpt: '',
+        articleImg: ''
+    }
+
+    var featurePost = [];
+
+    $.get('https://us-central1-trytruecom-website.cloudfunctions.net/getWordPressPosts', function(response){
+        var featureData = JSON.stringify(response.data);
+        var featureJSON = JSON.parse(featureData);
+        $.each(featureJSON, function(i,e) {
+            featureObj.authorName = e._embedded.author[0].name;
+            featureObj.authorImg = e._embedded.author[0].avatar_urls[96];
+            featureObj.articleDate = moment(e.date).format("MMM DD, YYYY");
+            featureObj.articleId = e.id;
+            featureObj.articleHeadline = e.title.rendered.replace('&nbsp;',' ');
+            featureObj.articleExcerpt = e.excerpt.rendered.replace(/<\/?[^>]+>/gi, '').substring(0, 140) + '...';
+            featureObj.articleImg = e.jetpack_featured_media_url;
+            featurePost.push(featureObj);
+            featureObj = {};
+        });
+        var featureData = {
+            posts: featurePost
+        };
+        var template = Handlebars.compile(document.getElementById('posts-feature-template').innerHTML);
+        var featureData = template(featureData);
+        document.getElementById('blogFeature').innerHTML += featureData;
+    });
+</script>
                 <div class="blog-list">
-                    <div class="blog-list__row">
-                        <div class="blog-list__item">
-                            <div class="blog-list__item--inner">
-                                <div class="blog-list__item--image" style="background-image: url(/static/images/ui/placeholder/blog.jpg);">
-                                    <a href="#"></a>
-                                </div>
-                                <div class="blog-list__item--title">Article headling goes here. Article headling goes here.</div>
-                                <div class="blog-list__item--description">Article description here. Article description here.</div>
-                                <div class="blog-author">
-                                    <div class="blog-author__thumbnail">
-                                        <a href="page.html"><img src="/static/images/ui/placeholder/profile.png" /></a>
-                                    </div>
-                                    <div class="blog-author__name"><a href="#">Errol Morris</a></div>
-                                    <div class="blog-author__date">May 6 - 4 min read</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="blog-list__item">
-                            <div class="blog-list__item--inner">
-                                <div class="blog-list__item--image" style="background-image: url(/static/images/ui/placeholder/blog.jpg);">
-                                    <a href="#"></a>
-                                </div>
-                                <div class="blog-list__item--title">Article headling goes here. Article headling goes here.</div>
-                                <div class="blog-list__item--description">Article description here. Article description here.</div>
-                                <div class="blog-author">
-                                    <div class="blog-author__thumbnail">
-                                        <a href="page.html"><img src="/static/images/ui/placeholder/profile.png" /></a>
-                                    </div>
-                                    <div class="blog-author__name"><a href="#">Errol Morris</a></div>
-                                    <div class="blog-author__date">May 6 - 4 min read</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="blog-list__item">
-                            <div class="blog-list__item--inner">
-                                <div class="blog-list__item--image" style="background-image: url(/static/images/ui/placeholder/blog.jpg);">
-                                    <a href="#"></a>
-                                </div>
-                                <div class="blog-list__item--title">Article headling goes here. Article headling goes here.</div>
-                                <div class="blog-list__item--description">Article description here. Article description here.</div>
-                                <div class="blog-author">
-                                    <div class="blog-author__thumbnail">
-                                        <a href="page.html"><img src="/static/images/ui/placeholder/profile.png" /></a>
-                                    </div>
-                                    <div class="blog-author__name"><a href="#">Errol Morris</a></div>
-                                    <div class="blog-author__date">May 6 - 4 min read</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="blog-list__item">
-                            <div class="blog-list__item--inner">
-                                <div class="blog-list__item--image" style="background-image: url(/static/images/ui/placeholder/blog.jpg);">
-                                    <a href="#"></a>
-                                </div>
-                                <div class="blog-list__item--title">Article headling goes here. Article headling goes here.</div>
-                                <div class="blog-list__item--description">Article description here. Article description here.</div>
-                                <div class="blog-author">
-                                    <div class="blog-author__thumbnail">
-                                        <a href="page.html"><img src="/static/images/ui/placeholder/profile.png" /></a>
-                                    </div>
-                                    <div class="blog-author__name"><a href="#">Errol Morris</a></div>
-                                    <div class="blog-author__date">May 6 - 4 min read</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="blog-list__item">
-                            <div class="blog-list__item--inner">
-                                <div class="blog-list__item--image" style="background-image: url(/static/images/ui/placeholder/blog.jpg);">
-                                    <a href="#"></a>
-                                </div>
-                                <div class="blog-list__item--title">Article headling goes here. Article headling goes here.</div>
-                                <div class="blog-list__item--description">Article description here. Article description here.</div>
-                                <div class="blog-author">
-                                    <div class="blog-author__thumbnail">
-                                        <a href="page.html"><img src="/static/images/ui/placeholder/profile.png" /></a>
-                                    </div>
-                                    <div class="blog-author__name"><a href="#">Errol Morris</a></div>
-                                    <div class="blog-author__date">May 6 - 4 min read</div>
-                                </div>
-                            </div>
-                        </div>
+                    
+<div id="blogHome" class="blog-list__row">
+</div>
+
+<script id="posts-template" type="text/x-handlebars-template">
+    {{#each posts}}
+        {{#if @index}}
+        <div class="blog-list__item">
+            <div class="blog-list__item--inner">
+                <div class="blog-list__item--image" style="background-image: url({{this.articleImg}});">
+                    <a href="#"></a>
+                </div>
+                <div class="blog-list__item--title">{{this.articleHeadline}}</div>
+                <div class="blog-list__item--description">{{this.articleExcerpt}}</div>
+                <div class="blog-author">
+                    <div class="blog-author__thumbnail">
+                        <a href="page.html"><img src="{{this.authorImg}}" /></a>
                     </div>
+                    <div class="blog-author__name"><a href="#">{{this.authorName}}</a></div>
+                    <div class="blog-author__date">{{this.articleDate}}</div>
+                </div>
+            </div>
+        </div>
+        {{/if}}
+    {{/each}}
+</script>
+
+<script type="text/javascript">
+    var postObj = {
+        authorName: '',
+        authorImg: '',
+        articleDate: '',
+        articleId: '',
+        articleHeadline: '',
+        articleExcerpt: '',
+        articleImg: ''
+    }
+
+    var posts = [];
+
+    $.get('https://us-central1-trytruecom-website.cloudfunctions.net/getWordPressPosts', function(response){
+        var responseData = JSON.stringify(response.data);
+        var responseJSON = JSON.parse(responseData);
+        $.each(responseJSON, function(i,e) {
+            postObj.authorName = e._embedded.author[0].name;
+            postObj.authorImg = e._embedded.author[0].avatar_urls[96];
+            postObj.articleDate = moment(e.date).format("MMM DD, YYYY");
+            postObj.articleId = e.id;
+            postObj.articleHeadline = e.title.rendered.replace('&nbsp;',' ');
+            postObj.articleExcerpt = e.excerpt.rendered.replace(/<\/?[^>]+>/gi, '').substring(0, 60) + '...';
+            postObj.articleImg = e.jetpack_featured_media_url;
+            posts.push(postObj);
+            postObj = {};
+        });
+        console.log(posts);
+        var data = {
+            posts: posts
+        };
+        var template = Handlebars.compile(document.getElementById('posts-template').innerHTML);
+        var postsData = template(data);
+        document.getElementById('blogHome').innerHTML += postsData;
+    });
+</script>
+                    <!-- <div class="blog-list__row">
+                        <div class="blog-list__item">
+                            <div class="blog-list__item--inner">
+                                <div class="blog-list__item--image" style="background-image: url(/static/images/ui/placeholder/blog.jpg);">
+                                    <a href="#"></a>
+                                </div>
+                                <div class="blog-list__item--title">Article headling goes here. Article headling goes here.</div>
+                                <div class="blog-list__item--description">Article description here. Article description here.</div>
+                                <div class="blog-author">
+                                    <div class="blog-author__thumbnail">
+                                        <a href="page.html"><img src="/static/images/ui/placeholder/profile.png" /></a>
+                                    </div>
+                                    <div class="blog-author__name"><a href="#">Errol Morris</a></div>
+                                    <div class="blog-author__date">May 6 - 4 min read</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-list__item">
+                            <div class="blog-list__item--inner">
+                                <div class="blog-list__item--image" style="background-image: url(/static/images/ui/placeholder/blog.jpg);">
+                                    <a href="#"></a>
+                                </div>
+                                <div class="blog-list__item--title">Article headling goes here. Article headling goes here.</div>
+                                <div class="blog-list__item--description">Article description here. Article description here.</div>
+                                <div class="blog-author">
+                                    <div class="blog-author__thumbnail">
+                                        <a href="page.html"><img src="/static/images/ui/placeholder/profile.png" /></a>
+                                    </div>
+                                    <div class="blog-author__name"><a href="#">Errol Morris</a></div>
+                                    <div class="blog-author__date">May 6 - 4 min read</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-list__item">
+                            <div class="blog-list__item--inner">
+                                <div class="blog-list__item--image" style="background-image: url(/static/images/ui/placeholder/blog.jpg);">
+                                    <a href="#"></a>
+                                </div>
+                                <div class="blog-list__item--title">Article headling goes here. Article headling goes here.</div>
+                                <div class="blog-list__item--description">Article description here. Article description here.</div>
+                                <div class="blog-author">
+                                    <div class="blog-author__thumbnail">
+                                        <a href="page.html"><img src="/static/images/ui/placeholder/profile.png" /></a>
+                                    </div>
+                                    <div class="blog-author__name"><a href="#">Errol Morris</a></div>
+                                    <div class="blog-author__date">May 6 - 4 min read</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-list__item">
+                            <div class="blog-list__item--inner">
+                                <div class="blog-list__item--image" style="background-image: url(/static/images/ui/placeholder/blog.jpg);">
+                                    <a href="#"></a>
+                                </div>
+                                <div class="blog-list__item--title">Article headling goes here. Article headling goes here.</div>
+                                <div class="blog-list__item--description">Article description here. Article description here.</div>
+                                <div class="blog-author">
+                                    <div class="blog-author__thumbnail">
+                                        <a href="page.html"><img src="/static/images/ui/placeholder/profile.png" /></a>
+                                    </div>
+                                    <div class="blog-author__name"><a href="#">Errol Morris</a></div>
+                                    <div class="blog-author__date">May 6 - 4 min read</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-list__item">
+                            <div class="blog-list__item--inner">
+                                <div class="blog-list__item--image" style="background-image: url(/static/images/ui/placeholder/blog.jpg);">
+                                    <a href="#"></a>
+                                </div>
+                                <div class="blog-list__item--title">Article headling goes here. Article headling goes here.</div>
+                                <div class="blog-list__item--description">Article description here. Article description here.</div>
+                                <div class="blog-author">
+                                    <div class="blog-author__thumbnail">
+                                        <a href="page.html"><img src="/static/images/ui/placeholder/profile.png" /></a>
+                                    </div>
+                                    <div class="blog-author__name"><a href="#">Errol Morris</a></div>
+                                    <div class="blog-author__date">May 6 - 4 min read</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -214,7 +340,7 @@
         </div>
 
 
-        <script src="../static/js/app.js?cache=1572105786513"></script>
+        <script src="../static/js/app.js?cache=1572210636756"></script>
         <!-- Google Analytics -->
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
