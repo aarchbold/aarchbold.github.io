@@ -2315,6 +2315,9 @@ button.-small, .button.-small {
 .button-social__mini.-facebook {
   background-color: #1877f2;
 }
+.button-social__mini.-facebook img {
+  height: 16px;
+}
 .button-social__mini.-twitter {
   background-color: #49caf1;
 }
@@ -3134,10 +3137,8 @@ button.-small, .button.-small {
   background-size: cover;
   background-position: 50% 50%;
   display: block;
-  max-width: 100%;
-  max-height: 160px;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 160px;
 }
 .blog-list__item--image a {
   display: block;
@@ -3149,6 +3150,10 @@ button.-small, .button.-small {
   line-height: 1.2;
   font-family: TruenoSemiBold, sans-serif;
   margin-bottom: 5px;
+}
+.blog-list__item--title a {
+  color: #414141;
+  text-decoration: none;
 }
 
 .blog-list__item--description {
@@ -3169,10 +3174,8 @@ button.-small, .button.-small {
   padding-right: 10px;
   box-sizing: border-box;
   display: block;
-  max-width: 66.6%;
-  max-height: 330px;
-  width: auto;
-  height: auto;
+  width: 66.6%;
+  height: 330px;
 }
 
 .blog-feature__image--inner {
@@ -3196,6 +3199,10 @@ button.-small, .button.-small {
   line-height: 1.2;
   font-family: TruenoSemiBold, sans-serif;
   margin-bottom: 10px;
+}
+.blog-feature__header a {
+  color: #414141;
+  text-decoration: none;
 }
 
 .blog-feature__description {
@@ -3308,6 +3315,47 @@ button.-small, .button.-small {
   padding: 20px 20px 100px;
 }
 
+.blog-post__outer {
+  position: relative;
+  min-height: 900px;
+}
+
+.blog-post__container {
+  position: relative;
+  border-top: 1px solid #808080;
+  padding: 40px 60px 0;
+  margin-top: 40px;
+  max-width: 1060px;
+  box-sizing: border-box;
+}
+
+.blog-post__info {
+  position: absolute;
+  left: 0;
+  top: -40px;
+  width: 100%;
+}
+
+.blog-post__info--author {
+  position: relative;
+  padding: 10px 0 0 60px;
+  color: #535353;
+  font-size: 18px;
+  font-family: TruenoSemiBold, sans-serif;
+}
+.blog-post__info--author img {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 50px;
+}
+
+.blog-post__info--social {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
 .legal__container {
   position: relative;
   box-sizing: border-box;
@@ -3335,7 +3383,6 @@ button.-small, .button.-small {
 }
 
 .blog-post__inner, .legal__inner {
-  border-top: 1px solid #808080;
   margin: 0 20px;
   padding: 10px 0 40px;
   font-size: 18px;
