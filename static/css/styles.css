@@ -3101,6 +3101,15 @@ button.-small, .button.-small {
   color: #535353;
 }
 
+.blog-loader {
+  padding: 0;
+  font-family: TruenoBold, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #1C6E5C;
+}
+
 .blog-home {
   max-width: 900px;
   margin: 0 auto;
@@ -3318,6 +3327,9 @@ button.-small, .button.-small {
 .blog-post__outer {
   position: relative;
   min-height: 900px;
+}
+.blog-post__outer .blog-loader {
+  padding-top: 100px;
 }
 
 .blog-post__container {
