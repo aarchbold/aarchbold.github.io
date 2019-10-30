@@ -3134,7 +3134,7 @@ button.-small, .button.-small {
   float: left;
   width: 33.3%;
   box-sizing: border-box;
-  min-height: 400px;
+  min-height: 440px;
 }
 
 .blog-list__item--inner {
@@ -3479,6 +3479,7 @@ button.-small, .button.-small {
 
   .blog-feature__image {
     margin-bottom: 20px;
+    padding-right: 0;
   }
 
   .blog-feature__content {
@@ -3538,6 +3539,19 @@ button.-small, .button.-small {
   }
 }
 @media (max-width: 550px) {
+  .blog-list__item {
+    margin-bottom: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .blog-list__item--image {
+    width: 300px;
+    height: 300px;
+    max-width: 100%;
+    margin: 0 auto 20px;
+  }
+
   .blog-hero__title {
     width: 100%;
     padding-right: 0;
@@ -3582,7 +3596,6 @@ button.-small, .button.-small {
     width: 100%;
     float: none;
     min-height: auto;
-    margin-bottom: 40px;
   }
 
   .legal__inner {
