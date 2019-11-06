@@ -3348,7 +3348,7 @@ button.-small, .button.-small {
   left: 0;
   top: -40px;
   width: 100%;
-  padding: 0 20px;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -3368,8 +3368,29 @@ button.-small, .button.-small {
 
 .blog-post__info--social {
   position: absolute;
-  right: 20px;
+  right: -3px;
   top: 0;
+}
+.blog-post__info--social a {
+  position: relative;
+  display: inline-block;
+  float: left;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  text-decoration: none;
+  margin-left: 8px;
+}
+.blog-post__info--social a img {
+  width: 26px;
+}
+.blog-post__info--social a:hover {
+  opacity: 0.6;
+}
+.blog-post__info--social a.twitter img {
+  width: 28px;
+}
+.blog-post__info--social a.reddit img {
+  width: 26px;
 }
 
 .legal__container {
@@ -3452,6 +3473,61 @@ button.-small, .button.-small {
   border: none;
 }
 
+progress {
+  position: fixed;
+  left: 0;
+  top: 58px;
+  width: 100%;
+  height: 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  color: #175A66;
+  z-index: 10;
+}
+
+progress::-webkit-progress-bar {
+  background-color: transparent;
+  z-index: 10;
+}
+
+progress::-webkit-progress-value {
+  background-color: #175A66;
+  z-index: 10;
+}
+
+progress::-moz-progress-bar {
+  background-color: #175A66;
+  z-index: 10;
+}
+
+.progress-container {
+  width: 100%;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  display: block;
+  z-index: 10;
+}
+
+.progress-bar {
+  background-color: #175A66;
+  width: 0%;
+  display: block;
+  height: inherit;
+  z-index: 10;
+}
+
+@media (max-width: 1155px) {
+  .blog-post__container {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
 @media (max-width: 950px) {
   .blog-hero__image {
     width: 300px;
@@ -3465,6 +3541,7 @@ button.-small, .button.-small {
 @media (max-width: 850px) {
   .blog-feature__image, .blog-feature__content {
     width: 50%;
+    padding-left: 0;
   }
 
   .blog-hero__title h1 {
@@ -3547,7 +3624,7 @@ button.-small, .button.-small {
 
   .blog-list__item--image {
     width: 300px;
-    height: 300px;
+    height: 130px;
     max-width: 100%;
     margin: 0 auto 20px;
   }
@@ -3563,8 +3640,8 @@ button.-small, .button.-small {
     position: relative;
     top: 0;
     right: 0;
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 250px;
     max-width: 100%;
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
@@ -3576,6 +3653,8 @@ button.-small, .button.-small {
   .blog-post__container {
     padding: 20px 0px 0;
     margin-top: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .blog-post__info--social {
@@ -3589,6 +3668,10 @@ button.-small, .button.-small {
 
   .blog-post__info {
     top: -20px;
+  }
+
+  #blogFeature {
+    padding: 0 10px;
   }
 }
 @media (max-width: 500px) {
@@ -3627,5 +3710,12 @@ button.-small, .button.-small {
     font-size: 18px;
     margin: 0 4px 10px;
     padding: 0 2px 8px;
+  }
+
+  .blog-list__item--image {
+    width: 100%;
+    height: 200px;
+    max-width: 100%;
+    margin: 0 auto 20px;
   }
 }
