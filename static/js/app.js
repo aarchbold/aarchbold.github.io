@@ -765,7 +765,7 @@ var shareBlogOnLinkedIn = function(message) {
     var url = [location.protocol, '//', location.host, location.pathname].join('');
     var linkedInBtn = $('.linkedin-share');
     var title = message;
-    var shareUrl = 'https://www.linkedin.com/sharing/share-offsite/?url' + url;
+    var shareUrl = 'https://www.linkedin.com/sharing/share-offsite/?url=' + url;
     linkedInBtn.href = shareUrl; // 1
 
     linkedInBtn.click(function(e) {
