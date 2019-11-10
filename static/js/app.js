@@ -748,7 +748,7 @@ if ($('body').hasClass('true-legal')) {
 }
 
 var shareBlogOnTwitter = function(message) {
-    var url = [location.protocol, '//', location.host, location.pathname].join('');
+    var url = window.location.href;
     var tweetBtn = $('.twitter-share');
     var title = message;
     var shareUrl = 'https://twitter.com/intent/tweet?text=' + title + '&url=' + url;
@@ -762,7 +762,7 @@ var shareBlogOnTwitter = function(message) {
 }
 
 var shareBlogOnLinkedIn = function(message) {
-    var url = [location.protocol, '//', location.host, location.pathname].join('');
+    var url = window.location.href;
     var linkedInBtn = $('.linkedin-share');
     var title = message;
     var shareUrl = 'https://www.linkedin.com/sharing/share-offsite/?url=' + url;
