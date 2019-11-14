@@ -774,6 +774,21 @@ var shareBlogOnLinkedIn = function(message) {
         win.opener = null; // 2
     });
 }
+
+var shareBlogOnReddit = function(message) {
+    var url = window.location.href;
+    var redditBtn = $('.reddit-share');
+    var title = 'Check out this blog post at trytrue.com';
+    var shareUrl = 'http://www.reddit.com/submit?&url=' + encodeURI(url) + '&title='+ encodeURI(title);
+    redditBtn.href = shareUrl; // 1
+
+    redditBtn.click(function(e) {
+        // alert(encodeURI(shareUrl));
+        e.preventDefault();
+        var win = window.open(encodeURI(shareUrl), 'ShareOnReddit', getWindowOptions());
+        win.opener = null; // 2
+    });
+}
 var getWindowOptions = function() {
     var width = 500;
     var height = 450;

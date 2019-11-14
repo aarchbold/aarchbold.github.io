@@ -4,16 +4,16 @@
         <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>True</title>
-<meta property="og:title" content="True">
-<meta property="og:description" content="True is private sharing for real friends.">
-<meta name="description" content="True is private sharing for real friends.">
+<title></title>
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta name="description" content="">
 <!-- <meta property="og:image" content="https://truetokensale.com/static/images/logos/logo-share-true.png"> -->
 <meta property="og:image" content="https://trueapp.co/static/images/ui/logos/share-true-2.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="True">
-<script src="/static/js/vendors.js?cache=1573347365066"></script>
-<link rel="stylesheet" href="/static/css/styles.css?cache=1573347365066">
+<script src="/static/js/vendors.js?cache=1573628380040"></script>
+<link rel="stylesheet" href="/static/css/styles.css?cache=1573628380040">
 <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.png">
 <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0087/6974.js" async="async"></script>
 
@@ -135,7 +135,7 @@
                 <a href="#" target="_blank" class="linkedin linkedin-share">
                     <img src="../static/images/ui/logos/logo-share-linkedin.png" />
                 </a>
-                <a href="#" target="_blank" class="reddit">
+                <a href="#" target="_blank" class="reddit reddit-share">
                     <img src="../static/images/ui/logos/logo-share-reddit.png" />
                 </a>
             </div>
@@ -178,6 +178,7 @@
             $('meta[property="og:image"]').attr('content', postObj.articleImg);
             shareBlogOnTwitter('True Blog - ' + postObj.articleHeadline);
             shareBlogOnLinkedIn(postObj.articleHeadline);
+            shareBlogOnReddit('True Blog - ' + postObj.articleHeadline);
 
 
             var getMax = function() {
@@ -250,7 +251,7 @@
         </div>
 
 
-        <script src="../static/js/app.js?cache=1573347365066"></script>
+        <script src="../static/js/app.js?cache=1573628380040"></script>
         <!-- Google Analytics -->
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
