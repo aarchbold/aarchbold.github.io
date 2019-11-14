@@ -762,7 +762,7 @@ var shareBlogOnTwitter = function(message) {
 }
 
 var shareBlogOnLinkedIn = function(message) {
-    var url = window.location.href;
+    var url = escape(window.location.href);
     var linkedInBtn = $('.linkedin-share');
     var title = message;
     var shareUrl = 'https://www.linkedin.com/sharing/share-offsite/?url=' + url;
@@ -776,16 +776,17 @@ var shareBlogOnLinkedIn = function(message) {
 }
 
 var shareBlogOnReddit = function(message) {
-    var url = window.location.href;
+    var url = escape(window.location.href);
     var redditBtn = $('.reddit-share');
-    var title = 'Check out this blog post at trytrue.com';
-    var shareUrl = 'http://www.reddit.com/submit?&url=' + encodeURI(url) + '&title='+ encodeURI(title);
+    var title = escape('Check out this blog post at trytrue.com');
+    var shareUrl = 'http://www.reddit.com/submit?url='+url+'&title='+title;
+    //var shareUrl = 'http://www.reddit.com/submit?url=https://stackoverflow.com/questions/24823114/post-to-reddit-via-url&title=Post%20to%20Reddit%20via%20URL';
     redditBtn.href = shareUrl; // 1
 
     redditBtn.click(function(e) {
         // alert(encodeURI(shareUrl));
         e.preventDefault();
-        var win = window.open(encodeURI(shareUrl), 'ShareOnReddit', getWindowOptions());
+        var win = window.open(shareUrl, 'ShareOnReddit', getWindowOptions());
         win.opener = null; // 2
     });
 }
