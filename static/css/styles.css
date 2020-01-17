@@ -2109,6 +2109,22 @@ html.-static, body.-static {
   .mobile-waterfall, .mobile-waterfall__gradiient, .footer-waterfall__animation--mobile {
     display: block;
   }
+
+  .main-site__hills1 {
+    top: 7%;
+  }
+
+  .main-site__hills2 {
+    top: 9.5%;
+  }
+
+  .main-site__hills3 {
+    top: 10%;
+  }
+
+  .main-site__hills4 {
+    top: 19%;
+  }
 }
 @media (max-width: 520px) {
   .hero-stage__header {
@@ -3754,5 +3770,80 @@ progress::-moz-progress-bar {
 
   #blogFeature {
     margin-bottom: 50px;
+  }
+}
+/* Unsubscribe styles
+*/
+.true-unsubscribe {
+  background: url("../images/ui/backgrounds/bg-unsubscribe.jpg") 50% 0% no-repeat;
+  background-size: cover;
+}
+
+.unsubscribe-container {
+  text-align: center;
+  padding: 100px 20px 40px;
+}
+
+.unsubscribe-header {
+  max-width: 334px;
+  width: 60%;
+}
+
+.card-unsubscribe {
+  margin: 100px auto 120px;
+  max-width: 500px;
+  border-radius: 90px;
+}
+.card-unsubscribe p {
+  margin: 0 0 10px;
+}
+
+.unsubscribe-footer {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.unsubscribe-footer__social {
+  margin-bottom: 20px;
+}
+
+.unsubscribe-footer__social--icon {
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  width: 50px;
+  padding: 0 3px;
+}
+.unsubscribe-footer__social--icon:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+@media (max-width: 650px) {
+  .unsubscribe-header {
+    max-width: 40%;
+    width: 40%;
+  }
+
+  .unsubscribe-container {
+    padding: 60px 20px 20px;
+  }
+
+  .card-unsubscribe {
+    top: 0 !important;
+    margin: 50px auto 60px;
+    max-width: 90%;
+    border-radius: 60px;
+    width: 80%;
+  }
+  .card-unsubscribe p {
+    margin: 0 0 10px;
+  }
+}
+@media (max-width: 500px) {
+  .card-unsubscribe {
+    max-width: 100%;
+    width: 100%;
   }
 }
