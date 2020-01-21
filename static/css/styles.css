@@ -3774,12 +3774,18 @@ progress::-moz-progress-bar {
 }
 /* Unsubscribe styles
 */
+.true-unsubscribe-html {
+  height: 100%;
+}
+
 .true-unsubscribe {
   background: url("../images/ui/backgrounds/bg-unsubscribe.jpg") 50% 0% no-repeat;
   background-size: cover;
+  height: 100%;
 }
 
 .unsubscribe-container {
+  position: relative;
   text-align: center;
   padding: 100px 20px 40px;
 }
@@ -3802,6 +3808,8 @@ progress::-moz-progress-bar {
   color: white;
   font-weight: bold;
   font-size: 16px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .unsubscribe-footer__social {
@@ -3839,6 +3847,16 @@ progress::-moz-progress-bar {
   }
   .card-unsubscribe p {
     margin: 0 0 10px;
+  }
+
+  .unsubscribe-footer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100%;
   }
 }
 @media (max-width: 500px) {
