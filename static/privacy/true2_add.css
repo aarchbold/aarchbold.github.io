@@ -1,0 +1,57 @@
+body {
+    -webkit-font-smoothing: antialiased !important;
+}
+
+.multiline.sub p {
+    color: #999;
+}
+
+
+.multiline.sub ol li  {
+    list-style-type: decimal;
+    margin: 0 28px;
+    color: #999;
+ }
+
+.multiline.sub ul.normal li  {
+    list-style-type: initial;
+    margin: 0 18px;
+}
+
+h2 {
+    width: 329px;
+    height: 34px;
+    color: rgb(0, 0, 0);
+    font-size: 28px;
+    font-family: 'Trueno Light', sans-serif;
+    letter-spacing: 0px;
+    line-height: 34px;
+}
+
+h3 {
+    color: rgb(37, 37, 37);
+    font-size: 14px;
+    letter-spacing: 0px;
+    line-height: 22px;
+}
+
+h3.title {
+    color: rgb(37, 37, 37);
+    font-size: 14px;
+    letter-spacing: 0px;
+    line-height: 22px;
+}
+
+p {
+    color: rgb(36, 36, 36);
+    font-size: 12px;
+    letter-spacing: 0px;
+    line-height: 22px;
+}
+
+.multiline.sub {
+    color: rgb(155, 155, 155);
+    font-size: 12px;
+    letter-spacing: 0px;
+    line-height: 22px;
+}
