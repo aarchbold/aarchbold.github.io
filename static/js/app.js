@@ -665,7 +665,11 @@ $(window).on('load', function (e) {
 
   setTimeout(function(){
     $actualButtons.addClass('-animate');
-  },4500)
+    setTimeout(function(){
+      $actualButtons.addClass('-fixed');
+      $actualButtons.removeClass('-animate');
+    },1200)
+  },4000)
 
   if ($('body').hasClass('true-home')) {
     if (window.location.hash === '#waitlist') {
@@ -702,6 +706,9 @@ $(window).on('load', function (e) {
     
     var resizeTimeout;
     $(window).resize(function(){
+        $actualButtons.css({
+          top: $downloadButtons.offset().top + $buttonsOffset + 'px'
+        })
         clearTimeout(resizeTimeout);
         resizeTimeout = setTimeout(function(){    
             $actualButtons.css({

@@ -1238,19 +1238,35 @@ html.-static, body.-static {
   }
 }
 #downloadActualButtons {
-  -webkit-transition: all .2s;
-  transition: all .2s;
   position: absolute;
   width: 100%;
   text-align: center;
   z-index: 8;
   opacity: 0;
+  -webkit-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  transform: scale(1.4);
 }
 #downloadActualButtons.-animate {
+  -webkit-transition: all 1s;
+  transition: all 1s;
   opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+#downloadActualButtons.-fixed {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 #downloadActualButtons.-fade {
-  opacity: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  opacity: 0 !important;
 }
 
 .hero-stage {
