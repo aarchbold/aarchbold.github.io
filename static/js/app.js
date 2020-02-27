@@ -583,6 +583,7 @@ initHero = debounce(function() {
     var $nav = $('.topnav-container');
     var $navInner = $('.navigation-inner');
     var $heroClouds = $('.hero-sky',$heroContainer);
+    var $downloadButtons = $('#downloadActualButtons');
     var $window = $(window);
     
     // set the fog to the screen height
@@ -609,9 +610,11 @@ initHero = debounce(function() {
       if (scrollTop > 40) {
         $navInner.addClass('-compact');
         $header.addClass('-fade');
+        $downloadButtons.addClass('-fade');
       } else {
         $navInner.removeClass('-compact');
         $header.removeClass('-fade');
+        $downloadButtons.removeClass('-fade');
       }
     });
     // start animations
@@ -648,6 +651,22 @@ $(function() {
 
 $(window).on('load', function (e) {
   initHero(); 
+
+  // try and get the position of the download buttons.
+  var $downloadButtons = $('#downloadButtons');
+  var $actualButtons = $('#downloadActualButtons');
+  var $buttonsOffset = 20;
+
+  console.log($downloadButtons.offset().top)
+
+  $actualButtons.css({
+    top: $downloadButtons.offset().top + $buttonsOffset + 'px'
+  })
+
+  setTimeout(function(){
+    $actualButtons.addClass('-animate');
+  },4500)
+
   if ($('body').hasClass('true-home')) {
     if (window.location.hash === '#waitlist') {
       $('.footer-container').addClass('-animate');
@@ -685,6 +704,9 @@ $(window).on('load', function (e) {
     $(window).resize(function(){
         clearTimeout(resizeTimeout);
         resizeTimeout = setTimeout(function(){    
+            $actualButtons.css({
+              top: $downloadButtons.offset().top + $buttonsOffset + 'px'
+            })
             if (ogWidth < 800 && $(window).width() > 800) {
               // init the parallax if the site starts at mobile and resizes to not mobile
               $('[data-scroll-speed]').moveIt();
