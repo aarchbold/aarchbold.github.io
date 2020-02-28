@@ -630,10 +630,13 @@ section {
 .footer-download__cta--link {
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
-  opacity: 0.75;
+  opacity: 0.85;
 }
 .footer-download__cta--link:hover {
   opacity: 1;
+}
+.footer-download__cta--link img {
+  width: 158px;
 }
 
 #clipboardCopy {
@@ -1020,7 +1023,7 @@ section {
 }
 @media (max-width: 376px) {
   .footer-download__cta--link img {
-    width: 100px;
+    width: 114px;
   }
 
   .section-footer {
@@ -1039,6 +1042,11 @@ section {
   .footer-doggers {
     top: 4px;
     left: 166px;
+  }
+}
+@media (max-width: 321px) {
+  .footer-download__cta--link img {
+    width: 90px;
   }
 }
 /* layout styles
@@ -1237,6 +1245,10 @@ html.-static, body.-static {
     height: 1px;
   }
 }
+#downloadButtons {
+  opacity: 0;
+}
+
 #downloadActualButtons {
   position: absolute;
   width: 100%;
@@ -1256,8 +1268,8 @@ html.-static, body.-static {
   transform: scale(1);
 }
 #downloadActualButtons.-fixed {
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 0s;
+  transition: all 0s;
   opacity: 1;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
@@ -1267,6 +1279,9 @@ html.-static, body.-static {
   -webkit-transition: all .3s;
   transition: all .3s;
   opacity: 0 !important;
+}
+#downloadActualButtons img {
+  margin: 0 4px;
 }
 
 .hero-stage {
@@ -1437,7 +1452,7 @@ html.-static, body.-static {
   position: relative;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
-  opacity: 0.75;
+  opacity: 0.85;
   z-index: 100;
 }
 .hero-stage__download img {
