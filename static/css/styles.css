@@ -1433,8 +1433,8 @@ html.-static, body.-static {
   opacity: 0;
 }
 .hero-stage__header h1 {
-  font-size: 58px;
-  line-height: 1.1;
+  font-size: 60px;
+  line-height: 1.2;
 }
 .hero-stage__header p {
   padding-top: 20px;
