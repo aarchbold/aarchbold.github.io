@@ -1287,7 +1287,7 @@ html.-static, body.-static {
   opacity: 0 !important;
 }
 #downloadActualButtons img {
-  margin: 0 4px;
+  margin: 0 5px;
 }
 
 .hero-stage {
@@ -1380,7 +1380,7 @@ html.-static, body.-static {
   font-family: TruenoBlack, sans-serif;
   opacity: 1;
   line-height: 1.2;
-  top: 49%;
+  top: 47%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -1463,7 +1463,7 @@ html.-static, body.-static {
 }
 .hero-stage__download img {
   width: 140px;
-  margin: 0;
+  margin: 0 5px;
 }
 .hero-stage__download:hover {
   opacity: 1;
@@ -1952,7 +1952,7 @@ html.-static, body.-static {
   }
 
   .hero-stage__header {
-    top: 41%;
+    top: 38%;
   }
   .hero-stage__header h1 {
     font-size: 52px;
@@ -2008,7 +2008,7 @@ html.-static, body.-static {
 }
 @media (max-width: 1000px) {
   .hero-stage__header {
-    top: 30%;
+    top: 34%;
   }
   .hero-stage__header h1 {
     font-size: 44px;

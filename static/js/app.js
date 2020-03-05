@@ -657,7 +657,7 @@ $(window).on('load', function (e) {
   // try and get the position of the download buttons.
   var $downloadButtons = $('#downloadButtons');
   var $actualButtons = $('#downloadActualButtons');
-  var $buttonsOffset = 18; 
+  var $buttonsOffset = 16; 
 
 
   if ($('body').hasClass('true-home')) {
@@ -688,10 +688,19 @@ $(window).on('load', function (e) {
     if ($(window).width() > 800) {
       $('[data-scroll-speed]').moveIt();
     }
+    if ($(window).width() < 1200) {
+      $buttonsOffset = 17;
+    }
+    if ($(window).width() < 1000) {
+      $buttonsOffset = 22;
+    }
     if ($(window).width() < 640) {
       $buttonsOffset = 30;
       // move footer
       $('.section-footer').appendTo('.section-starts');
+    }
+    if ($(window).width() < 520) {
+      $buttonsOffset = 28;
     }
 
     console.log($downloadButtons.offset().top)
@@ -702,7 +711,7 @@ $(window).on('load', function (e) {
   
     setTimeout(function(){
       $actualButtons.addClass('-fixed');
-    },3970)
+    },4040)
     
     var resizeTimeout;
     $(window).resize(function(){
