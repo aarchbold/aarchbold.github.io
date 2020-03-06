@@ -878,7 +878,7 @@ var shareOnFacebook = function(inviteCode) {
 var shareOnTwitter = function(inviteCode) {
     var url = [location.protocol, '//', location.host, location.pathname].join('');
     var tweetBtn = $('.twitter-share');
-    var title = encodeURIComponent('I just signed up to beta test True, a new way to share privately with friends 😎Come try it with me:');
+    var title = encodeURIComponent('Come beta test True with me, it’s for sharing privately with friends 😎 ');
     var shareUrl = 'https://twitter.com/intent/tweet?text=' + title + '&url=' + url + inviteCode;
     tweetBtn.href = shareUrl; // 1
 
@@ -916,7 +916,7 @@ var initEmailShare = function(inviteCode) {
     var $button = $('.button-send-email');
     var url = [location.protocol, '//', location.host, location.pathname].join('');
 
-    $button.attr('href','mailto:?subject=Let\'s beta test True together&body=I just signed up to beta test True, a new way to share privately with friends 😎 Come try it with me: '+url+inviteCode)
+    $button.attr('href','mailto:?subject=Let\'s beta test True together&body=Come beta test True with me, it’s for sharing privately with friends 😎 '+url+inviteCode)
 }
 
 function getParameterByName(name, url) {
