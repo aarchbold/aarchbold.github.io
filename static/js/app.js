@@ -916,7 +916,7 @@ var initEmailShare = function(inviteCode) {
     var $button = $('.button-send-email');
     var url = [location.protocol, '//', location.host, location.pathname].join('');
 
-    $button.attr('href','mailto:?subject=Let\'s beta test True together&body=Come beta test True with me, it’s for sharing privately with friends 😎 '+url+inviteCode)
+    $button.attr('href','mailto:?subject=Let\'s beta test True together&body=Come beta test True with me, it’s for sharing privately with friends 😎 %0D%0A%0D%0A'+url+inviteCode)
 }
 
 function getParameterByName(name, url) {
