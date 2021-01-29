@@ -9,11 +9,11 @@
 <meta property="og:description" content="True is private sharing for real friends.">
 <meta name="description" content="True is private sharing for real friends.">
 <!-- <meta property="og:image" content="https://truetokensale.com/static/images/logos/logo-share-true.png"> -->
-<meta property="og:image" content="https://trytrue.com/static/images/ui/logos/share-true-4.png">
+<meta property="og:image" content="https://trytrue.com/static/images/ui/logos/share-true-4.jpg">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="True">
-<script src="/static/js/vendors.js?cache=1583538916895"></script>
-<link rel="stylesheet" href="/static/css/styles.css?cache=1583538916895">
+<script src="/static/js/vendors.js?cache=1611889664520"></script>
+<link rel="stylesheet" href="/static/css/styles.css?cache=1611889664520">
 <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.png">
 <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0087/6974.js" async="async"></script>
 
@@ -83,7 +83,9 @@
             <div class="topnav-links">
                 <!-- <a  class="button-nav" href="/blog/">BLOG</a> -->
                 <a class="button-nav -selected"  href="/faq.html">FAQ</a>
-                <a  class="button-nav" href="/index.html#waitlist" >TRY TRUE</a>
+                <a  class="button-nav" href="/community/">COMMUNITY GUIDELINES</a>
+                <a  class="button-nav" id="tryTrueNav" target="_blank" href="/index.html#waitlist">TRY TRUE</a>
+                
             </div>
         </div>
     </div>
@@ -123,7 +125,7 @@
                         <p>But we never signed up for this. We didn’t post our lives, families and personal relationships for sale. We did not agree to let these companies make money from being in the middle of our friendships.</p>
                         <p>We believe you should be free to share your life without big brands competing for your attention. You should own your information and decide what you want to do with it. 3rd parties should never have access to your data. You should not be the product.</p>
                         <p>We believe your privacy matters. We take it into consideration with every decision we make. You should believe we respect your privacy and trust we’ll do the right thing with your information.</p>
-                        <p>Read our <a href="privacy.html">Privacy Policy here.</a></p>
+                        <p>Read our <a href="privacy/">Privacy Policy here.</a></p>
                     </div>
                 </div>
 
@@ -176,7 +178,7 @@
                         <div class="faq-more__item--content">
                             With a focused Team and top investors, we're hiring people who are passionate about building the next-generation social sharing platform.
                         </div>
-                        <a href="https://angel.co/company/true/jobs" target="_blank" class="button -small">Work With Us</a>
+                        <a onClick="ga('send', 'event', 'Try True FAQ', 'clicked Work With Us');" href="https://angel.co/company/true/jobs" target="_blank" class="button -small">Work With Us</a>
                     </div>
                 </div>
                 <div class="faq-more__item">
@@ -187,7 +189,7 @@
                         <div class="faq-more__item--content">
                             True is launching shortly and we're taking questions. You can request a press kit or set up a time to speak with a member of our Team.
                         </div>
-                        <a href="#" class="button -small button-press">Talk to Us</a>
+                        <a onClick="ga('send', 'event', 'Try True FAQ', 'clicked Talk to Us');" href="#" class="button -small button-press">Talk to Us</a>
                     </div>
                 </div>
                 <div class="faq-more__item">
@@ -198,7 +200,7 @@
                         <div class="faq-more__item--content">
                             True has raised $14M in Seed. If you're a Venture investor serious about breaking the social monopoly please reach out to our Team. 
                         </div>
-                        <a href="#" class="button -small button-investors">Contact Us</a>
+                        <a onClick="ga('send', 'event', 'Try True FAQ', 'clicked Contact Us');" href="#" class="button -small button-investors">Contact Us</a>
                     </div>
                 </div>
             </div>
@@ -208,12 +210,15 @@
                 Email us at <a href="mailto:hey@trytrue.com">hey@trytrue.com</a>
             </div>
             <div class="faq-footer__content">
-                &copy; 2020 True 
+                &copy; 2021 True
+                <div class="faq-footer__legal">
+                    <a href="https://trytrue.com/privacy/">Privacy Policy</a> | <a href="https://trytrue.com/terms/">Terms of Service</a>
+                </div>
             </div>
         </div>
 
 
-        <script src="static/js/app.js?cache=1583538916895"></script>
+        <script src="static/js/app.js?cache=1611889664520"></script>
         <!-- Google Analytics -->
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
