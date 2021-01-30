@@ -3037,6 +3037,11 @@ button.-small, .button.-small {
 }
 /* FAQ styles
 */
+.generic-header {
+  padding-top: 100px;
+  padding-bottom: 10px;
+}
+
 .generic-container {
   max-width: 640px;
   width: 100%;
@@ -3056,6 +3061,7 @@ button.-small, .button.-small {
 }
 .generic__item.-no-background {
   box-shadow: none;
+  padding-top: 0;
 }
 
 .generic__item--header {
