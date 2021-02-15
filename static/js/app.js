@@ -377,17 +377,17 @@ $(function() {
         })
 
         // slow down video playback
-        var $firstVideo = $('#firstVideo');
-        $firstVideo[0].playbackRate = 0.65;
-        $firstVideo[0].play();
+        // var $firstVideo = $('#firstVideo');
+        // $firstVideo[0].playbackRate = 0.65;
+        // $firstVideo[0].play();
 
-        var $secondVideo = $('#secondVideo');
-        $secondVideo[0].playbackRate = 0.65;
-        $secondVideo[0].play();
+        // var $secondVideo = $('#secondVideo');
+        // $secondVideo[0].playbackRate = 0.65;
+        // $secondVideo[0].play();
 
-        var $thirdVideo = $('#thirdVideo');
-        $thirdVideo[0].playbackRate = 0.65;
-        $thirdVideo[0].play();
+        // var $thirdVideo = $('#thirdVideo');
+        // $thirdVideo[0].playbackRate = 0.65;
+        // $thirdVideo[0].play();
 
         $(window).on('DOMContentLoaded load resize scroll', function() {
 
@@ -576,7 +576,6 @@ initHero = debounce(function() {
     var $mainSite = $('.main-site__container');
     var $sun = $('.hero-stage__sun',$heroContainer);
     var $shine = $('.main-site__shine',$mainSite);
-    var $fogs = $('.hero-stage__fog',$mainSite);
     var $header = $('.hero-stage__header',$heroContainer);
     var $clouds = $('.animated-cloud',$heroContainer);
     var $birds = $('.animated-bird',$mainSite);
@@ -589,9 +588,6 @@ initHero = debounce(function() {
     var $downloadButtons = $('#downloadActualButtons');
     var $window = $(window);
     
-    // set the fog to the screen height
-    $fogs.height($(window).height());
-    
     startAnimations = function() {
         $sun.addClass('-animate');
         $shine.addClass('-animate');
@@ -602,36 +598,32 @@ initHero = debounce(function() {
         $baloon2.addClass('-animate');
         // $heroClouds.addClass('-animate');
     }
-    startHeaderTextAnimation = function() {
-        if (!$header.hasClass('-fixed')) {
-          $downloadButtonsAnimateOnly.addClass('-animate');
-          $header.addClass('-animate');
-        }
-    }
+    // startHeaderTextAnimation = function() {
+    //     if (!$header.hasClass('-fixed')) {
+    //       $downloadButtonsAnimateOnly.addClass('-animate');
+    //       $header.addClass('-animate');
+    //     }
+    // }
 
     window.addEventListener('scroll', function(){
       var scrollTop = $window.scrollTop();
       if (scrollTop > 40) {
-        $navInner.addClass('-compact');
-        $header.addClass('-fade');
-        $downloadButtons.addClass('-fade');
+        $nav.addClass('-compact');
+        // $header.addClass('-fade');
+        // $downloadButtons.addClass('-fade');
       } else {
-        $navInner.removeClass('-compact');
-        $header.removeClass('-fade');
-        $downloadButtons.removeClass('-fade');
+        $nav.removeClass('-compact');
+        // $header.removeClass('-fade');
+        // $downloadButtons.removeClass('-fade');
       }
     });
     // start animations
     setTimeout(function() {
         startAnimations();
     },1600)
-    setTimeout(function() {
-        startHeaderTextAnimation();
-    },2000)
-    setTimeout(function() {
-      // fade fogs
-      // $fogs.addClass('-animate');
-    },3000)
+    // setTimeout(function() {
+    //     startHeaderTextAnimation();
+    // },2000)
     setTimeout(function() {
         //make body scrollable 
         $('body').removeClass('-static');
@@ -707,7 +699,7 @@ $(window).on('load', function (e) {
 
   // try and get the position of the download buttons.
   var $downloadButtons = $('#downloadButtons');
-  var $actualButtons = $('#downloadActualButtons');
+  // var $actualButtons = $('#downloadActualButtons');
   var $buttonsOffset = 16; 
 
 
@@ -754,15 +746,13 @@ $(window).on('load', function (e) {
       $buttonsOffset = 28;
     }
 
-    console.log($downloadButtons.offset().top)
-
-    $actualButtons.css({
-      top: $downloadButtons.offset().top + $buttonsOffset + 'px'
-    })
+    // $actualButtons.css({
+    //   top: $downloadButtons.offset().top + $buttonsOffset + 'px'
+    // })
   
-    setTimeout(function(){
-      $actualButtons.addClass('-fixed');
-    },4040)
+    // setTimeout(function(){
+    //   $actualButtons.addClass('-fixed');
+    // },4040)
     
     var resizeTimeout;
     $(window).resize(function(){
@@ -770,20 +760,20 @@ $(window).on('load', function (e) {
         $downloadButtons.css({
           opacity: 1
         })
-        $actualButtons.css({
-          top: $downloadButtons.offset().top + $buttonsOffset + 'px',
-          opacity: 0
-        })
+        // $actualButtons.css({
+        //   top: $downloadButtons.offset().top + $buttonsOffset + 'px',
+        //   opacity: 0
+        // })
 
         clearTimeout(resizeTimeout);
         resizeTimeout = setTimeout(function(){   
             $downloadButtons.css({
               opacity: 0
             }) 
-            $actualButtons.css({
-              top: $downloadButtons.offset().top + $buttonsOffset + 'px',
-              opacity: 1
-            })
+            // $actualButtons.css({
+            //   top: $downloadButtons.offset().top + $buttonsOffset + 'px',
+            //   opacity: 1
+            // })
             if (ogWidth < 800 && $(window).width() > 800) {
               // init the parallax if the site starts at mobile and resizes to not mobile
               $('[data-scroll-speed]').moveIt();
