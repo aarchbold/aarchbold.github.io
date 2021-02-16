@@ -1239,8 +1239,7 @@ section {
   margin: 0 auto;
   padding-right: 460px;
   box-sizing: border-box;
-  margin-top: 60px;
-  padding-top: 80px;
+  padding-top: 20px;
 }
 .hero-panel__inner h1 {
   font-size: 46px;
@@ -1255,9 +1254,9 @@ section {
 .hero-panel__inner .hero-panel__phone {
   position: absolute;
   right: -50px;
-  top: -100px;
+  top: -142px;
   width: 50%;
-  max-width: 440px;
+  max-width: 420px;
 }
 
 .hero-panel__ctas {
@@ -1364,7 +1363,7 @@ html.-static, body.-static {
   left: 0px;
   overflow: hidden;
   width: 100%;
-  height: 18%;
+  height: 22%;
   opacity: 1;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
@@ -1739,11 +1738,11 @@ html.-static, body.-static {
 }
 
 .main-site__balloon1 {
-  -webkit-transition: all 80s linear;
-  transition: all 80s linear;
+  -webkit-transition: all 100s linear;
+  transition: all 100s linear;
   position: absolute;
-  top: 42%;
-  left: 74%;
+  top: 23%;
+  left: 50%;
   z-index: 100;
 }
 .main-site__balloon1.-animate {
@@ -1751,11 +1750,11 @@ html.-static, body.-static {
 }
 
 .main-site__balloon2 {
-  -webkit-transition: all 135s linear;
-  transition: all 135s linear;
+  -webkit-transition: all 205s linear;
+  transition: all 205s linear;
   position: absolute;
-  top: 50%;
-  left: 70%;
+  top: 32%;
+  left: 45%;
   z-index: 100;
 }
 .main-site__balloon2.-animate {
@@ -1765,7 +1764,7 @@ html.-static, body.-static {
 .main-site__container {
   position: relative;
   z-index: 5;
-  padding-top: 120px;
+  padding-top: 220px;
 }
 
 .main-site__container--inner {
@@ -2045,6 +2044,15 @@ html.-static, body.-static {
 
   .hero-stage__download img {
     width: 130px;
+  }
+
+  .hero-panel {
+    padding: 0px 20px;
+    box-sizing: border-box;
+  }
+
+  .hero-panel__inner .hero-panel__phone {
+    right: -20px;
   }
 }
 @media (max-width: 1000px) {
