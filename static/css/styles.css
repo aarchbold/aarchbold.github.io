@@ -1100,7 +1100,11 @@ section {
   z-index: 1;
 }
 
-.card-container:after {
+.cards-container {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.cards-container:after {
   content: '';
   clear: both;
   display: table;
@@ -1119,6 +1123,7 @@ section {
   -webkit-transform: translatex(-50%);
   -ms-transform: translatex(-50%);
   transform: translatex(-50%);
+  height: 170px;
 }
 
 .card-outer {
@@ -1903,7 +1908,7 @@ html.-static, body.-static {
 }
 
 .section-sharing {
-  top: 44%;
+  top: 40%;
 }
 
 .section-friends {
