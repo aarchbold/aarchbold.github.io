@@ -4293,3 +4293,44 @@ progress::-moz-progress-bar {
     width: 100%;
   }
 }
+/* features styles
+*/
+.phone-features {
+  position: relative;
+  padding-left: 49%;
+}
+
+.phone-features__quote {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: absolute;
+  left: 0;
+  bottom: 150px;
+  padding: 50px;
+  width: 50%;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 60px;
+  box-shadow: 2px 2px 50px 0px rgba(0, 0, 0, 0.3);
+  font-size: 36px;
+  font-family: TruenoBlack, sans-serif;
+  line-height: 1.3;
+  min-height: 320px;
+}
+
+.phone-features__quote--profile {
+  position: absolute;
+  bottom: -46px;
+  left: -112px;
+  width: 90px;
+  height: 90px;
+}
+.phone-features__quote--profile img {
+  width: 90px;
+}
+
+.phone-features__quote--bubble {
+  position: absolute;
+  bottom: -2px;
+  left: -18px;
+}
