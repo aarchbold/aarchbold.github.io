@@ -398,7 +398,7 @@ $(function() {
                 // $('#friendsSection').addClass('-animate');
             }
             if (isElementInViewport($('.footer-waterfall__mist'))) {
-                $('.footer-container').addClass('-animate');
+                // $('.footer-container').addClass('-animate');
             } 
         });
     }

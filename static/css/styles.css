@@ -350,6 +350,55 @@ section {
   box-sizing: border-box;
 }
 
+.footer-table {
+  margin-bottom: 80px;
+}
+.footer-table:after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+.footer-col {
+  width: 33.3%;
+  float: left;
+  box-sizing: border-box;
+  padding-right: 40px;
+}
+
+.footer-col__header {
+  color: white;
+  font-size: 26px;
+  font-family: TruenoBlack, sans-serif;
+  margin-bottom: 28px;
+}
+
+.footer-col__ul {
+  color: white;
+  font-family: TruenoRegular, sans-serif;
+}
+.footer-col__ul a {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}
+.footer-col__ul a:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.footer-col__ul li {
+  padding-bottom: 15px;
+}
+
+.footer-col__copyright {
+  font-family: TruenoRegular, sans-serif;
+  color: white;
+  font-size: 20px;
+}
+
 .section-footer {
   position: relative;
   background-color: #103a31;
@@ -455,9 +504,6 @@ section {
   width: 100%;
   max-width: 1200px;
   z-index: 5;
-  -webkit-transform: translate(-100%, 100%) scale(0.5);
-  -ms-transform: translate(-100%, 100%) scale(0.5);
-  transform: translate(-100%, 100%) scale(0.5);
 }
 .footer-container.-animate {
   -webkit-transform: translate(0, 0) scale(1);
@@ -481,8 +527,10 @@ section {
 .footer-inner {
   position: absolute;
   bottom: 0;
-  padding: 0 100px 100px 80px;
+  padding: 0 0 100px 80px;
   color: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .footer-boulder {
@@ -494,9 +542,6 @@ section {
   top: -200px;
   max-width: 357px;
   width: 40%;
-  -webkit-transform: translate(-100%, 100%) scale(0.5);
-  -ms-transform: translate(-100%, 100%) scale(0.5);
-  transform: translate(-100%, 100%) scale(0.5);
 }
 
 .footer-old-man {
@@ -508,9 +553,6 @@ section {
   top: -100px;
   max-width: 238px;
   width: 30%;
-  -webkit-transform: translate(-100%, 100%) scale(0.5);
-  -ms-transform: translate(-100%, 100%) scale(0.5);
-  transform: translate(-100%, 100%) scale(0.5);
 }
 
 .footer-doggers {
@@ -524,9 +566,6 @@ section {
   max-width: 157px;
   width: 16%;
   height: 300px;
-  -webkit-transform: translate(-100%, 100%) scale(0.5);
-  -ms-transform: translate(-100%, 100%) scale(0.5);
-  transform: translate(-100%, 100%) scale(0.5);
 }
 .footer-doggers img {
   position: absolute;
