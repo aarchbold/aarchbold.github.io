@@ -914,6 +914,16 @@ var shareBlogOnReddit = function(message) {
         win.opener = null; // 2
     });
 }
+$(function() {
+    if ($('.testimonials-container').length > 0) {
+        $('.testimonial-card').slick({
+            dots: true,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 6000,
+        });
+    }
+});
 var getWindowOptions = function() {
     var width = 500;
     var height = 450;
