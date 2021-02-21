@@ -1212,15 +1212,37 @@ section {
   }
 }
 @media (max-width: 1000px) {
+  .cards-container {
+    max-width: 100%;
+  }
+
+  .card-grid {
+    padding: 10px 10px 0 10px;
+  }
+
+  .card-image {
+    height: 140px;
+  }
+
+  .card-outer {
+    padding: 32px 30px;
+  }
   .card-outer h2 {
-    font-size: 32px;
+    font-size: 28px;
+    line-height: 1.2;
   }
   .card-outer p {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .section-image {
     width: 48% !important;
+  }
+}
+@media (max-width: 920px) {
+  .page-inner {
+    max-width: 100%;
+    padding: 0 20px;
   }
 }
 @media (max-width: 850px) {
@@ -1960,7 +1982,7 @@ html.-static, body.-static {
 }
 
 .section-secure {
-  top: 116%;
+  top: 120%;
 }
 
 .section-image {
@@ -2173,11 +2195,11 @@ html.-static, body.-static {
   }
 
   .section-friends {
-    top: 73%;
+    top: 82%;
   }
 
   .section-secure {
-    top: 110%;
+    top: 116%;
   }
 }
 @media (max-width: 1000px) {
@@ -2202,9 +2224,33 @@ html.-static, body.-static {
     width: 120px;
   }
 }
+@media (max-width: 920px) {
+  .main-site__container {
+    padding-top: 225px;
+  }
+
+  .hero-panel__inner {
+    padding-top: 0;
+    padding-right: 290px;
+  }
+  .hero-panel__inner h1 {
+    font-size: 32px;
+  }
+  .hero-panel__inner .hero-panel__phone {
+    max-width: 340px;
+  }
+}
 @media (max-width: 900px) {
   .hero-stage__header {
     top: 31%;
+  }
+
+  .h2-home {
+    font-size: 38px;
+  }
+
+  .p-home {
+    font-size: 24px;
   }
 }
 @media (max-width: 800px) {
@@ -2230,7 +2276,7 @@ html.-static, body.-static {
   }
 
   .section-sharing {
-    top: 25%;
+    top: 30%;
   }
 
   .section-friends {
@@ -2753,6 +2799,23 @@ button.-small, .button.-small {
   height: auto !important;
 }
 
+@media (max-width: 950px) {
+  button, .button {
+    padding: 16px 30px !important;
+    font-size: 16px;
+  }
+
+  .button-icon {
+    position: relative;
+    padding-left: 45px !important;
+  }
+  .button-icon img {
+    position: absolute;
+    top: 12px;
+    left: 18px;
+    width: 22px;
+  }
+}
 @media (max-width: 800px) {
   .button-social__mini {
     width: 38px;
@@ -4379,6 +4442,25 @@ progress::-moz-progress-bar {
   left: -18px;
 }
 
+@media (max-width: 1000px) {
+  .phone-features__quote {
+    font-size: 30px;
+    min-height: 266px;
+    width: 45%;
+    margin-left: 40px;
+    bottom: 190px;
+  }
+
+  .phone-features__quote--profile {
+    width: 72px;
+    height: 72px;
+    bottom: -54px;
+    left: -94px;
+  }
+  .phone-features__quote--profile img {
+    width: 72px;
+  }
+}
 /* testimonials styles
 */
 .testimonials-container {
@@ -4421,6 +4503,19 @@ progress::-moz-progress-bar {
   font-family: TruenoRegular, sans-serif;
 }
 
+@media (max-width: 900px) {
+  .testimonial-card__inner {
+    font-size: 19px;
+  }
+
+  .testimonial-card__author {
+    font-size: 20px;
+  }
+
+  .testimonial-card__location {
+    font-size: 19px;
+  }
+}
 /* Slider */
 .slick-slider {
   position: relative;
