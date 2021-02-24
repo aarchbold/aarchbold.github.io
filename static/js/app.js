@@ -493,7 +493,7 @@ if ($('body').hasClass('true-FAQ')) {
 $.fn.handlePhoneQuote = function() {
     var $context = $(this),
         $quotes = $('.phone-features__quote--slide',$context),
-        timer = 5000,
+        timer = 7000,
         currentIndex = 0;
 
     $quotes.hide();
@@ -502,7 +502,7 @@ $.fn.handlePhoneQuote = function() {
     console.log(currentIndex);
 
     setInterval(function() {
-        if (currentIndex === 2) {
+        if (currentIndex === 3) {
             currentIndex = 0;
         } else {
             currentIndex++;
