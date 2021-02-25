@@ -4412,7 +4412,7 @@ progress::-moz-progress-bar {
   transition: all 0.3s;
   position: absolute;
   left: 0;
-  bottom: 150px;
+  bottom: 200px;
   padding: 50px;
   width: 50%;
   box-sizing: border-box;
