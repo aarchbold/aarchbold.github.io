@@ -917,6 +917,19 @@ section {
   }
 }
 @media (max-width: 700px) {
+  .footer-col__header {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .footer-col__ul {
+    font-size: 14px;
+  }
+
+  .footer-col__copyright {
+    font-size: 16px;
+  }
+
   .footer-download__ctas {
     position: relative;
     right: 0;
@@ -1023,6 +1036,21 @@ section {
     top: -4px;
   }
 }
+@media (max-width: 650px) {
+  .footer-col {
+    width: 50%;
+  }
+  .footer-col:last-child {
+    width: 100%;
+    padding-top: 10px;
+  }
+  .footer-col:last-child .button-icon {
+    margin-right: 10px;
+  }
+  .footer-col:last-child br {
+    display: none;
+  }
+}
 @media (max-width: 520px) {
   .footer-header {
     font-size: 22px;
@@ -1037,7 +1065,7 @@ section {
   }
 
   .footer-container {
-    bottom: -130px;
+    bottom: -100px;
   }
 
   .footer-inner {
@@ -1310,6 +1338,7 @@ section {
 
   .card-grid {
     width: 100%;
+    padding: 0;
   }
 }
 @media (max-width: 520px) {
@@ -2559,6 +2588,10 @@ html.-static, body.-static {
     margin-bottom: 0;
   }
 
+  .section-why-true {
+    padding: 0;
+  }
+
   .main-site__balloon1 {
     top: 5%;
   }
@@ -2673,9 +2706,18 @@ html.-static, body.-static {
     display: none;
   }
 }
+@media (max-width: 476px) {
+  .section-starts {
+    top: 32%;
+  }
+}
 @media (max-width: 400px) {
   .hero-stage__header {
     top: 26%;
+  }
+
+  .section-starts {
+    top: 40%;
   }
 }
 /* button styles
@@ -4629,8 +4671,18 @@ progress::-moz-progress-bar {
 @media (max-width: 600px) {
   .phone-features__quote {
     width: 55%;
-    left: 40px;
+    left: -19px;
     font-size: 16px;
+  }
+
+  .phone-features__quote--bubble {
+    bottom: -31px;
+    left: 54px;
+  }
+
+  .phone-features__quote--profile {
+    bottom: -79px;
+    left: -18px;
   }
 
   .phone-features__video {
@@ -4638,7 +4690,20 @@ progress::-moz-progress-bar {
   }
 
   .phone-features {
-    padding-left: 45%;
+    padding-left: 31%;
+  }
+}
+@media (max-width: 450px) {
+  .phone-features {
+    padding-left: 24%;
+  }
+
+  .phone-features__video {
+    max-width: 260px;
+  }
+
+  .phone-features__quote {
+    bottom: 100px;
   }
 }
 /* testimonials styles
