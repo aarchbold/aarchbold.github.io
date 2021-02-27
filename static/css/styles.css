@@ -1053,7 +1053,7 @@ section {
 }
 @media (max-width: 520px) {
   .footer-cast {
-    display: block;
+    display: none;
   }
 
   .footer-header {
