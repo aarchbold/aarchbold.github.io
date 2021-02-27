@@ -1431,7 +1431,7 @@ section {
 }
 .hero-panel__ctas a {
   display: inline-block;
-  margin-bottom: 6px;
+  margin: 0 2px 6px;
 }
 
 html.-static, body.-static {
@@ -2537,6 +2537,22 @@ html.-static, body.-static {
     top: 0;
   }
 
+  .hero-panel__ctas {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .hero-panel__ctas a {
+    margin: 5px 0;
+    min-width: 140px;
+    font-size: 18px;
+    padding: 17px 40px 17px 50px !important;
+  }
+  .hero-panel__ctas a img {
+    top: 14px;
+    left: 19px;
+    width: 24px;
+  }
+
   .main-site__container {
     padding-top: 240px;
   }
@@ -2602,7 +2618,7 @@ html.-static, body.-static {
 
   .section-starts {
     position: absolute;
-    top: 26%;
+    top: 30%;
     z-index: 1000;
     left: 50%;
     -webkit-transform: translateX(-50%);
@@ -2708,7 +2724,7 @@ html.-static, body.-static {
 }
 @media (max-width: 476px) {
   .section-starts {
-    top: 32%;
+    top: 37%;
   }
 }
 @media (max-width: 400px) {
@@ -3012,12 +3028,6 @@ button.-small, .button.-small {
   }
   .button-nav.-selected {
     display: none;
-  }
-}
-@media (max-width: 361px) {
-  button, .button {
-    font-size: 16px;
-    padding: 14px 20px !important;
   }
 }
 /* animated cloud styles
