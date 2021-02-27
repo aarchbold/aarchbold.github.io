@@ -1052,6 +1052,10 @@ section {
   }
 }
 @media (max-width: 520px) {
+  .footer-cast {
+    display: none;
+  }
+
   .footer-header {
     font-size: 22px;
   }
