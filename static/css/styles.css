@@ -1167,7 +1167,7 @@ section {
 }
 
 .cards-container {
-  max-width: 840px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 30px;
   box-sizing: border-box;
@@ -1218,11 +1218,11 @@ section {
   text-align: center;
   font-size: 20px;
   font-family: TruenoSemiBold, sans-serif;
-  line-height: 1.5;
+  line-height: 1.6;
   margin-bottom: 30px;
   opacity: 1;
   padding: 0 10px;
-  min-height: 185px;
+  min-height: 175px;
 }
 .card-outer.-with-image {
   padding-top: 10px;
@@ -1232,9 +1232,6 @@ section {
   .card-outer h2 {
     font-size: 32px;
   }
-  .card-outer p {
-    font-size: 18px;
-  }
 
   .section-image {
     width: 42% !important;
@@ -1242,7 +1239,7 @@ section {
 }
 @media (max-width: 1000px) {
   .cards-container {
-    max-width: 100%;
+    max-width: 730px;
   }
 
   .card-grid {
@@ -1258,7 +1255,8 @@ section {
     line-height: 1.2;
   }
   .card-outer p {
-    font-size: 16px;
+    font-size: 17px;
+    min-height: 135px;
   }
 
   .section-image {
@@ -1354,7 +1352,10 @@ section {
   }
 
   .card-outer {
-    padding: 24px !important;
+    padding: 35px 30px !important;
+  }
+  .card-outer.-with-image {
+    padding-top: 18px !important;
   }
   .card-outer h2 {
     font-size: 24px !important;
@@ -1363,7 +1364,9 @@ section {
   }
   .card-outer p {
     font-size: 18px !important;
-    line-height: 1.2;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    min-height: auto;
   }
 }
 @media (max-width: 361px) {
@@ -1428,9 +1431,9 @@ section {
 .hero-panel__inner .hero-panel__phone {
   position: absolute;
   right: -50px;
-  top: -164px;
+  top: -190px;
   width: 50%;
-  max-width: 455px;
+  max-width: 480px;
 }
 
 .hero-panel__ctas {
@@ -2262,7 +2265,7 @@ html.-static, body.-static {
   }
 
   .section-friends {
-    top: 82%;
+    top: 84%;
   }
 
   .section-secure {
@@ -4730,6 +4733,7 @@ progress::-moz-progress-bar {
     left: auto;
     width: 80%;
     font-size: 18px;
+    line-height: 1.5;
   }
 
   .phone-features {
