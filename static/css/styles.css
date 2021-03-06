@@ -1110,7 +1110,7 @@ section {
 
   .topnav-links {
     display: none;
-    width: 50%;
+    width: 80%;
     top: 52px;
     background-color: white;
     border-radius: 10px;
@@ -1126,7 +1126,7 @@ section {
     margin: 2px 0;
     border: 0;
     background-color: transparent;
-    font-size: 15px;
+    font-size: 20px;
   }
   .topnav-links a.button-nav.-selected {
     background-color: transparent;
