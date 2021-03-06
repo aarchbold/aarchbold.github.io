@@ -493,11 +493,14 @@ if ($('body').hasClass('true-FAQ')) {
 $.fn.handlePhoneQuote = function() {
     var $context = $(this),
         $quotes = $('.phone-features__quote--slide',$context),
+        $screenshots = $('.phone-features__video',$context),
         timer = 7000,
         currentIndex = 0;
 
     $quotes.hide();
+    $screenshots.hide();
     $($quotes[currentIndex]).fadeIn();
+    $($screenshots[currentIndex]).show();
 
     console.log(currentIndex);
 
@@ -507,10 +510,13 @@ $.fn.handlePhoneQuote = function() {
         } else {
             currentIndex++;
         }
-        $quotes.fadeOut();
-        setTimeout(function() {
-            $($quotes[currentIndex]).fadeIn();
-        },500)
+        $quotes.hide();
+        $screenshots.hide();
+        $($screenshots[currentIndex]).show();
+        $($quotes[currentIndex]).show();
+        // setTimeout(function() {
+        //     $($quotes[currentIndex]).fadeIn();
+        // },500)
         
         console.log(currentIndex);
     },timer);
