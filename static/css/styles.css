@@ -1276,7 +1276,7 @@ section {
 }
 
 .cards-container {
-  max-width: 900px;
+  max-width: 940px;
   margin: 0 auto;
   padding: 0 30px;
   box-sizing: border-box;
@@ -1330,8 +1330,8 @@ section {
   line-height: 1.6;
   margin-bottom: 30px;
   opacity: 1;
-  padding: 0 10px;
-  min-height: 175px;
+  padding: 0 0;
+  min-height: 140px;
 }
 .card-outer.-with-image {
   padding-top: 10px;
@@ -1542,7 +1542,7 @@ section {
   right: -50px;
   top: -190px;
   width: 50%;
-  max-width: 480px;
+  max-width: 510px;
 }
 
 .hero-panel__ctas {
@@ -2153,7 +2153,7 @@ html.-static, body.-static {
 }
 
 .section-sharing {
-  top: 34%;
+  top: 35%;
 }
 
 .section-friends {
