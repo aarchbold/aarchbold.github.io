@@ -1331,7 +1331,7 @@ section {
   margin-bottom: 30px;
   opacity: 1;
   padding: 0 0;
-  min-height: 140px;
+  min-height: 128px;
 }
 .card-outer.-with-image {
   padding-top: 10px;
@@ -1344,6 +1344,11 @@ section {
 
   .section-image {
     width: 42% !important;
+  }
+}
+@media (max-width: 1120px) {
+  .card-outer p br {
+    display: none;
   }
 }
 @media (max-width: 1000px) {
@@ -1527,7 +1532,7 @@ section {
   padding-top: 20px;
 }
 .hero-panel__inner h1 {
-  font-size: 56px;
+  font-size: 48px;
   font-family: TruenoBlack, sans-serif;
   line-height: 1.3;
 }
@@ -2353,7 +2358,7 @@ html.-static, body.-static {
   }
   .hero-panel__inner .hero-panel__phone {
     right: -20px;
-    width: 376px;
+    max-width: 430px;
   }
 }
 @media (max-width: 1000px) {
@@ -3591,12 +3596,64 @@ button.-small, .button.-small {
   padding-bottom: 10px;
 }
 
+.generic-header__h1 {
+  text-align: center;
+  font-family: TruenoBlack, sans-serif;
+  font-size: 35px;
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+.generic-header__image {
+  text-align: center;
+  margin: 40px 0 10px;
+}
+.generic-header__image img {
+  max-width: 474px;
+  width: 100%;
+}
+
+.generic-subheader__image {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.generic-subheader__image img {
+  max-width: 150px;
+  width: 100%;
+}
+
+.generic-hr {
+  margin: 30px auto 40px;
+  height: 10px;
+  max-width: 200px;
+  background-color: #F7F7F7;
+}
+
 .generic-container {
   max-width: 640px;
   width: 100%;
   margin: 0 auto;
   padding: 0px 16px 60px;
   box-sizing: border-box;
+}
+
+.generic-container__section {
+  font-size: 22px;
+  line-height: 1.5;
+  font-family: TruenoRegular, sans-serif;
+  border-bottom: 10px solid #F7F7F7;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+.generic-container__section h2 {
+  font-family: TruenoBlack, sans-serif;
+  font-size: 26px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+.generic-container__section a {
+  color: #4c8bff;
 }
 
 .generic__item {
