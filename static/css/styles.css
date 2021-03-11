@@ -3622,6 +3622,12 @@ button.-small, .button.-small {
   max-width: 150px;
   width: 100%;
 }
+.generic-subheader__image img.-guidelines {
+  max-width: 140px;
+}
+.generic-subheader__image img.-conversations {
+  max-width: 200px;
+}
 
 .generic-hr {
   margin: 30px auto 40px;
@@ -3643,17 +3649,36 @@ button.-small, .button.-small {
   line-height: 1.5;
   font-family: TruenoRegular, sans-serif;
   border-bottom: 10px solid #F7F7F7;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   margin-bottom: 40px;
+}
+.generic-container__section.-no-border {
+  border-bottom: none;
 }
 .generic-container__section h2 {
   font-family: TruenoBlack, sans-serif;
   font-size: 26px;
   line-height: 1.4;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .generic-container__section a {
   color: #4c8bff;
+}
+.generic-container__section p {
+  display: block;
+  margin-bottom: 20px;
+}
+.generic-container__section strong {
+  font-family: TruenoBold, sans-serif;
+}
+.generic-container__section ul {
+  margin-bottom: 20px;
+  list-style: disc;
+  margin-left: 30px;
+}
+.generic-container__section ul li {
+  padding-left: 10px;
+  margin-bottom: 30px;
 }
 
 .generic__item {
