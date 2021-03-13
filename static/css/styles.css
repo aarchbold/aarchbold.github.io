@@ -2659,7 +2659,8 @@ html.-static, body.-static {
     position: relative;
     right: auto;
     top: 0;
-    max-width: 400px;
+    max-width: 70%;
+    width: 70%;
   }
 
   .hero-panel__ctas {
@@ -2854,6 +2855,11 @@ html.-static, body.-static {
 @media (max-width: 476px) {
   .section-starts {
     top: 40%;
+  }
+
+  .hero-panel__inner .hero-panel__phone {
+    width: 100%;
+    max-width: 100%;
   }
 }
 @media (max-width: 400px) {
@@ -5034,9 +5040,9 @@ progress::-moz-progress-bar {
 .testimonial-card__inner {
   text-align: center;
   padding: 50px 60px 100px 60px;
-  font-size: 26px;
-  font-family: TruenoSemiBold, sans-serif;
-  line-height: 1.7;
+  font-size: 32px;
+  font-family: TruenoBlack, sans-serif;
+  line-height: 1.6;
   box-sizing: border-box;
 }
 
@@ -5044,7 +5050,7 @@ progress::-moz-progress-bar {
   padding: 30px 20px 0 20px;
   font-size: 24px;
   text-align: center;
-  font-family: TruenoBlack, sans-serif;
+  font-family: TruenoSemiBold, sans-serif;
 }
 
 .testimonial-card__location {
@@ -5056,11 +5062,10 @@ progress::-moz-progress-bar {
 
 @media (max-width: 900px) {
   .testimonial-card__inner {
-    font-size: 19px;
+    font-size: 28px;
   }
-
-  .testimonial-card__author {
-    font-size: 20px;
+  .testimonial-card__inner br {
+    display: none;
   }
 
   .testimonial-card__location {
@@ -5069,7 +5074,7 @@ progress::-moz-progress-bar {
 }
 @media (max-width: 800px) {
   .testimonial-card__inner {
-    font-size: 17px;
+    font-size: 21px;
   }
 
   .testimonial-card__author {
@@ -5090,6 +5095,11 @@ progress::-moz-progress-bar {
 
   .testimonial-card__author {
     padding: 20px 20px 0 20px;
+  }
+}
+@media (max-width: 500px) {
+  .testimonial-card__inner {
+    font-size: 19px;
   }
 }
 /* Slider */
