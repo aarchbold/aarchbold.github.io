@@ -532,7 +532,7 @@ section {
 .footer-inner {
   position: absolute;
   bottom: 0;
-  padding: 0 0 100px 80px;
+  padding: 0 100px 100px 80px;
   color: #ffffff;
   width: 100%;
   box-sizing: border-box;
