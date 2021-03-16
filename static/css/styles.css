@@ -1328,7 +1328,7 @@ section {
   font-size: 20px;
   font-family: TruenoSemiBold, sans-serif;
   line-height: 1.6;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   opacity: 1;
   padding: 0 0;
   min-height: 128px;
@@ -5049,9 +5049,10 @@ progress::-moz-progress-bar {
   .phone-features__quote {
     position: relative;
     left: auto;
-    width: 80%;
+    width: 92%;
     font-size: 18px;
     line-height: 1.5;
+    margin-left: 30px;
   }
 
   .phone-features {
@@ -5060,8 +5061,17 @@ progress::-moz-progress-bar {
   }
 
   .phone-features__video {
-    max-width: 84%;
-    margin-left: 0;
+    max-width: 104%;
+    margin-left: 0px;
+  }
+
+  .phone-features__quote--profile {
+    bottom: -79px;
+    left: -50px;
+  }
+
+  .phone-features__quote--bubble {
+    left: 20px;
   }
 }
 /* testimonials styles
