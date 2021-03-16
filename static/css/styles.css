@@ -1549,6 +1549,19 @@ section {
   width: 50%;
   max-width: 510px;
 }
+.hero-panel__inner .hero-panel__phone .video {
+  position: absolute;
+  top: 11.1%;
+  left: 21.1%;
+  width: 59%;
+}
+.hero-panel__inner .hero-panel__phone .video video {
+  width: 100%;
+  border-radius: 25px;
+}
+.hero-panel__inner .hero-panel__phone img {
+  width: 100%;
+}
 
 .hero-panel__ctas {
   padding-top: 30px;
@@ -2661,6 +2674,10 @@ html.-static, body.-static {
     top: 0;
     max-width: 70%;
     width: 70%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 
   .hero-panel__ctas {
