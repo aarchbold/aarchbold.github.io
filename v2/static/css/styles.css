@@ -3614,6 +3614,14 @@ button.-small, .button.-small {
 }
 /* FAQ styles
 */
+.iframe-container {
+  margin: 0 -100px;
+}
+.iframe-container iframe {
+  height: 600px;
+  width: 100%;
+}
+
 .generic-header {
   padding-top: 100px;
   padding-bottom: 10px;
