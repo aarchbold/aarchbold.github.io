@@ -12,8 +12,8 @@
 <meta property="og:image" content="https://trytrue.com/static/images/ui/logos/share-true-4.jpg">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="True">
-<script src="/static/js/vendors.js?cache=1615956610049"></script>
-<link rel="stylesheet" href="/static/css/styles.css?cache=1615956610049">
+<script src="/static/js/vendors.js?cache=1616186468035"></script>
+<link rel="stylesheet" href="/static/css/styles.css?cache=1616186468035">
 <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.png">
 <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0087/6974.js" async="async"></script>
 
@@ -82,13 +82,13 @@
                 <a href="/index.html" class="button-nav -home"><img src="/static/images/icons/icon-home.svg" width="20" /></a>
              -->
             <div class="topnav-links">
-                <!-- <a  class="button-nav" href="/faq.html">FAQ</a> -->
+                <!-- <a  class="button-nav" href="/faq.html">FAQ</a>
                 <a  class="button-nav" href="/guidelines/">COMMUNITY GUIDELINES</a>
-                <a id="tryTrueNav" class="button-nav" target="_blank" href="/index.html#waitlist">TRY TRUE</a>
-                <!-- <a  class="button-nav" href="/support/">SUPPORT</a>
+                <a id="tryTrueNav" class="button-nav" target="_blank" href="/index.html#waitlist">TRY TRUE</a> -->
+                <a  class="button-nav" href="/support/">SUPPORT</a>
                 <a  class="button-nav" href="/careers/">CAREERS</a>
                 <a  class="button-nav" href="/story/">OUR STORY</a>
-                <a  class="button-nav" href="/safety/">SAFETY</a> -->
+                <a  class="button-nav" href="/safety/">SAFETY</a>
             </div>
             <div class="mobile-nav-icon">
                 <span></span>
@@ -200,30 +200,13 @@
     });
 </script>
                 <div class="blog-list">
-                    
-<div id="blogHome" class="blog-list__row">
-</div>
+                    <ul id="blogHome" class="faq-article__list">
+    
+</ul>
 
 <script id="posts-template" type="text/x-handlebars-template">
     {{#each posts}}
-        {{#if @index}}
-        <div class="blog-list__item">
-            <div class="blog-list__item--inner">
-                <div class="blog-list__item--image" style="background-image: url({{this.articleImg}});">
-                    <a href="page.html?id={{articleId}}"></a>
-                </div>
-                <div class="blog-list__item--title"><a href="page.html?id={{articleId}}">{{this.articleHeadline}}</a></div>
-                <div class="blog-list__item--description">{{{this.articleExcerpt}}}</div>
-                <div class="blog-author">
-                    <div class="blog-author__thumbnail">
-                        <a href="page.html?id={{articleId}}"><img src="{{this.authorImg}}" /></a>
-                    </div>
-                    <div class="blog-author__name">{{this.authorName}}</div>
-                    <div class="blog-author__date">{{this.articleDate}}</div>
-                </div>
-            </div>
-        </div>
-        {{/if}}
+        <li><a href="faq.html?id={{articleId}}">{{this.articleHeadline}}<img class="faq-link__icon" src="/static/images/v2/icons/icon-link-arrow.svg" /></a></li>
     {{/each}}
 </script>
 
@@ -279,7 +262,7 @@
         </div>
 
 
-        <script src="../static/js/app.js?cache=1615956610049"></script>
+        <script src="../static/js/app.js?cache=1616186468035"></script>
         <!-- Google Analytics -->
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

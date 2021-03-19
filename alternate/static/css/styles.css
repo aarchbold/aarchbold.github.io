@@ -532,7 +532,7 @@ section {
 .footer-inner {
   position: absolute;
   bottom: 0;
-  padding: 0 0 100px 80px;
+  padding: 0 100px 100px 80px;
   color: #ffffff;
   width: 100%;
   box-sizing: border-box;
@@ -1328,7 +1328,7 @@ section {
   font-size: 20px;
   font-family: TruenoSemiBold, sans-serif;
   line-height: 1.6;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   opacity: 1;
   padding: 0 0;
   min-height: 128px;
@@ -1548,6 +1548,19 @@ section {
   top: -190px;
   width: 50%;
   max-width: 510px;
+}
+.hero-panel__inner .hero-panel__phone .video {
+  position: absolute;
+  top: 11.1%;
+  left: 21.1%;
+  width: 59%;
+}
+.hero-panel__inner .hero-panel__phone .video video {
+  width: 100%;
+  border-radius: 25px;
+}
+.hero-panel__inner .hero-panel__phone img {
+  width: 100%;
 }
 
 .hero-panel__ctas {
@@ -2661,6 +2674,10 @@ html.-static, body.-static {
     top: 0;
     max-width: 70%;
     width: 70%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 
   .hero-panel__ctas {
@@ -3614,14 +3631,6 @@ button.-small, .button.-small {
 }
 /* FAQ styles
 */
-.iframe-container {
-  margin: 0 -100px;
-}
-.iframe-container iframe {
-  height: 600px;
-  width: 100%;
-}
-
 .generic-header {
   padding-top: 100px;
   padding-bottom: 10px;
@@ -5040,9 +5049,10 @@ progress::-moz-progress-bar {
   .phone-features__quote {
     position: relative;
     left: auto;
-    width: 80%;
+    width: 92%;
     font-size: 18px;
     line-height: 1.5;
+    margin-left: 30px;
   }
 
   .phone-features {
@@ -5051,8 +5061,17 @@ progress::-moz-progress-bar {
   }
 
   .phone-features__video {
-    max-width: 84%;
-    margin-left: 0;
+    max-width: 104%;
+    margin-left: 0px;
+  }
+
+  .phone-features__quote--profile {
+    bottom: -79px;
+    left: -50px;
+  }
+
+  .phone-features__quote--bubble {
+    left: 20px;
   }
 }
 /* testimonials styles
