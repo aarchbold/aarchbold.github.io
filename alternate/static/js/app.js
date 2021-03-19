@@ -494,7 +494,7 @@ $.fn.handlePhoneQuote = function() {
     var $context = $(this),
         $quotes = $('.phone-features__quote--slide',$context),
         $screenshots = $('.phone-features__video',$context),
-        timer = 7000,
+        timer = 5000,
         currentIndex = 0;
 
     $quotes.hide();
