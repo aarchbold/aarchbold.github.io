@@ -2935,6 +2935,24 @@ button.-small, .button.-small {
   box-shadow: 0px 10px 40px 0px rgba(7, 55, 102, 0.3);
 }
 
+.faq-link__button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 10px 15px !important;
+  border-radius: 28px;
+  font-family: TruenoRegular;
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  background: #4C8BFF;
+  color: #ffffff;
+}
+
 .button-faq {
   border: 1px solid #D2D2D2;
   color: #1E1E1E;
@@ -3749,7 +3767,7 @@ button.-small, .button.-small {
   position: relative;
   color: #303030;
   text-decoration: none;
-  padding: 22px 60px 22px 0;
+  padding: 22px 100px 22px 0;
   display: block;
   border-bottom: 10px solid #F7F7F7;
 }
@@ -3798,6 +3816,14 @@ button.-small, .button.-small {
 .generic-container.-margin-top {
   padding-top: 165px;
   text-align: left;
+}
+
+.generic-container__cta {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.generic-container__cta .button {
+  box-shadow: 0px 10px 40px 0px rgba(7, 55, 102, 0.3);
 }
 
 .generic-container__section {
