@@ -12,8 +12,8 @@
 <meta property="og:image" content="https://trytrue.com/static/images/ui/logos/share-true-4.jpg">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="True">
-<script src="/static/js/vendors.js?cache=1616379935315"></script>
-<link rel="stylesheet" href="/static/css/styles.css?cache=1616379935315">
+<script src="/static/js/vendors.js?cache=1616652657842"></script>
+<link rel="stylesheet" href="/static/css/styles.css?cache=1616652657842">
 <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.png">
 <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0087/6974.js" async="async"></script>
 
@@ -28,6 +28,22 @@
                 <img src="static/images/ui/backgrounds/ajax-loader.gif" />
             </div>
         </div>
+        <div id="feedbackModal">
+            <h2>Share your Story</h2>
+            <p>We want to know how your experience on True is going?  How are you using True? What threads are you creating? How is it helping you in your daily life with your family and friends?  Please share your story by completing and submitting the form below:</p>
+            <div class="modal-form">
+                <input id="feedbackFirstName" type="text" placeholder="First Name" autocomplete="off" />
+                <input id="feedbackLastName" class="-right" type="text" placeholder="Last Name" autocomplete="off" />
+                <input id="feedbackEmail" type="email" placeholder="Email" autocomplete="off" />
+                <textarea id="feedbackComments" placeholder="Describe how True has helped you"></textarea>
+            </div>
+            <div class="modal-contact__ctas">
+                <a id="submitPress" href="#" class="button button-modal -disabled">Submit</a>
+            </div>
+        </div>
+
+
+
         <div id="pressModal">
             <h2>Drop us a deadline ✍️</h2>
             <h3>We’re happy to help with your story.</h3>
@@ -82,13 +98,13 @@
                 <a href="/index.html" class="button-nav -home"><img src="/static/images/icons/icon-home.svg" width="20" /></a>
              -->
             <div class="topnav-links">
-                <!-- <a  class="button-nav" href="/faq.html">FAQ</a>
+                <a  class="button-nav" href="/faq.html">FAQ</a>
                 <a  class="button-nav" href="/guidelines/">COMMUNITY GUIDELINES</a>
-                <a id="tryTrueNav" class="button-nav" target="_blank" href="/index.html#waitlist">TRY TRUE</a> -->
-                <a  class="button-nav" href="/support/">SUPPORT</a>
+                <a id="tryTrueNav" class="button-nav" target="_blank" href="/index.html#waitlist">TRY TRUE</a>
+                <!-- <a  class="button-nav" href="/support/">SUPPORT</a>
                 <a  class="button-nav" href="/careers/">CAREERS</a>
                 <a  class="button-nav" href="/story/">OUR STORY</a>
-                <a class="button-nav -selected"  href="/safety/">SAFETY</a>
+                <a class="button-nav -selected"  href="/safety/">SAFETY</a> -->
             </div>
             <div class="mobile-nav-icon">
                 <span></span>
@@ -201,12 +217,12 @@
     <div class="footer-col">
         <a onclick="trackFBClick('appStoreButtonClick');" href="https://apps.apple.com/us/app/true-private-social-network/id834451429" target="_blank" id="getForiOSFooter" class="button button-icon button-shadow">
             <img src="/static/images/v2/icons/icon-ios.png" />
-            Get for iOS
+            iOS
         </a>
         <br /><br />
         <a onclick="trackFBClick('googleStoreButtonClick');" href="https://play.google.com/store/apps/details?id=hellomobile.hello"  target="_blank" id="getForAbdroidFooter" class="button button-icon button-android button-shadow">
             <img src="/static/images/v2/icons/icon-android.png" />
-            Get for Android
+            Android
         </a>
     </div>
 </div>
@@ -216,7 +232,7 @@
         </div>
 
 
-        <script src="/static/js/app.js?cache=1616379935315"></script>
+        <script src="/static/js/app.js?cache=1616652657842"></script>
         <!-- Google Analytics -->
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

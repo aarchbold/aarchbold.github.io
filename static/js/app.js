@@ -114,6 +114,9 @@ var handleContact = function() {
     var $modal = $('.modal-waitlist'),
         $closeModal = $('#closeOverlay'),
         $closeBtn = $('.modal-close__button'),
+        $feedbackOpen = $('#shareStoryFeedback'),
+        $submitFeedback = $('#submitFeedback'),
+
         $pressOpen = $('.button-press'),
         $investorsOpen = $('.button-investors'),
         $pressFirstName = $('#pressFirstName'),
@@ -187,6 +190,43 @@ var handleContact = function() {
             $investorsFirm.focus()
         },100)
     });
+
+
+    $submitFeedback.click(function(e) {
+        alert('hi');
+        var postData = {
+            email: $investorsEmail.val(),
+            first_name: $investorsFirstName.val(),
+            last_name: $investorsLastName.val(),
+            firm: $investorsFirm.val()
+        }
+        e.preventDefault();
+        if (!$submitInvestors.hasClass('-disabled')) {
+            $spinner.show();
+            $.ajax({
+                url: 'https://us-central1-trytruecom-website.cloudfunctions.net/investorInfo',
+                type: 'POST',
+                data: postData,
+                dataType: 'json',
+                cache: false,
+                beforeSend: function() {
+
+                },
+                success: function(data) {
+                },
+                error: function(xhr, ajaxOptions, thrownError) { // if error occured
+                    $spinner.hide();
+                },
+                complete: function(data) {
+                    console.log(data);
+                    $success.show();
+                    $submitInvestors.hide();
+                    $spinner.hide();
+                    resetInvestorsForm();
+                }
+            });
+        }
+    })
 
     $submitInvestors.click(function(e) {
         var postData = {
@@ -350,7 +390,20 @@ var handleContact = function() {
         $('#investorsModal').hide();
         $('#pressModal').show();
         $modal.fadeIn();
-    }) 
+    })
+
+    $feedbackOpen.click(function(e) {
+        e.preventDefault(e);
+        $success.hide();
+        $submitPress.show();
+        $('#investorsModal').hide();
+        $('#pressModal').hide();
+        $('#feedbackModal').show();
+        $modal.fadeIn();
+    })
+
+
+    
     $investorsOpen.click(function(e) {
         e.preventDefault(e);
         $success.hide();
