@@ -372,7 +372,7 @@ section {
   padding-right: 0;
 }
 .footer-col .button {
-  min-width: 75px;
+  min-width: 175px;
 }
 
 .footer-col__header {
@@ -1311,7 +1311,10 @@ section {
 
 .feature-outer {
   position: relative;
-  margin-bottom: 300px;
+  margin-bottom: 380px;
+}
+.feature-outer.last-child {
+  margin-bottom: 220px;
 }
 
 .card-outer {
@@ -1321,15 +1324,15 @@ section {
   box-sizing: border-box;
   padding: 35px 30px;
   box-shadow: 2px 2px 50px 0px rgba(0, 0, 0, 0.3);
-  border-radius: 60px;
+  border-radius: 100px;
   margin-top: 20px;
 }
 .card-outer.-half {
   width: 55%;
-  margin-left: 60px;
+  margin-left: 0;
 }
 .card-outer.-right {
-  margin-left: 40%;
+  margin-left: 45%;
 }
 .card-outer h2 {
   text-align: center;
@@ -1343,7 +1346,7 @@ section {
   font-size: 32px;
   font-family: TruenoBold, sans-serif;
   line-height: 1.6;
-  padding: 0 60px;
+  padding: 0 80px;
 }
 .card-outer p {
   text-align: center;
@@ -1357,6 +1360,7 @@ section {
 }
 .card-outer.-with-image {
   padding-top: 10px;
+  border-radius: 60px;
 }
 
 @media (max-width: 1200px) {
@@ -1591,7 +1595,7 @@ section {
 .hero-panel__ctas a {
   display: inline-block;
   margin: 0 2px 6px;
-  min-width: 75px;
+  min-width: 175px;
 }
 
 html.-static, body.-static {
@@ -2208,7 +2212,7 @@ html.-static, body.-static {
 .section-image {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: -40px;
   -webkit-transform: translateY(-46%);
   -ms-transform: translateY(-46%);
   transform: translateY(-46%);
@@ -2216,7 +2220,7 @@ html.-static, body.-static {
 }
 .section-image.-left {
   right: auto;
-  left: 0px;
+  left: -40px;
 }
 .section-image img {
   width: 100%;
@@ -3012,6 +3016,7 @@ button.-small, .button.-small {
 }
 
 .button-icon {
+  box-sizing: border-box;
   position: relative;
   padding-left: 62px !important;
 }
@@ -3019,6 +3024,14 @@ button.-small, .button.-small {
   position: absolute;
   top: 15px;
   left: 28px;
+  width: 26px;
+}
+
+.button-ios {
+  padding-left: 78px !important;
+}
+.button-ios img {
+  left: 45px;
   width: 26px;
 }
 
@@ -5261,6 +5274,7 @@ progress::-moz-progress-bar {
 .testimonials-container {
   max-width: 760px;
   margin: 0 auto;
+  padding-top: 160px;
 }
 .testimonials-container:after {
   content: '';
