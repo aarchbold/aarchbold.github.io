@@ -744,7 +744,7 @@ $(window).on('load', function (e) {
     if ($(window).width() < 1000) {
       $buttonsOffset = 22;
     }
-    if ($(window).width() < 640) {
+    if ($(window).width() < 700) {
       $buttonsOffset = 30;
       // move footer
       $('.section-footer').appendTo('.section-starts');
@@ -785,12 +785,12 @@ $(window).on('load', function (e) {
               // init the parallax if the site starts at mobile and resizes to not mobile
               $('[data-scroll-speed]').moveIt();
             }
-            if (ogWidth < 640 && $(window).width() > 640) {
+            if (ogWidth < 700 && $(window).width() > 700) {
               // check if the footer has been moved.
               $('.section-footer').appendTo('#ogFooterPosition');
-            } else if (ogWidth > 640 && $(window).width() < 640) {
+            } else if (ogWidth > 700 && $(window).width() < 700) {
               $('.section-footer').appendTo('.section-starts');
-            } else if (ogWidth < 640 && $(window).width() < 640) {
+            } else if (ogWidth < 700 && $(window).width() < 700) {
               $('.section-footer').appendTo('.section-starts');
             } else {
               $('.section-footer').appendTo('#ogFooterPosition');

@@ -961,7 +961,7 @@ section {
   }
 
   .section-footer {
-    height: 1200px;
+    height: 2000px;
   }
 
   .footer-input {
@@ -1405,7 +1405,7 @@ section {
   }
 
   .card-outer h2 {
-    font-size: 25px;
+    font-size: 22px;
     line-height: 1.2;
   }
   .card-outer p {
@@ -1423,39 +1423,47 @@ section {
     margin-bottom: 200px;
   }
 }
-@media (max-width: 920px) {
+@media (max-width: 950px) {
   .card-outer {
     padding: 32px 23px;
   }
 
   .page-inner {
     max-width: 100%;
-    padding: 0 20px;
+    padding: 0 5px;
+  }
+
+  .card-outer .feature-body {
+    font-size: 22px;
   }
 }
 @media (max-width: 850px) {
-  .card-outer h2 {
-    font-size: 32px;
+  .feature-outer {
+    margin-bottom: 160px;
   }
-  .card-outer p {
-    font-size: 18px;
-  }
-
-  .section-image {
-    width: 46% !important;
+  .feature-outer.last-child {
+    margin-bottom: 100px;
   }
 }
 @media (max-width: 800px) {
-  .card-outer.-right {
-    margin-left: 40%;
-  }
   .card-outer h2 {
-    font-size: 26px;
+    font-size: 22px;
     margin-bottom: 18px;
   }
   .card-outer p {
-    font-size: 16px;
+    font-size: 15px;
     margin-bottom: 18px;
+    min-height: auto;
+  }
+  .card-outer .feature-body {
+    padding: 0 28px;
+  }
+  .card-outer.-half {
+    width: 52%;
+    margin-left: 45px;
+  }
+  .card-outer.-half.-right {
+    margin-left: 42%;
   }
 
   .card-inner .card-image {
@@ -2478,20 +2486,20 @@ html.-static, body.-static {
     width: 120px;
   }
 }
-@media (max-width: 920px) {
+@media (max-width: 950px) {
   .main-site__container {
     padding-top: 260px;
   }
 
   .hero-panel__inner {
     padding-top: 0;
-    padding-right: 290px;
+    padding-right: 400px;
   }
   .hero-panel__inner h1 {
     font-size: 32px;
   }
   .hero-panel__inner .hero-panel__phone {
-    max-width: 340px;
+    max-width: 370px;
   }
 }
 @media (max-width: 900px) {
@@ -2506,6 +2514,10 @@ html.-static, body.-static {
   .p-home {
     font-size: 24px;
   }
+
+  .section-sharing {
+    top: 37%;
+  }
 }
 @media (max-width: 800px) {
   .h2-home {
@@ -2519,9 +2531,10 @@ html.-static, body.-static {
 
   .hero-panel__inner {
     margin-top: -40px;
+    padding-right: 300px;
   }
   .hero-panel__inner .hero-panel__phone {
-    top: -100px;
+    top: -130px;
     max-width: 320px;
   }
 
@@ -2540,10 +2553,6 @@ html.-static, body.-static {
   }
   .hero-stage__header .-animated-image {
     width: 200px;
-  }
-
-  .section-image.-left {
-    left: -35px;
   }
 
   .section-sharing {
@@ -2692,14 +2701,6 @@ html.-static, body.-static {
   .section-sharing {
     top: 33%;
   }
-
-  .section-friends {
-    top: 82%;
-  }
-
-  .section-secure {
-    top: 114%;
-  }
 }
 @media (max-width: 700px) {
   .main-site__container {
@@ -2707,15 +2708,11 @@ html.-static, body.-static {
   }
 
   .section-sharing {
-    top: 30%;
+    top: 22%;
   }
 
-  .section-friends {
-    top: 73%;
-  }
-
-  .section-secure {
-    top: 101%;
+  .hero-panel__inner .hero-panel__phone {
+    top: -100px;
   }
 }
 @media (max-width: 650px) {
@@ -5352,9 +5349,10 @@ progress::-moz-progress-bar {
     padding-top: 150px;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .testimonial-card__inner {
-    font-size: 28px;
+    font-size: 27px;
+    line-height: 1.4;
   }
   .testimonial-card__inner br {
     display: none;
@@ -5365,6 +5363,10 @@ progress::-moz-progress-bar {
   }
 }
 @media (max-width: 800px) {
+  .testimonials-container {
+    padding-top: 80px;
+  }
+
   .testimonial-card__inner {
     font-size: 21px;
   }
