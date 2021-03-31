@@ -912,7 +912,7 @@ $(function() {
         $('.testimonial-card').slick({
             dots: true,
             arrows: true,
-            autoplay: false,
+            autoplay: true,
             autoplaySpeed: 6000,
         });
     }
