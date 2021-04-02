@@ -2165,6 +2165,9 @@ html.-static, body.-static {
     padding-left: 0;
     text-align: center;
     top: -50px; }
+    .hero-panel__inner h1 {
+      width: 80%;
+      margin: 0 auto; }
     .hero-panel__inner .hero-panel__phone {
       position: relative;
       right: auto;
@@ -2262,7 +2265,10 @@ html.-static, body.-static {
   .section-friends {
     top: 335px; }
   .section-secure {
-    top: 311px; } }
+    top: 311px; }
+  .hero-panel__inner h1 {
+    width: 100%;
+    margin: 0 auto; } }
 
 @media (max-width: 520px) {
   .section-starts {
