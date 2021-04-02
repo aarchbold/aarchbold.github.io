@@ -256,7 +256,7 @@ section {
     -ms-transform: translateY(0) !important;
     transform: translateY(0) !important; } }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   .page-h1 {
     font-size: 50px; } }
 
@@ -805,8 +805,6 @@ section {
     min-width: 800px; }
   .footer-social__links {
     margin-bottom: 20px; }
-  .section-footer {
-    height: 1730px; }
   .footer-input {
     margin-bottom: 20px; }
     .footer-input input {
@@ -821,7 +819,7 @@ section {
   .footer-subheader, .footer-hashtag {
     font-size: 18px; } }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   .footer-col__header {
     font-size: 20px;
     margin-bottom: 20px; }
@@ -839,6 +837,7 @@ section {
   .footer-background {
     min-width: 800px; }
   .section-footer {
+    height: 1200px;
     overflow: hidden;
     background-color: transparent; }
   .footer-header {
@@ -868,8 +867,6 @@ section {
     transform: translate(0, 0); }
   .footer-subheader {
     padding-right: 0; }
-  .section-footer {
-    height: 1900px; }
   .footer-input input {
     width: 100%;
     border-radius: 25px !important; }
@@ -935,8 +932,8 @@ section {
         margin-right: 10px; }
       .footer-col:last-child br {
         display: none; }
-  .section-footer {
-    height: 900px; } }
+  .footer-cast {
+    top: -70px; } }
 
 @media (max-width: 520px) {
   .footer-cast {
@@ -956,7 +953,7 @@ section {
   .footer-input input {
     width: 55%; }
   .section-footer {
-    height: 888px; }
+    height: 1000px; }
   .footer-boulder {
     top: -10px;
     -webkit-transform: translate(0, 0);
@@ -1066,10 +1063,10 @@ section {
     line-height: 1.4; }
   .card-outer .feature-body {
     min-height: auto;
-    font-size: 32px;
+    font-size: 30px;
     font-family: TruenoBold, sans-serif;
     line-height: 1.6;
-    padding: 0 60px;
+    padding: 0 60px 0 90px;
     text-align: left; }
   .card-outer p {
     text-align: center;
@@ -1158,7 +1155,7 @@ section {
   .card-inner .card-image {
     height: 124px; } }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   .cards-container {
     padding: 0; }
   .card-inner .card-image {
@@ -2001,11 +1998,7 @@ html.-static, body.-static {
     padding-top: 260px; }
   .hero-panel__inner {
     padding-top: 0;
-    padding-right: 430px; }
-    .hero-panel__inner h1 {
-      font-size: 34px; }
-    .hero-panel__inner .hero-panel__phone {
-      max-width: 370px; } }
+    padding-right: 340px; } }
 
 @media (max-width: 900px) {
   .hero-stage__header {
@@ -2016,6 +2009,11 @@ html.-static, body.-static {
     font-size: 24px; }
   .section-sharing {
     top: 37%; } }
+
+@media (max-width: 850px) {
+  .hero-panel__inner .hero-panel__phone {
+    top: -130px;
+    max-width: 320px; } }
 
 @media (max-width: 800px) {
   .h2-home {
@@ -2050,7 +2048,7 @@ html.-static, body.-static {
     -ms-transform: translateY(0) !important;
     transform: translateY(0) !important; } }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   .hero-panel {
     top: 180px;
     padding: 0px 20px;
@@ -2155,7 +2153,7 @@ html.-static, body.-static {
     -webkit-transform: translateY(350%) scale(0.6);
     transform: translateY(350%) scale(0.6); } }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   .main-site__container {
     padding-top: 340px; }
   .section-sharing {
@@ -2566,7 +2564,7 @@ button, .button {
       top: 10px;
       left: 15px; } }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   .button-nav {
     font-size: 14px;
     padding: 8px 14px;
@@ -3399,7 +3397,7 @@ button, .button {
     width: 100%;
     margin: 0 0 20px 0; } }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   .faq-more__row {
     max-width: 640px;
     width: 80%;
@@ -4140,7 +4138,7 @@ progress::-moz-progress-bar {
     font-size: 24px;
     padding: 50px 30px; } }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   .phone-features__video {
     max-width: 360px; }
   .phone-features__quote {
@@ -4218,10 +4216,21 @@ progress::-moz-progress-bar {
   box-sizing: border-box; }
 
 .testimonial-card__author {
-  padding: 30px 20px 0 20px;
+  position: relative;
+  padding: 10px 20px 0 20px;
   font-size: 24px;
   text-align: center;
   font-family: TruenoSemiBold, sans-serif; }
+
+.testimonial-card__thumb {
+  display: inline-block;
+  width: 60px;
+  padding-right: 5px; }
+  .testimonial-card__thumb img {
+    display: inline-block;
+    position: relative;
+    top: 22px;
+    width: 100%; }
 
 .testimonial-card__location {
   padding: 0 20px 0 20px;
@@ -4259,7 +4268,7 @@ progress::-moz-progress-bar {
   .testimonial-card__author {
     padding: 20px 20px 0 20px; } }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   .testimonials-container {
     max-width: 70%;
     width: 100%;

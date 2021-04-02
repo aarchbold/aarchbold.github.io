@@ -785,12 +785,12 @@ $(window).on('load', function (e) {
               // init the parallax if the site starts at mobile and resizes to not mobile
               $('[data-scroll-speed]').moveIt();
             }
-            if (ogWidth < 750 && $(window).width() > 750) {
+            if (ogWidth < 800 && $(window).width() > 800) {
               // check if the footer has been moved.
               $('.section-footer').appendTo('#ogFooterPosition');
-            } else if (ogWidth > 750 && $(window).width() < 750) {
+            } else if (ogWidth > 800 && $(window).width() < 800) {
               $('.section-footer').appendTo('.section-starts');
-            } else if (ogWidth < 750 && $(window).width() < 750) {
+            } else if (ogWidth < 800 && $(window).width() < 800) {
               $('.section-footer').appendTo('.section-starts');
             } else {
               $('.section-footer').appendTo('#ogFooterPosition');
