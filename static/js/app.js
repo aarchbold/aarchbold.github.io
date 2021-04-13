@@ -430,9 +430,9 @@ $(function() {
         })
 
         // slow down video playback
-        // var $firstVideo = $('#firstVideo');
-        // $firstVideo[0].playbackRate = 0.65;
-        // $firstVideo[0].play();
+        var $firstVideo = $('#firstVideo');
+        $firstVideo[0].playbackRate = 0.65;
+        $firstVideo[0].play();
 
         // var $secondVideo = $('#secondVideo');
         // $secondVideo[0].playbackRate = 0.65;
