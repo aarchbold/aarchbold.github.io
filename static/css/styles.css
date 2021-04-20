@@ -1048,7 +1048,7 @@ section {
   box-sizing: border-box;
   padding: 35px 30px;
   box-shadow: 2px 2px 50px 0px rgba(0, 0, 0, 0.3);
-  border-radius: 60px;
+  border-radius: 90px;
   margin-top: 20px; }
   .card-outer.-half {
     width: 55%;
@@ -1061,13 +1061,21 @@ section {
     font-family: TruenoBlack, sans-serif;
     margin-bottom: 20px;
     line-height: 1.4; }
+  .card-outer .feature-header {
+    font-size: 34px;
+    font-family: TruenoBlack, sans-serif;
+    line-height: 1.6;
+    padding: 0 60px 20px 60px;
+    text-align: center; }
   .card-outer .feature-body {
     min-height: auto;
-    font-size: 30px;
-    font-family: TruenoBold, sans-serif;
-    line-height: 1.6;
-    padding: 0 60px 0 90px;
+    font-size: 22px;
+    font-family: TruenoSemiBold, sans-serif;
+    line-height: 1.4;
+    padding: 14px 40px 24px 72px;
     text-align: left; }
+    .card-outer .feature-body.-offset {
+      padding: 14px 30px 24px 90px; }
   .card-outer p {
     text-align: center;
     font-size: 16px;
@@ -1823,9 +1831,9 @@ html.-static, body.-static {
     width: 100%; }
   .section-image .video {
     position: absolute;
-    top: 8.1%;
-    left: 27.1%;
-    width: 57.6%; }
+    top: 11.8%;
+    left: 21%;
+    width: 59%; }
     .section-image .video video {
       width: 100%;
       border-radius: 25px; }

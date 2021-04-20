@@ -431,16 +431,18 @@ $(function() {
 
         // slow down video playback
         var $firstVideo = $('#firstVideo');
-        $firstVideo[0].playbackRate = 0.65;
         $firstVideo[0].play();
 
-        // var $secondVideo = $('#secondVideo');
+        var $secondVideo = $('#secondVideo');
         // $secondVideo[0].playbackRate = 0.65;
-        // $secondVideo[0].play();
+        $secondVideo[0].play();
 
-        // var $thirdVideo = $('#thirdVideo');
-        // $thirdVideo[0].playbackRate = 0.65;
-        // $thirdVideo[0].play();
+        var $thirdVideo = $('#thirdVideo');
+        $thirdVideo[0].play();
+        var $fourthVideo = $('#fourthVideo');
+        $fourthVideo[0].play();
+        var $fifthVideo = $('#fifthVideo');
+        $fifthVideo[0].play();
 
         $(window).on('DOMContentLoaded load resize scroll', function() {
 
