@@ -1046,7 +1046,7 @@ section {
   width: 100%;
   background-color: #ffffff;
   box-sizing: border-box;
-  padding: 35px 30px;
+  padding: 45px 30px;
   box-shadow: 2px 2px 50px 0px rgba(0, 0, 0, 0.3);
   border-radius: 90px;
   margin-top: 20px; }
@@ -1064,7 +1064,7 @@ section {
   .card-outer .feature-header {
     font-size: 34px;
     font-family: TruenoBlack, sans-serif;
-    line-height: 1.6;
+    line-height: 1.4;
     padding: 0 60px 20px 60px;
     text-align: center; }
   .card-outer .feature-body {
@@ -1095,6 +1095,8 @@ section {
     font-size: 26px; }
     .card-outer .feature-body br {
       display: none; }
+    .card-outer .feature-body.-offset {
+      padding: 14px 40px 24px 72px; }
   .card-outer.-half {
     width: 52%;
     margin-left: 60px; }
@@ -1142,7 +1144,9 @@ section {
   .feature-outer {
     margin-bottom: 160px; }
     .feature-outer.last-child {
-      margin-bottom: 100px; } }
+      margin-bottom: 100px; }
+  .feature-header {
+    font-size: 30px; } }
 
 @media (max-width: 800px) {
   .card-outer h2 {
