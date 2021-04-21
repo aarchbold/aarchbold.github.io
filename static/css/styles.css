@@ -606,6 +606,12 @@ section {
   position: absolute;
   right: -20px;
   bottom: -10px; }
+  .footer-download__ctas a {
+    display: inline-block;
+    margin: 0 2px 6px;
+    min-width: 175px;
+    padding-top: 15px !important;
+    padding-bottom: 16px !important; }
 
 .footer-download__cta--link {
   -webkit-transition: all 0.25s;
@@ -736,9 +742,9 @@ section {
     -webkit-transform: translateY(150%) scale(0.7);
     transform: translateY(150%) scale(0.7); } }
 
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   .section-footer {
-    height: 1600px; }
+    height: 2000px; }
   .footer-input {
     margin-bottom: 120px; } }
 
@@ -748,6 +754,10 @@ section {
     width: 13%; }
   .footer-download__cta--link img {
     width: 150px; } }
+
+@media (max-width: 1050px) {
+  .section-footer {
+    height: 1900px; } }
 
 @media (max-width: 1000px) {
   .footer-download__cta--link img {
@@ -784,6 +794,12 @@ section {
     left: 400px;
     max-width: 13%;
     width: 13%; } }
+
+@media (max-width: 1050px) {
+  .footer-download__ctas {
+    position: relative;
+    right: 0;
+    padding-top: 20px; } }
 
 @media (max-width: 800px) {
   .footer-inner {
@@ -827,9 +843,6 @@ section {
     font-size: 14px; }
   .footer-col__copyright {
     font-size: 16px; }
-  .footer-download__ctas {
-    position: relative;
-    right: 0; }
   .footer-download__cta--link img {
     width: 114px; }
   .navigation-inner img {
@@ -837,7 +850,7 @@ section {
   .footer-background {
     min-width: 800px; }
   .section-footer {
-    height: 1200px;
+    height: 1000px;
     overflow: hidden;
     background-color: transparent; }
   .footer-header {
@@ -1315,6 +1328,13 @@ section {
     display: inline-block;
     margin: 0 2px 6px;
     min-width: 175px; }
+
+.footer-download__ctas a {
+  display: inline-block;
+  margin: 0 2px 6px;
+  min-width: 175px;
+  padding-top: 15px !important;
+  padding-bottom: 16px !important; }
 
 html.-static, body.-static {
   overflow: hidden; }
@@ -2313,7 +2333,7 @@ html.-static, body.-static {
     padding: 0 10px; }
   .hero-panel__inner p {
     line-height: 1.2;
-    font-size: 24px; }
+    font-size: 22px; }
   .hero-panel__inner h1 {
     line-height: 1.2;
     font-size: 35px; }
@@ -2574,21 +2594,13 @@ button, .button {
     width: 38px;
     height: 38px;
     margin-right: 4px; }
-  button, .button {
-    font-size: 15px;
-    padding: 14px 26px !important; }
   .button-social {
     width: 42px;
     height: 42px; }
     .button-social.-facebook img {
       width: 14px; }
     .button-social.-twitter img {
-      width: 26px; }
-  .button-icon {
-    padding-left: 42px !important; }
-    .button-icon img {
-      top: 10px;
-      left: 15px; } }
+      width: 26px; } }
 
 @media (max-width: 800px) {
   .button-nav {
