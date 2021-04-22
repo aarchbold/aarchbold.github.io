@@ -966,7 +966,7 @@ section {
   .footer-input input {
     width: 55%; }
   .section-footer {
-    height: 1000px; }
+    height: 1150px; }
   .footer-boulder {
     top: -10px;
     -webkit-transform: translate(0, 0);
@@ -985,7 +985,9 @@ section {
     -ms-transform: translate(0, 0);
     transform: translate(0, 0); }
   .footer-legal {
-    font-size: 14px; } }
+    font-size: 14px; }
+  .footer-background {
+    height: 850px; } }
 
 @media (max-width: 376px) {
   .footer-download__cta--link img {
@@ -2344,7 +2346,7 @@ html.-static, body.-static {
 
 @media (max-width: 476px) {
   .section-starts {
-    top: 43%; }
+    top: 35%; }
   .hero-panel__inner .hero-panel__phone {
     width: 100%;
     max-width: 100%; }
@@ -2356,7 +2358,7 @@ html.-static, body.-static {
   .hero-stage__header {
     top: 26%; }
   .section-starts {
-    top: 44%; } }
+    top: 34%; } }
 
 /* button styles
 */
