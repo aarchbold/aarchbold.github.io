@@ -757,9 +757,14 @@ section {
 
 @media (max-width: 1050px) {
   .section-footer {
-    height: 1900px; } }
+    height: 1900px; }
+  .footer-input {
+    margin-bottom: 90px; } }
 
 @media (max-width: 1000px) {
+  .footer-waterfall {
+    display: block;
+    height: 3000px; }
   .footer-download__cta--link img {
     width: 130px; }
   .footer-container {
@@ -796,14 +801,19 @@ section {
     width: 13%; } }
 
 @media (max-width: 1050px) {
-  .footer-download__ctas {
-    position: relative;
-    right: 0;
-    padding-top: 20px; } }
+  .footer-download__ctas a {
+    display: block !important;
+    padding-top: 12px !important;
+    padding-bottom: 13px !important; } }
 
 @media (max-width: 800px) {
   .footer-download__ctas {
-    text-align: center; }
+    position: relative;
+    right: auto;
+    padding-top: 20px;
+    text-align: center;
+    max-width: 185px;
+    margin: 0 auto; }
     .footer-download__ctas .button-ios {
       padding-left: 48px !important; }
   .footer-inner {
@@ -837,7 +847,10 @@ section {
   .footer-header {
     font-size: 30px; }
   .footer-subheader, .footer-hashtag {
-    font-size: 18px; } }
+    font-size: 18px; }
+  .footer-waterfall {
+    display: block;
+    height: auto; } }
 
 @media (max-width: 800px) {
   .footer-hashtag {
@@ -854,7 +867,7 @@ section {
   .navigation-inner img {
     width: 75px; }
   .footer-background {
-    min-width: 800px; }
+    min-width: 915px; }
   .section-footer {
     height: 1000px;
     overflow: hidden;
@@ -952,7 +965,8 @@ section {
       .footer-col:last-child br {
         display: none; }
   .footer-cast {
-    top: -70px; } }
+    top: -70px;
+    display: none; } }
 
 @media (max-width: 520px) {
   .footer-cast {
@@ -1160,6 +1174,12 @@ section {
     padding: 0 5px; }
   .card-outer .feature-body {
     font-size: 22px; } }
+
+@media (max-width: 860px) {
+  .feature-outer .feature-body {
+    padding-right: 20px; }
+    .feature-outer .feature-body.-offset {
+      padding-left: 40px; } }
 
 @media (max-width: 850px) {
   .feature-outer {
@@ -1804,7 +1824,7 @@ html.-static, body.-static {
   display: none;
   position: relative;
   z-index: 4;
-  margin-top: 35%; }
+  margin-top: 47%; }
 
 .main-site__shim {
   position: absolute;
@@ -2113,7 +2133,7 @@ html.-static, body.-static {
   display: none;
   position: absolute;
   bottom: 0;
-  height: 83.9%;
+  height: 83.4%;
   width: 100%; }
 
 .footer-waterfall__animation--mobile {
@@ -2277,7 +2297,7 @@ html.-static, body.-static {
     top: 15%; }
   .section-starts {
     position: absolute;
-    top: 34%;
+    top: 27%;
     z-index: 1000;
     left: 50%;
     -webkit-transform: translateX(-50%);
@@ -2320,7 +2340,7 @@ html.-static, body.-static {
 
 @media (max-width: 520px) {
   .section-starts {
-    top: 37%; }
+    top: 25%; }
   .hero-stage__header {
     top: 26%; }
   .section-sharing {
