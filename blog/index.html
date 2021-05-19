@@ -12,8 +12,8 @@
 <meta property="og:image" content="https://trytrue.com/static/images/ui/logos/share-true-4.jpg">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="True">
-<script src="/static/js/vendors.js?cache=1621306839246"></script>
-<link rel="stylesheet" href="/static/css/styles.css?cache=1621306839246">
+<script src="/static/js/vendors.js?cache=1621379673396"></script>
+<link rel="stylesheet" href="/static/css/styles.css?cache=1621379673396">
 <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.png">
 <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0087/6974.js" async="async"></script>
 
@@ -216,9 +216,32 @@
     });
 </script>
                 <div class="blog-list">
-                    <ul id="blogHome" class="faq-article__list">
-    
-</ul>
+                    <div class="faq-container">
+    <div class="generic-header">
+        <h1 class="generic-header__h1 -margin-top">How can we help you?</h1>
+        <p class="generic-subheader">Find answers to common questions here 🎉</p>
+        <div class="faq-input__container">    
+            <img class="faq-input__icon" src="/static/images/v2/icons/icon-search.svg" />
+            <input class="faq-input" placeholder="Search" />
+        </div>
+        <div class="faq-buttons__container">
+            <a href="#" class="button button-faq">Getting Started</a>
+            <a href="#" class="button button-faq">Privacy and Safety</a>
+            <a href="#" class="button button-faq">App Features</a>
+            <a href="#" class="button button-faq">General</a>
+        </div>
+    </div>
+
+    <div class="generic-container">
+        <div class="generic-container__section -no-border">
+            <div class="blog-list">
+                <ul id="blogHome" class="faq-article__list">
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script id="posts-template" type="text/x-handlebars-template">
     {{#each posts}}
@@ -237,12 +260,17 @@
         articleImg: ''
     }
 
-    var posts = [];
 
-    function getThePosts() {
+    function getThePosts(searchTerm) {
         $.get('https://us-central1-trytruecom-website.cloudfunctions.net/getWordPressPosts', function(response){
             var responseData = JSON.stringify(response.data);
             var responseJSON = JSON.parse(responseData);
+            var posts = [];
+            var data = {
+                posts: []
+            };
+            var template = Handlebars.compile(document.getElementById('posts-template').innerHTML);
+            var postsData = template(data);
             // console.log(responseJSON);
 
             responseJSON.reverse();
@@ -256,15 +284,32 @@
                 postObj.articleHeadline = e.title.rendered.replace('&nbsp;',' ');
                 postObj.articleExcerpt = e.excerpt.rendered.replace(/<\/?[^>]+>/gi, '').substring(0, 60) + '...';
                 postObj.articleImg = e.jetpack_featured_media_url;
-                posts.push(postObj);
+                postObj.articleContent = e.content.rendered;
+
+                if (searchTerm) {
+                    if (postObj.articleContent.includes(searchTerm)) {
+                        posts.push(postObj);  
+                        console.log('has a search term');
+                    }
+                } else {
+                    posts.push(postObj);   
+                }
                 postObj = {};
             });
+
+            // window.true = {
+            //     posts: posts
+            // };
             console.log(posts);
-            var data = {
-                posts: posts
-            };
-            var template = Handlebars.compile(document.getElementById('posts-template').innerHTML);
-            var postsData = template(data);
+            data.posts = posts
+        
+            if (searchTerm) {
+                $('#blogHome').empty();
+                //data.posts = [];
+                postsData = template(data);
+            } else {
+                postsData = template(data);
+            }
             document.getElementById('blogHome').innerHTML += postsData;
         });
     }
@@ -274,7 +319,16 @@
     $(function() {
         var $context = $('.faq-buttons__container'),
         $filters = $('.button-faq',$context),
+        $searchInput = $('.faq-input'),
         setFilter = '';
+
+        $searchInput.keyup(function(e) {
+            console.log(e.target.value);
+            if (e.which === 13) {
+                console.log('do the search');
+                getThePosts(e.target.value)
+            }
+        });
 
         $filters.click(function(e) {
             e.preventDefault();
@@ -306,7 +360,7 @@
         </div>
 
 
-        <script src="../static/js/app.js?cache=1621306839246"></script>
+        <script src="../static/js/app.js?cache=1621379673396"></script>
         <!-- Google Analytics -->
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
