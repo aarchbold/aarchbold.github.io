@@ -3,14 +3,17 @@ body {
 }
 
 .multiline.sub p {
-    color: #999;
+    color: #000000;
 }
 
+li {
+    margin-bottom: 8px !important;
+}
 
 .multiline.sub ol li  {
     list-style-type: decimal;
     margin: 0 28px;
-    color: #999;
+    color: #000000;
  }
 
 .multiline.sub ul.normal li  {
@@ -30,30 +33,30 @@ h2 {
 
 h3 {
     color: rgb(37, 37, 37);
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 0px;
-    line-height: 22px;
+    line-height: 1.6;
 }
 
 h3.title {
     color: rgb(37, 37, 37);
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 0px;
-    line-height: 22px;
+    line-height: 1.6;
 }
 
 p {
-    color: rgb(36, 36, 36);
-    font-size: 12px;
+    color: #000000;
+    font-size: 15px;
     letter-spacing: 0px;
-    line-height: 22px;
+    line-height: 1.6;
 }
 
 .multiline.sub {
-    color: rgb(155, 155, 155);
-    font-size: 12px;
+    color: #000000;
+    font-size: 15px;
     letter-spacing: 0px;
-    line-height: 22px;
+    line-height: 1.6;
 }
 
 strong {
