@@ -12,8 +12,8 @@
 <meta property="og:image" content="https://trytrue.com/static/images/ui/logos/share-true-4.jpg">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="True">
-<script src="/static/js/vendors.js?cache=1621441841625"></script>
-<link rel="stylesheet" href="/static/css/styles.css?cache=1621441841625">
+<script src="/static/js/vendors.js?cache=1621662757019"></script>
+<link rel="stylesheet" href="/static/css/styles.css?cache=1621662757019">
 <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.png">
 <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0087/6974.js" async="async"></script>
 
@@ -225,15 +225,18 @@
             <input class="faq-input" placeholder="Search" />
         </div>
         <div class="faq-buttons__container">
+            <a href="#" class="button button-faq">About True</a>
             <a href="#" class="button button-faq">Getting Started</a>
             <a href="#" class="button button-faq">Privacy and Safety</a>
-            <a href="#" class="button button-faq">App Features</a>
-            <a href="#" class="button button-faq">General</a>
         </div>
     </div>
 
     <div class="generic-container">
         <div class="generic-container__section -no-border">
+            <div class="blog-post-loader">
+                <br />loading blog posts...<br /><br />
+                <img src="../static/images/ui/backgrounds/ajax-loader.gif" />
+            </div>
             <div class="blog-list">
                 <ul id="blogHome" class="faq-article__list">
                     
@@ -262,6 +265,7 @@
 
 
     function getThePosts(searchTerm) {
+        $('.blog-post-loader').show();
         $.get('https://us-central1-trytruecom-website.cloudfunctions.net/getWordPressPosts', function(response){
             var responseData = JSON.stringify(response.data);
             var responseJSON = JSON.parse(responseData);
@@ -306,6 +310,7 @@
             } else {
                 postsData = template(data);
             }
+            $('.blog-post-loader').hide();
             document.getElementById('blogHome').innerHTML += postsData;
         });
     }
@@ -356,7 +361,7 @@
         </div>
 
 
-        <script src="../static/js/app.js?cache=1621441841625"></script>
+        <script src="../static/js/app.js?cache=1621662757019"></script>
         <!-- Google Analytics -->
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
