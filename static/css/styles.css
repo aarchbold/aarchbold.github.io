@@ -3178,6 +3178,8 @@ button, .button {
   .generic-container__section p {
     display: block;
     margin-bottom: 20px; }
+    .generic-container__section p img {
+      vertical-align: middle; }
   .generic-container__section .wp-block-image {
     text-align: center; }
   .generic-container__section strong {
