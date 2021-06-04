@@ -3122,7 +3122,7 @@ button, .button {
       display: block;
       border-bottom: 10px solid #F7F7F7; }
       .faq-article__list li .faq-link.-active {
-        border-bottom: none; }
+        border-bottom: 10px solid white; }
         .faq-article__list li .faq-link.-active img {
           -webkit-transform: translateY(-50%) rotate(90deg);
           -ms-transform: translateY(-50%) rotate(90deg);
