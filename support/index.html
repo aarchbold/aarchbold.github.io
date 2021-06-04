@@ -12,8 +12,8 @@
 <meta property="og:image" content="https://trytrue.com/static/images/ui/logos/share-true-4.jpg">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="True">
-<script src="/static/js/vendors.js?cache=1622751036055"></script>
-<link rel="stylesheet" href="/static/css/styles.css?cache=1622751036055">
+<script src="/static/js/vendors.js?cache=1622826351198"></script>
+<link rel="stylesheet" href="/static/css/styles.css?cache=1622826351198">
 <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.png">
 <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0087/6974.js" async="async"></script>
 
@@ -150,7 +150,10 @@
 
 <script id="posts-template" type="text/x-handlebars-template">
     {{#each posts}}
-        <li><a href="faq.html?id={{articleId}}">{{this.articleHeadline}}<img class="faq-link__icon" src="/static/images/v2/icons/icon-link-arrow.svg" /></a></li>
+        <li>
+            <a class="faq-link" href="faq.html?id={{articleId}}">{{this.articleHeadline}}<img class="faq-link__icon" src="/static/images/v2/icons/icon-link-arrow.svg" /></a>
+            <div class="generic-container__section -no-border -inline">{{{this.articleContent}}}</div>
+        </li>
     {{/each}}
 </script>
 
@@ -186,7 +189,6 @@
             responseJSON.reverse();
 
             $.each(responseJSON, function(i,e) {
-                console.log(e);
                 postObj.authorName = e._embedded.author[0].name;
                 postObj.authorImg = e._embedded.author[0].avatar_urls ? e._embedded.author[0].avatar_urls[96] : '../static/images/ui/logos/logo-blog-trueicon.png';
                 postObj.articleDate = moment(e.date).format("MMM DD, YYYY");
@@ -207,7 +209,6 @@
                 if (searchTerm) {
                     if (postObj.articleContent.toLowerCase().includes(searchTerm.toLowerCase()) || postObj.articleHeadline.toLowerCase().includes(searchTerm.toLowerCase())) {
                         posts.push(postObj);  
-                        console.log('has a search term');
                     }
                 } else {
                     posts.push(postObj);   
@@ -218,7 +219,6 @@
             if (category) {
                 // filter the results
                 posts.forEach(function(post) {
-                    console.log(post.categories)
                     if (post.categories.includes(category)) {
                         filteredPosts.push(post);
                     }
@@ -226,7 +226,6 @@
                 posts = filteredPosts;
             }
 
-            console.log(posts);
             data.posts = posts
         
             if (searchTerm) {
@@ -237,6 +236,19 @@
             }
             $('.blog-post-loader').hide();
             document.getElementById('blogHome').innerHTML += postsData;
+
+            $('.faq-link').click(function(e){
+                e.preventDefault();
+                if ($(this).hasClass('-active')) {
+                    $(this).removeClass('-active');
+                    $('.generic-container__section',$(this).parent()).hide();
+                } else {
+                    $(this).addClass('-active');
+                    $('.generic-container__section',$(this).parent()).show();
+                }
+                console.log($(this)); 
+            })
+
         });
     }
 
@@ -249,9 +261,7 @@
         setFilter = '';
 
         $searchInput.keyup(function(e) {
-            console.log(e.target.value);
             if (e.which === 13) {
-                console.log('do the search');
                 getThePosts(e.target.value)
             }
         });
@@ -261,7 +271,6 @@
             if ($(this).hasClass('-selected')) {
                 $(this).removeClass('-selected');
                 setFilter = '';
-                console.log(setFilter);
                 $('#blogHome').empty();
                 getThePosts();
                 return false;
@@ -270,7 +279,6 @@
             $filters.removeClass('-selected');
             $(this).addClass('-selected');  
             setFilter = $(this).text(); 
-            console.log(setFilter);
             getThePosts(null,$(this).data('category'));
         })
     });
@@ -318,7 +326,7 @@
         </div>
 
 
-        <script src="/static/js/app.js?cache=1622751036055"></script>
+        <script src="/static/js/app.js?cache=1622826351198"></script>
         <!-- Google Analytics -->
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

@@ -3114,17 +3114,25 @@ button, .button {
     padding: 0 !important;
     font-size: 22px;
     font-family: TruenoBlack, sans-serif; }
-    .faq-article__list li a {
+    .faq-article__list li .faq-link {
       position: relative;
       color: #303030;
       text-decoration: none;
-      padding: 22px 100px 22px 0;
+      padding: 22px 100px 22px 1px;
       display: block;
       border-bottom: 10px solid #F7F7F7; }
+      .faq-article__list li .faq-link.-active {
+        border-bottom: none; }
+        .faq-article__list li .faq-link.-active img {
+          -webkit-transform: translateY(-50%) rotate(90deg);
+          -ms-transform: translateY(-50%) rotate(90deg);
+          transform: translateY(-50%) rotate(90deg); }
     .faq-article__list li:first-child {
       border-top: 10px solid #F7F7F7; }
 
 .faq-link__icon {
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
   position: absolute;
   top: 50%;
   right: 0;
@@ -3203,6 +3211,11 @@ button, .button {
     .generic-container__section ul li {
       padding-left: 10px;
       margin-bottom: 30px; }
+  .generic-container__section.-inline {
+    display: none; }
+    .generic-container__section.-inline p {
+      font-size: 20px;
+      line-height: 1.5; }
 
 .generic__item {
   padding: 26px 40px;
