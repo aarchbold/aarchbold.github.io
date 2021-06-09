@@ -12,8 +12,8 @@
 <meta property="og:image" content="https://trytrue.com/static/images/ui/logos/share-true-4.jpg">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="True">
-<script src="/static/js/vendors.js?cache=1622842239634"></script>
-<link rel="stylesheet" href="/static/css/styles.css?cache=1622842239634">
+<script src="/static/js/vendors.js?cache=1623197670226"></script>
+<link rel="stylesheet" href="/static/css/styles.css?cache=1623197670226">
 <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.png">
 <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0087/6974.js" async="async"></script>
 
@@ -126,7 +126,7 @@
             <input class="faq-input" placeholder="Search" />
         </div>
         <div class="faq-buttons__container">
-            <a href="#" data-category="355593524" class="button button-faq -selected">About True</a>
+            <a href="#" data-category="355593524" class="button button-faq">About True</a>
             <a href="#" data-category="719451347" class="button button-faq">Getting Started</a>
             <a href="#" data-category="1274" class="button button-faq">Using True</a>
             <a href="#" data-category="11934513" class="button button-faq">Privacy and Safety</a>
@@ -150,7 +150,7 @@
 
 <script id="posts-template" type="text/x-handlebars-template">
     {{#each posts}}
-        <li>
+        <li data-postid="{{articleId}}">
             <a class="faq-link" href="faq.html?id={{articleId}}">{{this.articleHeadline}}<img class="faq-link__icon" src="/static/images/v2/icons/icon-link-arrow.svg" /></a>
             <div class="generic-container__section -no-border -inline">{{{this.articleContent}}}</div>
         </li>
@@ -167,67 +167,107 @@
         articleExcerpt: '',
         articleImg: ''
     }
+    var posts = [];
+    var filteredPosts = [];
+    var data = {
+        posts: []
+    };
+    var template = Handlebars.compile(document.getElementById('posts-template').innerHTML);
+    var postsData;
 
+    function handleLinks() {
+        var storageObj = JSON.parse(localStorage.getItem('trytrue-faq-list'));
+        var $bodyLinks = $('a', $('.-inline'));
+        $('.faq-link').click(function(e){
+            let $element = $(this);
+            e.preventDefault();
+            if ($(this).hasClass('-active')) {
+                $element.removeClass('-active');
+                $('.generic-container__section',$(this).parent()).slideUp('fast');
+            } else {
+                $(this).addClass('-active');
+                $('.generic-container__section',$(this).parent()).slideDown();
+                
+            }
+            console.log($(this)); 
+        })
+
+        $bodyLinks.click(function(e) {
+            if ($(this).attr('href') && $(this).attr('href').includes('?id=')) {
+                storageObj.currentId = $(this).closest('li').data('postid');
+                localStorage.setItem('trytrue-faq-list',JSON.stringify(storageObj));
+            }
+        })
+    }
+
+    function searchPosts(term) {
+        var postsArray = [];
+        var searchablePosts = JSON.parse(localStorage.getItem('trytrue-faq-list')).posts;
+        var $filters = $('.button-faq');
+        console.log('Search me');
+        console.log(term);
+        console.log(searchablePosts);
+        if (term) {
+            searchablePosts.forEach(function(post) {
+                if (post.articleContent.toLowerCase().includes(term.toLowerCase()) || post.articleHeadline.toLowerCase().includes(term.toLowerCase())) {
+                    console.log(post)
+                    postsArray.push(post);
+                }
+            })
+            data.posts = postsArray;
+            $('#blogHome').empty();
+            postsData = template(data);
+            $('.blog-post-loader').hide();
+            document.getElementById('blogHome').innerHTML += postsData;
+        } else {
+            // posts.push(postObj);   
+            data.posts = searchablePosts;
+            $('#blogHome').empty();
+            postsData = template(data);
+            $('.blog-post-loader').hide();
+            document.getElementById('blogHome').innerHTML += postsData;
+        }
+        $filters.removeClass('-selected');
+        handleLinks();
+    }
+
+    function filterPosts(filter) {
+        var postsArray = [];
+        var searchablePosts = JSON.parse(localStorage.getItem('trytrue-faq-list')).posts;
+        console.log(filter);
+        if (filter) {
+            // filter the results
+            searchablePosts.forEach(function(post) {
+                if (post.categories.includes(filter)) {
+                    postsArray.push(post);
+                }
+            })
+            data.posts = postsArray;
+            $('#blogHome').empty();
+            postsData = template(data);
+            $('.blog-post-loader').hide();
+            document.getElementById('blogHome').innerHTML += postsData;
+        } else {
+            data.posts = searchablePosts;
+            $('#blogHome').empty();
+            postsData = template(data);
+            $('.blog-post-loader').hide();
+            document.getElementById('blogHome').innerHTML += postsData;
+        }
+        handleLinks();
+    }
 
     function getThePosts(searchTerm,category) {
         if (category) {
             $('#blogHome').empty();
         }
-        $('.blog-post-loader').show();
-        $.get('https://us-central1-trytruecom-website.cloudfunctions.net/getWordPressPosts', function(response){
-            var responseData = JSON.stringify(response.data);
-            var responseJSON = JSON.parse(responseData);
-            var posts = [];
-            var filteredPosts = [];
-            var data = {
-                posts: []
-            };
-            var template = Handlebars.compile(document.getElementById('posts-template').innerHTML);
-            var postsData = template(data);
-            // console.log(responseJSON);
 
-            responseJSON.reverse();
+        if (localStorage.getItem('trytrue-faq-list')) {
+            let storagePosts = JSON.parse(localStorage.getItem('trytrue-faq-list'));
 
-            $.each(responseJSON, function(i,e) {
-                postObj.authorName = e._embedded.author[0].name;
-                postObj.authorImg = e._embedded.author[0].avatar_urls ? e._embedded.author[0].avatar_urls[96] : '../static/images/ui/logos/logo-blog-trueicon.png';
-                postObj.articleDate = moment(e.date).format("MMM DD, YYYY");
-                postObj.articleId = e.id;
-                postObj.categories = e.categories;
-                postObj.articleHeadline = e.title.rendered.replace('&nbsp;',' ');
-                postObj.articleExcerpt = e.excerpt.rendered.replace(/<\/?[^>]+>/gi, '').substring(0, 60) + '...';
-                postObj.articleImg = e.jetpack_featured_media_url;
-                postObj.articleContent = e.content.rendered;
-                // categories
-                // 1 = uncategorized
-                // 1274 = Using True
-                // 11934513 = Privacy and Safety
-                // 355593524 = About True
-                // 719451347 = Getting Started
-                // 
-
-                if (searchTerm) {
-                    if (postObj.articleContent.toLowerCase().includes(searchTerm.toLowerCase()) || postObj.articleHeadline.toLowerCase().includes(searchTerm.toLowerCase())) {
-                        posts.push(postObj);  
-                    }
-                } else {
-                    posts.push(postObj);   
-                }
-                postObj = {};
-            });
-
-            if (category) {
-                // filter the results
-                posts.forEach(function(post) {
-                    if (post.categories.includes(category)) {
-                        filteredPosts.push(post);
-                    }
-                })
-                posts = filteredPosts;
-            }
-
-            data.posts = posts
-        
+            console.log(storagePosts.posts)
+            data.posts = storagePosts.posts
+            
             if (searchTerm) {
                 $('#blogHome').empty();
                 postsData = template(data);
@@ -236,25 +276,90 @@
             }
             $('.blog-post-loader').hide();
             document.getElementById('blogHome').innerHTML += postsData;
+            handleLinks();
+            if (storagePosts.currentId) {
+                var $faqLinks = $('.faq-link');
+                $faqLinks.each(function(i) {
+                    if ($(this).parent().data('postid') === parseInt(storagePosts.currentId,10)) {
+                        $(this).click();
+                    }
+                })
+            } else {
+                console.log($('.button-faq[data-category="355593524"]'));
+                setTimeout(function() {
+                    $('.button-faq[data-category="355593524"]').click();
+                },200)
+                //console.log($('.button-faq').data('category',));
+            }
 
-            $('.faq-link').click(function(e){
-                let $element = $(this);
-                e.preventDefault();
-                if ($(this).hasClass('-active')) {
-                    $element.removeClass('-active');
-                    $('.generic-container__section',$(this).parent()).slideUp('fast');
-                } else {
-                    $(this).addClass('-active');
-                    $('.generic-container__section',$(this).parent()).slideDown();
-                    
+        } else {
+            $('.blog-post-loader').show();
+            $.get('https://us-central1-trytruecom-website.cloudfunctions.net/getWordPressPosts', function(response){
+                var responseData = JSON.stringify(response.data);
+                var responseJSON = JSON.parse(responseData);
+                postsData = template(data);
+                // console.log(responseJSON);
+
+                responseJSON.reverse();
+
+                $.each(responseJSON, function(i,e) {
+                    postObj.authorName = e._embedded.author[0].name;
+                    postObj.authorImg = e._embedded.author[0].avatar_urls ? e._embedded.author[0].avatar_urls[96] : '../static/images/ui/logos/logo-blog-trueicon.png';
+                    postObj.articleDate = moment(e.date).format("MMM DD, YYYY");
+                    postObj.articleId = e.id;
+                    postObj.categories = e.categories;
+                    postObj.articleHeadline = e.title.rendered.replace('&nbsp;',' ');
+                    postObj.articleExcerpt = e.excerpt.rendered.replace(/<\/?[^>]+>/gi, '').substring(0, 60) + '...';
+                    postObj.articleImg = e.jetpack_featured_media_url;
+                    postObj.articleContent = e.content.rendered;
+                    // categories
+                    // 1 = uncategorized
+                    // 1274 = Using True
+                    // 11934513 = Privacy and Safety
+                    // 355593524 = About True
+                    // 719451347 = Getting Started
+                    // 
+
+                    if (searchTerm) {
+                        if (postObj.articleContent.toLowerCase().includes(searchTerm.toLowerCase()) || postObj.articleHeadline.toLowerCase().includes(searchTerm.toLowerCase())) {
+                            posts.push(postObj);  
+                        }
+                    } else {
+                        posts.push(postObj);   
+                    }
+                    postObj = {};
+                });
+
+                let storageObject = {
+                    filter: '',
+                    searchTerm: '',
+                    currentId: '',
+                    posts: posts
                 }
-                console.log($(this)); 
-            })
 
-        });
+                // put posts in to localStorage
+                localStorage.setItem('trytrue-faq-list', JSON.stringify(storageObject));
+
+                console.log(posts)
+
+                data.posts = posts
+            
+                if (searchTerm) {
+                    $('#blogHome').empty();
+                    postsData = template(data);
+                } else {
+                    postsData = template(data);
+                }
+                $('.blog-post-loader').hide();
+                document.getElementById('blogHome').innerHTML += postsData;
+                console.log($('.button-faq[data-category="355593524"]'));
+                $('.button-faq[data-category="355593524"]').click();
+                handleLinks();
+            });
+        }
     }
 
-    getThePosts(null,355593524);
+    getThePosts();
 
     $(function() {
         var $context = $('.faq-buttons__container'),
@@ -264,24 +369,25 @@
 
         $searchInput.keyup(function(e) {
             if (e.which === 13) {
-                getThePosts(e.target.value)
+                searchPosts(e.target.value)
             }
         });
 
         $filters.click(function(e) {
             e.preventDefault();
+            $searchInput.val('');
             if ($(this).hasClass('-selected')) {
                 $(this).removeClass('-selected');
                 setFilter = '';
                 $('#blogHome').empty();
-                getThePosts();
+                filterPosts();
                 return false;
             }
 
             $filters.removeClass('-selected');
             $(this).addClass('-selected');  
             setFilter = $(this).text(); 
-            getThePosts(null,$(this).data('category'));
+            filterPosts($(this).data('category'))
         })
     });
 </script>
@@ -328,7 +434,7 @@
         </div>
 
 
-        <script src="/static/js/app.js?cache=1622842239634"></script>
+        <script src="/static/js/app.js?cache=1623197670226"></script>
         <!-- Google Analytics -->
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

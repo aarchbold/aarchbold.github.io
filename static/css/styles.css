@@ -3607,7 +3607,7 @@ button, .button {
     transform: translate(-50%, -50%); }
 
 .blog-post-loader {
-  display: block;
+  display: none;
   text-align: center;
   min-height: 200px;
   font-size: 22px;
