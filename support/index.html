@@ -12,8 +12,8 @@
 <meta property="og:image" content="https://trytrue.com/static/images/ui/logos/share-true-4.jpg">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="True">
-<script src="/static/js/vendors.js?cache=1623259241193"></script>
-<link rel="stylesheet" href="/static/css/styles.css?cache=1623259241193">
+<script src="/static/js/vendors.js?cache=1623280687435"></script>
+<link rel="stylesheet" href="/static/css/styles.css?cache=1623280687435">
 <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.png">
 <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0087/6974.js" async="async"></script>
 
@@ -123,7 +123,8 @@
         <p class="generic-subheader">Find answers to common questions here 🎉</p>
         <div class="faq-input__container">    
             <img class="faq-input__icon" src="/static/images/v2/icons/icon-search.svg" />
-            <input class="faq-input" placeholder="Search" />
+            <input class="faq-input" />
+            <button class="button button-blog-search" id="buttonBlogSearch">Search</button>
         </div>
         <div class="faq-buttons__container">
             <a href="#" data-category="355593524" class="button button-faq">About True</a>
@@ -285,6 +286,9 @@
                     }
                 })      
             } else {
+                $(window).animate({
+                    scrollTop: 0
+                },300);
                 setTimeout(function() {
                     $('.button-faq[data-category="355593524"]').click();
                 },200)
@@ -360,6 +364,7 @@
     $(function() {
         var $context = $('.faq-buttons__container'),
         $filters = $('.button-faq',$context),
+        $searchBtn = $('#buttonBlogSearch');
         $searchInput = $('.faq-input'),
         setFilter = '';
 
@@ -368,6 +373,13 @@
                 searchPosts(e.target.value)
             }
         });
+
+        $searchBtn.click(function(e) {
+            e.preventDefault();
+            searchPosts($searchInput.val());
+        })
+
+        
 
         $filters.click(function(e) {
             e.preventDefault();
@@ -430,7 +442,7 @@
         </div>
 
 
-        <script src="/static/js/app.js?cache=1623259241193"></script>
+        <script src="/static/js/app.js?cache=1623280687435"></script>
         <!-- Google Analytics -->
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
