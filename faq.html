@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>True</title>
 <meta property="og:title" content="True">
-<meta property="og:description" content="True is private sharing for real friends.">
-<meta name="description" content="True is private sharing for real friends.">
+<meta property="og:description" content="How can we help you?">
+<meta name="description" content="How can we help you?">
 <!-- <meta property="og:image" content="https://truetokensale.com/static/images/logos/logo-share-true.png"> -->
 <meta property="og:image" content="https://trytrue.com/static/images/ui/logos/share-true-4.jpg">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="True">
-<script src="/static/js/vendors.js?cache=1623360281732"></script>
-<link rel="stylesheet" href="/static/css/styles.css?cache=1623360281732">
+<script src="/static/js/vendors.js?cache=1625333349327"></script>
+<link rel="stylesheet" href="/static/css/styles.css?cache=1625333349327">
 <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.png">
 <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0087/6974.js" async="async"></script>
 
@@ -90,7 +90,31 @@
     </div>
 </div>
         <div data-section-name="home" class="scroll-me page-outer">
-            <nav style="position: fixed;z-index:10;width: 100%;">
+            <!-- Nextdoor Pixel Code -->
+<script type="text/javascript">
+    (function(win, doc, sdk_url){
+    if(win.ndp) return;
+    var tr=win.ndp=function(){
+    tr.handleRequest? tr.handleRequest.apply(tr, arguments):tr.queue.push(arguments);
+  };
+    tr.queue = [];
+    var s='script';
+    var new_script_section=doc.createElement(s);
+    new_script_section.async=!0;
+    new_script_section.src=sdk_url;
+    var insert_pos=doc.getElementsByTagName(s)[0];
+    insert_pos.parentNode.insertBefore(new_script_section, insert_pos);
+  })(window, document, 'https://ads.nextdoor.com/public/pixel/ndp.js');
+    ndp('init','e9f6e04c-3597-463b-ba39-c8cc3d45086d', {})
+    ndp('track','PAGE_VIEW');
+</script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://flask.nextdoor.com/pixel?pid=e9f6e04c-3597-463b-ba39-c8cc3d45086d&ev=PAGE_VIEW&noscript=1" />
+  </noscript>
+  <!-- End Nextdoor Pixel Code -->
+
+<nav style="position: fixed;z-index:10;width: 100%;">
     <div class="topnav-container">
         <div class="navigation-inner">
             <a href="/"><img class="navigation-logo" src="/static/images/ui/logos/logo-true__large.png" width="140" /></a>
@@ -98,10 +122,10 @@
                 <a href="/index.html" class="button-nav -home"><img src="/static/images/icons/icon-home.svg" width="20" /></a>
              -->
             <div class="topnav-links">
-                <a class="button-nav -selected"  href="/faq.html">FAQ</a>
+                <a  class="button-nav" href="/faq.html">FAQ</a>
                 <a  class="button-nav" href="/guidelines/">COMMUNITY GUIDELINES</a>
                 <a id="tryTrueNav" class="button-nav" target="_blank" href="/index.html#waitlist">TRY TRUE</a>
-                <!-- <a  class="button-nav" href="/support/">SUPPORT</a>
+                <!-- <a class="button-nav -selected"  href="/support/">SUPPORT</a>
                 <a  class="button-nav" href="/careers/">CAREERS</a>
                 <a  class="button-nav" href="/story/">OUR STORY</a>
                 <a  class="button-nav" href="/safety/">SAFETY</a> -->
@@ -118,112 +142,288 @@
         </div>
         
         <div class="faq-container">
-            <div class="generic-header">
-                <div class="faq-header__h1">FAQ</div>
-                <img class="faq-header__img" src="static/images/ui/scenery/header-faq.png" />
+    <div class="generic-header">
+        <h1 class="generic-header__h1 -margin-top">How can we help you?</h1>
+        <p class="generic-subheader">Find answers to common questions here 🎉</p>
+        <div class="faq-input__container">    
+            <img class="faq-input__icon" src="/static/images/v2/icons/icon-search.svg" />
+            <input class="faq-input" />
+            <button class="button button-blog-search" id="buttonBlogSearch">Search</button>
+        </div>
+        <div class="faq-buttons__container">
+            <a href="#" data-category="355593524" class="button button-faq">About True</a>
+            <a href="#" data-category="719451347" class="button button-faq">Getting Started</a>
+            <a href="#" data-category="1274" class="button button-faq">Using True</a>
+            <a href="#" data-category="11934513" class="button button-faq">Privacy and Safety</a>
+        </div>
+    </div>
+
+    <div class="generic-container">
+        <div class="generic-container__section -no-border">
+            <div class="blog-post-loader">
+                <br />Just a second...<br /><br />
+                <img src="../static/images/ui/backgrounds/ajax-loader.gif" />
             </div>
-
-            <div class="faq-questions">
-                <div id="trueStory" class="faq-questions__item">
-                    <div class="faq-questions__item-question">
-                        What’s your story?
-                        <div class="faq-questions__item-control">+</div>
-                    </div>
-                    <div class="faq-questions__item-anwser">
-                        <p>True was founded in Mill Valley. It’s a lovely little mountain town in northern California filled with giant redwoods, beautiful valleys and neighbors who look after each other.</p>
-                        <p>It’s this real-life Happy Valley that inspired us to build a company that gets back to things that matter. Real friends and real life without commercial interruption.</p>
-                        <p>It’s the quality of our relationships, not the quantity, that make us happier. It’s the joy of making new friends and connecting with old ones that strengthen our sense of community.</p>
-                        <p>Somehow, in a rush for growth and profit, these feelings have been lost. Social today no longer feels like a Happy Valley, it’s more like we’re all living in a big creepy commercial.</p>
-                        <p>Big social companies are in the middle of our relationships. They’re taking our best intentions and selling them to the highest bidder.</p>
-                        <p>Well, we’re just not going to do that anymore.</p>
-                    </div>
-                </div>
-
-                <div id="trueTrust" class="faq-questions__item">
-                    <div class="faq-questions__item-question">
-                        Why should I trust you guys?
-                        <div class="faq-questions__item-control">+</div>
-                    </div>
-                    <div class="faq-questions__item-anwser">
-                        <p>There’s a lot of talk about privacy. Every few weeks, another big company gets caught in a new scandal. But there is never anything really done about it and we go on accepting the problem.</p>
-                        <p>The crazy thing is, this is never going to stop. As long as these companies make money by selling our personal information, they will find ever more devious ways to collect it.</p>
-                        <p>But we never signed up for this. We didn’t post our lives, families and personal relationships for sale. We did not agree to let these companies make money from being in the middle of our friendships.</p>
-                        <p>We believe you should be free to share your life without big brands competing for your attention. You should own your information and decide what you want to do with it. 3rd parties should never have access to your data. You should not be the product.</p>
-                        <p>We believe your privacy matters. We take it into consideration with every decision we make. You should believe we respect your privacy and trust we’ll do the right thing with your information.</p>
-                        <p>Read our <a href="privacy/">Privacy Policy here.</a></p>
-                    </div>
-                </div>
-
-                <div id="trueDifference" class="faq-questions__item">
-                    <div class="faq-questions__item-question">
-                        What’s different about it?
-                        <div class="faq-questions__item-control">+</div>
-                    </div>
-                    <div class="faq-questions__item-anwser">
-                        <p>We just don’t think you can be yourself in a world of perfect pictures awash in a sea of influencers. Old-school social is for blasting your life to people you don’t really know, measured by standards you will never achieve.</p>
-                        <p>So we’ve built a new kind of threaded sharing that is private by default. Until now, no one has tried this before. It gives you control over things you want to share and who you want to share them with.</p>
-                        <p>By combining beautiful, edge-to-edge storytelling with private messaging, it’s the best of both worlds.</p>
-                        <p>What do we all love? Updates from real friends. But original thoughts and stories have gone missing in big social.</p>
-                        <p>Sadly, most content today is created by companies with an agenda. We share an endless stream of news and ideas pushed by these companies and no longer share our real lives.</p>
-                        <p>So we built a platform that only allows original content. There are no outside links or political arguments here. You come to True to see real updates from friends. Content they created themselves, not clickbait designed to hold your attention and manipulate opinion.</p>
-                        <p>True lets you… be you. Real sharing from real friends, we’re making social a safe, happy place again.</p>
-                    </div>
-                </div>
-
-                <div id="trueCost" class="faq-questions__item">
-                    <div class="faq-questions__item-question">
-                        How do you make money?
-                        <div class="faq-questions__item-control">+</div>
-                    </div>
-                    <div class="faq-questions__item-anwser">
-                        <p>We currently do not show any ads on our platform, and believe that people should be allowed to have a private threaded experience without ads.</p>
-                        <p>In the future, we will need to monetize the platform in order to continue serving you in the best way possible with quality, function, and safety as a priority.  But we are committed to expand our business model in a way that does not monetize your personal data.  We may consider a key-word based advertising model, or give you the opportunity to pay for additional public content or features.  Most importantly, you will always be in control of how your data is used, and what you are paying for.  A great social and communication experience should not come at a high cost to you or your data.</p>
-                    </div>
-                </div>
+            <div class="blog-list">
+                <ul id="blogHome" class="faq-article__list">
+                    
+                </ul>
             </div>
         </div>
+    </div>
+</div>
 
-        <div class="faq-more">
-            <div class="faq-more__header">
-                Much more on the way.<br />
-                Need something else now?
-            </div>
-            <div class="faq-more__row">
-                <div class="faq-more__item">
-                    <div class="faq-more__item--inner">
-                        <div class="faq-more__item--header">
-                            Careers
-                        </div>
-                        <div class="faq-more__item--content">
-                            With a focused Team and top investors, we're hiring people who are passionate about building the next-generation social sharing platform.
-                        </div>
-                        <a onClick="ga('send', 'event', 'Try True FAQ', 'clicked Work With Us');" href="https://angel.co/company/true/jobs" target="_blank" class="button -small">Work With Us</a>
-                    </div>
-                </div>
-                <div class="faq-more__item">
-                    <div class="faq-more__item--inner">
-                        <div class="faq-more__item--header">
-                            Press
-                        </div>
-                        <div class="faq-more__item--content">
-                            True is launching shortly and we're taking questions. You can request a press kit or set up a time to speak with a member of our Team.
-                        </div>
-                        <a onClick="ga('send', 'event', 'Try True FAQ', 'clicked Talk to Us');" href="#" class="button -small button-press">Talk to Us</a>
-                    </div>
-                </div>
-                <div class="faq-more__item">
-                    <div class="faq-more__item--inner">
-                        <div class="faq-more__item--header">
-                            Investors
-                        </div>
-                        <div class="faq-more__item--content">
-                            True has raised $18M in Seed. If you're a Venture investor serious about breaking the social monopoly please reach out to our Team. 
-                        </div>
-                        <a onClick="ga('send', 'event', 'Try True FAQ', 'clicked Contact Us');" href="#" class="button -small button-investors">Contact Us</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+<script id="posts-template" type="text/x-handlebars-template">
+    {{#each posts}}
+        <li data-postid="{{articleId}}">
+            <a class="faq-link" href="/faq/faq.html?id={{articleId}}">{{this.articleHeadline}}<img class="faq-link__icon" src="/static/images/v2/icons/icon-link-arrow.svg" /></a>
+            <div class="generic-container__section -no-border -inline">{{{this.articleContent}}}</div>
+        </li>
+    {{/each}}
+</script>
+
+<script type="text/javascript">
+    var postObj = {
+        authorName: '',
+        authorImg: '',
+        articleDate: '',
+        articleId: '',
+        articleHeadline: '',
+        articleExcerpt: '',
+        articleImg: ''
+    }
+    var posts = [];
+    var filteredPosts = [];
+    var data = {
+        posts: []
+    };
+    var template = Handlebars.compile(document.getElementById('posts-template').innerHTML);
+    var postsData;
+
+    function handleLinks() {
+        var storageObj = JSON.parse(sessionStorage.getItem('trytrue-faq-list'));
+        var $bodyLinks = $('a', $('.-inline'));
+        $('.faq-link').click(function(e){
+            let $element = $(this);
+            e.preventDefault();
+            if ($(this).hasClass('-active')) {
+                $element.removeClass('-active');
+                $('.generic-container__section',$(this).parent()).slideUp('fast');
+            } else {
+                $(this).addClass('-active');
+                $('.generic-container__section',$(this).parent()).slideDown();
+                
+            }
+        })
+
+        $bodyLinks.click(function(e) {
+            if ($(this).attr('href') && $(this).attr('href').includes('?id=')) {
+                storageObj.currentId = $(this).closest('li').data('postid');
+                sessionStorage.setItem('trytrue-faq-list',JSON.stringify(storageObj));
+            }
+        })
+    }
+
+    function searchPosts(term) {
+        var postsArray = [];
+        var searchablePosts = JSON.parse(sessionStorage.getItem('trytrue-faq-list')).posts;
+        var $filters = $('.button-faq');
+        if (term) {
+            searchablePosts.forEach(function(post) {
+                if (post.articleContent.toLowerCase().includes(term.toLowerCase()) || post.articleHeadline.toLowerCase().includes(term.toLowerCase())) {
+                    postsArray.push(post);
+                }
+            })
+            data.posts = postsArray;
+            $('#blogHome').empty();
+            postsData = template(data);
+            $('.blog-post-loader').hide();
+            document.getElementById('blogHome').innerHTML += postsData;
+        } else {
+            // posts.push(postObj);   
+            data.posts = searchablePosts;
+            $('#blogHome').empty();
+            postsData = template(data);
+            $('.blog-post-loader').hide();
+            document.getElementById('blogHome').innerHTML += postsData;
+        }
+        $filters.removeClass('-selected');
+        handleLinks();
+    }
+
+    function filterPosts(filter) {
+        var postsArray = [];
+        var searchablePosts = JSON.parse(sessionStorage.getItem('trytrue-faq-list')).posts;
+        if (filter) {
+            // filter the results
+            searchablePosts.forEach(function(post) {
+                if (post.categories.includes(filter)) {
+                    postsArray.push(post);
+                }
+            })
+            data.posts = postsArray;
+            $('#blogHome').empty();
+            postsData = template(data);
+            $('.blog-post-loader').hide();
+            document.getElementById('blogHome').innerHTML += postsData;
+        } else {
+            data.posts = searchablePosts;
+            $('#blogHome').empty();
+            postsData = template(data);
+            $('.blog-post-loader').hide();
+            document.getElementById('blogHome').innerHTML += postsData;
+        }
+        handleLinks();
+    }
+
+    function getThePosts(searchTerm,category) {
+        if (category) {
+            $('#blogHome').empty();
+        }
+
+        if (sessionStorage.getItem('trytrue-faq-list')) {
+            let storagePosts = JSON.parse(sessionStorage.getItem('trytrue-faq-list'));
+
+            data.posts = storagePosts.posts
+            
+            if (searchTerm) {
+                $('#blogHome').empty();
+                postsData = template(data);
+            } else {
+                postsData = template(data);
+            }
+            $('.blog-post-loader').hide();
+            document.getElementById('blogHome').innerHTML += postsData;
+            // handleLinks();
+            if (storagePosts.currentId) {
+                handleLinks();
+                var $faqLinks = $('.faq-link');
+                $faqLinks.each(function(i) {
+                    if ($(this).parent().data('postid') === parseInt(storagePosts.currentId,10)) {
+                        $(this).click();
+                        $(window).animate({
+                            scrollTop: ($(this).offset().top - 100)
+                        },300,function(){
+                            storagePosts.currentId = '';
+                            sessionStorage.setItem('trytrue-faq-list',JSON.stringify(storagePosts));
+                        });
+                    }
+                })      
+            } else {
+                $(window).animate({
+                    scrollTop: 0
+                },300);
+                setTimeout(function() {
+                    $('.button-faq[data-category="355593524"]').click();
+                },200)
+                //console.log($('.button-faq').data('category',));
+            }
+
+        } else {
+            $('.blog-post-loader').show();
+            $.get('https://us-central1-trytruecom-website.cloudfunctions.net/getWordPressPosts', function(response){
+                var responseData = JSON.stringify(response.data);
+                var responseJSON = JSON.parse(responseData);
+                postsData = template(data);
+                // console.log(responseJSON);
+
+                responseJSON.reverse();
+
+                $.each(responseJSON, function(i,e) {
+                    postObj.authorName = e._embedded.author[0].name;
+                    postObj.authorImg = e._embedded.author[0].avatar_urls ? e._embedded.author[0].avatar_urls[96] : '../static/images/ui/logos/logo-blog-trueicon.png';
+                    postObj.articleDate = moment(e.date).format("MMM DD, YYYY");
+                    postObj.articleId = e.id;
+                    postObj.categories = e.categories;
+                    postObj.articleHeadline = e.title.rendered.replace('&nbsp;',' ');
+                    postObj.articleExcerpt = e.excerpt.rendered.replace(/<\/?[^>]+>/gi, '').substring(0, 60) + '...';
+                    postObj.articleImg = e.jetpack_featured_media_url;
+                    postObj.articleContent = e.content.rendered;
+                    // categories
+                    // 1 = uncategorized
+                    // 1274 = Using True
+                    // 11934513 = Privacy and Safety
+                    // 355593524 = About True
+                    // 719451347 = Getting Started
+                    // 
+
+                    if (searchTerm) {
+                        if (postObj.articleContent.toLowerCase().includes(searchTerm.toLowerCase()) || postObj.articleHeadline.toLowerCase().includes(searchTerm.toLowerCase())) {
+                            posts.push(postObj);  
+                        }
+                    } else {
+                        posts.push(postObj);   
+                    }
+                    postObj = {};
+                });
+
+                let storageObject = {
+                    filter: '',
+                    searchTerm: '',
+                    currentId: '',
+                    posts: posts
+                }
+
+                // put posts in to localStorage
+                sessionStorage.setItem('trytrue-faq-list', JSON.stringify(storageObject));
+
+                data.posts = posts
+            
+                if (searchTerm) {
+                    $('#blogHome').empty();
+                    postsData = template(data);
+                } else {
+                    postsData = template(data);
+                }
+                $('.blog-post-loader').hide();
+                document.getElementById('blogHome').innerHTML += postsData;
+                $('.button-faq[data-category="355593524"]').click();
+                // handleLinks();
+            });
+        }
+    }
+
+    getThePosts();
+
+    $(function() {
+        var $context = $('.faq-buttons__container'),
+        $filters = $('.button-faq',$context),
+        $searchBtn = $('#buttonBlogSearch');
+        $searchInput = $('.faq-input'),
+        setFilter = '';
+
+        $searchInput.keyup(function(e) {
+            if (e.which === 13) {
+                searchPosts(e.target.value)
+            }
+        });
+
+        $searchBtn.click(function(e) {
+            e.preventDefault();
+            searchPosts($searchInput.val());
+        })
+
+        
+
+        $filters.click(function(e) {
+            e.preventDefault();
+            $searchInput.val('');
+            if ($(this).hasClass('-selected')) {
+                $(this).removeClass('-selected');
+                setFilter = '';
+                $('#blogHome').empty();
+                filterPosts();
+                return false;
+            }
+
+            $filters.removeClass('-selected');
+            $(this).addClass('-selected');  
+            setFilter = $(this).text(); 
+            filterPosts($(this).data('category'))
+        })
+    });
+</script>
+        
         <div class="faq-footer">
             <div class="faq-footer__header">
                 Email us at <a href="mailto:hey@trytrue.com">hey@trytrue.com</a>
@@ -237,7 +437,7 @@
         </div>
 
 
-        <script src="static/js/app.js?cache=1623360281732"></script>
+        <script src="/static/js/app.js?cache=1625333349327"></script>
         <!-- Google Analytics -->
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

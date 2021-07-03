@@ -4414,6 +4414,101 @@ progress::-moz-progress-bar {
   .testimonials-container {
     max-width: 100%; } }
 
+/* modal styles
+*/
+.store-container {
+  width: 100%;
+  max-width: 425px;
+  margin: 0 auto; }
+
+.store-container__inner {
+  padding: 15px;
+  overflow: hidden; }
+
+.store-app-info {
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 130px;
+  margin-bottom: 15px; }
+  .store-app-info .store-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 114px; }
+
+.store-app-title {
+  color: #000;
+  font-size: 21px;
+  line-height: 24px; }
+
+.store-app-description {
+  color: #8A898E;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 6px 0 10px; }
+
+.store-app-button {
+  display: inline-block;
+  text-decoration: none;
+  background: #007AFE;
+  border-radius: 70px;
+  color: white;
+  size: 14px;
+  padding: 9px 20px 8px; }
+
+.store-app-header {
+  color: #000;
+  font-size: 21px;
+  font-weight: 700;
+  margin: 15px 0; }
+
+.store-app-content {
+  margin-top: 15px;
+  border-top: 1px solid #C6C6C8;
+  padding-top: 15px;
+  color: #000;
+  font-size: 15px;
+  line-height: 19px; }
+  .store-app-content p {
+    margin-bottom: 20px; }
+  .store-app-content ul {
+    list-style: disc;
+    margin-left: 15px; }
+  .store-app-content li {
+    padding-left: 4px;
+    margin-bottom: 20px; }
+
+.store-app-footer {
+  margin-top: 40px;
+  display: block;
+  position: relative;
+  color: #027BFF;
+  padding-right: 60px;
+  text-decoration: none;
+  line-height: 20px;
+  font-size: 15px; }
+  .store-app-footer span {
+    display: block;
+    color: #8A898E;
+    font-size: 13px; }
+  .store-app-footer img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+
+.store-app-slider {
+  margin-bottom: 20px;
+  width: 285px; }
+  .store-app-slider .slick-list {
+    overflow: visible !important; }
+
+.store-app-slider__item img {
+  width: 270px;
+  margin-right: 10px; }
+
 /* Slider */
 .slick-arrow {
   border: none;

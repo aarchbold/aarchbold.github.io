@@ -733,6 +733,9 @@ var handleTryTrueButton  = function(){
   var $contentButton1 = $('#waitListButton');
   var $contentButton2 = $('#beRealButton');
   var $contentButton3 = $('#letsDoItButton');
+  var $iosButton = $('#getForiOS');
+  var $androindButton = $('#getForAbdroid');
+  
   var fbEventProp = 'appleStore';
   var appStoreLink = 'https://apps.apple.com/us/app/true-private-social-network/id834451429';
   var playStoreLink = 'https://play.google.com/store/apps/details?id=hellomobile.hello';
@@ -753,10 +756,24 @@ var handleTryTrueButton  = function(){
   $contentButton2.attr('href',realLink);
   $contentButton3.attr('href',realLink);
 
+
+  $iosButton.click(function() {
+    ndp('track','CONVERSION');
+  })
+  $androindButton.click(function() {
+    ndp('track','CONVERSION');
+  })
+  $('#getForiOSFooter').click(function() {
+    ndp('track','CONVERSION');
+  })
+  $('#getForAndroidFooter').click(function() {
+    ndp('track','CONVERSION');
+  })
   $button.click(function() {
     trackFBClick('TopNavButtonClick');
     fbq('trackCustom', 'TopNavTryTrueButtonClick', {store: fbEventProp});
     ga('send', 'event', 'Try True Topnav', 'clicked Try True', fbEventProp);
+    ndp('track','CONVERSION');
   })
   $contentButton1.click(function() {
     fbq('trackCustom', 'TryItButtonClick', {store: fbEventProp});
