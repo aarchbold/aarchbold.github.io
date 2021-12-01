@@ -705,6 +705,32 @@ $(function(){
         $.getScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyAiFHTqZU2-AOTdopVZlR7ltL-lI1Dr-Bk&callback=initMap');
     }
 });
+$.fn.handleSignUp = function() {
+    var $signUpButton = $('#signUp'),
+        $modal = $('.modal-container'),
+        $closeButton = $('.modal-close');
+
+    $signUpButton.click(function(e) {
+        e.preventDefault();
+        $('body').css({
+            overflow: 'hidden'
+        })
+        $modal.fadeIn();
+    })
+
+    $closeButton.click(function(e) {
+        e.preventDefault();
+        $('body').css({
+            overflow: 'visible'
+        })
+        $modal.fadeOut();
+    })
+}
+
+
+$(function(){    
+    $('#signUp').handleSignUp();
+});
 $.fn.handleTopNav = function() {
     var $container = $(this),
         $mainMenu = $('.topnav-main-menu', $container),

@@ -20,15 +20,27 @@
         <meta property="og:site_name" content="Quietly">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@QuietlyApp">
-        <script src="/static/js/vendors.js?cache=1638334329413"></script>
-        <link rel="stylesheet" href="/static/css/styles.css?cache=1638334329413">
+        <script src="/static/js/vendors.js?cache=1638336589236"></script>
+        <link rel="stylesheet" href="/static/css/styles.css?cache=1638336589236">
         <link rel="shortcut icon" type="image/x-icon" href="/static/images/favicon.png">
     </head>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div class="page-outer">  
+        <div class="page-outer">
+            <div class="modal-container">
+                <div class="modal-content">
+                    <a href="#" class="modal-close">X</a>
+                    <label for="emailSignup">Enter your email address to join the Helios waitlist</label>
+                    <div>
+                        <input type="email" placeholder="Enter your email" id="emailSignup" name="emailSignup" value="" />
+                    </div>
+                    <a href="#" class="button-default -margin-top">Join Helios</a>
+                </div>
+                <div class="modal-overlay">
+                </div>
+            </div>
             <div class="page-inner">
                 <img class="home-hero" src="/static/images/hdr-helios.png" />
                 
@@ -49,7 +61,7 @@
                             <div class="helios-hdr">
                                 Sign up now for early access.
                             </div>
-                            <a href="#" class="button-default">SIGN UP</a>
+                            <a href="#" id="signUp" class="button-default">SIGN UP</a>
                         </div>
                     </div>
                     <div class="home-content__row">
@@ -96,6 +108,6 @@
             </div>
         </div>
 
-        <script src="/static/js/app.js?cache=1638334329413"></script>
+        <script src="/static/js/app.js?cache=1638336589236"></script>
     </body>
 </html>
