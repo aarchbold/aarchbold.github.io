@@ -8,6 +8,7 @@
    This is a Sass partial
 */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800);
+@import url(//db.onlinewebfonts.com/c/2596224269750e00c3ad5356299a3b9f?family=Ogg);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -91,6 +92,7 @@ h3 {
   font-weight: bold;
   line-height: 1.2;
   color: #dc1d66;
+  letter-spacing: 4px;
 }
 
 /* Home layout styles
@@ -139,6 +141,7 @@ h3 {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-right: 10px;
+  font-family: 'Ogg', serif;
 }
 @media (max-width: 700px) {
   .home-list__cta {
@@ -200,6 +203,7 @@ h3 {
   color: #dc1d66;
   font-size: 18px;
   font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
 }
 .button-default.-margin-top {
   margin-top: 40px;
