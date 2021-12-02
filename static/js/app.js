@@ -708,7 +708,39 @@ $(function(){
 $.fn.handleSignUp = function() {
     var $signUpButton = $('#signUp'),
         $modal = $('.modal-container'),
-        $closeButton = $('.modal-close');
+        $closeButton = $('.modal-close'),
+        $email = $('#emailSignup'),
+        $firstname = $('#firstnameSignup'),
+        $lastname = $('#lastnameSignup'),
+        $joinButton = $('#joinButton');
+
+    $joinButton.click(function(e) {
+        e.preventDefault();
+        if ($email.val() === '') {
+            alert('Please enter a valid email.');
+        } else {
+            let payload = {
+                firstname: $firstname.val(),
+                lastname: $lastname.val(),
+                email: $email.val(),
+                path: 'waitlist'
+            }
+            $.post('https://zdtqrwuc01.execute-api.us-west-2.amazonaws.com/production/waitlist', JSON.stringify(payload), function() {
+                // displayError('success', 'Thank you for your interest! We will get back to you shortly.');
+                setTimeout(function() {
+                    $firstname.val('');
+                    $lastname.val('');
+                    $email.val('');
+                },500);
+            })
+            .fail(function(response) {
+                console.log('fail');
+                console.log(response);
+                //displayError('error', errorMsg);
+            });
+        }
+        // alert('submit');
+    })
 
     $signUpButton.click(function(e) {
         e.preventDefault();
