@@ -217,11 +217,15 @@ body {
     color: #eb008b;
 }
 
+.slot2-color {
+    color: #ffffff;
+}
+
 .home-auction__hdr {
     font-weight: bold;
     font-size: 60px;
     text-transform: uppercase;
-    line-height: 1.4;
+    line-height: 1.2;
 }
 
 .home-auction__subhdr {
@@ -240,6 +244,55 @@ body {
     width: 100%;
     max-width: 500px;
     margin-left: 40px;
+}
+
+.home-details__col--middle {
+    position: relative;
+    width: 40%;
+    padding: 100px 30% 400px;
+}
+
+.auction-middle__slot {
+    position: absolute;
+    width: 200px;
+}
+
+.auction-middle__slot.-slot1 {
+    left: 0;
+    top: -100px;
+}
+
+.auction-middle__slot.-slot2 {
+    left: 0;
+    bottom: 200px;
+}
+
+.auction-middle__slot.-slot3 {
+    right: 0;
+    top: 0;
+}
+
+.auction-middle__slot.-slot4 {
+    right: 0;
+    bottom: 150px;
+}
+
+.auction-middle__slot img {
+    width: 100%;
+}
+
+.auction-image__label {
+    text-transform: uppercase;
+    font-size: 16px;
+    text-align: center;
+}
+
+@media (max-width: 1180px) {
+    .auction-main__img {
+        max-width: 400px;
+        position: absolute;
+        right: 20px;
+    }
 }
 
 @media (max-width: 1080px) {
@@ -272,11 +325,64 @@ body {
         width: 60%;
         max-width: 60%;
     }
+    .auction-main__img {
+        display: block;
+        margin-left: 0;
+        margin: 0 auto;
+    }
+    .auction-main__img {
+        max-width: 400px;
+        position: relative;
+        right: auto;
+        margin: 20px auto 50px;
+    }
+    .auction-middle__slot {
+        width: 160px;
+    }
+    .auction-middle__slot.-slot2 {
+        left: 0;
+        bottom: 400px;
+    }
+    .auction-middle__slot.-slot4 {
+        right: 0;
+        bottom: 350px;
+    }
+}
+
+@media (max-width: 750px) {
+    .home-details__col--middle {
+        position: relative;
+        width: 100%;
+        padding: 160px 0 400px;
+    }
+    .auction-middle__slot {
+        width: 130px;
+    }
+    .auction-middle__slot.-slot1 {
+        left: 0;
+        top: -150px;
+    }
+    
+    .auction-middle__slot.-slot3 {
+        right: 0;
+        top: -130px;
+    }
+    .auction-middle__slot.-slot2 {
+        left: 0;
+        bottom: 70px;
+    }
+    .auction-middle__slot.-slot4 {
+        right: 0;
+        bottom: 180px;
+    }
 }
 
 @media (max-width: 500px) { 
     .home-hero__logo {
         width: 80%;
         max-width: 80%;
+    }
+    .home-auction__hdr {
+        font-size: 40px;
     }
 }
