@@ -221,6 +221,10 @@ body {
     color: #ffffff;
 }
 
+.faq-color {
+    color: #f2d95c;
+}
+
 .home-auction__hdr {
     font-weight: bold;
     font-size: 60px;
@@ -317,6 +321,44 @@ body {
 
 .auction-left__slot img {
     width: 100%;
+}
+
+.home-section__faq {
+    background-color: #231f20;
+}
+
+.faq-inner {
+    padding: 100px 20px 100px 180px;
+    background: url(../img/bg-faq.png);
+    background-position: 0 40px;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+
+.faq-row {
+    padding-top: 60px;
+    line-height: 1.5;
+}
+
+.faq-question {
+    font-weight: bold;
+    color: #7cb4bf;
+    font-size: 22px;
+}
+
+.home-grid-dark {
+    height: 91px;
+    background: url(../img/bg-grid-dark.png);
+    background-color: white;
+    background-size: 40px;
+}
+
+.home-grid-dark.-yellow {
+    background-color: #ffe676;
+}
+
+.home-grid-dark.-purple {
+    background-color: #9588f2;
 }
 
 @media (max-width: 1180px) {
@@ -452,6 +494,10 @@ body {
         right: 0;
         top: auto;
         bottom: 226px;
+    }
+    .faq-inner {
+        padding: 100px 20px 100px 20px;
+        background-image: none;
     }
 }
 
