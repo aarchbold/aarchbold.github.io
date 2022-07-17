@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    @font-face {
+        font-family: "Trueno";
+        src: url("https://s3.amazonaws.com/hellomobil_ee/system/fonts/Trueno.woff");
+    }
+    /* @font-face {
+        font-family: 'TruenoRegular';
+        font-style: normal;
+        font-weight: normal;
+        src: local('TruenoRegular'), url('../fonts/TruenoRg.woff') format('woff');
+    } */
+
+
+    .container {
+      overflow: hidden;
+      width: 800px;
+      height: 600px;
+    }
+
+    .container > img {
+      object-fit: cover;
+      min-width: 100%;
+      height: 100%;
+      background: no-repeat center center;
+    }
+
+    .thread-title {
+        position: absolute;
+        width: 666px;
+        left: 84px;
+        bottom: 175px;
+
+        font-family: 'Trueno';
+        font-style: normal;
+        font-size: 72px;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+
+        color: #FFFFFF;
+        text-shadow: 2px 2px 9px rgba(0, 0, 0, .5);
+    }
+
+    .avatar-img {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        height: 84px;
+        width: 84px;
+        overflow: hidden;
+        border-radius: 35%;
+        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.50);
+    }
+
+    .avatar-img > img {
+        flex-grow: 1;
+        object-fit: cover;
+    }
+
+    .avatar1 {
+        position: absolute;
+        top: 470px;
+        left: 84px;
+    }
+    .avatar2 {
+        position: absolute;
+        top: 470px;
+        left: 152px;
+    }
+    .avatar3 {
+        position: absolute;
+        top: 470px;
+        left: 220px;
+    }
+    .avatar4 {
+        position: absolute;
+        top: 470px;
+        left: 288px;
+    }
+    .avatar5 {
+        position: absolute;
+        top: 470px;
+        left: 356px;
+    }
+
+    .text-over-last-avatar {
+        position: absolute;
+        justify-content: center;
+        height: 84px;
+        width: 84px;
+        top: 470px;
+        left: 356px;
+
+        font-family: 'Trueno';
+        font-style: normal;
+        font-weight: 100;
+        font-size: 30px;
+
+        display: flex;
+        text-align: center;
+        text-transform: uppercase;
+
+        color: #FFFFFF;
+        z-index: 100;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 35%;
+    }
+    .text-over-last-avatar__inner {
+        position: absolute;
+        font-weight: normal;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var characterLimit = 26;
+        var title = document.getElementById('threadTitle');
+        console.log(title.textContent.length);
+        if (title.textContent.length > characterLimit) {
+            title.textContent = title.textContent.substring(0,characterLimit) + '...';
+        }
+    });
+</script>
+
+</head>
+<body>
+    <div class="container">
+        <img src="background-large.jpg" />
+		<div id="threadTitle" class="thread-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</div>
+		<div class="text-over-last-avatar">
+            <div class="text-over-last-avatar__inner">+24</div>
+        </div>
+    <span class="avatar-img avatar1">
+       <img src="avatar1-thumbnail.jpg"/>
+    </span>
+    <span class="avatar-img avatar2">
+        <img src="avatar2-thumbnail.jpg"/>
+    </span>
+    <span class="avatar-img avatar3">
+        <img src="avatar3-thumbnail.jpg"/>
+    </span>
+    <span class="avatar-img avatar4">
+        <img src="avatar4-thumbnail.jpg"/>
+    </span>
+    <span class="avatar-img avatar5">
+        <img src="avatar5-thumbnail.jpg"/>
+    </span>
+</body>
+</html>
