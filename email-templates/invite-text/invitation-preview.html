@@ -21,6 +21,16 @@
       height: 600px;
     }
 
+    .container-overlay {
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(20, 15, 38, 0) 0%, rgba(20, 15, 38, 0.55) 100%);
+    }
+
     .container > img {
       object-fit: cover;
       min-width: 100%;
@@ -30,6 +40,7 @@
 
     .thread-title {
         position: absolute;
+        display: block;
         width: 666px;
         left: 84px;
         bottom: 170px;
@@ -38,11 +49,11 @@
         font-style: normal;
         font-size: 72px;
         line-height: 1;
-        display: flex;
         align-items: center;
 
         color: #FFFFFF;
         text-shadow: 2px 2px 9px rgba(0, 0, 0, .5);
+        word-wrap: break-word;
     }
 
     .avatar-img {
@@ -133,8 +144,9 @@
 </head>
 <body>
     <div class="container">
+    <div class="container-overlay"></div>
         <img src="background-large.jpg" />
-		<div id="threadTitle" class="thread-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</div>
+		<div id="threadTitle" class="thread-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </div>
 		<div class="text-over-last-avatar">
             <div class="text-over-last-avatar__inner">+24</div>
         </div>
@@ -153,5 +165,6 @@
     <span class="avatar-img avatar5">
         <img src="avatar5-thumbnail.jpg"/>
     </span>
+    </div>
 </body>
 </html>
