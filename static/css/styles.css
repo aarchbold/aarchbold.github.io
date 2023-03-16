@@ -4362,6 +4362,9 @@ progress::-moz-progress-bar {
     clear: both;
     display: table; }
 
+.slick-slide {
+  position: relative; }
+
 .testimonial-card {
   background-color: #ffffff;
   box-sizing: border-box;
@@ -4369,19 +4372,43 @@ progress::-moz-progress-bar {
   border-radius: 60px; }
 
 .testimonial-card__inner {
+  position: relative;
   text-align: center;
-  padding: 50px 70px 100px 70px;
-  font-size: 27px;
+  padding: 50px 70px 170px 70px;
+  font-size: 25px;
   font-family: TruenoBlack, sans-serif;
   line-height: 1.6;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  min-height: 450px;
+  margin-bottom: 50px; }
+  @media (max-width: 800px) {
+    .testimonial-card__inner {
+      min-height: 400px; } }
+
+.testimonial-card__text {
+  position: absolute;
+  width: 75%;
+  top: 45%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  left: 50%; }
 
 .testimonial-card__author {
-  position: relative;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
   padding: 10px 20px 0 20px;
   font-size: 24px;
   text-align: center;
-  font-family: TruenoSemiBold, sans-serif; }
+  font-family: TruenoSemiBold, sans-serif;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100%; }
+  @media (max-width: 400px) {
+    .testimonial-card__author {
+      bottom: 30px; } }
 
 .testimonial-card__thumb {
   display: inline-block;
@@ -4417,9 +4444,9 @@ progress::-moz-progress-bar {
     padding-top: 80px;
     overflow: hidden; }
   .testimonial-card__inner {
-    font-size: 21px; }
-  .testimonial-card__author {
     font-size: 18px; }
+  .testimonial-card__author {
+    font-size: 16px; }
   .testimonial-card__location {
     font-size: 17px; }
   .slick-dots {
@@ -4751,6 +4778,9 @@ progress::-moz-progress-bar {
 
 .slick-next {
   right: 24px; }
+  @media (max-width: 800px) {
+    .slick-next {
+      right: 10px; } }
 
 .slick-prev {
   left: 24px;
@@ -4761,6 +4791,9 @@ progress::-moz-progress-bar {
     -webkit-transform: translate(0, -50%) rotate(180deg);
     -ms-transform: translate(0, -50%) rotate(180deg);
     transform: translate(0, -50%) rotate(180deg); }
+  @media (max-width: 800px) {
+    .slick-prev {
+      left: 10px; } }
 
 .slick-slider {
   position: relative;
