@@ -643,6 +643,28 @@ input:focus {
   }
 }
 
+.column-12 {
+  width: 50%;
+  line-height: 1.4;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 25px;
+  text-align: left;
+  font-size: 22px;
+}
+@media (max-width: 940px) {
+  .column-12 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 650px) {
+  .column-12 {
+    width: 100%;
+    padding: 0 10px;
+    margin-bottom: 20px;
+  }
+}
+
 .section-screenshot {
   margin: 0 auto;
 }
