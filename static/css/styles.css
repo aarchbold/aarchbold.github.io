@@ -534,6 +534,9 @@ input:focus {
   line-height: 1.2;
   width: 80%;
 }
+.single-quote.-less-space {
+  top: 60%;
+}
 @media (max-width: 940px) {
   .single-quote {
     font-size: 46px;
@@ -607,6 +610,7 @@ input:focus {
 @media (max-width: 650px) {
   .columns {
     display: block;
+    margin-bottom: 120px;
   }
 }
 
@@ -648,7 +652,7 @@ input:focus {
 .section-screenshot.-align-bottom {
   position: relative;
   bottom: -100px;
-  margin-top: 100px;
+  margin-top: 0;
 }
 @media (max-width: 940px) {
   .section-screenshot.-align-bottom {
@@ -672,7 +676,6 @@ input:focus {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   width: 55%;
-  opacity: 0.7;
 }
 @media (max-width: 940px) {
   .section-background.-willow img {
@@ -1145,9 +1148,22 @@ input:focus {
 .footer-inner a {
   color: white;
 }
+@media (max-width: 650px) {
+  .footer-inner {
+    text-align: center;
+  }
+}
 
 .footer-ctas {
   position: absolute;
   right: 50px;
   top: 15px;
+}
+@media (max-width: 650px) {
+  .footer-ctas {
+    position: relative;
+    right: auto;
+    top: 0;
+    padding: 15px 0;
+  }
 }

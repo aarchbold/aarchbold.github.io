@@ -45,9 +45,25 @@ $.fn.handleHero = function() {
     });
 }
 
+$.fn.handleGetApp = function() {
+    var $button = $('#getTheApp');
+    var appStoreLink = 'https://testflight.apple.com/join/la1hIfJy';
+    var playStoreLink = 'https://play.google.com/store/apps/details?id=com.helios.party';
+    var userAgent = navigator.userAgent.toLowerCase(); 
+    var isAndroid = userAgent.indexOf('android') > -1;
+    var realLink = '#';
+
+    if (isAndroid) {
+        realLink = playStoreLink;
+      } else {
+        realLink = appStoreLink;
+      }
+      $button.attr('href',realLink);
+}
 
 $(function(){    
     $('.home-hero').handleHero();
+    $('#getTheApp').handleGetApp();
 });
 // function getParam(name) {
 //     SCH = document.location.search;
