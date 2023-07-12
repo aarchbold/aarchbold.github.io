@@ -85,6 +85,9 @@ body {
 .page-inner.-no-pad {
   padding: 0;
 }
+.page-inner.-extra-top-pad {
+  padding-top: 80px;
+}
 @media (max-width: 850px) {
   .page-inner {
     padding-bottom: 80px;
@@ -176,6 +179,9 @@ input:focus {
   height: 680px;
   text-align: center;
   overflow: hidden;
+  background-image: url("/static/images/hero-helios.jpg");
+  background-position: 50% 50%;
+  background-size: cover;
 }
 
 .home-hero__inner {
@@ -189,7 +195,7 @@ input:focus {
 }
 @media (max-width: 800px) {
   .home-hero__inner {
-    top: 59%;
+    top: 53%;
   }
 }
 
@@ -201,7 +207,7 @@ input:focus {
 @media (max-width: 940px) {
   .home-hero__title {
     font-size: 20px;
-    padding: 30px 20px 0 20px;
+    padding: 30px 30px 0 30px;
   }
 }
 
@@ -304,7 +310,7 @@ input:focus {
 .helios-hdr {
   font-family: 'Ogg', serif;
   font-size: 52px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 @media (max-width: 940px) {
   .helios-hdr {
@@ -328,6 +334,16 @@ input:focus {
 .helios-hdr.-align-center {
   padding-right: 0;
   text-align: center;
+}
+
+.get-app-ctas {
+  font-size: 24px;
+  padding: 30px 0;
+  line-height: 1.8;
+}
+.get-app-ctas a {
+  color: white;
+  text-decoration: none;
 }
 
 .home-subheader {
@@ -414,6 +430,7 @@ input:focus {
 }
 
 .home-content__slot {
+  padding: 40px 0 20px;
   margin-bottom: 25px;
 }
 .home-content__slot p {
@@ -604,7 +621,7 @@ input:focus {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 @media (max-width: 650px) {
@@ -682,6 +699,18 @@ input:focus {
     bottom: -40px;
   }
 }
+@media (max-width: 450px) {
+  .section-screenshot.-align-bottom {
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 450px) {
+  .section-screenshot.-align-bottom img {
+    width: 200%;
+  }
+}
 
 .section-background {
   position: absolute;
@@ -721,6 +750,39 @@ input:focus {
     height: 100%;
     right: 20%;
   }
+}
+
+.video-embed {
+  max-width: 900px;
+  margin: 80px auto 0;
+}
+@media (max-width: 650px) {
+  .video-embed {
+    margin-top: 0;
+  }
+}
+
+.press-embed {
+  position: relative;
+  max-width: 900px;
+  margin: 200px auto;
+  text-align: center;
+}
+.press-embed img {
+  width: 100%;
+}
+.press-embed .press-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.youtube-video {
+  aspect-ratio: 16 / 9;
+  width: 100%;
 }
 
 /* buttons styles
@@ -769,6 +831,23 @@ input:focus {
   font-family: 'Ogg', serif;
 }
 .button-hero:hover {
+  color: white;
+  background-color: #dc1d66;
+}
+
+.button-topnav {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 30px;
+  color: #dc1d66;
+  background-color: white;
+  font-size: 20px;
+  font-family: 'Ogg', serif;
+}
+.button-topnav:hover {
   color: white;
   background-color: #dc1d66;
 }
@@ -1117,12 +1196,6 @@ input:focus {
   width: 100%;
   z-index: 100;
   background-color: #000000;
-  height: 50px;
-}
-@media (max-width: 650px) {
-  .top-nav {
-    height: 44px;
-  }
 }
 
 .top-nav__inner {
@@ -1138,6 +1211,8 @@ input:focus {
 @media (max-width: 650px) {
   .top-nav__inner {
     font-size: 22px;
+    text-align: left;
+    padding: 10px;
   }
 }
 .top-nav__inner .top-nav__about {
@@ -1155,6 +1230,24 @@ input:focus {
   text-decoration: none;
 }
 
+.top-nav__socials {
+  position: absolute;
+  right: 10px;
+  top: 14px;
+}
+.top-nav__socials a {
+  display: inline-block;
+  padding-left: 10px;
+}
+.top-nav__socials img {
+  width: 25px;
+}
+@media (max-width: 650px) {
+  .top-nav__socials {
+    top: 18px;
+  }
+}
+
 .footer {
   width: 100%;
   background-color: #000000;
@@ -1166,6 +1259,7 @@ input:focus {
   margin: 0 auto;
   padding: 15px 50px;
   font-size: 15px;
+  line-height: 1.4;
 }
 .footer-inner a {
   color: white;
@@ -1179,7 +1273,7 @@ input:focus {
 .footer-ctas {
   position: absolute;
   right: 50px;
-  top: 15px;
+  top: 25px;
 }
 @media (max-width: 650px) {
   .footer-ctas {
