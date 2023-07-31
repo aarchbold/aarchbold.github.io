@@ -46,7 +46,9 @@ $.fn.handleHero = function() {
 }
 
 $.fn.handleGetApp = function() {
-    var $button = $('#getTheApp');
+    console.log('=== get the app stuff ===');
+    console.log($(this));
+    var $button = $(this);
     var appStoreLink = 'https://testflight.apple.com/join/la1hIfJy';
     var playStoreLink = 'https://play.google.com/store/apps/details?id=com.helios.party';
     var userAgent = navigator.userAgent.toLowerCase(); 
@@ -64,6 +66,7 @@ $.fn.handleGetApp = function() {
 $(function(){    
     $('.home-hero').handleHero();
     $('#getTheApp').handleGetApp();
+    $('#getTheAppFooter').handleGetApp();
 });
 // function getParam(name) {
 //     SCH = document.location.search;
